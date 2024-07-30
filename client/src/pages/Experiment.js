@@ -1,5 +1,5 @@
 // Paula's imports
-import {useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
@@ -10,10 +10,12 @@ import NextButton from '../components/NextButton.js';
 // My imports
 import experiments from '../data.json';
 import WordSelector from '../components/WordSelector.js';
+import PacmanLoader from "react-spinners/BounceLoader.js";
+
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
-  
+
   return (
     <div className="progress-bar-container">
       <progress value={value} max={max}></progress>
@@ -30,7 +32,7 @@ function ExperimentCompareImages() {
   const navigate = useNavigate();
   const location = useLocation();
   const { userId } = location.state;
-    
+
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
   const maxProgress = experiments.length;
 
@@ -38,7 +40,8 @@ function ExperimentCompareImages() {
   const [exp_index, setExperimentIndex] = useState(0);
   const [exp, setExperiment] = useState(experiments[exp_index]);
   const wordSelectorRef = useRef(null);
-  
+
+  const [loading, setLoading] = useState(false)
 
   // Facu
 
@@ -46,13 +49,17 @@ function ExperimentCompareImages() {
   useEffect(() => {
     console.log(exp_index)
     setExperiment(experiments[exp_index]);
-  } , [exp_index]);
+  }, [exp_index]);
 
   const submitRating = async (timestamp) => {
     if (!navigator.onLine) {
       alert('No se pudo enviar la calificación. Por favor, revisa tu conexión a internet.');
       return;
     }
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
     // try {
     //   const response = await axios.post('http://127.0.0.1:8000/api/addRating', {
     //     userId: userId,
@@ -73,7 +80,7 @@ function ExperimentCompareImages() {
     });
     sessionStorage.setItem('progress', progress);
     setExperimentIndex(exp_index + 1);
-    sessionStorage.setItem('exp_index', exp_index + 1); 
+    sessionStorage.setItem('exp_index', exp_index + 1);
     //setExperiment(null);
     // } catch (error) {
     //   console.error('Error adding rating:', error);
@@ -84,7 +91,7 @@ function ExperimentCompareImages() {
   const handleNextClick = async () => {
     if (wordSelectorRef) {
       // !Repeated Code
-      if(!wordSelectorRef.current.isFull()){
+      if (!wordSelectorRef.current.isFull()) {
         alert('Ingresa una calificación antes de continuar');
         return;
       }
@@ -94,42 +101,58 @@ function ExperimentCompareImages() {
   }
 
   const handleExitClick = async () => {
-    if(!wordSelectorRef.current.isFull()){
+    if (!wordSelectorRef.current.isFull()) {
       alert('Ingresa una calificación antes de continuar');
       return;
     }
     const timestamp = new Date().getTime();
     submitRating(timestamp);
     // !Es temporal
-    sessionStorage.setItem('progress', 0); 
+    sessionStorage.setItem('progress', 0);
     navigate('/thank-you');
   }
 
-  
+  const override: CSSProperties = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  };
+
   return (
     <div>
-        <div className='SubHeader'>
-          Suponiendo que la imagen de la derecha fue generada con una descripción la imagen de la izquierda
-          ¿Cuán bien te parece que salió el proceso?
-        </div>
-        <div className='Center'> <i>(1 es muy mal y 5 muy bien)</i> </div>
+      <div className='SubHeader'>
+        Suponiendo que la imagen de la derecha fue generada con una descripción la imagen de la izquierda
+        ¿Cuán bien te parece que salió el proceso?
+      </div>
+      <div className='Center'> <i>(1 es muy mal y 5 muy bien)</i> </div>
 
       <div className='rating-container'>
-        <div className='inner-star-rating-container'>
-          <WordSelector ref={wordSelectorRef}  exp={exp}/>
-        </div>
+        {
+          !loading ? (
+            <div className='inner-star-rating-container'>
+              <WordSelector ref={wordSelectorRef} exp={exp} />
+            </div>
+          ) : (<PacmanLoader
+            color={'grey'}
+            loading={true}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />) // TODO: spinner
+        }
+
         <div className='inner-button-container'>
           {(progress < maxProgress) ? (
-            <NextButton handleOnClick={handleNextClick}/>
-          ):(<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
+            <NextButton handleOnClick={handleNextClick} />
+          ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
           }
         </div>
       </div>
       <div className='progress-bar-container'>
-        <ProgressBar value={progress} max={maxProgress} className='progress'/>
+        <ProgressBar value={progress} max={maxProgress} className='progress' />
       </div>
-      </div>
-    
+    </div>
+
   );
 }
 

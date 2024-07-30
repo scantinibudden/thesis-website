@@ -29,7 +29,7 @@ function CellPhoneLogin() {
       
       if (!isValidCellNumber) {
         console.error('Invalid cell number');
-        alert("El numero de telefono ingresado no es valido. El número ingresado debe tener 10 dígitos. Por favor, intenta de nuevo.")
+        alert("El numero de teléfono ingresado no es valido. El número ingresado debe tener 10 dígitos. Por favor, intenta de nuevo.")
         setUserId('')
         setIsLoading(false);
         return;
@@ -65,10 +65,11 @@ function CellPhoneLogin() {
       <div>
         <form onSubmit={handleSubmit} className='input-button-container'>
           <input
+            style={{textAlign: 'center'}}
             type="text"
             value={cellPhoneInput}
             onChange={handleInputChange}
-            placeholder="Ingresa tu telefono"
+            placeholder="Ingresa tu teléfono"
             className='Input'
           />
           <div className='button-container' style={{ marginTop: '8px' }}>

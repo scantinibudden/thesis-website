@@ -5,7 +5,7 @@ import CellPhoneLogin from '../components/CellPhoneLogin.js';
 export default function Home() {
 
   return (
-    <div>
+    <div >
       <Header/>
       <SubHeader/>
       <ExperimentExplanation/>
@@ -17,7 +17,7 @@ export default function Home() {
 function Header(){
   return (
     <div className="Header">
-      <h1> Humanos vs. IA Generativa </h1>
+      <h1> Experimento de Neurociencia 🧠 </h1>
     </div>
 
   );
@@ -26,9 +26,8 @@ function Header(){
 function SubHeader(){
   return (
     <div className="SubHeader">
-      En este experimento te pedimos que nos ayudes a entender cuán buenos son los humanos y la Inteligencia Artificial para generar imágenes a partir de descripciones.  
+      En este experimento buscamos comparar como hace ChatGPT para darle significado a algunas palabras frente a como lo hacemos los humanos.  
     </div>
-
   );
 }
 

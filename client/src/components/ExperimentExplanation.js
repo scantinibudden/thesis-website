@@ -1,18 +1,20 @@
 import '../pages/home.css';
 
-import experimentDiagram from '../assets/expDiagram2.png';
+import laboratoryLogo from '../assets/liaa-logo.png';
+
+// TODO: Add UBA logo
 
 function ExperimentExplanation(){
     return (
       <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column',}}>
         <p className='experiment-explanation'>
-          En un experimento anterior le mostramos a distintas personas imágenes y les pedimos que las describieran en texto. Luego otras personas generaron imágenes a partir de las descripciones y se evaluó cuán parecidas eran esas imágenes a las originales. Ahora le dimos estas descripciones a distintas Inteligencias Artificiales y queremos evaluar cuán bien salió ese proceso.
+          Para ello te mostraremos una oración con una palabra resaltada y una lista de palabras. Necesitamos que elijas las tres palabras que mejor se relacionen con la palabra resaltada.
         </p>
         <div className='image-container-home'>
-          <img src={experimentDiagram}  alt="Diagrama del experimento" ></img>
+          <img src={laboratoryLogo}  alt="Logo del Laboratorio de Inteligencia Artifical Aplicada UBA" ></img> 
         </div>
-        <p className='Center'>
-          Podes realizar este experimento desde cualquier dispositivo y te llevará 15 minutos completarlo.
+        <p className='experiment-explanation'>
+          Podes realizar este experimento desde cualquier dispositivo y te llevará XXX minutos completarlo.
         </p>
       </div>
     );

@@ -10,7 +10,7 @@ import NextButton from '../components/NextButton.js';
 // My imports
 import experiments from '../data.json';
 import WordSelector from '../components/WordSelector.js';
-import PacmanLoader from "react-spinners/BounceLoader.js";
+import Loader from "react-spinners/ClockLoader.js";
 
 
 function ProgressBar({ value, max }) {
@@ -59,7 +59,7 @@ function ExperimentCompareImages() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 3000);
+    }, 1500);
     // try {
     //   const response = await axios.post('http://127.0.0.1:8000/api/addRating', {
     //     userId: userId,
@@ -112,27 +112,45 @@ function ExperimentCompareImages() {
     navigate('/thank-you');
   }
 
-  const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
+  const wrapWords = (text, words) => {
+    // Convertir todas las palabras a minúsculas
+    const wordsLowerCase = words.map(word => word.toLowerCase());
+
+    // Dividir el texto en palabras y signos de puntuación
+    const parts = text.split(/(\b[\wáéíóúüñ]+[\.,!?]?\b)/);
+
+    return parts.map((part, index) => {
+      // Verificar si la palabra (en minúsculas) debe ser envuelta
+      if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
+        return <span className='highlight-word' key={index}>{part}</span>;
+      }
+      return part;
+    });
   };
 
   return (
     <div>
-      <div className='SubHeader'>
-        Suponiendo que la imagen de la derecha fue generada con una descripción la imagen de la izquierda
-        ¿Cuán bien te parece que salió el proceso?
+      <div className='BlueSubHeader'>
+        Experimento
       </div>
-      <div className='Center'> <i>(1 es muy mal y 5 muy bien)</i> </div>
 
-      <div className='rating-container'>
+      <div className='experiment-explanation'>
+        Selecciona las tres palabras que creas que mejor se relacionan con la palabra resaltada.
+      </div>
+
+      <div className='SubHeaderExp'>
+        <p className='no-margin'>
+          {wrapWords(exp.context, [exp.word])}
+        </p>
+      </div>
+
+      <div className='experiment-container'>
         {
           !loading ? (
             <div className='inner-star-rating-container'>
               <WordSelector ref={wordSelectorRef} exp={exp} />
             </div>
-          ) : (<PacmanLoader
+          ) : (<Loader
             color={'grey'}
             loading={true}
             size={150}

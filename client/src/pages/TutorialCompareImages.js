@@ -72,11 +72,11 @@ function TutorialCompareImages() {
           <p className='experiment-explanation'>
           Necesitamos que selecciones las 3 (tres) que mejor se relacionen con la palabra destacada.
           </p>
-          <div className='SubHeader'>
-            <p>La <span style={{color: 'red'}}>selección</span> Argentina ganó la final del mundial contra Francia 4-3 por penales.</p>
+          <div className='SubHeaderExp'>
+            <p className='no-margin'>La <span style={{color: 'red'}}>selección</span> Argentina ganó la final del mundial contra Francia 4-3 por penales.</p>
           </div>
 
-        <div className='rating-container'>
+        <div className='experiment-container'>
           <div className='inner-star-rating-container'>
             <WordSelector ref={wordSelectorRef}  exp={exp}/>
           </div>

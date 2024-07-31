@@ -8,6 +8,7 @@ import Home from './pages/Home.js';
 import ThankYouMessage from './components/thankYouMessage.js';
 import TutorialCompareImages from './pages/TutorialCompareImages.js';
 
+import 'normalize.css'
 import './styles/global.css';
 import './index.css';
 
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "experiment/",
-    element: <ExperimentCompareImages />,
+    element: < ExperimentCompareImages />,
   },
   {
     path: "thank-you/",

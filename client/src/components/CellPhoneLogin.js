@@ -66,7 +66,7 @@ function CellPhoneLogin() {
         <form onSubmit={handleSubmit} className='input-button-container'>
           <input
             style={{textAlign: 'center'}}
-            type="text"
+            type="tel"
             value={cellPhoneInput}
             onChange={handleInputChange}
             placeholder="Ingresa tu teléfono"

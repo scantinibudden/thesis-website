@@ -1,91 +1,115 @@
 [
   {
-    "topic": "Tarjeta", 
-    "context": "Plata",
+    "word": "Tarjeta", 
+    "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
     "words": [
       {
         "id":1,
-        "word":"Dinero1"
+        "word":"Crédito"
       },
       {
         "id":2,
-        "word":"Dinero2"
+        "word":"Débito"
       },
       {
         "id":3,
-        "word":"Dinero3"
+        "word":"Prestamo"
       },
       {
         "id":4,
-        "word":"Dinero4"
+        "word":"Dinero"
       },
       {
         "id":5,
-        "word":"Dinero5"
+        "word":"Acciones"
       },
       {
         "id":6,
-        "word":"Dinero6"
+        "word":"Dólares"
+      },
+      {
+        "id":7,
+        "word":"Pesos"
+      },
+      {
+        "id":8,
+        "word":"Pago"
       }
     ]
   },
   {
-    "topic": "Tarjeta", 
-    "context": "Fiest",
+    "word": "Llama", 
+    "context": "En su viaje al Jujuy, comió una milanesa de llama.",
     "words": [
       {
         "id":1,
-        "word":"Cumple1"
+        "word":"Animal"
       },
       {
         "id":2,
-        "word":"Cumple2"
+        "word":"Camelido"
       },
       {
         "id":3,
-        "word":"Cumple3"
+        "word":"Mamifero"
       },
       {
         "id":4,
-        "word":"Cumple4"
+        "word":"Andino"
       },
       {
         "id":5,
-        "word":"Cumple5"
+        "word":"Cuadrupedo"
       },
       {
         "id":6,
-        "word":"Cumple6"
+        "word":"Pelos"
+      }, 
+      {
+        "id":7,
+        "word":"Doméstico"
+      },
+      {
+        "id":8,
+        "word":"Norte"
       }
     ]
   },
   {
-    "topic": "Tarjeta", 
-    "context": "Fiest",
+    "word": "Muñeca", 
+    "context": "El se quebró la muñeca jugando al paddle.",
     "words": [
       {
         "id":1,
-        "word":"Cumple1"
+        "word":"Brazo"
       },
       {
         "id":2,
-        "word":"Cumple2"
+        "word":"Piel"
       },
       {
         "id":3,
-        "word":"Cumple3"
+        "word":"Mano"
       },
       {
         "id":4,
-        "word":"Cumple4"
+        "word":"Cuerpo"
       },
       {
         "id":5,
-        "word":"Cumple5"
+        "word":"Persona"
       },
       {
         "id":6,
-        "word":"Cumple6"
+        "word":"Articulacion"
+      },
+      {
+        "id":7,
+        "word":"Pulsera"
+      },
+      {
+        "id":8,
+        "word":"Reloj"
       }
     ]
   }

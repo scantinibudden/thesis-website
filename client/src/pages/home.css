@@ -1,8 +1,9 @@
-
-.Header h1{
+.Header h1 {
   font-size: calc(25px + 2vw);
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
-  color: var(--deep-blue); 
+  color: var(--deep-blue);
   margin-bottom: 1px;
 }
 
@@ -11,27 +12,29 @@
   text-align: center;
   color: var(--deeper-gray-color);
   margin: 0;
-  
+  padding: 5px 5px;
+  font-weight: bold;
 }
 
 @media (max-width: 600px) {
-  .SubHeader{
+  .SubHeader {
     font-size: 16px;
   }
 }
 
-.SubSubHeader{
+.SubSubHeader {
   font-size: calc(4px + 2vw);
   text-align: center;
   color: var(--deeper-gray-color);
   font-weight: bold;
 }
 
-.Center{
+.Center {
   text-align: center;
   display: flex;
   justify-content: center;
 }
+
 .gray {
   color: var(--gray-color);
 }
@@ -60,12 +63,14 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    max-width: 20%;
+    max-width: 140px;
+    height: 40px;
+    font-size: 12px;
     position: relative;
   }
 }
 
-.Input{
+.Input {
   color: var(--deeper-gray-color);
   font-weight: bold;
   border: none;
@@ -83,9 +88,8 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .button-container {
-  width: 120px;
-  height: 40px; 
   margin: 0;
   display: flex;
   justify-content: center;
@@ -100,21 +104,20 @@
   }
 
   .button-container {
-    width: 500px;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-   
   }
 }
 
 
 .experiment-explanation {
   font-size: 24px;
-  line-height: 1.6; 
-  color: #333; 
-  margin: 5px 0; 
-  padding: 0 10px; 
+  line-height: 1.6;
+  color: #333;
+  margin: 5px 0;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -126,7 +129,7 @@
   }
 }
 
-.image-container-home{
+.image-container-home {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
@@ -138,7 +141,6 @@
     max-width: 200px;
     height: auto;
   }
-
 }
 
 .image-container-home img {
@@ -146,3 +148,6 @@
   height: auto;
 }
 
+.no-margin {
+  margin: 0;
+}

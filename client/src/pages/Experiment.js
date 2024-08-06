@@ -10,14 +10,14 @@ import NextButton from '../components/NextButton.js';
 // My imports
 import experiments from '../data.json';
 import WordSelector from '../components/WordSelector.js';
-import PacmanLoader from "react-spinners/BounceLoader.js";
+import Loader from "react-spinners/ClockLoader.js";
 
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
 
   return (
-    <div className="progress-bar-container">
+    <div className="progress-bar-inner-container">
       <progress value={value} max={max}></progress>
       <span className="progress-bar-text">{`${percentage.toFixed(0)}%`}</span>
     </div>
@@ -41,7 +41,10 @@ function ExperimentCompareImages() {
   const [exp, setExperiment] = useState(experiments[exp_index]);
   const wordSelectorRef = useRef(null);
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
+  setTimeout(() => {
+    setLoading(false)
+  }, 1500);
 
   // Facu
 
@@ -59,7 +62,7 @@ function ExperimentCompareImages() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 3000);
+    }, 1500);
     // try {
     //   const response = await axios.post('http://127.0.0.1:8000/api/addRating', {
     //     userId: userId,
@@ -112,27 +115,23 @@ function ExperimentCompareImages() {
     navigate('/thank-you');
   }
 
-  const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
-  };
-
   return (
     <div>
-      <div className='SubHeader'>
-        Suponiendo que la imagen de la derecha fue generada con una descripción la imagen de la izquierda
-        ¿Cuán bien te parece que salió el proceso?
+      <div className='BlueSubHeader'>
+        Experimento
       </div>
-      <div className='Center'> <i>(1 es muy mal y 5 muy bien)</i> </div>
 
-      <div className='rating-container'>
+      <div className='experiment-explanation'>
+        Selecciona las tres palabras que creas que mejor se relacionan con la palabra resaltada.
+      </div>
+
+      <div className='experiment-container'>
         {
           !loading ? (
-            <div className='inner-star-rating-container'>
+            <div>
               <WordSelector ref={wordSelectorRef} exp={exp} />
             </div>
-          ) : (<PacmanLoader
+          ) : (<Loader
             color={'grey'}
             loading={true}
             size={150}

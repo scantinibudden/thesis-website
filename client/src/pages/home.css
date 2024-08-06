@@ -1,5 +1,7 @@
 .Header h1 {
   font-size: calc(25px + 2vw);
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   color: var(--deep-blue);
   margin-bottom: 1px;
@@ -61,7 +63,9 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    max-width: 20%;
+    max-width: 140px;
+    height: 40px;
+    font-size: 12px;
     position: relative;
   }
 }
@@ -100,7 +104,7 @@
   }
 
   .button-container {
-    width: 500px;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;

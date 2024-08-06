@@ -72,7 +72,7 @@ function CellPhoneLogin() {
             placeholder="Ingresa tu teléfono"
             className='Input'
           />
-          <div className='button-container' style={{ marginTop: '8px' }}>
+          <div className='button-container' >
           {isLoading ? (
                 <div className="loader"></div>
               ) : (

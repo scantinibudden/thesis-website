@@ -17,7 +17,7 @@ function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
 
   return (
-    <div className="progress-bar-container">
+    <div className="progress-bar-inner-container">
       <progress value={value} max={max}></progress>
       <span className="progress-bar-text">{`${percentage.toFixed(0)}%`}</span>
     </div>
@@ -41,7 +41,10 @@ function ExperimentCompareImages() {
   const [exp, setExperiment] = useState(experiments[exp_index]);
   const wordSelectorRef = useRef(null);
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
+  setTimeout(() => {
+    setLoading(false)
+  }, 1500);
 
   // Facu
 
@@ -112,22 +115,6 @@ function ExperimentCompareImages() {
     navigate('/thank-you');
   }
 
-  const wrapWords = (text, words) => {
-    // Convertir todas las palabras a minúsculas
-    const wordsLowerCase = words.map(word => word.toLowerCase());
-
-    // Dividir el texto en palabras y signos de puntuación
-    const parts = text.split(/(\b[\wáéíóúüñ]+[\.,!?]?\b)/);
-
-    return parts.map((part, index) => {
-      // Verificar si la palabra (en minúsculas) debe ser envuelta
-      if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
-        return <span className='highlight-word' key={index}>{part}</span>;
-      }
-      return part;
-    });
-  };
-
   return (
     <div>
       <div className='BlueSubHeader'>
@@ -138,16 +125,10 @@ function ExperimentCompareImages() {
         Selecciona las tres palabras que creas que mejor se relacionan con la palabra resaltada.
       </div>
 
-      <div className='SubHeaderExp'>
-        <p className='no-margin'>
-          {wrapWords(exp.context, [exp.word])}
-        </p>
-      </div>
-
       <div className='experiment-container'>
         {
           !loading ? (
-            <div className='inner-star-rating-container'>
+            <div>
               <WordSelector ref={wordSelectorRef} exp={exp} />
             </div>
           ) : (<Loader

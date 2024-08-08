@@ -4,16 +4,16 @@ const ExperimentModel = require('../models/ExperimentModel');
 
 module.exports = async (req, res) => {
   try {
-    allowCORS(req, res, () => {});
+    allowCORS(req, res, () => { });
     console.log("probando")
     console.log(process.env.MONGODB_URI)
     const userId = req.query.userId;
 
     const userExists = await ExperimentModel.exists({ userId: userId });
-    
-    if (userExists){
+
+    if (userExists) {
       res.json({ userExists: true });
-    }else{
+    } else {
       res.json({ userExists: false });
     }
   } catch (err) {

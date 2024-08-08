@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGODB_URI)
 const allowCORS = (req, res, next) => {
   res.setHeader('Permissions-Policy', 'interest-cohort=()');
   console.log(`Received ${req.method} request from ${req.origin}`);
-  res.setHeader('Access-Control-Allow-Origin', 'experiment-webpage.vercel.app'); 
+  res.setHeader('Access-Control-Allow-Origin', 'https://experiment-webpage.vercel.app'); 
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
   

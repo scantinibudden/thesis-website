@@ -62,7 +62,7 @@ function TutorialCompareImages() {
     if (wordSelectorRef != null && wordSelectorRef.current.isFull()) {
       const timestamp = new Date().getTime();
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/addTutorialTime', {
+        const response = await axios.post('https://experiment-webpage-vyv5.vercel.app/api/addTutorialTime', {
           userId: userId,
           tutorialTime: timestamp
         });

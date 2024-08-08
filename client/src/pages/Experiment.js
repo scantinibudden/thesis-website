@@ -64,7 +64,7 @@ function ExperimentCompareImages() {
       setLoading(false)
     }, 1500);
     // try {
-    //   const response = await axios.post('http://127.0.0.1:8000/api/addRating', {
+    //   const response = await axios.post('https://experiment-webpage-vyv5.vercel.app/api/addRating', {
     //     userId: userId,
     //     imgGeneratedId: experimentImg.id, 
     //     imgId: experimentImg.img, 

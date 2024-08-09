@@ -1,115 +1,97 @@
 [
   {
-    "word": "Tarjeta", 
-    "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
-    "words": [
+    "id": 1,
+    "word": "Tarjeta",
+    "meanings": [
       {
-        "id":1,
-        "word":"Crédito"
+        "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
+        "words": [
+          "Crédito",
+          "Débito",
+          "Prestamo",
+          "Dinero",
+          "Acciones",
+          "Dólares",
+          "Pesos",
+          "Pago"
+        ]
       },
       {
-        "id":2,
-        "word":"Débito"
-      },
-      {
-        "id":3,
-        "word":"Prestamo"
-      },
-      {
-        "id":4,
-        "word":"Dinero"
-      },
-      {
-        "id":5,
-        "word":"Acciones"
-      },
-      {
-        "id":6,
-        "word":"Dólares"
-      },
-      {
-        "id":7,
-        "word":"Pesos"
-      },
-      {
-        "id":8,
-        "word":"Pago"
+        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "words": [
+          "Papel",
+          "Saludo",
+          "Invitación",
+          "Carta",
+          "Información",
+          "Regalo",
+          "Felicitación",
+          "Dirigida"
+        ]
       }
     ]
   },
   {
-    "word": "Llama", 
-    "context": "En su viaje al Jujuy, comió una milanesa de llama.",
-    "words": [
+    "id": 2,
+    "word": "Llama",
+    "meanings": [
       {
-        "id":1,
-        "word":"Animal"
+        "context": "En su viaje al Jujuy, comió una milanesa de llama.",
+        "words": [
+          "Animal",
+          "Camelido",
+          "Mamifero",
+          "Andino",
+          "Cuadrupedo",
+          "Pelos",
+          "Doméstico",
+          "Norte"
+        ]
       },
       {
-        "id":2,
-        "word":"Camelido"
-      },
-      {
-        "id":3,
-        "word":"Mamifero"
-      },
-      {
-        "id":4,
-        "word":"Andino"
-      },
-      {
-        "id":5,
-        "word":"Cuadrupedo"
-      },
-      {
-        "id":6,
-        "word":"Pelos"
-      }, 
-      {
-        "id":7,
-        "word":"Doméstico"
-      },
-      {
-        "id":8,
-        "word":"Norte"
+        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "words": [
+          "Papel",
+          "Saludo",
+          "Invitación",
+          "Carta",
+          "Información",
+          "Regalo",
+          "Felicitación",
+          "Dirigida"
+        ]
       }
     ]
   },
   {
-    "word": "Muñeca", 
-    "context": "El se quebró la muñeca jugando al paddle.",
-    "words": [
+    "id": 3,
+    "word": "Muñeca",
+    "meanings": [
       {
-        "id":1,
-        "word":"Brazo"
+        "context": "El se quebró la muñeca jugando al paddle.",
+        "words": [
+          "Brazo",
+          "Piel",
+          "Mano",
+          "Cuerpo",
+          "Persona",
+          "Articulación",
+          "Pulsera",
+          "Reloj"
+        ]
       },
       {
-        "id":2,
-        "word":"Piel"
-      },
-      {
-        "id":3,
-        "word":"Mano"
-      },
-      {
-        "id":4,
-        "word":"Cuerpo"
-      },
-      {
-        "id":5,
-        "word":"Persona"
-      },
-      {
-        "id":6,
-        "word":"Articulacion"
-      },
-      {
-        "id":7,
-        "word":"Pulsera"
-      },
-      {
-        "id":8,
-        "word":"Reloj"
+        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "words": [
+          "Papel",
+          "Saludo",
+          "Invitación",
+          "Carta",
+          "Información",
+          "Regalo",
+          "Felicitación",
+          "Dirigida"
+        ]
       }
     ]
   }

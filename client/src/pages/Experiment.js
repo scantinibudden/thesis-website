@@ -63,20 +63,24 @@ function ExperimentCompareImages() {
     setTimeout(() => {
       setLoading(false)
     }, 1500);
-    // try {
-    //   const response = await axios.post('https://experiment-webpage-vyv5.vercel.app/api/addRating', {
-    //     userId: userId,
-    //     imgGeneratedId: experimentImg.id, 
-    //     imgId: experimentImg.img, 
-    //     imgGroup: experimentImg.group,
-    //     imgGeneratedBy: experimentImg.experiment, 
-    //     promptUsed: experimentImg.promptUsed, 
-    //     rating: fiveStarsRatingRef.current.currentRating(), 
-    //     submitTime: timestamp, 
-    //     lastImageIndexSubmitted: img_index,
-    //   });
-    console.log('Rating added successfully!');
-    wordSelectorRef.current.reset();
+    try {
+      const response = await axios.post('https://experiment-webpage-vyv5.vercel.app/api/addTrial', {
+        userId: userId,
+        trialNumber: exp_index, //!Change 
+        wordID: exp.id,
+        meaningID: 0, // !Change
+        word: exp.word,
+        context: exp.meanings[0].context, // !Change
+        answers: wordSelectorRef.current.result(), // !Change
+        wordOrder: exp.meanings[0].words, 
+        lastTrialSubmitted: exp_index,
+      });
+      console.log('Rating added successfully!');
+      wordSelectorRef.current.reset();
+      //setExperiment(null);
+    } catch (error) {
+      console.error('Error adding rating:', error);
+    }
     setProgress(prevProgress => {
       const updatedProgress = prevProgress + 1;
       return updatedProgress > maxProgress ? maxProgress : updatedProgress;
@@ -84,10 +88,6 @@ function ExperimentCompareImages() {
     sessionStorage.setItem('progress', progress);
     setExperimentIndex(exp_index + 1);
     sessionStorage.setItem('exp_index', exp_index + 1);
-    //setExperiment(null);
-    // } catch (error) {
-    //   console.error('Error adding rating:', error);
-    // }
   };
 
 

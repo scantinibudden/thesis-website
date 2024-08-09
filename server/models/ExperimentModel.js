@@ -4,7 +4,6 @@ const trialSchema = new mongoose.Schema({
     trialNumber: { type: Number, required: true },
     wordID: { type: Number, required: true },
     meaningID: { type: Number, required: true },
-    meaningID: { type: Number, required: true },
     word: { type: String, required: true },
     context: { type: String, required: true },
     answers: { type: [String], required: true },

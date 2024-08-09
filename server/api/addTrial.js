@@ -7,17 +7,16 @@ module.exports = async (req, res) => {
   try {
     allowCORS(req, res, () => { });
 
-    body = JSON.parse(req.body)
-    console.log("body body: ", body)
-    console.log("aassd")
-    const { userId } = body;
-    const { trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = body;
+    const {userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = req.body;
 
     if (!trialNumber || !wordID || !meaningID || !word || !context || !answers || !userId || !wordOrder || (lastTrialSubmitted == undefined)) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
     let user = await ExperimentModel.findOne({ userId: userId });
+    console.log("el usuario es")
+    console.log(user)
+    console.log("chauu")
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }

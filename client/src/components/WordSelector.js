@@ -1,38 +1,43 @@
 import React, { Component } from 'react';
 
+
 export default class WordSelector extends Component {
     constructor(props) {
         super(props);
-        this.state = { selected: [] }; // Cambiado a lista
+        this.state = { selected: new Set() };
     }
 
     isFull() {
-        return this.state.selected.length === 3; // Cambiado a .length
+        return this.state.selected.size === 3
     }
 
     reset() {
-        this.setState({ selected: [] }); // Cambiado a lista vacía
+        this.setState({ selected: new Set() });
     }
 
     result() {
-        return this.state.selected;
+        return Array.from(this.state.selected);
     }
 
     wrapWords(text, words) {
+        // Convertir todas las palabras a minúsculas
         const wordsLowerCase = words.map(word => word.toLowerCase());
+    
+        // Dividir el texto en palabras y signos de puntuación
         const parts = text.split(/(\b[\wáéíóúüñ]+[\.,!?]?\b)/);
     
         return parts.map((part, index) => {
-            if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
-                return <span className='highlight-word' key={index}>{part}</span>;
-            }
-            return part;
+          // Verificar si la palabra (en minúsculas) debe ser envuelta
+          if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
+            return <span className='highlight-word' key={index}>{part}</span>;
+          }
+          return part;
         });
     };
 
     render() {
-        const { exp } = this.props;
-        const list = exp.words;
+        const { exp } = this.props
+        const list = exp.words
         return (
             <div className='word-selector-container'>
                 <div className='SubHeaderExp'>
@@ -42,33 +47,27 @@ export default class WordSelector extends Component {
                 </div>
                 <div className='grid-container'>
                     {list.map((item) => {
-                        let selected = this.state.selected;
-                        console.log(selected);
+                        let selected = this.state.selected
+                        console.log(selected)
                         return (
                             <button
+                                // TODO: change styles to css file
                                 className='grid-item'
-                                style={{
-                                    fontWeight: 'bold',
-                                    color: 'black',
-                                    borderRadius: '5px',
-                                    height: '50px',
-                                    width: "100%",
-                                    display: 'block',
-                                    padding: '5px',
-                                    backgroundColor: selected.includes(item.id) ? 'coral' : 'yellow'
-                                }}
+                                style={{ fontWeight:'bold',color:'black', borderRadius: '5px', height: '50px', width: "100%", display: 'block', padding: '5px', backgroundColor: this.state.selected.has(item.id) ? 'coral' : 'yellow' }}
                                 key={item.id}
                                 onClick={() => {
-                                    if (selected.length >= 3 && !selected.includes(item.id)) {
-                                        return;
+                                    if (selected.size > 3) {
+                                        return
                                     }
 
-                                    if (selected.includes(item.id)) {
-                                        selected = selected.filter(id => id !== item.id);
+                                    if (this.state.selected.has(item.id)) {
+                                        selected.delete(item.id)
+                                    } else if (selected.size < 3) {
+                                        selected.add(item.id)
                                     } else {
-                                        selected = [...selected, item.id];
+                                        return
                                     }
-                                    this.setState({ selected });
+                                    this.setState({ selected: new Set(selected) })
                                 }}
                             >
                                 {item.word}

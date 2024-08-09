@@ -7,9 +7,8 @@ module.exports = async (req, res) => {
   try {
     allowCORS(req, res, () => { });
 
-    // const {userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = req.body;
+    const {userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = req.body;
 
-    const {userId} = req.body
     if (!userId ) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
@@ -22,18 +21,18 @@ module.exports = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    user.lastTrialSubmitted = 0;
+    user.lastTrialSubmitted = lastTrialSubmitted;
 
-    // user.trials.push({
-    //   trialNumber: trialNumber,
-    //   wordID: wordID,
-    //   meaningID: meaningID,
-    //   word: word,
-    //   context: context,
-    //   answers: answers,
-    //   wordOrder: wordOrder,
-    //   submitTime: submitTime
-    // });
+    user.trials.push({
+      trialNumber: trialNumber,
+      wordID: wordID,
+      meaningID: meaningID,
+      word: word,
+      context: context,
+      answers: answers,
+      wordOrder: wordOrder,
+      submitTime: submitTime
+    });
 
     await user.save();
     res.json(user);

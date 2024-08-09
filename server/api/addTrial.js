@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   try {
     allowCORS(req, res, () => { });
 
-    console.log(req)
+    console.log(req.body)
     const { userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = req.body;
 
     if (!trialNumber || !wordID || !meaningID || !word || !context || !answers || !userId || !wordOrder || (lastTrialSubmitted == undefined)) {

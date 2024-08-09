@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
     const {userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = req.body;
 
     
-    if (!trialNumber || !wordID || !meaningID || !word || !context || !answers || !userId || !wordOrder || (lastTrialSubmitted == undefined)) {
+    if (!trialNumber || !wordID || !meaningID || !word || !context || !answers || !userId || !wordOrder ) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 

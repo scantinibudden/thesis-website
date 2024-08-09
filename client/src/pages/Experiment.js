@@ -72,7 +72,7 @@ function ExperimentCompareImages() {
         context: exp.meanings[0].context, // !Change
         answers: wordSelectorRef.current.result(), // !Change
         wordOrder: exp.meanings[0].words, 
-        lastTrialSubmitted: exp_index,
+        lastTrialSubmitted: exp_index
       });
       console.log('Rating added successfully!');
       wordSelectorRef.current.reset();

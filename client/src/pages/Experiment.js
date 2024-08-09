@@ -27,12 +27,10 @@ function ProgressBar({ value, max }) {
 
 
 function ExperimentCompareImages() {
-
   // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
   const { userId } = location.state;
-  console.log(userId)
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
   const maxProgress = experiments.length;

@@ -37,7 +37,6 @@ export default class WordSelector extends Component {
 
     render() {
         const { exp } = this.props
-        console.log(exp)
         const list = exp.meanings[0].words // !Change
         return (
             <div className='word-selector-container'>

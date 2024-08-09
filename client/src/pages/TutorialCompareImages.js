@@ -42,6 +42,71 @@ function TutorialCompareImages() {
       }
     ]
   }
+  const exp =  {
+    "id": 1,
+    "word": "Tarjeta",
+    "meanings": [
+      {
+        "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
+        "words": [
+          {
+            "id": 1,
+            "word": "Messi"
+          },
+          {
+            "id": 2,
+            "word": "Scalonetta"
+          },
+          {
+            "id": 3,
+            "word": "Di Maria"
+          },
+          {
+            "id": 4,
+            "word": "Mbappe"
+          },
+          {
+            "id": 5,
+            "word": "Qatar"
+          },
+          {
+            "id": 6,
+            "word": "Fútbol"
+          }
+        ]
+      },
+      {
+        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "words": [
+          {
+            "id": 1,
+            "word": "Messi"
+          },
+          {
+            "id": 2,
+            "word": "Scalonetta"
+          },
+          {
+            "id": 3,
+            "word": "Di Maria"
+          },
+          {
+            "id": 4,
+            "word": "Mbappe"
+          },
+          {
+            "id": 5,
+            "word": "Qatar"
+          },
+          {
+            "id": 6,
+            "word": "Fútbol"
+          }
+        ]
+      }
+    ]
+  },
+
   const [show1, setShow1] = useState(false)
   const [show2, setShow2] = useState(false)
   const [show3, setShow3] = useState(false)

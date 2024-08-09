@@ -40,7 +40,7 @@ function ExperimentCompareImages() {
   const [exp, setExperiment] = useState(experiments[exp_index]);
   const wordSelectorRef = useRef(null);
 
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   // Facu
 

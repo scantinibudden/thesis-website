@@ -53,24 +53,24 @@ export default class WordSelector extends Component {
                             <button
                                 // TODO: change styles to css file
                                 className='grid-item'
-                                style={{ fontWeight:'bold',color:'black', borderRadius: '5px', height: '50px', width: "100%", display: 'block', padding: '5px', backgroundColor: this.state.selected.has(item.id) ? 'coral' : 'yellow' }}
-                                key={item.id}
+                                style={{ fontWeight:'bold',color:'black', borderRadius: '5px', height: '50px', width: "100%", display: 'block', padding: '5px', backgroundColor: this.state.selected.has(item) ? 'coral' : 'yellow' }}
+                                key={item}
                                 onClick={() => {
                                     if (selected.size > 3) {
                                         return
                                     }
 
-                                    if (this.state.selected.has(item.id)) {
-                                        selected.delete(item.id)
+                                    if (this.state.selected.has(item)) {
+                                        selected.delete(item)
                                     } else if (selected.size < 3) {
-                                        selected.add(item.id)
+                                        selected.add(item)
                                     } else {
                                         return
                                     }
                                     this.setState({ selected: new Set(selected) })
                                 }}
                             >
-                                {item.word}
+                                {item}
                             </button>
                         )
                     })}

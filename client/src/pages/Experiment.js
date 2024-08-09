@@ -65,6 +65,7 @@ function ExperimentCompareImages() {
     try {
       const response = await axios.post('https://experiment-webpage-vyv5.vercel.app/api/addTrial', {
         userId: userId,
+        /*
         trialNumber: exp_index, //!Change 
         wordID: exp.id,
         meaningID: 0, // !Change
@@ -72,7 +73,7 @@ function ExperimentCompareImages() {
         context: exp.meanings[0].context, // !Change
         answers: wordSelectorRef.current.result(), // !Change
         wordOrder: exp.meanings[0].words, 
-        lastTrialSubmitted: exp_index
+        lastTrialSubmitted: exp_index*/
       });
       console.log('Rating added successfully!');
       wordSelectorRef.current.reset();

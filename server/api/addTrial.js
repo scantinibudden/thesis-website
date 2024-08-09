@@ -9,10 +9,11 @@ module.exports = async (req, res) => {
 
     const { userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted, submitTime } = req.body;
 
-    if (!userId || !trialNumber || !wordID || !meaningID || !word || !context || !answers || !wordOrder || (lastTrialSubmitted==undefined) || !submitTime) {
+    if (!userId) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
-
+    console.log(req.body)
+    console.log("FAlta algos")
     let user = await ExperimentModel.findOne({ userId: userId });
     console.log("el usuario es")
     console.log(user)

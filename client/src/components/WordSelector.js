@@ -37,6 +37,7 @@ export default class WordSelector extends Component {
 
     render() {
         const { exp } = this.props
+        console.log(exp)
         const list = exp.meanings[0].words // !Change
         return (
             <div className='word-selector-container'>
@@ -48,7 +49,6 @@ export default class WordSelector extends Component {
                 <div className='grid-container'>
                     {list.map((item) => {
                         let selected = this.state.selected
-                        console.log(selected)
                         return (
                             <button
                                 // TODO: change styles to css file

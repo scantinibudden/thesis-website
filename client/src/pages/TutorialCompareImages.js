@@ -12,36 +12,6 @@ function TutorialCompareImages() {
   const location = useLocation();
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);
-  const exp = {
-    "word": "Selección",
-    "context": "La selección Argentina ganó la final del mundial contra Francia 4-3 por penales",
-    "words": [
-      {
-        "id": 1,
-        "word": "Messi"
-      },
-      {
-        "id": 2,
-        "word": "Scalonetta"
-      },
-      {
-        "id": 3,
-        "word": "Di Maria"
-      },
-      {
-        "id": 4,
-        "word": "Mbappe"
-      },
-      {
-        "id": 5,
-        "word": "Qatar"
-      },
-      {
-        "id": 6,
-        "word": "Fútbol"
-      }
-    ]
-  }
   const exp =  {
     "id": 1,
     "word": "Tarjeta",
@@ -105,7 +75,7 @@ function TutorialCompareImages() {
         ]
       }
     ]
-  },
+  }
 
   const [show1, setShow1] = useState(false)
   const [show2, setShow2] = useState(false)

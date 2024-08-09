@@ -7,8 +7,11 @@ module.exports = async (req, res) => {
   try {
     allowCORS(req, res, () => { });
 
-    const { userId } = req.body;
-    const { trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = req.body;
+    body = JSON.parse(req.body)
+    console.log("body body: ", body)
+    console.log("aassd")
+    const { userId } = body;
+    const { trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted } = body;
 
     if (!trialNumber || !wordID || !meaningID || !word || !context || !answers || !userId || !wordOrder || (lastTrialSubmitted == undefined)) {
       return res.status(400).json({ error: 'Missing required fields' });

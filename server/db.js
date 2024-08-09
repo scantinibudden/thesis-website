@@ -11,6 +11,7 @@ const allowCORS = (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://experiment-webpage.vercel.app'); 
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+  res.setHeader('Content-Type', 'application/json');
   
   if (req.method === 'OPTIONS') {
     res.status(200).end();

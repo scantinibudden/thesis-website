@@ -14,10 +14,10 @@ function TutorialCompareImages() {
   const wordSelectorRef = useRef(null);
   const exp = {
     "id": 1,
-    "word": "Tarjeta",
+    "word": "Selección",
     "meanings": [
       {
-        "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
+        "context": "La selección Argentina le ganó 4-2 por penales a Francia.",
         "words": [
           "Messi",
           "Scalonetta",

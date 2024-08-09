@@ -41,9 +41,6 @@ function ExperimentCompareImages() {
   const wordSelectorRef = useRef(null);
 
   const [loading, setLoading] = useState(true)
-  setTimeout(() => {
-    setLoading(false)
-  }, 1500);
 
   // Facu
 

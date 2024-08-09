@@ -37,12 +37,12 @@ export default class WordSelector extends Component {
 
     render() {
         const { exp } = this.props
-        const list = exp.words
+        const list = exp.meanings[0].words // !Change
         return (
             <div className='word-selector-container'>
                 <div className='SubHeaderExp'>
                     <p className='no-margin'>
-                        {this.wrapWords(exp.context, [exp.word])}
+                        {this.wrapWords(exp.meanings[0].context, [exp.word])}
                     </p>
                 </div>
                 <div className='grid-container'>

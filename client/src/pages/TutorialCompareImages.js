@@ -13,20 +13,15 @@ function TutorialCompareImages() {
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);
   const exp = {
-    "id": 1,
     "word": "Selección",
-    "meanings": [
-      {
-        "context": "La selección Argentina le ganó 4-2 por penales a Francia.",
-        "words": [
-          "Messi",
-          "Scalonetta",
-          "Di Maria",
-          "Mbappe",
-          "Qatar",
-          "Fútbol"]
-      }
-    ]
+    "context": "La selección Argentina le ganó 4-2 por penales a Francia.",
+    "words": [
+      "Messi",
+      "Scalonetta",
+      "Di Maria",
+      "Mbappe",
+      "Qatar",
+      "Fútbol"]
   }
 
   const [show1, setShow1] = useState(false)

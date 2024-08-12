@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "wordID": 1,
     "word": "Tarjeta",
     "meanings": [
       {
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "id": 2,
+    "wordID": 2,
     "word": "Llama",
     "meanings": [
       {
@@ -49,22 +49,23 @@
         ]
       },
       {
-        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "context": "Usaron un encendedor para prender la llama.",
         "words": [
-          "Papel",
-          "Saludo",
-          "Invitación",
-          "Carta",
-          "Información",
-          "Regalo",
-          "Felicitación",
-          "Dirigida"
+          "Fuego", 
+          "Vela", 
+          "Mechero", 
+          "Hornalla", 
+          "Cocinar", 
+          "Calor", 
+          "Incendio", 
+          "Combustion", 
+          "Quimica" 
         ]
       }
     ]
   },
   {
-    "id": 3,
+    "wordID": 3,
     "word": "Muñeca",
     "meanings": [
       {
@@ -81,16 +82,16 @@
         ]
       },
       {
-        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "context": "Su diversión favorita era jugar con su muñeca en el parque.",
         "words": [
-          "Papel",
-          "Saludo",
-          "Invitación",
-          "Carta",
-          "Información",
-          "Regalo",
-          "Felicitación",
-          "Dirigida"
+          "Juguete", 
+          "Trapo", 
+          "Niña", 
+          "Niño", 
+          "Infancia", 
+          "Juego", 
+          "Vestido", 
+          "Entretenimiento" 
         ]
       }
     ]

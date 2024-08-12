@@ -8,10 +8,11 @@ import './experiment.css'
 import NextButton from '../components/NextButton.js';
 
 // My imports
-import experiments from '../data.json';
+import data from '../data.json';
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/ClockLoader.js";
 
+import { generateDataset } from '../utils/experimentMapper.js';
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
@@ -26,18 +27,20 @@ function ProgressBar({ value, max }) {
 }
 
 
+
 function ExperimentCompareImages() {
   // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
   const { userId } = location.state;
+  const dataset = generateDataset(data, 2000)
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
-  const maxProgress = experiments.length;
+  const maxProgress = dataset.length;
 
   // My states
   const [exp_index, setExperimentIndex] = useState(0);
-  const [exp, setExperiment] = useState(experiments[exp_index]);
+  const [exp, setExperiment] = useState(dataset[exp_index]);
   const wordSelectorRef = useRef(null);
 
   const [loading, setLoading] = useState(false)
@@ -47,7 +50,7 @@ function ExperimentCompareImages() {
   // update next image 
   useEffect(() => {
     console.log(exp_index)
-    setExperiment(experiments[exp_index]);
+    setExperiment(dataset[exp_index]);
   }, [exp_index]);
 
   const submitRating = async (timestamp) => {
@@ -62,13 +65,13 @@ function ExperimentCompareImages() {
     try {
       const response = await axios.post(`${process.env.SERVER_BASE_ROUTE}/api/addTrial`, {
         userId: userId,
-        trialNumber: exp_index, //!Change 
-        wordID: exp.id,
-        meaningID: 0, // !Change
+        trialNumber: exp_index, 
+        wordID: exp.wordID,
+        meaningID: exp.meaningID,
         word: exp.word,
-        context: exp.meanings[0].context, // !Change
-        answers: wordSelectorRef.current.result(), // !Change
-        wordOrder: exp.meanings[0].words, 
+        context: exp.context,
+        answers: wordSelectorRef.current.result(),
+        wordOrder: exp.words, 
         lastTrialSubmitted: exp_index,
         submitTime: timestamp, 
       });

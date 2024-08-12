@@ -60,7 +60,7 @@ function ExperimentCompareImages() {
       setLoading(false)
     }, 1500);
     try {
-      const response = await axios.post('https://experiment-webpage-vyv5.vercel.app/api/addTrial', {
+      const response = await axios.post(`${process.env.SERVER_BASE_ROUTE}/api/addTrial`, {
         userId: userId,
         trialNumber: exp_index, //!Change 
         wordID: exp.id,

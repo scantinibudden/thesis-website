@@ -13,6 +13,7 @@ import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/ClockLoader.js";
 
 import { generateDataset } from '../utils/experimentMapper.js';
+import { getSeed } from '../utils/getSeed.js';
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
@@ -33,7 +34,8 @@ function ExperimentCompareImages() {
   const navigate = useNavigate();
   const location = useLocation();
   const { userId } = location.state;
-  const dataset = generateDataset(data, 2000)
+  const seed = getSeed(userId)
+  const dataset = generateDataset(data, seed)
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
   const maxProgress = dataset.length;

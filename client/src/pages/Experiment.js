@@ -66,7 +66,7 @@ function ExperimentCompareImages() {
       setLoading(false)
     }, 1500);
     try {
-      const response = await axios.post(`${process.env.SERVER_BASE_ROUTE}/api/addTrial`, {
+      const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
         userId: userId,
         trialNumber: exp_index, 
         wordID: exp.wordID,

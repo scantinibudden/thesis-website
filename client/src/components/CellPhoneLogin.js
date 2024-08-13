@@ -49,7 +49,7 @@ function CellPhoneLogin() {
 
         try {
           
-          await axios.post(`${process.env.SERVER_BASE_ROUTE}/api/addUser`, {
+          await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
             userId: hashedCellNumber, 
             loginTime: timestamp
           });

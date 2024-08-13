@@ -44,7 +44,7 @@ function TutorialCompareImages() {
     if (wordSelectorRef != null && wordSelectorRef.current.isFull()) {
       const timestamp = new Date().getTime();
       try {
-        const response = await axios.post(`${process.env.SERVER_BASE_ROUTE}/api/addTutorialTime`, {
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTutorialTime`, {
           userId: userId,
           tutorialTime: timestamp
         });

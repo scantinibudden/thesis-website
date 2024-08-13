@@ -35,6 +35,7 @@ function ExperimentCompareImages() {
   const location = useLocation();
   const { userId } = location.state;
   const seed = getSeed(userId)
+  console.log("seed is: ", seed)
   const dataset = generateDataset(data, seed)
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);

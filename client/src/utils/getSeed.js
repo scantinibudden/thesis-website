@@ -1,7 +1,7 @@
-const bigInt = require('big-integer');
-
 export function getSeed(userId) {
-    const numericID = bigInt(`0x${userId}`);
+    /* eslint-disable */
+    const numericID = BigInt(`0x${userId}`);
+    /* eslint-enable */
 
     const numericIDString = numericID.toString();
 

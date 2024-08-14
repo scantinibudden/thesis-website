@@ -1,32 +1,35 @@
 [
   {
     "wordID": 1,
-    "word": "Tarjeta",
+    "word": "Raya",
     "meanings": [
       {
-        "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
+        "context": "Es muy dificil encontrar una raya en el acuario.",
         "words": [
-          "Crédito",
-          "Débito",
-          "Prestamo",
-          "Dinero",
-          "Acciones",
-          "Dólares",
-          "Pesos",
-          "Pago"
+          "Pez",
+          "Peces",
+          "Peligro",
+          "Mantarraya",
+          "Tiburones",
+          "Animales",
+          "Marino",
+          "Mar"
         ]
       },
       {
-        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "context": "Con cuatro rayas hizo un dibujo hermoso.",
         "words": [
-          "Papel",
-          "Saludo",
-          "Invitación",
-          "Carta",
-          "Información",
-          "Regalo",
-          "Felicitación",
-          "Dirigida"
+          "Linea",
+          "Recta",
+          "Palo",
+          "Lapiz",
+          "Geometrica",
+          "Lado",
+          "Dibujo",
+          "Curvo",
+          "Plano",
+          "Eje",
+          "Lineal"
         ]
       }
     ]
@@ -51,21 +54,51 @@
       {
         "context": "Usaron un encendedor para prender la llama.",
         "words": [
-          "Fuego", 
-          "Vela", 
-          "Mechero", 
-          "Hornalla", 
-          "Cocinar", 
-          "Calor", 
-          "Incendio", 
-          "Combustion", 
-          "Quimica" 
+          "Fuego",
+          "Vela",
+          "Mechero",
+          "Hornalla",
+          "Cocinar",
+          "Calor",
+          "Incendio",
+          "Combustion",
+          "Quimica",
+          "Parrila"
         ]
       }
     ]
   },
   {
     "wordID": 3,
+    "word": "Salamandra",
+    "meanings": [
+      {
+        "context": "La salamandra era muy escurridiza y se movía por todo el lugar.",
+        "words": [
+          "Lagarto",
+          "Reptil",
+          "Camaleon",
+          "Animal",
+          "Anfibio",
+          "Lagartija"
+        ]
+      },
+      {
+        "context": "Su padre compro una salamandra para evitar el frío en invierno.",
+        "words": [
+          "Estufa",
+          "Carbon",
+          "Llamas",
+          "Calefaccion",
+          "Madera",
+          "Calor",
+          "Humo"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 4,
     "word": "Muñeca",
     "meanings": [
       {
@@ -84,14 +117,635 @@
       {
         "context": "Su diversión favorita era jugar con su muñeca en el parque.",
         "words": [
-          "Juguete", 
-          "Trapo", 
-          "Niña", 
-          "Niño", 
-          "Infancia", 
-          "Juego", 
-          "Vestido", 
-          "Entretenimiento" 
+          "Juguete",
+          "Trapo",
+          "Niña",
+          "Niño",
+          "Infancia",
+          "Juego",
+          "Vestido",
+          "Entretenimiento"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 5,
+    "word": "Palma",
+    "meanings": [
+      {
+        "context": "Chocaron sus palmas para festejar que habían anotado un punto.",
+        "words": [
+          "Brazo",
+          "Piel",
+          "Mano",
+          "Cuerpo",
+          "Persona",
+          "Dedos",
+          "Falanges",
+          "Apreton",
+          "Aplauso",
+          "Tacto"
+        ]
+      },
+      {
+        "context": "La palma tardó muchisimos años en llegar a tener esa altura.",
+        "words": [
+          "Vegetal",
+          "Verdura",
+          "Palmera",
+          "Fruto",
+          "Verde",
+          "Caribe",
+          "Tropical",
+          "Aceite"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 6,
+    "word": "Peso",
+    "meanings": [
+      {
+        "context": "Me quedan solo 2 pesos en la billetera.",
+        "words": [
+          "Moneda",
+          "Billete",
+          "Economia",
+          "Dinero",
+          "Dolar",
+          "Cambio",
+          "Plata"
+        ]
+      },
+      {
+        "context": "El se pasó de peso en su equipaje y tuvo que empezar a sacar cosas de su valija.",
+        "words": [
+          "Gravedad",
+          "Kilos",
+          "Kilo",
+          "Pesado",
+          "Balanza",
+          "Gramos",
+          "Newton",
+          "Medida",
+          "Cantidad",
+          "Masa"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 7,
+    "word": "Banco",
+    "meanings": [
+      {
+        "context": "El banco cerró y tuvo que despedir a todos sus empleados.",
+        "words": [
+          "Prestamo",
+          "Crédito",
+          "Debito",
+          "Dinero",
+          "Acciones",
+          "Dolares",
+          "Pesos",
+          "Cheque",
+          "Cajero",
+          "Reserva",
+          "Protegido",
+          "Plata"
+        ]
+      },
+      {
+        "context": "Tuvo que mandar a hacer 10 bancos de madera.",
+        "words": [
+          "Silla",
+          "Sentarse",
+          "Parque",
+          "Exteriores",
+          "Escuela",
+          "Escritorio",
+          "Asiento",
+          "Plaza",
+          "Descanso"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 8,
+    "word": "Tarjeta",
+    "meanings": [
+      {
+        "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
+        "words": [
+          "Crédito",
+          "Débito",
+          "Prestamo",
+          "Dinero",
+          "Acciones",
+          "Dólares",
+          "Pesos",
+          "Pago",
+          "Plata"
+        ]
+      },
+      {
+        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "words": [
+          "Papel",
+          "Saludo",
+          "Invitación",
+          "Carta",
+          "Información",
+          "Regalo",
+          "Felicitación",
+          "Dirigida"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 9,
+    "word": "Granada",
+    "meanings": [
+      {
+        "context": "Comer granada es delicioso.",
+        "words": [
+          "Tropical",
+          "Semillas",
+          "Fruta",
+          "Arbol",
+          "Granadina",
+          "Caribe",
+          "Rojo",
+          "Mango",
+          "Dulce"
+        ]
+      },
+      {
+        "context": "Con una sola granada, abatió a 5 enemigos.",
+        "words": [
+          "Guerra",
+          "Armamento",
+          "Armas",
+          "Solados",
+          "Violencia",
+          "Destruccion",
+          "Ataque",
+          "Militar"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 10,
+    "word": "Lima",
+    "meanings": [
+      {
+        "context": "Fue a buscar unas limas que tenía en la heladera.",
+        "words": [
+          "Acido",
+          "Limon",
+          "Limonero",
+          "Arbol",
+          "Tragos",
+          "Caipirinha",
+          "Fruta",
+          "Mandarina",
+          "Verde",
+          "Citrico",
+          "Naranja"
+        ]
+      },
+      {
+        "context": "Con su lima pudo darle forma al latón.",
+        "words": [
+          "Metal",
+          "Herramienta",
+          "Lija",
+          "Taller",
+          "Mecanico",
+          "Uñas",
+          "Limar",
+          "Corte",
+          "Desgaste",
+          "Técnico"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 11,
+    "word": "Mango",
+    "meanings": [
+      {
+        "context": "No podría parar de comer mango.",
+        "words": [
+          "Tropical",
+          "Semillas",
+          "Fruta",
+          "Arbol",
+          "Caribe",
+          "Jugoso",
+          "Cascara",
+          "Pulpa",
+          "Dulce"
+        ]
+      },
+      {
+        "context": "Usaba el mango para agarrarle y que no se le cayera.",
+        "words": [
+          "Herramientas",
+          "Hacha",
+          "Lima",
+          "Martillo",
+          "Taller",
+          "Sarten",
+          "Manija",
+          "Madera",
+          "Sostén"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 12,
+    "word": "Copa",
+    "meanings": [
+      {
+        "context": "Fueron los vencedores y obtuvieron la copa.",
+        "words": [
+          "Deporte",
+          "Trofeo",
+          "Triunfo",
+          "Ganador",
+          "Premio",
+          "Campeonato",
+          "Campeón",
+          "Torneo",
+          "Puntaje",
+          "Puntos",
+          "Perdedor",
+          "Oro",
+          "Plata",
+          "Bronce"
+        ]
+      },
+      {
+        "context": "Tomaron en copas diferentes.",
+        "words": [
+          "Vaso",
+          "Vino",
+          "Utensillo",
+          "Borracho",
+          "Alcoholico",
+          "Cristal",
+          "Bebida",
+          "Fiesta",
+          "Brindis",
+          "Champagne",
+          "Vidrio",
+          "Derramar",
+          "Beber",
+          "Bazar"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 13,
+    "word": "Arco",
+    "meanings": [
+      {
+        "context": "No paraban de darle al arco.",
+        "words": [
+          "Deporte",
+          "Futbol",
+          "Hockey",
+          "Handbol",
+          "Gol",
+          "Apuntar",
+          "Arquero",
+          "Red",
+          "Caño",
+          "Porteria"
+        ]
+      },
+      {
+        "context": "El arco se veía gigante desde cerca.",
+        "words": [
+          "Triunfo",
+          "Arquitectura",
+          "Puerta",
+          "Curva",
+          "Construccion",
+          "Abierto",
+          "Abertura",
+          "Pared"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 14,
+    "word": "Penal",
+    "meanings": [
+      {
+        "context": "Messi se preparó para ejecutar el penal.",
+        "words": [
+          "Deporte",
+          "Futbol",
+          "Hockey",
+          "Handbol",
+          "Gol",
+          "Corner",
+          "Patear",
+          "Intento",
+          "Barrera",
+          "Lanzamiento"
+        ]
+      },
+      {
+        "context": "Del juzgado fueron directo al penal.",
+        "words": [
+          "Abogados",
+          "Trajes",
+          "Juez",
+          "Crimen",
+          "Cárcel",
+          "Delíto",
+          "Prisión",
+          "Criminal",
+          "Delincuente",
+          "Ladrón",
+          "Civil",
+          "Condena",
+          "Encierro",
+          "Pena",
+          "Fiscal",
+          "Corte",
+          "Testigos",
+          "Derecho",
+          "Juicio"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 15,
+    "word": "Pico",
+    "meanings": [
+      {
+        "context": "Cuando llegaron al pico estaban muy cansados.",
+        "words": [
+          "Montaña",
+          "Monte",
+          "Valle",
+          "Naturaleza",
+          "Rocas",
+          "Piedras",
+          "Cumbre",
+          "Cima",
+          "Nieve",
+          "Altura",
+          "Sierra"
+        ]
+      },
+      {
+        "context": "Tuvieron que usar pico y pala para poder sacar los escombros.",
+        "words": [
+          "Herramientas",
+          "Hacha",
+          "Lima",
+          "Martillo",
+          "Taller",
+          "Pinza",
+          "Golpear",
+          "Picar",
+          "Filo",
+          "Fuerza",
+          "Minería",
+          "Minecraft"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 16,
+    "word": "Cabo",
+    "meanings": [
+      {
+        "context": "Desde la ventana de su hotel tenían muy buena vista del cabo.",
+        "words": [
+          "Faro",
+          "Costa",
+          "Bahía",
+          "Golfo",
+          "Acantilado",
+          "Playa",
+          "Peninsula",
+          "Mar",
+          "Vegetacion",
+          "Marino"
+        ]
+      },
+      {
+        "context": "El cabo estaba muy tranquilo respecto a cual iba a ser el resultado de la guerra.",
+        "words": [
+          "Militar",
+          "Soldado",
+          "Sargento",
+          "Teniente",
+          "Coronel",
+          "Comandante",
+          "Tropa",
+          "Infanteria",
+          "Jefe",
+          "Escuadra"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 17,
+    "word": "Sierra",
+    "meanings": [
+      {
+        "context": "Hicieron un trecking a través de las sierras.",
+        "words": [
+          "Montaña",
+          "Monte",
+          "Valle",
+          "Naturaleza",
+          "Rocas",
+          "Piedras",
+          "Cumbre",
+          "Cima",
+          "Nieve",
+          "Cordillera",
+          "Nevada"
+        ]
+      },
+      {
+        "context": "Usaron la sierra para dividirlo en dos.",
+        "words": [
+          "Metal",
+          "Laton",
+          "Herramienta",
+          "Lija",
+          "Taller",
+          "Mecanico",
+          "Serrucho",
+          "Madera",
+          "Cortar",
+          "Carpintero",
+          "Dientes",
+          "Electrica",
+          "Técnico"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 18,
+    "word": "Cólera",
+    "meanings": [
+      {
+        "context": "La cólera lo estaba matando.",
+        "words": [
+          "Medicina",
+          "Virus",
+          "Enfermedad",
+          "Infeccion",
+          "Heces",
+          "Diarrea",
+          "Bacteria"
+        ]
+      },
+      {
+        "context": "Su equipo perdío y lo único que sentía era cólera.",
+        "words": [
+          "Ira",
+          "Enojo",
+          "Ataque",
+          "Furia",
+          "Emocion",
+          "Frustacion",
+          "Enfado",
+          "Rabia"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 19,
+    "word": "Buzo",
+    "meanings": [
+      {
+        "context": "Al entrar, tuvo que sacarse el buzo.",
+        "words": [
+          "Prenda",
+          "Ropa",
+          "Abrigo",
+          "Campera",
+          "Canguro",
+          "Capucha",
+          "Cardigan",
+          "Sweater",
+          "Cierra"
+        ]
+      },
+      {
+        "context": "Los buzos entrenaron durante mucho tiempo antes del rescate.",
+        "words": [
+          "Barco",
+          "Marino",
+          "Tanque",
+          "Respiracion",
+          "Profundidad",
+          "Agua",
+          "Mar",
+          "Oxigeno",
+          "Submarino",
+          "Nadador",
+          "Buceo"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 20,
+    "word": "Sostén",
+    "meanings": [
+      {
+        "context": "Entró a la tienda a comprar un sostén nuevo.",
+        "words": [
+          "Prenda",
+          "Ropa",
+          "Intimo",
+          "Calzon",
+          "Broche",
+          "Lencería",
+          "Pecho",
+          "Corpiño",
+          "Remera",
+          "Sujetador"
+        ]
+      },
+      {
+        "context": "Graciás a todo el sostén pudo salir adelante.",
+        "words": [
+          "Apoyo",
+          "Ayuda",
+          "Psicologo",
+          "Emociones",
+          "Felicidad",
+          "Tristeza",
+          "Familia",
+          "Bienestar",
+          "Malestar",
+          "Aguantar",
+          "Soportar",
+          "Económico"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 21,
+    "word": "Taco",
+    "meanings": [
+      {
+        "context": "Se le rompió el taco durante la fiesta.",
+        "words": [
+          "Prenda",
+          "Ropa",
+          "Calzado",
+          "Tacon",
+          "Pie",
+          "Dolor",
+          "Zapato",
+          "Bota",
+          "Altura",
+          "Plataforma",
+          "Caminar"
+        ]
+      },
+      {
+        "context": "Los tacos estaban deliciosos.",
+        "words": [
+          "Mexico",
+          "Carne",
+          "Comida",
+          "Verdura",
+          "Pollo",
+          "Picante",
+          "Wacamole",
+          "Picante",
+          "Tortilla",
+          "Burrito"
         ]
       }
     ]

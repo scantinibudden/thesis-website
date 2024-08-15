@@ -749,5 +749,447 @@
         ]
       }
     ]
+  },
+  {
+    "wordID": 22,
+    "word": "Pluma",
+    "meanings": [
+      {
+        "context": "En el colegió usaba todos los días la pluma que le había regalado su abuelo.",
+        "words": [
+          "Caligrafia",
+          "Bolígrafo",
+          "Escritura",
+          "Tinta",
+          "Documento",
+          "Firma",
+          "Palabras",
+          "Escribir",
+          "Lapicera"
+        ]
+      },
+      {
+        "context": "Después del ataque del gato, no le quedó ni una pluma.",
+        "words": [
+          "Ave",
+          "Pájaro",
+          "Paloma",
+          "Pelaje",
+          "Blanco",
+          "Ligero",
+          "Calor",
+          "Cobertura",
+          "Piel"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 23,
+    "word": "Hoja",
+    "meanings": [
+      {
+        "context": "Tuvo que sacar una hoja en el medio del examen.",
+        "words": [
+          "Caligrafia",
+          "Boligrafo",
+          "Escritura",
+          "Tinta",
+          "Documento",
+          "Firma",
+          "Palabras",
+          "Arboles",
+          "Blanco",
+          "Papel"
+        ]
+      },
+      {
+        "context": "El jardinero pasó y no dejó ni una hoja en el piso.",
+        "words": [
+          "Arboles",
+          "Clorofila",
+          "Palmeras",
+          "Flores",
+          "Verde",
+          "Otoño",
+          "Primavera",
+          "Verdura",
+          "Acelga",
+          "Lechuga",
+          "Espinaca",
+          "Planta",
+          "Fotosintesis"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 30,
+    "word": "Nota",
+    "meanings": [
+      {
+        "context": "Cada nota que tocaba emocionaba más que la anterior.",
+        "words": [
+          "Do",
+          "Fa",
+          "Piano",
+          "Guitarra",
+          "Musica",
+          "Instrumento",
+          "Conservatorio",
+          "Sonido",
+          "Musicalidad"
+        ]
+      },
+      {
+        "context": "Obtuvo una muy buena nota.",
+        "words": [
+          "Examen",
+          "Escuela",
+          "Educacion",
+          "Diez",
+          "Uno",
+          "Siete",
+          "Calificaciones",
+          "Boletin",
+          "Apunte",
+          "Calificación",
+          "Sobresaliente",
+          "Estudios",
+          "Estudiante",
+          "Puntaje"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 31,
+    "word": "Órgano",
+    "meanings": [
+      {
+        "context": "Era muy talentoso tocando el órgano.",
+        "words": [
+          "Piano",
+          "Música",
+          "Canción",
+          "Iglesia",
+          "Instrumento",
+          "Teclado",
+          "Cuerdas"
+        ]
+      },
+      {
+        "context": "Tuvo que recibir un transplante debido a la falla de su organo.",
+        "words": [
+          "Cuerpo",
+          "Víscera",
+          "Cirujano",
+          "Corazón",
+          "Higado",
+          "Humano",
+          "Vital",
+          "Vida",
+          "Cerebro",
+          "Cirugia",
+          "Hospital",
+          "Sangre"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 32,
+    "word": "Batería",
+    "meanings": [
+      {
+        "context": "Los vecinos se quejaban porque estaba tocando la batería.",
+        "words": [
+          "Platillos",
+          "Ritmo",
+          "Musica",
+          "Banda",
+          "Rock",
+          "Jazz",
+          "Baqueta",
+          "Baterista",
+          "Tambor",
+          "Bombo"
+        ]
+      },
+      {
+        "context": "Su celular se quedó sin batería.",
+        "words": [
+          "Energia",
+          "Electricidad",
+          "Recargable",
+          "Alcalina",
+          "Celular",
+          "Laptop",
+          "Corriente",
+          "Pila",
+          "Cargador"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 33,
+    "word": "Izquierda",
+    "meanings": [
+      {
+        "context": "Su primo era muy de izquierda.",
+        "words": [
+          "Comunismo",
+          "Socialismo",
+          "Rojo",
+          "Castro?",
+          "Revolución",
+          "Politica",
+          "Cuba",
+          "Socialista",
+          "Comunista",
+          "Ideología",
+          "Marx",
+          "Trotsky",
+          "Igualdad"
+        ]
+      },
+      {
+        "context": "Como se lastimó la izquierda, no podía hacer nada.",
+        "words": [
+          "Mano",
+          "Lugar",
+          "Ubicación",
+          "Posición",
+          "Pierna",
+          "Derecha",
+          "Direccion",
+          "Indicacion",
+          "Orientacion",
+          "Lado"
+        ]
+      }
+    ]
+  }
+  {
+    "wordID": 34,
+    "word": "Partido",
+    "meanings": [
+      {
+        "context": "No le gustaban las ideas del otro partido.",
+        "words": [
+          "Peronismo",
+          "Liberalismo",
+          "Politica",
+          "Sociedad",
+          "Economia",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Senadores",
+          "Congreso",
+          "Politico",
+          "Socialista",
+          "Comunista",
+          "Liberal",
+          "Nacionalista",
+          "Ideologia",
+          "Militancia",
+          "Politica"
+        ]
+      },
+      {
+        "context": "Todos los domingos juegan un partido.",
+        "words": [
+          "Deporte",
+          "Trofeo",
+          "Triunfo",
+          "Ganador",
+          "Premio",
+          "Compentencia",
+          "Perdedor",
+          "Empate",
+          "Fútbol",
+          "Futbol",
+          "Juego",
+          "Equipo",
+          "Ganar",
+          "Perder",
+          "Árbitro",
+          "Compentencia",
+          "Derrota"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 35,
+    "word": "Campaña",
+    "meanings": [
+      {
+        "context": "No cumplió nada de lo que prometió en campaña.",
+        "words": [
+          "Politica",
+          "Sociedad",
+          "Economia",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Senadores",
+          "Congreso",
+          "Elecciones",
+          "Candidato",
+          "Candidatura",
+          "Militancia",
+          "Propaganda"
+        ]
+      },
+      {
+        "context": "Hicieron una campaña por las vacaciones.",
+        "words": [
+          "Campo",
+          "Carpa",
+          "Camping",
+          "Fogata",
+          "Fogón",
+          "Llanura",
+          "Pastizal",
+          "Campiña",
+          "Valle"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 36,
+    "word": "Estado",
+    "meanings": [
+      {
+        "context": "Un estado es una organización política constituida por un conjunto de instituciones burocráticas estables, a través de las cuales ejerce el monopolio del uso de la fuerza (soberanía) aplicada a una población dentro de unos límites territoriales establecidos.",
+        "words": [
+          "Peronismo",
+          "Liberalismo",
+          "Politica",
+          "Sociedad",
+          "Economia",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Senadores",
+          "Congreso",
+          "País",
+          "Nación",
+          "Gobierno",
+          "Pueblo"
+        ]
+      },
+      {
+        "context": "Era muy dificil describir su estado.",
+        "words": [
+          "Cansancio",
+          "Placer",
+          "Calma",
+          "Extásis",
+          "Locura",
+          "Vigor",
+          "Mental",
+          "Sentimiento",
+          "Sentir",
+          "Emocion",
+          "Feliz",
+          "Triste"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 37,
+    "word": "Pastor",
+    "meanings": [
+      {
+        "context": "El pastor rezaba todas las mañanas.",
+        "words": [
+          "Religion",
+          "Iglesia",
+          "Misa",
+          "Evangelico",
+          "Eucaristia",
+          "Religioso",
+          "Jesucristo",
+          "Cristo",
+          "Protestante",
+          "Sacerdote",
+          "Creyente",
+          "Orador",
+          "Cura"
+        ]
+      },
+      {
+        "context": "Al pastor le encantaba cuidar a sus animales.",
+        "words": [
+          "Ovejas",
+          "Lobos",
+          "Monte",
+          "Campo",
+          "Vacas",
+          "Fabula",
+          "Pasto",
+          "Ganado",
+          "Lana",
+          "Cabra",
+          "Trabajador",
+          "Agricultura",
+          "Cultivo"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 38,
+    "word": "Oración",
+    "meanings": [
+      {
+        "context": "Recitó la oración del día que estaba escrita en el antiguo testamento.",
+        "words": [
+          "Religion",
+          "Iglesia",
+          "Misa",
+          "Evangelico",
+          "Eucaristia",
+          "Evangelio",
+          "Rezo",
+          "Rosario",
+          "Evangelio",
+          "Jesucristo",
+          "Cristo",
+          "Plegaria. dios",
+          "Rezar",
+          "Iglesia",
+          "Fe",
+          "Orar",
+          "Credo",
+          "Cura"
+        ]
+      },
+      {
+        "context": "Su oración estaba llena de faltas de ortografía.",
+        "words": [
+          "Libro",
+          "Texto",
+          "Palabras",
+          "Lectura",
+          "Leer",
+          "Sujeto",
+          "Predicado",
+          "Punto",
+          "Coma",
+          "Linguistica",
+          "Gramática",
+          "Secuencia",
+          "Parrafo",
+          "Sentencia"
+        ]
+      }
+    ]
   }
 ]

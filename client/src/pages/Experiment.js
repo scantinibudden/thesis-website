@@ -16,6 +16,7 @@ import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 
 function ProgressBar({ value, max }) {
+  value = value + 1 
   const percentage = Math.min((value / max) * 100, 99);
 
   return (
@@ -33,20 +34,28 @@ function ExperimentCompareImages() {
   // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
+
   const { userId } = location.state;
   const seed = getSeed(userId)
   console.log("seed is: ", seed)
   const dataset = generateDataset(data, seed)
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
-  const maxProgress = dataset.length;
-
+  
   // My states
+  const stepLength = 3
+  const dataset_length = dataset.length
+  const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || 0) % stepLength)
+  const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - progress)) 
+
+
   const [exp_index, setExperimentIndex] = useState(0);
   const [exp, setExperiment] = useState(dataset[exp_index]);
   const wordSelectorRef = useRef(null);
 
   const [loading, setLoading] = useState(false)
+
+  const [startTrial, setStartTrial] = useState(true)
 
   // Facu
 
@@ -68,29 +77,41 @@ function ExperimentCompareImages() {
     try {
       const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
         userId: userId,
-        trialNumber: exp_index, 
+        trialNumber: exp_index,
         wordID: exp.wordID,
         meaningID: exp.meaningID,
         word: exp.word,
         context: exp.context,
         answers: wordSelectorRef.current.result(),
-        wordOrder: exp.words, 
+        wordOrder: exp.words,
         lastTrialSubmitted: exp_index,
-        submitTime: timestamp, 
+        submitTime: timestamp,
       });
       console.log('Rating added successfully!');
       wordSelectorRef.current.reset();
-      //setExperiment(null);
+      setExperiment(null);
     } catch (error) {
       console.error('Error adding rating:', error);
     }
+
     setProgress(prevProgress => {
       const updatedProgress = prevProgress + 1;
       return updatedProgress > maxProgress ? maxProgress : updatedProgress;
     });
+    setBarProgress(prevBarProgress => {
+      const updatedProgress = prevBarProgress + 1
+      return updatedProgress % stepLength === 0 ? 0 : updatedProgress;
+    })
+
+    const new_exp_index = exp_index + 1
+
+    if (new_exp_index % stepLength === 0 && dataset_length - new_exp_index < stepLength) {
+      setMaxProgress(dataset_length - new_exp_index)
+    }
+    setStartTrial(new_exp_index % stepLength === 0)
     sessionStorage.setItem('progress', progress);
-    setExperimentIndex(exp_index + 1);
-    sessionStorage.setItem('exp_index', exp_index + 1);
+    setExperimentIndex(new_exp_index);
+    sessionStorage.setItem('exp_index', new_exp_index);
   };
 
 
@@ -118,41 +139,56 @@ function ExperimentCompareImages() {
     navigate('/thank-you');
   }
 
+  const handleNextStep = async () => {
+    setStartTrial(false)
+  }
+
   return (
     <div>
-      <div className='BlueSubHeader'>
-        Experimento
-      </div>
-
-      <div className='experiment-explanation'>
-        Selecciona las tres palabras que creas que mejor se relacionan con la palabra resaltada.
-      </div>
-
-      <div className='experiment-container'>
-        {
-          !loading ? (
-            <div>
-              <WordSelector ref={wordSelectorRef} exp={exp} />
+      {
+        startTrial ? (
+          <div>
+            <p>Comenzemos con esta etapa</p>
+            <button onClick={handleNextStep} className='SubmitButton'>Salir del experimento</button>
+          </div>
+        ) : (
+          <div>
+            <div className='BlueSubHeader'>
+              Experimento
             </div>
-          ) : (<Loader
-            color={'grey'}
-            loading={true}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />) // TODO: spinner
-        }
 
-        <div className='inner-button-container'>
-          {(progress < maxProgress) ? (
-            <NextButton handleOnClick={handleNextClick} />
-          ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
-          }
-        </div>
-      </div>
-      <div className='progress-bar-container'>
-        <ProgressBar value={progress} max={maxProgress} className='progress' />
-      </div>
+            <div className='experiment-explanation'>
+              Selecciona las tres palabras que creas que mejor se relacionan con la palabra resaltada.
+            </div>
+
+            <div className='experiment-container'>
+              {
+                !loading ? (
+                  <div>
+                    <WordSelector ref={wordSelectorRef} exp={exp} />
+                  </div>
+                ) : (<Loader
+                  color={'grey'}
+                  loading={true}
+                  size={150}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />)
+              }
+
+              <div className='inner-button-container'>
+                {(exp_index < dataset_length-1) ? (
+                  <NextButton handleOnClick={handleNextClick} />
+                ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
+                }
+              </div>
+            </div>
+            <div className='progress-bar-container'>
+              <ProgressBar value={barProgress} max={maxProgress} className='progress' />
+            </div>
+          </div>
+        )
+      }
     </div>
 
   );

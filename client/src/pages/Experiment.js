@@ -8,7 +8,7 @@ import './experiment.css'
 import NextButton from '../components/NextButton.js';
 
 // My imports
-import data from '../data.json';
+import data from '../data_dev.json';
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/ClockLoader.js";
 
@@ -16,7 +16,7 @@ import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 
 function ProgressBar({ value, max }) {
-  value = value + 1 
+  value = value + 1
   const percentage = Math.min((value / max) * 100, 99);
 
   return (
@@ -37,16 +37,15 @@ function ExperimentCompareImages() {
 
   const { userId } = location.state;
   const seed = getSeed(userId)
-  console.log("seed is: ", seed)
-  const dataset = generateDataset(data, seed)
+  const [dataset, setDataset] = useState(generateDataset(data, seed))
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
-  
+
   // My states
   const stepLength = 3
   const dataset_length = dataset.length
   const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || 0) % stepLength)
-  const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - progress)) 
+  const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - progress))
 
 
   const [exp_index, setExperimentIndex] = useState(0);
@@ -55,7 +54,7 @@ function ExperimentCompareImages() {
 
   const [loading, setLoading] = useState(false)
 
-  const [startTrial, setStartTrial] = useState(true)
+  const [startTrial, setStartTrial] = useState(false)
 
   // Facu
 
@@ -70,29 +69,34 @@ function ExperimentCompareImages() {
       alert('No se pudo enviar la calificación. Por favor, revisa tu conexión a internet.');
       return;
     }
-    setLoading(true)
+
+    axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
+      userId: userId,
+      trialNumber: exp_index,
+      wordID: exp.wordID,
+      meaningID: exp.meaningID,
+      word: exp.word,
+      context: exp.context,
+      answers: wordSelectorRef.current.result(),
+      wordOrder: exp.words,
+      lastTrialSubmitted: exp_index,
+      submitTime: timestamp,
+    }).then(response => {
+      console.log('Rating added successfully!');
+    }).catch(error => {
+      console.error('Error adding rating:', error);
+    });
+
+    const new_exp_index = exp_index + 1
+    const next_change_step = new_exp_index % stepLength === 0
+
+    if (!next_change_step) {
+      setLoading(true)
+    }
+    
     setTimeout(() => {
       setLoading(false)
     }, 1500);
-    try {
-      const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
-        userId: userId,
-        trialNumber: exp_index,
-        wordID: exp.wordID,
-        meaningID: exp.meaningID,
-        word: exp.word,
-        context: exp.context,
-        answers: wordSelectorRef.current.result(),
-        wordOrder: exp.words,
-        lastTrialSubmitted: exp_index,
-        submitTime: timestamp,
-      });
-      console.log('Rating added successfully!');
-      wordSelectorRef.current.reset();
-      setExperiment(null);
-    } catch (error) {
-      console.error('Error adding rating:', error);
-    }
 
     setProgress(prevProgress => {
       const updatedProgress = prevProgress + 1;
@@ -103,9 +107,7 @@ function ExperimentCompareImages() {
       return updatedProgress % stepLength === 0 ? 0 : updatedProgress;
     })
 
-    const new_exp_index = exp_index + 1
-
-    if (new_exp_index % stepLength === 0 && dataset_length - new_exp_index < stepLength) {
+    if (next_change_step && dataset_length - new_exp_index < stepLength) {
       setMaxProgress(dataset_length - new_exp_index)
     }
     setStartTrial(new_exp_index % stepLength === 0)
@@ -177,7 +179,7 @@ function ExperimentCompareImages() {
               }
 
               <div className='inner-button-container'>
-                {(exp_index < dataset_length-1) ? (
+                {(exp_index < dataset_length - 1) ? (
                   <NextButton handleOnClick={handleNextClick} />
                 ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
                 }

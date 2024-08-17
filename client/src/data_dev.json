@@ -1,0 +1,166 @@
+[
+    {
+      "wordID": 1,
+      "word": "Raya",
+      "meanings": [
+        {
+          "context": "Es muy dificil encontrar una raya en el acuario.",
+          "words": [
+            "Pez",
+            "Peces",
+            "Peligro",
+            "Mantarraya",
+            "Tiburones",
+            "Animales",
+            "Marino",
+            "Mar"
+          ]
+        },
+        {
+          "context": "Con cuatro rayas hizo un dibujo hermoso.",
+          "words": [
+            "Linea",
+            "Recta",
+            "Palo",
+            "Lapiz",
+            "Geometrica",
+            "Lado",
+            "Dibujo",
+            "Curvo",
+            "Plano",
+            "Eje",
+            "Lineal"
+          ]
+        }
+      ]
+    },
+    {
+      "wordID": 2,
+      "word": "Llama",
+      "meanings": [
+        {
+          "context": "En su viaje al Jujuy, comió una milanesa de llama.",
+          "words": [
+            "Animal",
+            "Camelido",
+            "Mamifero",
+            "Andino",
+            "Cuadrupedo",
+            "Pelos",
+            "Doméstico",
+            "Norte"
+          ]
+        },
+        {
+          "context": "Usaron un encendedor para prender la llama.",
+          "words": [
+            "Fuego",
+            "Vela",
+            "Mechero",
+            "Hornalla",
+            "Cocinar",
+            "Calor",
+            "Incendio",
+            "Combustion",
+            "Quimica",
+            "Parrila"
+          ]
+        }
+      ]
+    },
+    {
+      "wordID": 3,
+      "word": "Salamandra",
+      "meanings": [
+        {
+          "context": "La salamandra era muy escurridiza y se movía por todo el lugar.",
+          "words": [
+            "Lagarto",
+            "Reptil",
+            "Camaleon",
+            "Animal",
+            "Anfibio",
+            "Lagartija"
+          ]
+        },
+        {
+          "context": "Su padre compro una salamandra para evitar el frío en invierno.",
+          "words": [
+            "Estufa",
+            "Carbon",
+            "Llamas",
+            "Calefaccion",
+            "Madera",
+            "Calor",
+            "Humo"
+          ]
+        }
+      ]
+    },
+    {
+      "wordID": 4,
+      "word": "Muñeca",
+      "meanings": [
+        {
+          "context": "El se quebró la muñeca jugando al paddle.",
+          "words": [
+            "Brazo",
+            "Piel",
+            "Mano",
+            "Cuerpo",
+            "Persona",
+            "Articulación",
+            "Pulsera",
+            "Reloj"
+          ]
+        },
+        {
+          "context": "Su diversión favorita era jugar con su muñeca en el parque.",
+          "words": [
+            "Juguete",
+            "Trapo",
+            "Niña",
+            "Niño",
+            "Infancia",
+            "Juego",
+            "Vestido",
+            "Entretenimiento"
+          ]
+        }
+      ]
+    },
+    {
+      "wordID": 5,
+      "word": "Palma",
+      "meanings": [
+        {
+          "context": "El ruido de un chasquido es producido por el golpe del pulgar con la palma.",
+          "words": [
+            "Brazo",
+            "Piel",
+            "Mano",
+            "Cuerpo",
+            "Persona",
+            "Dedos",
+            "Falanges",
+            "Apreton",
+            "Aplauso",
+            "Tacto"
+          ]
+        },
+        {
+          "context": "La palma tardó muchisimos años en llegar a tener esa altura.",
+          "words": [
+            "Vegetal",
+            "Verdura",
+            "Palmera",
+            "Fruto",
+            "Verde",
+            "Caribe",
+            "Tropical",
+            "Aceite"
+          ]
+        }
+      ]
+    }
+  ]

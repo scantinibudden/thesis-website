@@ -59,7 +59,7 @@ function TutorialCompareImages() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <div className='BlueSubHeader'>
         Fase de prueba
       </div>

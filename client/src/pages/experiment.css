@@ -208,3 +208,48 @@ progress {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.next-step-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.StepButton {
+  padding: 10px 15px;
+  background-color: var(--deep-red);
+  color: var(--platinum);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  width: 120px;
+}
+
+@media (max-width: 600px) {
+  .StepButton {
+    padding: 12px 20px;
+    font-size: 10px;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.step-buttons-container {
+  max-width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .step-buttons-container {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

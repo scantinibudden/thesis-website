@@ -5,7 +5,7 @@ import CellPhoneLogin from '../components/CellPhoneLogin.js';
 export default function Home() {
 
   return (
-    <div >
+    <div className='container'>
       <Header/>
       <SubHeader/>
       <ExperimentExplanation/>

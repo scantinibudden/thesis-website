@@ -16,7 +16,6 @@ import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 
 function ProgressBar({ value, max }) {
-  value = value + 1
   const percentage = Math.min((value / max) * 100, 99);
 
   return (
@@ -93,7 +92,7 @@ function ExperimentCompareImages() {
     if (!next_change_step) {
       setLoading(true)
     }
-    
+
     setTimeout(() => {
       setLoading(false)
     }, 1500);
@@ -129,6 +128,10 @@ function ExperimentCompareImages() {
     }
   }
 
+  const handleFinishClick = async () => {
+    navigate('/thank-you');
+  }
+
   const handleExitClick = async () => {
     if (!wordSelectorRef.current.isFull()) {
       alert('Ingresa una calificación antes de continuar');
@@ -146,12 +149,26 @@ function ExperimentCompareImages() {
   }
 
   return (
-    <div>
+    <div className='container'>
       {
         startTrial ? (
-          <div>
-            <p>Comenzemos con esta etapa</p>
-            <button onClick={handleNextStep} className='SubmitButton'>Salir del experimento</button>
+          <div className='next-step-container'>
+            <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
+              Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>
+
+            <div className='step-buttons-container'>
+              <div className='inner-button-container'>
+                <div className='button-container'>
+                  <button onClick={handleNextStep} className='StepButton' style={{ backgroundColor: 'green' }}>Continuar</button>
+                </div>
+              </div>
+              <div className='inner-button-container'>
+                <div className='button-container'>
+                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'red' }}>Terminar</button>
+                </div>
+              </div>
+            </div>
+
           </div>
         ) : (
           <div>

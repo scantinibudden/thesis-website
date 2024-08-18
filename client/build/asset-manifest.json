@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.10aa7fc7.css",
+    "main.js": "/static/js/main.f17eb06a.js",
+    "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
+    "static/media/logo-dc.png": "/static/media/logo-dc.176abe9a3f1b31c16675.png",
+    "static/media/liaa-logo.png": "/static/media/liaa-logo.bf1ce1f48927d2a1c21d.png",
+    "index.html": "/index.html",
+    "main.10aa7fc7.css.map": "/static/css/main.10aa7fc7.css.map",
+    "main.f17eb06a.js.map": "/static/js/main.f17eb06a.js.map",
+    "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10aa7fc7.css",
+    "static/js/main.f17eb06a.js"
+  ]
+}

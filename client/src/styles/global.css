@@ -72,3 +72,19 @@ body {
     margin: 0;
   }
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 10vh;
+}
+
+.header-image {
+  max-height: 10vh;
+  max-width: 40vw;
+}
+
+
+

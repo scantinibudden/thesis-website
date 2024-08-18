@@ -10,6 +10,7 @@ import './experiment.css';
 function TutorialCompareImages() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);
   const exp = {
@@ -42,6 +43,7 @@ function TutorialCompareImages() {
 
   const handleGoToExperiment = async () => {
     if (wordSelectorRef != null && wordSelectorRef.current.isFull()) {
+      setIsLoading(true);
       const timestamp = new Date().getTime();
       try {
         const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTutorialTime`, {
@@ -51,6 +53,7 @@ function TutorialCompareImages() {
       } catch (error) {
         console.error("Error trying to add tutorial time:", error)
       }
+      setIsLoading(false);
       navigate('/experiment', { state: { userId: userId } });
     } else {
       alert("Por favor, seleccione 3 palabras antes de continuar")
@@ -89,7 +92,11 @@ function TutorialCompareImages() {
             </div>
             <div className='inner-button-container'>
               <div className='button-container'>
-                <button onClick={handleGoToExperiment} className='SubmitButton'>Comenzar con el experimento</button>
+                {isLoading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <button onClick={handleGoToExperiment} className='SubmitButton'>Comenzar con el experimento</button>
+                )}
               </div>
             </div>
           </div>

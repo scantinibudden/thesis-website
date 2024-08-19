@@ -49,7 +49,7 @@ function ExperimentCompareImages() {
   const stepLength = realTrialsLength + catchLength
   const [dataset, setDataset] = useState(generateDataset(data, catch_data, seed, realTrialsLength, catchLength))
 
-  const [startTime, setStartTime] = useState(now()) 
+  const [startTime, setStartTime] = useState(now())
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
 
@@ -213,7 +213,7 @@ function ExperimentCompareImages() {
                     </div>
                   </div>
                 ) : (
-                  <div class="loader-container" style={{height:height}}>
+                  <div class="loader-container" style={{ height: height }}>
                     <Loader
                       color={'grey'}
                       loading={true}
@@ -225,9 +225,15 @@ function ExperimentCompareImages() {
                 )
               }
             </div>
-            <div className='progress-bar-container'>
-              <ProgressBar value={barProgress} max={maxProgress} className='progress' />
-            </div>
+            {
+              !startTrial ? (
+                <div className='progress-bar-container'>
+                  <ProgressBar value={barProgress} max={maxProgress} className='progress' />
+                </div>
+              ) : (
+                <div></div>
+              )
+            }
           </div>
         )
       }

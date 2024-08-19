@@ -1,4 +1,4 @@
-export function generateDataset(data, seed) {
+export function generateDataset(data, catch_data, seed, realTrialsLength, catchLength) {
     const rng = new RNG(seed);
     const getItem = (e) => {
         const meaningID = rng.nextRange(0, 2);
@@ -11,8 +11,59 @@ export function generateDataset(data, seed) {
             words: shuffleArray(trial.words)
         };
     };
-    return shuffleArray(data.map(getItem), seed);
+    // Split in buckets
+    const dataBuckets = buildBucketsBuckets(data, seed, realTrialsLength, 2)
+    const catchBuckets = buildBucketsBuckets(catch_data, seed, catchLength, 1)
+    
+    // Make step trials
+    const contatenatedArrays = concatenateArrays(dataBuckets,catchBuckets)
+
+    const shuffleItem = (e) => {
+        return shuffleArray(e, seed)
+    } 
+
+    const shuffledConcatenadArrays = contatenatedArrays.map(shuffleItem)
+
+    return shuffledConcatenadArrays.flat();
 }
+
+function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
+    const rng = new RNG(seed);
+    const getItem = (e) => {
+        const meaningID = rng.nextRange(0, meaningRange);
+        const trial = e.meanings[meaningID];
+        return {
+            wordID: e.wordID,
+            word: e.word,
+            meaningID: meaningID,
+            context: trial.context,
+            words: shuffleArray(trial.words)
+        };
+    };
+    return splitArrayByLength(shuffleArray(data.map(getItem), seed), bucketSize);
+}
+
+function splitArrayByLength(A, l) {
+    const B = [];
+    for (let i = 0; i < A.length; i += l) {
+        B.push(A.slice(i, i + l));
+    }
+    return B;
+}
+
+function concatenateArrays(A, B) {
+    const maxLength = Math.max(A.length, B.length);
+    const C = [];
+
+    for (let i = 0; i < maxLength; i++) {
+        const arrA = A[i] || [];
+        const arrB = B[i] || [];
+        C.push(arrA.concat(arrB));
+    }
+
+    return C;
+}
+
 
 class RNG {
     constructor(seed) {

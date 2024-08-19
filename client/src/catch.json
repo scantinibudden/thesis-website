@@ -1,0 +1,40 @@
+[
+    {
+        "wordID": 1000,
+        "word": "Catch",
+        "meanings": [
+            {
+                "context": "Esto es un catch.",
+                "words": [
+                    "Esta no 1",
+                    "Esta no 2",
+                    "Esta no 3",
+                    "Esta no 4",
+                    "Esta no 5",
+                    "Esta si 1",
+                    "Esta si 2",
+                    "Esta si 3"
+                ]
+            }
+        ]
+    },
+    {
+        "wordID": 1001,
+        "word": "Catchito",
+        "meanings": [
+            {
+                "context": "Esto es un catchito.",
+                "words": [
+                    "Esta no 1",
+                    "Esta no 2",
+                    "Esta no 3",
+                    "Esta no 4",
+                    "Esta no 5",
+                    "Esta si 1",
+                    "Esta si 2",
+                    "Esta si 3"
+                ]
+            }
+        ]
+    }
+]

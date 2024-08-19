@@ -9,6 +9,8 @@ import NextButton from '../components/NextButton.js';
 
 // My imports
 import data from '../data_dev.json';
+import catch_data from '../catch.json';
+
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/ClockLoader.js";
 
@@ -36,12 +38,14 @@ function ExperimentCompareImages() {
 
   const { userId } = location.state;
   const seed = getSeed(userId)
-  const [dataset, setDataset] = useState(generateDataset(data, seed))
+  const realTrialsLength = 3
+  const catchLength = 1
+  const stepLength = realTrialsLength+catchLength
+  const [dataset, setDataset] = useState(generateDataset(data, catch_data, seed, realTrialsLength, catchLength))
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
 
   // My states
-  const stepLength = 3
   const dataset_length = dataset.length
   const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || 0) % stepLength)
   const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - progress))

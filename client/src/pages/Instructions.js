@@ -1,10 +1,6 @@
-import { useRef, useState, useEffect } from 'react';
+import {  useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import LogosHeader from '../components/LogosHeader.js';
-import axios from 'axios';
-
-import WordSelector from '../components/WordSelector.js';
-
 import './experiment.css';
 
 function Instructions() {
@@ -65,7 +61,7 @@ function Instructions() {
             {
                 show3 && (
                     <p className='experiment-explanation'>
-                        Una vez seleccionadas, pulsa el boton de continuar.
+                        Una vez seleccionadas, pulsa el boton de Siguiente.
                     </p>
                 )
             }

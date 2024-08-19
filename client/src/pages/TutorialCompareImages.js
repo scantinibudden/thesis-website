@@ -26,7 +26,7 @@ function TutorialCompareImages() {
       "Fútbol"]
   }
 
-  const handleGoToExperiment = async () => {
+  const handleGoToBreak = async () => {
     if (wordSelectorRef != null && wordSelectorRef.current.isFull()) {
       setIsLoading(true);
       const timestamp = new Date().getTime();
@@ -39,7 +39,7 @@ function TutorialCompareImages() {
         console.error("Error trying to add tutorial time:", error)
       }
       setIsLoading(false);
-      navigate('/experiment', { state: { userId: userId } });
+      navigate('/break', { state: { userId: userId } });
     } else {
       alert("Por favor, seleccione 3 palabras antes de continuar")
     }
@@ -62,7 +62,7 @@ function TutorialCompareImages() {
             {isLoading ? (
               <div className="loader"></div>
             ) : (
-              <button onClick={handleGoToExperiment} className='SubmitButton'>Comenzar con el experimento</button>
+              <button onClick={handleGoToBreak} className='SubmitButton'>Siguiente</button>
             )}
           </div>
         </div>

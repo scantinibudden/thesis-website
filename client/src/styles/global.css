@@ -82,6 +82,12 @@ body {
   margin-top: 0.67em;
 }
 
+@media (max-width: 600px) {
+  .header-container {
+    padding: 5px;
+  }
+}
+
 .header-image {
   max-height: 10vh;
   max-width: 40vw;

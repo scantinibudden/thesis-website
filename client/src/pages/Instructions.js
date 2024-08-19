@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import LogosHeader from '../components/Header.js';
 import axios from 'axios';
 
 import WordSelector from '../components/WordSelector.js';
@@ -39,6 +40,7 @@ function Instructions() {
 
     return (
         <div className='container'>
+            <LogosHeader />
             <div className='BlueSubHeader'>
                 Instruciones
             </div>

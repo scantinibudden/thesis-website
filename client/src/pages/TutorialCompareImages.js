@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import LogosHeader from '../components/Header.js';
 import axios from 'axios';
 
 import WordSelector from '../components/WordSelector.js';
@@ -25,22 +26,6 @@ function TutorialCompareImages() {
       "Fútbol"]
   }
 
-  const [show1, setShow1] = useState(false)
-  const [show2, setShow2] = useState(false)
-  const [show3, setShow3] = useState(false)
-
-  useEffect(() => {
-    const timer1 = setTimeout(() => setShow1(true), 1000);
-    const timer2 = setTimeout(() => setShow2(true), 2000);
-    const timer3 = setTimeout(() => setShow3(true), 3000);
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-    };
-  }, []);
-
   const handleGoToExperiment = async () => {
     if (wordSelectorRef != null && wordSelectorRef.current.isFull()) {
       setIsLoading(true);
@@ -63,45 +48,26 @@ function TutorialCompareImages() {
 
   return (
     <div className='container'>
+      <LogosHeader />
       <div className='BlueSubHeader'>
         Fase de prueba
       </div>
 
-      {
-        show1 && (
-          <p className='experiment-explanation'>
-            Te vamos a mostrar una palabra que va a estar resaltada en un cierto contexto.
-          </p>
-        )
-      }
-
-      {
-        show2 && (
-          <p className='experiment-explanation'>
-            Necesitamos que selecciones las 3 (tres) que mejor se relacionen con la palabra destacada.
-          </p>
-        )
-      }
-
-
-      {
-        show3 && (
-          <div className='experiment-container'>
-            <div className='inner-star-rating-container'>
-              <WordSelector ref={wordSelectorRef} exp={exp} />
-            </div>
-            <div className='inner-button-container'>
-              <div className='button-container'>
-                {isLoading ? (
-                  <div className="loader"></div>
-                ) : (
-                  <button onClick={handleGoToExperiment} className='SubmitButton'>Comenzar con el experimento</button>
-                )}
-              </div>
-            </div>
+      <div className='experiment-container'>
+        <div className='inner-star-rating-container'>
+          <WordSelector ref={wordSelectorRef} exp={exp} />
+        </div>
+        <div className='inner-button-container'>
+          <div className='button-container'>
+            {isLoading ? (
+              <div className="loader"></div>
+            ) : (
+              <button onClick={handleGoToExperiment} className='SubmitButton'>Comenzar con el experimento</button>
+            )}
           </div>
-        )
-      }
+        </div>
+      </div>
+
     </div>
   );
 }

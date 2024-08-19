@@ -87,7 +87,7 @@ body {
 @media (max-width: 600px) {
   .header-container {
     padding: 5px;
-    height: 20vh;
+    height: 10vh;
   }
 }
 

@@ -218,6 +218,7 @@ progress {
   justify-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  max-width: 95vw;
 }
 
 .next-step-container {

@@ -56,7 +56,7 @@ function Instructions() {
             {
                 show2 && (
                     <p className='experiment-explanation'>
-                        Necesitamos que selecciones las 3 (tres) que pienses que mejor se relacionen con la palabra destacada.
+                        Necesitamos que selecciones las 3 palabras que pienses que mejor se relacionen con la palabra destacada.
                     </p>
                 )
             }

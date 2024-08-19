@@ -22,16 +22,16 @@ export default class WordSelector extends Component {
     wrapWords(text, words) {
         // Convertir todas las palabras a minúsculas
         const wordsLowerCase = words.map(word => word.toLowerCase());
-    
+
         // Dividir el texto en palabras y signos de puntuación
         const parts = text.split(/(\b[\wáéíóúüñ]+[\.,!?]?\b)/);
-    
+
         return parts.map((part, index) => {
-          // Verificar si la palabra (en minúsculas) debe ser envuelta
-          if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
-            return <span className='highlight-word' key={index}>{part}</span>;
-          }
-          return part;
+            // Verificar si la palabra (en minúsculas) debe ser envuelta
+            if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
+                return <span className='highlight-word' key={index}>{part}</span>;
+            }
+            return part;
         });
     };
 
@@ -46,6 +46,9 @@ export default class WordSelector extends Component {
                         {this.wrapWords(exp.context, [exp.word])}
                     </p>
                 </div>
+                <p>                       
+                    Necesitamos que selecciones las 3 palabras que pienses que mejor se relacionen con la palabra destacada.
+                </p>
                 <div className='grid-container'>
                     {list.map((item) => {
                         let selected = this.state.selected
@@ -53,7 +56,7 @@ export default class WordSelector extends Component {
                             <button
                                 // TODO: change styles to css file
                                 className='grid-item'
-                                style={{ fontWeight:'bold',color:'black', borderRadius: '5px', height: '50px', width: "100%", display: 'block', padding: '5px', backgroundColor: this.state.selected.has(item) ? 'coral' : 'yellow' }}
+                                style={{ backgroundColor: this.state.selected.has(item) ? 'coral' : 'var(--pale-cyan)'  }}
                                 key={item}
                                 onClick={() => {
                                     if (selected.size > 3) {

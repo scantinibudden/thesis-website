@@ -176,15 +176,17 @@ function ExperimentCompareImages() {
               Experimento
             </div>
 
-            <div className='experiment-explanation'>
-              Selecciona las tres palabras que creas que mejor se relacionan con la palabra resaltada.
-            </div>
-
             <div className='experiment-container'>
               {
                 !loading ? (
                   <div>
                     <WordSelector ref={wordSelectorRef} exp={exp} />
+                    <div className='inner-button-container'>
+                      {(exp_index < dataset_length - 1) ? (
+                        <NextButton handleOnClick={handleNextClick} />
+                      ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
+                      }
+                    </div>
                   </div>
                 ) : (<Loader
                   color={'grey'}
@@ -194,13 +196,6 @@ function ExperimentCompareImages() {
                   data-testid="loader"
                 />)
               }
-
-              <div className='inner-button-container'>
-                {(exp_index < dataset_length - 1) ? (
-                  <NextButton handleOnClick={handleNextClick} />
-                ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
-                }
-              </div>
             </div>
             <div className='progress-bar-container'>
               <ProgressBar value={barProgress} max={maxProgress} className='progress' />

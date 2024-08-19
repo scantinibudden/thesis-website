@@ -17,6 +17,7 @@ import Loader from "react-spinners/ClockLoader.js";
 import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 import LogosHeader from '../components/LogosHeader.js';
+import { set } from 'mongoose';
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
@@ -37,12 +38,18 @@ function ExperimentCompareImages() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const now = () => {
+    return new Date().getTime()
+  }
+
   const { userId } = location.state;
   const seed = getSeed(userId)
   const realTrialsLength = 3
   const catchLength = 1
   const stepLength = realTrialsLength + catchLength
   const [dataset, setDataset] = useState(generateDataset(data, catch_data, seed, realTrialsLength, catchLength))
+
+  const [startTime, setStartTime] = useState(now()) 
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
 
@@ -94,6 +101,7 @@ function ExperimentCompareImages() {
       answers: wordSelectorRef.current.result(),
       wordOrder: exp.words,
       lastTrialSubmitted: exp_index,
+      startTime: startTime,
       submitTime: timestamp,
     }).then(response => {
       console.log('Selection added successfully!');
@@ -104,12 +112,11 @@ function ExperimentCompareImages() {
     const new_exp_index = exp_index + 1
     const next_change_step = new_exp_index % stepLength === 0
 
-    if (!next_change_step) {
-      setLoading(true)
-    }
+    setLoading(true)
 
     setTimeout(() => {
       setLoading(false)
+      setStartTime(now())
     }, 1500);
 
     setProgress(prevProgress => {
@@ -138,7 +145,7 @@ function ExperimentCompareImages() {
         alert('Selecciona todas las palabras antes de continuar');
         return;
       }
-      const timestamp = new Date().getTime();
+      const timestamp = now();
       submitRating(timestamp);
     }
   }
@@ -152,7 +159,7 @@ function ExperimentCompareImages() {
       alert('Selecciona todas las palabras antes de continuar');
       return;
     }
-    const timestamp = new Date().getTime();
+    const timestamp = now();
     submitRating(timestamp);
     // !Es temporal
     sessionStorage.setItem('progress', 0);
@@ -161,13 +168,14 @@ function ExperimentCompareImages() {
 
   const handleNextStep = async () => {
     setStartTrial(false)
+    setStartTime(now())
   }
 
   return (
     <div className='container'>
       <LogosHeader />
       {
-        startTrial ? (
+        startTrial && !loading ? (
           <div className='next-step-container'>
             <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
               Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>

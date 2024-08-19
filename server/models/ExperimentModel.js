@@ -8,6 +8,7 @@ const trialSchema = new mongoose.Schema({
     context: { type: String, required: true },
     answers: { type: [String], required: true },
     wordOrder: { type: [String], required: true },
+    startTime: { type: Date, required: true },
     submitTime: { type: Date, required: true }
 });
 

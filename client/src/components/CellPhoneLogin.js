@@ -45,7 +45,7 @@ function CellPhoneLogin() {
 
     } else {
       console.log('Add new user: User does not exist');
-      navigate('/tutorial', { state: { userId: hashedCellNumber } });
+      navigate('/instructions', { state: { userId: hashedCellNumber } });
 
       try {
 
@@ -53,7 +53,7 @@ function CellPhoneLogin() {
           userId: hashedCellNumber,
           loginTime: timestamp
         });
-        navigate('/tutorial', { state: { userId: hashedCellNumber } })
+        navigate('/instructions', { state: { userId: hashedCellNumber } })
       } catch (error) {
         console.error('Error submitting data:', error);
       }

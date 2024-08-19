@@ -5,6 +5,7 @@
   text-align: center;
   color: var(--deep-blue);
   margin-bottom: 1px;
+  margin: 0;
 }
 
 .SubHeader {

@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: var(--pale-cyan);
+  background-color: white;
   display: flex;
   justify-content: center;
 }
@@ -78,7 +78,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  height: 10vh;
+  height: 15vh;
+  margin-top: 0.67em;
 }
 
 .header-image {

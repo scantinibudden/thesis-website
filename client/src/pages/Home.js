@@ -7,16 +7,16 @@ export default function Home() {
 
   return (
     <div className='container'>
-      <LogosHeader/>
-      <Header/>
-      <SubHeader/>
-      <ExperimentExplanation/>
-      <CellPhoneLogin/>
+      <LogosHeader />
+      <Header />
+      <SubHeader />
+      <ExperimentExplanation />
+      <CellPhoneLogin />
     </div>
   );
 }
 
-function Header(){
+function Header() {
   return (
     <div className="Header">
       <h1> Experimento de Neurociencia 🧠 </h1>
@@ -25,10 +25,10 @@ function Header(){
   );
 }
 
-function SubHeader(){
+function SubHeader() {
   return (
     <div className="SubHeader">
-      En este experimento buscamos comparar como hace ChatGPT para darle significado a algunas palabras frente a como lo hacemos los humanos.  
+      El objetivo de este experimento es entender un poco mejor como funciona ChatGPT.
     </div>
   );
 }

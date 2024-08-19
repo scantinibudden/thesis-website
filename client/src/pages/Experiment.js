@@ -16,6 +16,7 @@ import Loader from "react-spinners/ClockLoader.js";
 
 import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
+import LogosHeader from '../components/LogosHeader.js';
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
@@ -40,7 +41,7 @@ function ExperimentCompareImages() {
   const seed = getSeed(userId)
   const realTrialsLength = 3
   const catchLength = 1
-  const stepLength = realTrialsLength+catchLength
+  const stepLength = realTrialsLength + catchLength
   const [dataset, setDataset] = useState(generateDataset(data, catch_data, seed, realTrialsLength, catchLength))
 
   const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
@@ -59,6 +60,9 @@ function ExperimentCompareImages() {
 
   const [startTrial, setStartTrial] = useState(false)
 
+  const divRef = useRef(null)
+  const [height, setHeight] = useState('400px');
+
   // Facu
 
   // update next image 
@@ -67,9 +71,16 @@ function ExperimentCompareImages() {
     setExperiment(dataset[exp_index]);
   }, [exp_index]);
 
+  useEffect(() => {
+    if (divRef.current) {
+      console.log(divRef.current.offsetHeight)
+      setHeight(`${divRef.current.offsetHeight}px`);
+    }
+  }, []);
+
   const submitRating = async (timestamp) => {
     if (!navigator.onLine) {
-      alert('No se pudo enviar la calificación. Por favor, revisa tu conexión a internet.');
+      alert('No se pudo enviar la selección. Por favor, revisa tu conexión a internet.');
       return;
     }
 
@@ -85,9 +96,9 @@ function ExperimentCompareImages() {
       lastTrialSubmitted: exp_index,
       submitTime: timestamp,
     }).then(response => {
-      console.log('Rating added successfully!');
+      console.log('Selection added successfully!');
     }).catch(error => {
-      console.error('Error adding rating:', error);
+      console.error('Error adding selection:', error);
     });
 
     const new_exp_index = exp_index + 1
@@ -124,7 +135,7 @@ function ExperimentCompareImages() {
     if (wordSelectorRef) {
       // !Repeated Code
       if (!wordSelectorRef.current.isFull()) {
-        alert('Ingresa una calificación antes de continuar');
+        alert('Selecciona todas las palabras antes de continuar');
         return;
       }
       const timestamp = new Date().getTime();
@@ -138,7 +149,7 @@ function ExperimentCompareImages() {
 
   const handleExitClick = async () => {
     if (!wordSelectorRef.current.isFull()) {
-      alert('Ingresa una calificación antes de continuar');
+      alert('Selecciona todas las palabras antes de continuar');
       return;
     }
     const timestamp = new Date().getTime();
@@ -154,6 +165,7 @@ function ExperimentCompareImages() {
 
   return (
     <div className='container'>
+      <LogosHeader />
       {
         startTrial ? (
           <div className='next-step-container'>
@@ -183,7 +195,7 @@ function ExperimentCompareImages() {
             <div className='experiment-container'>
               {
                 !loading ? (
-                  <div>
+                  <div ref={divRef}>
                     <WordSelector ref={wordSelectorRef} exp={exp} />
                     <div className='inner-button-container'>
                       {(exp_index < dataset_length - 1) ? (
@@ -192,13 +204,17 @@ function ExperimentCompareImages() {
                       }
                     </div>
                   </div>
-                ) : (<Loader
-                  color={'grey'}
-                  loading={true}
-                  size={150}
-                  aria-label="Loading Spinner"
-                  data-testid="loader"
-                />)
+                ) : (
+                  <div class="loader-container" style={{height:height}}>
+                    <Loader
+                      color={'grey'}
+                      loading={true}
+                      size={150}
+                      aria-label="Loading Spinner"
+                      data-testid="loader"
+                    />
+                  </div>
+                )
               }
             </div>
             <div className='progress-bar-container'>

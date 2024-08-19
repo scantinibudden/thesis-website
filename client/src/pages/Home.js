@@ -1,7 +1,7 @@
 import './home.css';
 import ExperimentExplanation from '../components/ExperimentExplanation.js';
 import CellPhoneLogin from '../components/CellPhoneLogin.js';
-import LogosHeader from '../components/Header.js';
+import LogosHeader from '../components/LogosHeader.js';
 
 export default function Home() {
 

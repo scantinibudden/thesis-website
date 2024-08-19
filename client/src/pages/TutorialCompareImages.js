@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import LogosHeader from '../components/Header.js';
+import LogosHeader from '../components/LogosHeader.js';
 import axios from 'axios';
 
 import WordSelector from '../components/WordSelector.js';

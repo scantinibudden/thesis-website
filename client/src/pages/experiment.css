@@ -70,7 +70,8 @@
   padding: 10px 5px;
   background-color: var(--pale-cyan);
   border-radius: 10px;
-  border-width: medium;
+  border-width: thin;
+  border: solid;
 }
 
 
@@ -272,4 +273,10 @@ progress {
   width: 100%;
   display: block;
   padding: 5px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

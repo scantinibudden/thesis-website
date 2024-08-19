@@ -79,17 +79,17 @@ body {
   align-items: center;
   padding: 10px;
   height: 15vh;
-  margin-top: 0.67em;
 }
 
 @media (max-width: 600px) {
   .header-container {
     padding: 5px;
+    height: 20vh;
   }
 }
 
 .header-image {
-  max-height: 10vh;
+  max-height: 100%;
   max-width: 40vw;
 }
 

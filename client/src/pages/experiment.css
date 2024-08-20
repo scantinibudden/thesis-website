@@ -85,7 +85,7 @@
 
 @media (max-width: 600px) {
   .SubHeaderExp {
-    font-size: 25px;
+    font-size: 22px;
     padding: 10px 10px;
   }
 
@@ -205,6 +205,12 @@ progress {
   display: block;
   padding: 5px;
   border-width: thin;
+}
+
+@media (max-width: 600px) {
+  .grid-item {
+    font-size: 15px;
+  }
 }
 
 .highlight-word {

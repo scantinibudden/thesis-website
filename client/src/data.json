@@ -4,26 +4,26 @@
     "word": "Raya",
     "meanings": [
       {
-        "context": "Es muy dificil encontrar una raya en el acuario.",
+        "context": "Es muy difícil encontrar una raya en el acuario.",
         "words": [
           "Pez",
-          "Peces",
+          "Negro",
           "Peligro",
           "Mantarraya",
-          "Tiburones",
-          "Animales",
+          "Tiburón",
+          "Animal",
           "Marino",
           "Mar"
         ]
       },
       {
-        "context": "Con cuatro rayas hizo un dibujo hermoso.",
+        "context": "Después de borrar su hoja, no le quedó ni una raya.",
         "words": [
-          "Linea",
+          "Línea",
           "Recta",
           "Palo",
           "Lapiz",
-          "Geometrica",
+          "Geométrica",
           "Lado",
           "Dibujo",
           "Curvo",
@@ -39,11 +39,11 @@
     "word": "Llama",
     "meanings": [
       {
-        "context": "En su viaje al Jujuy, comió una milanesa de llama.",
+        "context": "En su viaje a Jujuy, comió una milanesa de llama.",
         "words": [
           "Animal",
-          "Camelido",
-          "Mamifero",
+          "Camélido",
+          "Mamífero",
           "Andino",
           "Cuadrupedo",
           "Pelos",
@@ -61,9 +61,9 @@
           "Cocinar",
           "Calor",
           "Incendio",
-          "Combustion",
-          "Quimica",
-          "Parrila"
+          "Combustión",
+          "Química",
+          "Parrilla"
         ]
       }
     ]
@@ -77,19 +77,19 @@
         "words": [
           "Lagarto",
           "Reptil",
-          "Camaleon",
+          "Camaleón",
           "Animal",
           "Anfibio",
           "Lagartija"
         ]
       },
       {
-        "context": "Su padre compro una salamandra para evitar el frío en invierno.",
+        "context": "Su padre compró una salamandra para evitar el frío en invierno.",
         "words": [
           "Estufa",
           "Carbon",
           "Llamas",
-          "Calefaccion",
+          "Calefacción",
           "Madera",
           "Calor",
           "Humo"
@@ -143,7 +143,7 @@
           "Persona",
           "Dedos",
           "Falanges",
-          "Apreton",
+          "Apretón",
           "Aplauso",
           "Tacto"
         ]
@@ -172,9 +172,9 @@
         "words": [
           "Moneda",
           "Billete",
-          "Economia",
+          "Economía",
           "Dinero",
-          "Dolar",
+          "Dólar",
           "Cambio",
           "Plata"
         ]
@@ -203,12 +203,12 @@
       {
         "context": "El banco cerró y tuvo que despedir a todos sus empleados.",
         "words": [
-          "Prestamo",
+          "Préstamo",
           "Crédito",
-          "Debito",
+          "Débito",
           "Dinero",
           "Acciones",
-          "Dolares",
+          "Dólares",
           "Pesos",
           "Cheque",
           "Cajero",
@@ -242,7 +242,7 @@
         "words": [
           "Crédito",
           "Débito",
-          "Prestamo",
+          "Préstamo",
           "Dinero",
           "Acciones",
           "Dólares",
@@ -276,7 +276,7 @@
           "Tropical",
           "Semillas",
           "Fruta",
-          "Arbol",
+          "Árbol",
           "Granadina",
           "Caribe",
           "Rojo",
@@ -292,7 +292,7 @@
           "Armas",
           "Solados",
           "Violencia",
-          "Destruccion",
+          "Destrucción",
           "Ataque",
           "Militar"
         ]
@@ -306,16 +306,16 @@
       {
         "context": "Fue a buscar una lima que tenía en la heladera.",
         "words": [
-          "Acido",
+          "Ácido",
           "Limon",
           "Limonero",
-          "Arbol",
+          "Árbol",
           "Tragos",
           "Caipirinha",
           "Fruta",
           "Mandarina",
           "Verde",
-          "Citrico",
+          "Cítrico",
           "Naranja"
         ]
       },
@@ -346,23 +346,23 @@
           "Tropical",
           "Semillas",
           "Fruta",
-          "Arbol",
+          "Árbol",
           "Caribe",
           "Jugoso",
-          "Cascara",
+          "Cáscara",
           "Pulpa",
           "Dulce"
         ]
       },
       {
-        "context": "Usaba el mango para agarrarle y que no se le cayera.",
+        "context": "Usaba el mango para agarrarlo y que no se le cayera.",
         "words": [
           "Herramientas",
           "Hacha",
           "Lima",
           "Martillo",
           "Taller",
-          "Sarten",
+          "Sartén",
           "Manija",
           "Madera",
           "Sostén"
@@ -394,13 +394,13 @@
         ]
       },
       {
-        "context": "Tomaron de la misma copa para mostrar que no estaba enveneda.",
+        "context": "Tomaron de la misma copa para mostrar que no estaba envenenada.",
         "words": [
           "Vaso",
           "Vino",
           "Utensillo",
           "Borracho",
-          "Alcoholico",
+          "Alcohólico",
           "Cristal",
           "Bebida",
           "Fiesta",
@@ -422,7 +422,7 @@
         "context": "No paraban de darle al arco.",
         "words": [
           "Deporte",
-          "Futbol",
+          "Fútbol",
           "Hockey",
           "Handbol",
           "Gol",
@@ -430,7 +430,7 @@
           "Arquero",
           "Red",
           "Caño",
-          "Porteria"
+          "Portería"
         ]
       },
       {
@@ -440,7 +440,7 @@
           "Arquitectura",
           "Puerta",
           "Curva",
-          "Construccion",
+          "Construcción",
           "Abierto",
           "Abertura",
           "Pared"
@@ -456,7 +456,7 @@
         "context": "Messi se preparó para ejecutar el penal.",
         "words": [
           "Deporte",
-          "Futbol",
+          "Fútbol",
           "Hockey",
           "Handbol",
           "Gol",
@@ -475,7 +475,7 @@
           "Juez",
           "Crimen",
           "Cárcel",
-          "Delíto",
+          "Delito",
           "Prisión",
           "Criminal",
           "Delincuente",
@@ -545,14 +545,14 @@
           "Golfo",
           "Acantilado",
           "Playa",
-          "Peninsula",
+          "Península",
           "Mar",
-          "Vegetacion",
+          "Vegetación",
           "Marino"
         ]
       },
       {
-        "context": "El cabo estaba muy tranquilo respecto a cual iba a ser el resultado de la guerra.",
+        "context": "El cabo estaba muy tranquilo respecto a cuál iba a ser el resultado de la guerra.",
         "words": [
           "Militar",
           "Soldado",
@@ -561,7 +561,7 @@
           "Coronel",
           "Comandante",
           "Tropa",
-          "Infanteria",
+          "Infantería",
           "Jefe",
           "Escuadra"
         ]
@@ -573,7 +573,7 @@
     "word": "Sierra",
     "meanings": [
       {
-        "context": "Hicieron un trecking a través de las sierra.",
+        "context": "Hicieron un trekking a través de las sierra.",
         "words": [
           "Montaña",
           "Monte",
@@ -592,7 +592,7 @@
         "context": "Usaron la sierra para dividirlo en dos.",
         "words": [
           "Metal",
-          "Laton",
+          "Latón",
           "Herramienta",
           "Lija",
           "Taller",
@@ -602,7 +602,7 @@
           "Cortar",
           "Carpintero",
           "Dientes",
-          "Electrica",
+          "Eléctrica",
           "Técnico"
         ]
       }
@@ -618,21 +618,21 @@
           "Medicina",
           "Virus",
           "Enfermedad",
-          "Infeccion",
+          "Infección",
           "Heces",
           "Diarrea",
           "Bacteria"
         ]
       },
       {
-        "context": "Su equipo perdío y lo único que sentía era cólera.",
+        "context": "Su equipo perdió y lo único que sentía era cólera.",
         "words": [
           "Ira",
           "Enojo",
           "Ataque",
           "Furia",
-          "Emocion",
-          "Frustacion",
+          "Emoción",
+          "Frustración",
           "Enfado",
           "Rabia"
         ]
@@ -663,11 +663,11 @@
           "Barco",
           "Marino",
           "Tanque",
-          "Respiracion",
+          "Respiración",
           "Profundidad",
           "Agua",
           "Mar",
-          "Oxigeno",
+          "Oxígeno",
           "Submarino",
           "Nadador",
           "Buceo"
@@ -695,12 +695,12 @@
         ]
       },
       {
-        "context": "Graciás a todo el sostén pudo salir adelante.",
+        "context": "Gracias a todo el sostén pudo salir adelante.",
         "words": [
           "Apoyo",
           "Ayuda",
-          "Psicologo",
-          "Emociones",
+          "Psicólogo",
+          "Emociónes",
           "Felicidad",
           "Tristeza",
           "Familia",
@@ -723,7 +723,7 @@
           "Prenda",
           "Ropa",
           "Calzado",
-          "Tacon",
+          "Tacón",
           "Pie",
           "Dolor",
           "Zapato",
@@ -736,13 +736,13 @@
       {
         "context": "Ese taco estaba deliciosos.",
         "words": [
-          "Mexico",
+          "México",
           "Carne",
           "Comida",
           "Verdura",
           "Pollo",
           "Picante",
-          "Wacamole",
+          "Guacamole",
           "Picante",
           "Tortilla",
           "Burrito"
@@ -755,9 +755,9 @@
     "word": "Pluma",
     "meanings": [
       {
-        "context": "En el colegió usaba todos los días la pluma que le había regalado su abuelo.",
+        "context": "En el colegio usaba todos los días la pluma que le había regalado su abuelo.",
         "words": [
-          "Caligrafia",
+          "Caligrafía",
           "Bolígrafo",
           "Escritura",
           "Tinta",
@@ -791,14 +791,14 @@
       {
         "context": "Tuvo que sacar una hoja en el medio del examen.",
         "words": [
-          "Caligrafia",
-          "Boligrafo",
+          "Caligrafía",
+          "Bolígrafo",
           "Escritura",
           "Tinta",
           "Documento",
           "Firma",
           "Palabras",
-          "Arboles",
+          "Árbol",
           "Blanco",
           "Papel"
         ]
@@ -806,7 +806,7 @@
       {
         "context": "El jardinero pasó y no dejó ni una hoja en el piso.",
         "words": [
-          "Arboles",
+          "Árbol",
           "Clorofila",
           "Palmeras",
           "Flores",
@@ -818,7 +818,7 @@
           "Lechuga",
           "Espinaca",
           "Planta",
-          "Fotosintesis"
+          "Fotosíntesis"
         ]
       }
     ]
@@ -828,17 +828,17 @@
     "word": "Nota",
     "meanings": [
       {
-        "context": "Cada nota que tocaba emocionaba más que la anterior.",
+        "context": "Cada nota que tocaba Emociónaba más que la anterior.",
         "words": [
           "Do",
           "Fa",
           "Piano",
           "Guitarra",
-          "Musica",
+          "Música",
           "Instrumento",
           "Conservatorio",
           "Sonido",
-          "Musicalidad"
+          "Músicalidad"
         ]
       },
       {
@@ -846,12 +846,12 @@
         "words": [
           "Examen",
           "Escuela",
-          "Educacion",
+          "Educación",
           "Diez",
           "Uno",
           "Siete",
           "Calificaciones",
-          "Boletin",
+          "Boletín",
           "Apunte",
           "Calificación",
           "Sobresaliente",
@@ -879,18 +879,18 @@
         ]
       },
       {
-        "context": "Tuvo que recibir un transplante debido a la falla de su organo.",
+        "context": "Tuvo que recibir un trasplante debido a la falla de su órgano.",
         "words": [
           "Cuerpo",
           "Víscera",
           "Cirujano",
           "Corazón",
-          "Higado",
+          "Hígado",
           "Humano",
           "Vital",
           "Vida",
           "Cerebro",
-          "Cirugia",
+          "Cirugía",
           "Hospital",
           "Sangre"
         ]
@@ -906,7 +906,7 @@
         "words": [
           "Platillos",
           "Ritmo",
-          "Musica",
+          "Música",
           "Banda",
           "Rock",
           "Jazz",
@@ -919,7 +919,7 @@
       {
         "context": "Su celular se quedó sin batería.",
         "words": [
-          "Energia",
+          "Energía",
           "Electricidad",
           "Recargable",
           "Alcalina",
@@ -944,7 +944,7 @@
           "Rojo",
           "Castro?",
           "Revolución",
-          "Politica",
+          "Política",
           "Cuba",
           "Socialista",
           "Comunista",
@@ -955,7 +955,7 @@
         ]
       },
       {
-        "context": "Como se lastimó la izquierda, no podía hacer nada.",
+        "context": "Cómo se lastimó la izquierda, no podía hacer nada.",
         "words": [
           "Mano",
           "Lugar",
@@ -964,8 +964,8 @@
           "Pierna",
           "Derecha",
           "Direccion",
-          "Indicacion",
-          "Orientacion",
+          "Indicación",
+          "Orientación",
           "Lado"
         ]
       }
@@ -980,22 +980,22 @@
         "words": [
           "Peronismo",
           "Liberalismo",
-          "Politica",
+          "Política",
           "Sociedad",
-          "Economia",
+          "Economía",
           "Agrupaciones",
           "Presidente",
           "Diputados",
           "Senadores",
           "Congreso",
-          "Politico",
+          "Político",
           "Socialista",
           "Comunista",
           "Liberal",
           "Nacionalista",
-          "Ideologia",
+          "Ideología",
           "Militancia",
-          "Politica"
+          "Política"
         ]
       },
       {
@@ -1006,17 +1006,17 @@
           "Triunfo",
           "Ganador",
           "Premio",
-          "Compentencia",
+          "Competencia",
           "Perdedor",
           "Empate",
           "Fútbol",
-          "Futbol",
+          "Fútbol",
           "Juego",
           "Equipo",
           "Ganar",
           "Perder",
           "Árbitro",
-          "Compentencia",
+          "Competencia",
           "Derrota"
         ]
       }
@@ -1029,9 +1029,9 @@
       {
         "context": "No cumplió nada de lo que prometió en campaña.",
         "words": [
-          "Politica",
+          "Política",
           "Sociedad",
-          "Economia",
+          "Economía",
           "Agrupaciones",
           "Presidente",
           "Diputados",
@@ -1069,9 +1069,9 @@
         "words": [
           "Peronismo",
           "Liberalismo",
-          "Politica",
+          "Política",
           "Sociedad",
-          "Economia",
+          "Economía",
           "Agrupaciones",
           "Presidente",
           "Diputados",
@@ -1084,18 +1084,18 @@
         ]
       },
       {
-        "context": "Era muy dificil describir su estado.",
+        "context": "Era muy difícil describir su estado.",
         "words": [
           "Cansancio",
           "Placer",
           "Calma",
-          "Extásis",
+          "Éxtasis",
           "Locura",
           "Vigor",
           "Mental",
           "Sentimiento",
           "Sentir",
-          "Emocion",
+          "Emoción",
           "Feliz",
           "Triste"
         ]
@@ -1109,11 +1109,11 @@
       {
         "context": "El pastor rezaba todas las mañanas.",
         "words": [
-          "Religion",
+          "Religión",
           "Iglesia",
           "Misa",
           "Evangelico",
-          "Eucaristia",
+          "Eucaristía",
           "Religioso",
           "Jesucristo",
           "Cristo",
@@ -1132,7 +1132,7 @@
           "Monte",
           "Campo",
           "Vacas",
-          "Fabula",
+          "Fábula",
           "Pasto",
           "Ganado",
           "Lana",
@@ -1151,11 +1151,11 @@
       {
         "context": "Recitó la oración del día que estaba escrita en el antiguo testamento.",
         "words": [
-          "Religion",
+          "Religión",
           "Iglesia",
           "Misa",
           "Evangelico",
-          "Eucaristia",
+          "Eucaristía",
           "Evangelio",
           "Rezo",
           "Rosario",
@@ -1183,10 +1183,10 @@
           "Predicado",
           "Punto",
           "Coma",
-          "Linguistica",
+          "Lingüística",
           "Gramática",
           "Secuencia",
-          "Parrafo",
+          "Párrafo",
           "Sentencia"
         ]
       }

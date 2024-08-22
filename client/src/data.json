@@ -57,13 +57,13 @@
           "Fuego",
           "Vela",
           "Mechero",
-          "Hornalla",
+          "Parrilla",
           "Cocinar",
           "Calor",
           "Incendio",
           "Combustión",
           "Química",
-          "Parrilla"
+          "Hornalla"
         ]
       }
     ]
@@ -140,12 +140,12 @@
           "Piel",
           "Mano",
           "Cuerpo",
-          "Persona",
+          "Aplauso",
           "Dedos",
           "Falanges",
           "Apretón",
-          "Aplauso",
-          "Tacto"
+          "Tacto",
+          "Persona"
         ]
       },
       {
@@ -183,7 +183,7 @@
         "context": "El se pasó de peso en su equipaje y tuvo que empezar a sacar cosas de su valija.",
         "words": [
           "Gravedad",
-          "Kilos",
+          "Masa",
           "Kilo",
           "Pesado",
           "Balanza",
@@ -191,7 +191,7 @@
           "Newton",
           "Medida",
           "Cantidad",
-          "Masa"
+          "Kilos"
         ]
       }
     ]
@@ -207,11 +207,11 @@
           "Crédito",
           "Débito",
           "Dinero",
-          "Acciones",
-          "Dólares",
+          "Cajero",
+          "Dólar",
           "Pesos",
           "Cheque",
-          "Cajero",
+          "Acciones",
           "Reserva",
           "Protegido",
           "Plata"
@@ -245,7 +245,7 @@
           "Préstamo",
           "Dinero",
           "Acciones",
-          "Dólares",
+          "Dólar",
           "Pesos",
           "Pago",
           "Plata"
@@ -276,12 +276,12 @@
           "Tropical",
           "Semillas",
           "Fruta",
-          "Árbol",
           "Granadina",
           "Caribe",
           "Rojo",
+          "Dulce",
           "Mango",
-          "Dulce"
+          "Árbol"
         ]
       },
       {
@@ -307,15 +307,15 @@
         "context": "Fue a buscar una lima que tenía en la heladera.",
         "words": [
           "Ácido",
-          "Limon",
-          "Limonero",
-          "Árbol",
+          "Limón",
+          "Limónero",
           "Tragos",
           "Caipirinha",
           "Fruta",
           "Mandarina",
-          "Verde",
           "Cítrico",
+          "Verde",
+          "Árbol",
           "Naranja"
         ]
       },
@@ -327,11 +327,11 @@
           "Lija",
           "Taller",
           "Mecanico",
-          "Uñas",
+          "Técnico",
           "Limar",
           "Corte",
           "Desgaste",
-          "Técnico"
+          "Uñas"
         ]
       }
     ]
@@ -377,7 +377,7 @@
       {
         "context": "Fueron los vencedores y obtuvieron la copa.",
         "words": [
-          "Deporte",
+          "Oro",
           "Trofeo",
           "Triunfo",
           "Ganador",
@@ -385,10 +385,10 @@
           "Campeonato",
           "Campeón",
           "Torneo",
+          "Deporte",
           "Puntaje",
           "Puntos",
           "Perdedor",
-          "Oro",
           "Plata",
           "Bronce"
         ]
@@ -398,14 +398,14 @@
         "words": [
           "Vaso",
           "Vino",
-          "Utensillo",
+          "Champagne",
           "Borracho",
           "Alcohólico",
           "Cristal",
           "Bebida",
           "Fiesta",
+          "Utensillo",
           "Brindis",
-          "Champagne",
           "Vidrio",
           "Derramar",
           "Beber",
@@ -424,13 +424,13 @@
           "Deporte",
           "Fútbol",
           "Hockey",
-          "Handbol",
+          "Portería",
           "Gol",
           "Apuntar",
           "Arquero",
           "Red",
           "Caño",
-          "Portería"
+          "Handbol"
         ]
       },
       {
@@ -462,8 +462,8 @@
           "Gol",
           "Corner",
           "Patear",
-          "Intento",
           "Barrera",
+          "Intento",
           "Lanzamiento"
         ]
       },
@@ -471,24 +471,24 @@
         "context": "Del juzgado fueron directo al penal.",
         "words": [
           "Abogados",
-          "Trajes",
-          "Juez",
+          "Condena",
           "Crimen",
+          "Juicio",
           "Cárcel",
           "Delito",
           "Prisión",
           "Criminal",
+          "Juez",
           "Delincuente",
           "Ladrón",
           "Civil",
-          "Condena",
+          "Trajes",
           "Encierro",
           "Pena",
           "Fiscal",
           "Corte",
           "Testigos",
-          "Derecho",
-          "Juicio"
+          "Derecho"
         ]
       }
     ]
@@ -502,14 +502,14 @@
         "words": [
           "Montaña",
           "Monte",
-          "Valle",
+          "Altura",
           "Naturaleza",
           "Rocas",
           "Piedras",
           "Cumbre",
           "Cima",
           "Nieve",
-          "Altura",
+          "Valle",
           "Sierra"
         ]
       },
@@ -523,7 +523,7 @@
           "Taller",
           "Pinza",
           "Golpear",
-          "Picar",
+          "Picar", 
           "Filo",
           "Fuerza",
           "Minería",
@@ -577,15 +577,15 @@
         "words": [
           "Montaña",
           "Monte",
-          "Valle",
+          "Cordillera",
           "Naturaleza",
           "Rocas",
-          "Piedras",
+          "Nevada",
           "Cumbre",
           "Cima",
           "Nieve",
-          "Cordillera",
-          "Nevada"
+          "Valle",
+          "Piedras"
         ]
       },
       {
@@ -654,7 +654,7 @@
           "Capucha",
           "Cardigan",
           "Sweater",
-          "Cierra"
+          "Cierre"
         ]
       },
       {
@@ -662,15 +662,15 @@
         "words": [
           "Barco",
           "Marino",
-          "Tanque",
-          "Respiración",
+          "Buceo",
+          "Submarino",
           "Profundidad",
           "Agua",
           "Mar",
           "Oxígeno",
-          "Submarino",
+          "Respiración",
           "Nadador",
-          "Buceo"
+          "Tanque"
         ]
       }
     ]
@@ -689,9 +689,9 @@
           "Broche",
           "Lencería",
           "Pecho",
+          "Sujetador",
           "Corpiño",
-          "Remera",
-          "Sujetador"
+          "Remera"
         ]
       },
       {
@@ -725,10 +725,10 @@
           "Calzado",
           "Tacón",
           "Pie",
-          "Dolor",
-          "Zapato",
-          "Bota",
           "Altura",
+          "Dolor",
+          "Bota",
+          "Zapato",
           "Plataforma",
           "Caminar"
         ]
@@ -741,11 +741,11 @@
           "Comida",
           "Verdura",
           "Pollo",
-          "Picante",
+          "Burrito",
           "Guacamole",
           "Picante",
-          "Tortilla",
-          "Burrito"
+          "Picante",
+          "Tortilla"
         ]
       }
     ]
@@ -761,11 +761,11 @@
           "Bolígrafo",
           "Escritura",
           "Tinta",
-          "Documento",
+          "Lapicera",
           "Firma",
           "Palabras",
           "Escribir",
-          "Lapicera"
+          "Documento"
         ]
       },
       {
@@ -778,8 +778,8 @@
           "Blanco",
           "Ligero",
           "Calor",
-          "Cobertura",
-          "Piel"
+          "Piel",
+          "Cobertura"
         ]
       }
     ]
@@ -798,9 +798,9 @@
           "Documento",
           "Firma",
           "Palabras",
-          "Árbol",
           "Blanco",
-          "Papel"
+          "Papel",
+          "Árbol"
         ]
       },
       {
@@ -808,17 +808,17 @@
         "words": [
           "Árbol",
           "Clorofila",
-          "Palmeras",
+          "Fotosíntesis",
           "Flores",
           "Verde",
           "Otoño",
-          "Primavera",
+          "Planta",
           "Verdura",
+          "Palmeras",
           "Acelga",
           "Lechuga",
           "Espinaca",
-          "Planta",
-          "Fotosíntesis"
+          "Primavera"
         ]
       }
     ]
@@ -828,7 +828,7 @@
     "word": "Nota",
     "meanings": [
       {
-        "context": "Cada nota que tocaba Emociónaba más que la anterior.",
+        "context": "Cada nota que tocaba emociónaba más que la anterior.",
         "words": [
           "Do",
           "Fa",
@@ -847,14 +847,14 @@
           "Examen",
           "Escuela",
           "Educación",
-          "Diez",
-          "Uno",
-          "Siete",
-          "Calificaciones",
-          "Boletín",
           "Apunte",
           "Calificación",
           "Sobresaliente",
+          "Calificaciones",
+          "Boletín",
+          "Diez",
+          "Uno",
+          "Siete",
           "Estudios",
           "Estudiante",
           "Puntaje"
@@ -883,13 +883,13 @@
         "words": [
           "Cuerpo",
           "Víscera",
-          "Cirujano",
+          "Cerebro",
           "Corazón",
           "Hígado",
           "Humano",
           "Vital",
           "Vida",
-          "Cerebro",
+          "Cirujano",
           "Cirugía",
           "Hospital",
           "Sangre"
@@ -907,12 +907,12 @@
           "Platillos",
           "Ritmo",
           "Música",
-          "Banda",
+          "Tambor",
           "Rock",
           "Jazz",
           "Baqueta",
           "Baterista",
-          "Tambor",
+          "Banda",
           "Bombo"
         ]
       },
@@ -922,12 +922,12 @@
           "Energía",
           "Electricidad",
           "Recargable",
-          "Alcalina",
+          "Pila",
           "Celular",
+          "Cargador",
           "Laptop",
           "Corriente",
-          "Pila",
-          "Cargador"
+          "Alcalina"
         ]
       }
     ]
@@ -942,31 +942,31 @@
           "Comunismo",
           "Socialismo",
           "Rojo",
-          "Castro?",
+          "Igualdad",
           "Revolución",
           "Política",
           "Cuba",
           "Socialista",
+          "Castro",
           "Comunista",
           "Ideología",
           "Marx",
-          "Trotsky",
-          "Igualdad"
+          "Trotsky"
         ]
       },
       {
         "context": "Cómo se lastimó la izquierda, no podía hacer nada.",
         "words": [
-          "Mano",
+          "Lado",
           "Lugar",
           "Ubicación",
           "Posición",
-          "Pierna",
+          "Orientación",
           "Derecha",
           "Direccion",
           "Indicación",
-          "Orientación",
-          "Lado"
+          "Pierna",
+          "Mano"
         ]
       }
     ]
@@ -982,10 +982,12 @@
           "Liberalismo",
           "Política",
           "Sociedad",
+          "Militancia",
           "Economía",
-          "Agrupaciones",
           "Presidente",
+          "Política",
           "Diputados",
+          "Agrupaciones",
           "Senadores",
           "Congreso",
           "Político",
@@ -993,30 +995,27 @@
           "Comunista",
           "Liberal",
           "Nacionalista",
-          "Ideología",
-          "Militancia",
-          "Política"
+          "Ideología"
         ]
       },
       {
         "context": "Todos los domingos juegan un partido.",
         "words": [
           "Deporte",
-          "Trofeo",
+          "Competencia",
           "Triunfo",
+          "Juego",
           "Ganador",
           "Premio",
           "Competencia",
           "Perdedor",
           "Empate",
           "Fútbol",
-          "Fútbol",
-          "Juego",
+          "Trofeo",
           "Equipo",
           "Ganar",
           "Perder",
           "Árbitro",
-          "Competencia",
           "Derrota"
         ]
       }
@@ -1031,13 +1030,13 @@
         "words": [
           "Política",
           "Sociedad",
-          "Economía",
+          "Elecciones",
           "Agrupaciones",
           "Presidente",
           "Diputados",
           "Senadores",
           "Congreso",
-          "Elecciones",
+          "Economía",
           "Candidato",
           "Candidatura",
           "Militancia",
@@ -1065,21 +1064,21 @@
     "word": "Estado",
     "meanings": [
       {
-        "context": "Un estado es una organización política constituida por un conjunto de instituciones burocráticas estables, a través de las cuales ejerce el monopolio del uso de la fuerza (soberanía) aplicada a una población dentro de unos límites territoriales establecidos.",
+        "context": "Un estado es una organización política constituida por un conjunto de instituciones burocráticas estables.",
         "words": [
-          "Peronismo",
-          "Liberalismo",
           "Política",
           "Sociedad",
           "Economía",
-          "Agrupaciones",
-          "Presidente",
-          "Diputados",
           "Senadores",
           "Congreso",
           "País",
           "Nación",
           "Gobierno",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Peronismo",
+          "Liberalismo",
           "Pueblo"
         ]
       },
@@ -1087,17 +1086,17 @@
         "context": "Era muy difícil describir su estado.",
         "words": [
           "Cansancio",
-          "Placer",
+          "Tristeza",
           "Calma",
           "Éxtasis",
+          "Emoción",
           "Locura",
-          "Vigor",
+          "Feliz",
           "Mental",
           "Sentimiento",
+          "Placer",
           "Sentir",
-          "Emoción",
-          "Feliz",
-          "Triste"
+          "Vigor"
         ]
       }
     ]
@@ -1112,13 +1111,13 @@
           "Religión",
           "Iglesia",
           "Misa",
+          "Sacerdote",
           "Evangelico",
           "Eucaristía",
           "Religioso",
           "Jesucristo",
           "Cristo",
           "Protestante",
-          "Sacerdote",
           "Creyente",
           "Orador",
           "Cura"
@@ -1128,17 +1127,17 @@
         "context": "Al pastor le encantaba cuidar a sus animales.",
         "words": [
           "Ovejas",
-          "Lobos",
+          "Trabajador",
+          "Agricultura",
           "Monte",
           "Campo",
           "Vacas",
+          "Ganado",
           "Fábula",
           "Pasto",
-          "Ganado",
           "Lana",
           "Cabra",
-          "Trabajador",
-          "Agricultura",
+          "Lobos",
           "Cultivo"
         ]
       }
@@ -1154,19 +1153,19 @@
           "Religión",
           "Iglesia",
           "Misa",
-          "Evangelico",
-          "Eucaristía",
+          "Fe",
+          "Orar",
           "Evangelio",
           "Rezo",
           "Rosario",
-          "Evangelio",
+          "Evangelico",
+          "Eucaristía",
           "Jesucristo",
           "Cristo",
-          "Plegaria. dios",
+          "Plegaria",
+          "Dios",
           "Rezar",
           "Iglesia",
-          "Fe",
-          "Orar",
           "Credo",
           "Cura"
         ]
@@ -1178,15 +1177,15 @@
           "Texto",
           "Palabras",
           "Lectura",
+          "Lingüística",
+          "Gramática",
+          "Párrafo",
           "Leer",
           "Sujeto",
           "Predicado",
           "Punto",
           "Coma",
-          "Lingüística",
-          "Gramática",
           "Secuencia",
-          "Párrafo",
           "Sentencia"
         ]
       }

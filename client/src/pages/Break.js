@@ -18,7 +18,7 @@ export default function Home() {
         <div className='container'>
             <LogosHeader />
             <div className="Header">
-                <h1> ¡Ahora si comenzemos! </h1>
+                <h1> ¡Ahora si comencemos! </h1>
             </div>
             <div className='inner-button-container'>
                 <div className='button-container'>

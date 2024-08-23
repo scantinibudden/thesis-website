@@ -46,8 +46,8 @@ export default class WordSelector extends Component {
                         {this.wrapWords(exp.context, [exp.word])}
                     </p>
                 </div>
-                <p>                       
-                    Necesitamos que selecciones las 3 palabras que pienses que mejor se relacionen con la palabra destacada.
+                <p className='word-selector-instruction'>                       
+                    Seleccioná las 3 palabras que más se relacionen con la palabra en naranja.
                 </p>
                 <div className='grid-container'>
                     {list.map((item) => {

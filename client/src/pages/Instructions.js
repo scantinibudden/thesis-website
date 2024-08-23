@@ -44,7 +44,7 @@ function Instructions() {
             {
                 show1 && (
                     <p className='experiment-explanation'>
-                        Te vamos a mostrar una palabra que va a estar resaltada en una oración.
+                        Te vamos a mostrar una palabra que va a estar de color naranja en una oración.
                     </p>
                 )
             }
@@ -52,7 +52,7 @@ function Instructions() {
             {
                 show2 && (
                     <p className='experiment-explanation'>
-                        Necesitamos que selecciones las 3 palabras que pienses que mejor se relacionen con la palabra destacada.
+                        Seleccioná las 3 palabras que más se relacionen con la palabra en naranja.
                     </p>
                 )
             }

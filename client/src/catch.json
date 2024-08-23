@@ -28,9 +28,9 @@
                     "Cordillera",
                     "Cumbre",
                     "Colina",
-                    "Lámpara",
-                    "Cuchara",
-                    "Almohada",
+                    "Pista",
+                    "Ketchup",
+                    "Sillón",
                     "Carpeta",
                     "Puerta"
                 ]
@@ -66,11 +66,11 @@
                     "Aula",
                     "Colegio",
                     "Profesor",
-                    "Silla",
-                    "Taza",
-                    "Reloj",
+                    "Espátula",
+                    "Estuche",
+                    "Recital",
                     "Catacumbas",
-                    "Ventana"
+                    "Sacacorchos"
                 ]
             }
         ]
@@ -85,8 +85,8 @@
                     "PC",
                     "Notebook",
                     "Mouse",
-                    "Cartera",
-                    "Cuaderno",
+                    "Linterna",
+                    "Carpa",
                     "Zapato",
                     "Florero",
                     "Tenedor"
@@ -102,10 +102,10 @@
                 "context": "Un buen libro puede transportarte a otro mundo.",
                 "words": [
                     "Novela",
-                    "Manual",
+                    "Lectura",
                     "Biblioteca",
-                    "Sillón",
-                    "Botella",
+                    "Cámara",
+                    "Empedrado",
                     "Espejo",
                     "Cuadro",
                     "Cuchara"
@@ -120,12 +120,12 @@
             {
                 "context": "El río cruza el paisaje, ofreciendo un respiro en la naturaleza.",
                 "words": [
-                    "Afluente",
+                    "Lago",
                     "Corriente",
                     "Arroyo",
-                    "Mochila",
-                    "Lámpara",
-                    "Piso",
+                    "Universidad",
+                    "Jurado",
+                    "Libreta",
                     "Ventilador",
                     "Reloj"
                 ]
@@ -142,9 +142,9 @@
                     "Aeronave",
                     "Jet",
                     "Ala",
-                    "Taza",
+                    "Codo",
                     "Cuaderno",
-                    "Cámara",
+                    "Camaleón",
                     "Reloj",
                     "Papel"
                 ]
@@ -161,8 +161,8 @@
                     "Película",
                     "Sala",
                     "Proyector",
-                    "Silla",
-                    "Cartera",
+                    "Pescado",
+                    "Parrilla",
                     "Cuaderno",
                     "Cuchara",
                     "Carpeta"
@@ -180,11 +180,11 @@
                     "Exposición",
                     "Galería",
                     "Pintura",
-                    "Lámpara",
-                    "Mochila",
-                    "Cubo",
-                    "Cuadro",
-                    "Reloj"
+                    "Escoba",
+                    "Fideos",
+                    "Salsa",
+                    "Elefante",
+                    "Pastilla"
                 ]
             }
         ]

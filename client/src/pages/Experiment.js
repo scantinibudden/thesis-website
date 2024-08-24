@@ -43,7 +43,7 @@ function ExperimentCompareImages() {
   }
 
   const { userId } = location.state;
-  const {currentTrial} = location.state;
+  const { currentTrial } = location.state;
   const seed = getSeed(userId)
   const realTrialsLength = 3
   const catchLength = 1
@@ -52,16 +52,20 @@ function ExperimentCompareImages() {
 
   const [startTime, setStartTime] = useState(now())
 
-  const [progress, setProgress] = useState(parseInt(sessionStorage.getItem('progress')) || 1);
+  const [exp_index, setExperimentIndex] = useState(currentTrial || 0);
+  const [exp, setExperiment] = useState(dataset[exp_index]);
 
   // My states
   const dataset_length = dataset.length
-  const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || 0) % stepLength)
-  const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - progress))
+  const catch_length = catch_data.length 
+  // const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || currentTrial) % stepLength)
+  const [barProgress, setBarProgress] = useState(currentTrial % stepLength)
+  const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - exp_index + 1))
 
+  if (exp_index === dataset_length + catch_length) {
+    navigate('/thank-you');
+  }
 
-  const [exp_index, setExperimentIndex] = useState(currentTrial || 0);
-  const [exp, setExperiment] = useState(dataset[exp_index]);
   const wordSelectorRef = useRef(null);
 
   const [loading, setLoading] = useState(false)
@@ -120,10 +124,6 @@ function ExperimentCompareImages() {
       setStartTime(now())
     }, 1500);
 
-    setProgress(prevProgress => {
-      const updatedProgress = prevProgress + 1;
-      return updatedProgress > maxProgress ? maxProgress : updatedProgress;
-    });
     setBarProgress(prevBarProgress => {
       const updatedProgress = prevBarProgress + 1
       return updatedProgress % stepLength === 0 ? 0 : updatedProgress;
@@ -133,9 +133,8 @@ function ExperimentCompareImages() {
       setMaxProgress(dataset_length - new_exp_index)
     }
     setStartTrial(new_exp_index % stepLength === 0)
-    sessionStorage.setItem('progress', progress);
     setExperimentIndex(new_exp_index);
-    sessionStorage.setItem('exp_index', new_exp_index);
+    // sessionStorage.setItem('exp_index', new_exp_index);
   };
 
 
@@ -163,7 +162,6 @@ function ExperimentCompareImages() {
     const timestamp = now();
     submitRating(timestamp);
     // !Es temporal
-    sessionStorage.setItem('progress', 0);
     navigate('/thank-you');
   }
 

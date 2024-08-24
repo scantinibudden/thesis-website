@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function ThankYouMessage() {
   useEffect(() => {
     window.history.pushState(null, null, '/');
+    window.history.pushState(null, null, '/thank-you');
   }, []);
 
   return (

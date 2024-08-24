@@ -67,7 +67,7 @@
   text-align: center;
   color: var(--deeper-gray-color);
   margin: 0;
-  padding: 10px 5px;
+  padding: 10px 15px;
   background-color: var(--pale-cyan);
   border-radius: 10px;
   border-width: thin;
@@ -86,7 +86,6 @@
 @media (max-width: 600px) {
   .SubHeaderExp {
     font-size: 22px;
-    padding: 10px 10px;
   }
 
   .BlueSubHeader {
@@ -184,7 +183,7 @@ progress {
   left: 0;
   width: 100%;
   text-align: center;
-  color: black;
+  color: var(--platinum);
   font-weight: bold;
   line-height: 20px;
 }

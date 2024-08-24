@@ -31,26 +31,6 @@ function ProgressBar({ value, max }) {
   );
 }
 
-function Continue() {
-  <div className='next-step-container'>
-    <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
-      Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>
-
-    <div className='step-buttons-container'>
-      <div className='inner-button-container'>
-        <div className='button-container'>
-          <button onClick={handleNextStep} className='StepButton' style={{ backgroundColor: 'green' }}>Continuar</button>
-        </div>
-      </div>
-      <div className='inner-button-container'>
-        <div className='button-container'>
-          <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'red' }}>Terminar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-}
-
 
 function ExperimentCompareImages() {
   // Paula's states
@@ -198,7 +178,23 @@ function ExperimentCompareImages() {
       <LogosHeader />
       {
         startTrial && !loading ? (
-          <Continue />
+          <div className='next-step-container'>
+            <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
+              Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>
+
+            <div className='step-buttons-container'>
+              <div className='inner-button-container'>
+                <div className='button-container'>
+                  <button onClick={handleNextStep} className='StepButton' style={{ backgroundColor: 'green' }}>Continuar</button>
+                </div>
+              </div>
+              <div className='inner-button-container'>
+                <div className='button-container'>
+                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'red' }}>Terminar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         ) : (
           <div className='center-items'>
             <div className='BlueSubHeader'>

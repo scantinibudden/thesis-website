@@ -43,6 +43,7 @@ function ExperimentCompareImages() {
   }
 
   const { userId } = location.state;
+  const {currentTrial} = location.state;
   const seed = getSeed(userId)
   const realTrialsLength = 3
   const catchLength = 1
@@ -59,7 +60,7 @@ function ExperimentCompareImages() {
   const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - progress))
 
 
-  const [exp_index, setExperimentIndex] = useState(0);
+  const [exp_index, setExperimentIndex] = useState(currentTrial || 0);
   const [exp, setExperiment] = useState(dataset[exp_index]);
   const wordSelectorRef = useRef(null);
 

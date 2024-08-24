@@ -37,7 +37,7 @@ function ExperimentCompareImages() {
   // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
-
+  console.log(location.state)
   const now = () => {
     return new Date().getTime()
   }

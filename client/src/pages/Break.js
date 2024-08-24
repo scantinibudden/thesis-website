@@ -9,9 +9,10 @@ export default function Home() {
     const navigate = useNavigate();
     const location = useLocation();
     const { userId } = location.state;
+    console.log(location.state)
     
     const handleGoToExperiment = async () => {
-        navigate('/experiment', { state: { userId: userId } });
+        navigate('/experiment', { state: location.state });
     }
 
     return (

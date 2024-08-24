@@ -40,12 +40,12 @@ function CellPhoneLogin() {
     if (userExists) {
       console.log('User already exists');
       alert("Bienvenidx nuevamente!")
-      navigate('/experiment', { state: { userId: hashedCellNumber } });
+      navigate('/experiment', { state: { userId: hashedCellNumber, currentTrial: 2 } });
       alert('Ya completaste el experimento! Gracias por tu participación!')
 
     } else {
       console.log('Add new user: User does not exist');
-      navigate('/instructions', { state: { userId: hashedCellNumber } });
+      navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } });
 
       try {
 
@@ -53,7 +53,7 @@ function CellPhoneLogin() {
           userId: hashedCellNumber,
           loginTime: timestamp
         });
-        navigate('/instructions', { state: { userId: hashedCellNumber } })
+        navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } })
       } catch (error) {
         console.error('Error submitting data:', error);
       }

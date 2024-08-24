@@ -11,6 +11,7 @@ import './experiment.css';
 function TutorialCompareImages() {
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location.state)
   const [isLoading, setIsLoading] = useState(false);
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);
@@ -39,7 +40,7 @@ function TutorialCompareImages() {
         console.error("Error trying to add tutorial time:", error)
       }
       setIsLoading(false);
-      navigate('/break', { state: { userId: userId } });
+      navigate('/break', { state: location.state });
     } else {
       alert("Por favor, seleccione 3 palabras antes de continuar")
     }

@@ -13,11 +13,8 @@ module.exports = async (req, res) => {
       return res.status(400).json({ error: 'Missing required fields' });
     }
     console.log(req.body)
-    console.log("FAlta algos")
     let user = await ExperimentModel.findOne({ userId: userId });
-    console.log("el usuario es")
     console.log(user)
-    console.log("chauu")
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }

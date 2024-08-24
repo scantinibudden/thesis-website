@@ -37,13 +37,13 @@ function ExperimentCompareImages() {
   // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location.state)
   const now = () => {
     return new Date().getTime()
   }
 
   const { userId } = location.state;
-  const { currentTrial } = location.state;
+  const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
+  const currentTrial = (location.state.currentTrial||0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
   const seed = getSeed(userId)
   const realTrialsLength = 3
   const catchLength = 1
@@ -57,7 +57,7 @@ function ExperimentCompareImages() {
 
   // My states
   const dataset_length = dataset.length
-  const catch_length = catch_data.length 
+  const catch_length = catch_data.length
   // const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || currentTrial) % stepLength)
   const [barProgress, setBarProgress] = useState(currentTrial % stepLength)
   const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - exp_index + 1))
@@ -81,6 +81,7 @@ function ExperimentCompareImages() {
   useEffect(() => {
     console.log(exp_index)
     setExperiment(dataset[exp_index]);
+    console.log(sessionStorage.getItem('exp_index'))
   }, [exp_index]);
 
   useEffect(() => {
@@ -134,7 +135,7 @@ function ExperimentCompareImages() {
     }
     setStartTrial(new_exp_index % stepLength === 0)
     setExperimentIndex(new_exp_index);
-    // sessionStorage.setItem('exp_index', new_exp_index);
+    sessionStorage.setItem('exp_index', new_exp_index);
   };
 
 
@@ -151,6 +152,7 @@ function ExperimentCompareImages() {
   }
 
   const handleFinishClick = async () => {
+    sessionStorage.setItem('exp_index', 0);
     navigate('/thank-you');
   }
 
@@ -162,6 +164,7 @@ function ExperimentCompareImages() {
     const timestamp = now();
     submitRating(timestamp);
     // !Es temporal
+    sessionStorage.setItem('exp_index', 0);
     navigate('/thank-you');
   }
 

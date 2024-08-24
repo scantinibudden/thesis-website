@@ -63,6 +63,7 @@ function ExperimentCompareImages() {
   const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - exp_index + 1))
 
   if (exp_index === dataset_length + catch_length) {
+    alert("Ya completaste el experimento, gracias por participar")
     navigate('/thank-you');
   }
 

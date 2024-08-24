@@ -31,6 +31,25 @@ function ProgressBar({ value, max }) {
   );
 }
 
+function Continue() {
+  <div className='next-step-container'>
+    <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
+      Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>
+
+    <div className='step-buttons-container'>
+      <div className='inner-button-container'>
+        <div className='button-container'>
+          <button onClick={handleNextStep} className='StepButton' style={{ backgroundColor: 'green' }}>Continuar</button>
+        </div>
+      </div>
+      <div className='inner-button-container'>
+        <div className='button-container'>
+          <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'red' }}>Terminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
 
 
 function ExperimentCompareImages() {
@@ -43,7 +62,7 @@ function ExperimentCompareImages() {
 
   const { userId } = location.state;
   const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
-  const currentTrial = (location.state.currentTrial||0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
+  const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
   const seed = getSeed(userId)
   const realTrialsLength = 3
   const catchLength = 1
@@ -179,26 +198,9 @@ function ExperimentCompareImages() {
       <LogosHeader />
       {
         startTrial && !loading ? (
-          <div className='next-step-container'>
-            <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
-              Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>
-
-            <div className='step-buttons-container'>
-              <div className='inner-button-container'>
-                <div className='button-container'>
-                  <button onClick={handleNextStep} className='StepButton' style={{ backgroundColor: 'green' }}>Continuar</button>
-                </div>
-              </div>
-              <div className='inner-button-container'>
-                <div className='button-container'>
-                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'red' }}>Terminar</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <Continue />
         ) : (
-          <div>
+          <div className='center-items'>
             <div className='BlueSubHeader'>
               Experimento
             </div>
@@ -237,10 +239,10 @@ function ExperimentCompareImages() {
                 <div></div>
               )
             }
-          </div>
+          </div >
         )
       }
-    </div>
+    </div >
 
   );
 }

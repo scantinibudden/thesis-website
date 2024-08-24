@@ -18,11 +18,11 @@ module.exports = async (req, res) => {
     }
     const login_time = new Date(loginTime);
     const newUser = new ExperimentModel({
-      userId: userId, 
-      loginTime: login_time, 
+      userId: userId,
+      loginTime: login_time,
       trials: [],
       tutorialTime: null,
-      lastTrialSubmitted: null
+      lastTrialSubmitted: -1
     });
     await newUser.save();
 
@@ -33,6 +33,4 @@ module.exports = async (req, res) => {
       res.status(500).send('Server Error');
     }
   }
-
-
 }

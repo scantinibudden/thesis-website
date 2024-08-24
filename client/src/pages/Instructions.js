@@ -38,7 +38,7 @@ function Instructions() {
         <div className='container'>
             <LogosHeader />
             <div className='BlueSubHeader'>
-                Instruciones
+                Instrucciones
             </div>
 
             {

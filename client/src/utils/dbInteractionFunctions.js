@@ -37,9 +37,9 @@ export async function getNewImageToRate(userId){
     return randomIndex;
 };
 
-export async function getSerieNumber(userId){
+export async function getLastSubmitted(userId){
   try {
-    const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/getCurrentSerie`, 
+    const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/getLastSubmitted`, 
     {userId: userId});
     return response.data;
   } catch (error) {

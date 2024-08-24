@@ -6,6 +6,7 @@ import { SHA256 } from 'crypto-js';
 
 import '../pages/home.css';
 import { checkUserExists } from '../utils/dbInteractionFunctions.js';
+import { getLastSubmitted } from '../utils/dbInteractionFunctions.js';
 
 function CellPhoneLogin() {
   const navigate = useNavigate();
@@ -38,10 +39,10 @@ function CellPhoneLogin() {
     const userExists = await checkUserExists(hashedCellNumber);
 
     if (userExists) {
+      const last_submitted = await getLastSubmitted(hashedCellNumber)
       console.log('User already exists');
       alert("Bienvenidx nuevamente!")
-      navigate('/experiment', { state: { userId: hashedCellNumber, currentTrial: 2 } });
-      alert('Ya completaste el experimento! Gracias por tu participación!')
+      navigate('/experiment', { state: { userId: hashedCellNumber, currentTrial: last_submitted } });
 
     } else {
       console.log('Add new user: User does not exist');

@@ -16,15 +16,18 @@ function TutorialCompareImages() {
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);
   const exp = {
-    "word": "Selección",
-    "context": "La selección Argentina le ganó 4-2 por penales a Francia.",
+    "word": "mensaje",
+    "context": "Ana le envió un mensaje a Beto.",
     "words": [
-      "Messi",
-      "Scalonetta",
-      "Di Maria",
-      "Mbappe",
-      "Qatar",
-      "Fútbol"]
+      "Comunicación",
+      "Chat",
+      "Mail",
+      "Celular",
+      "Computadora",
+      "Casilla",
+      "Videollamada",
+      "Tecnología"
+    ]
   }
 
   const handleGoToBreak = async () => {

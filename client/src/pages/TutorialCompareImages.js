@@ -57,17 +57,19 @@ function TutorialCompareImages() {
         Fase de prueba
       </div>
 
-      <div className='experiment-container'>
-        <div className='inner-star-rating-container'>
-          <WordSelector ref={wordSelectorRef} exp={exp} />
-        </div>
-        <div className='inner-button-container'>
-          <div className='button-container'>
-            {isLoading ? (
-              <div className="loader"></div>
-            ) : (
-              <button onClick={handleGoToBreak} className='SubmitButton'>Siguiente</button>
-            )}
+      <div>
+        <div className='experiment-container'>
+          <div className='inner-star-rating-container'>
+            <WordSelector ref={wordSelectorRef} exp={exp} />
+          </div>
+          <div className='inner-button-container'>
+            <div className='button-container'>
+              {isLoading ? (
+                <div className="loader"></div>
+              ) : (
+                <button onClick={handleGoToBreak} className='SubmitButton'>Siguiente</button>
+              )}
+            </div>
           </div>
         </div>
       </div>

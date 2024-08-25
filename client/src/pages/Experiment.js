@@ -123,7 +123,7 @@ function ExperimentCompareImages() {
     setTimeout(() => {
       setLoading(false)
       setStartTime(now())
-    }, 1500);
+    }, 5000);
 
     setBarProgress(prevBarProgress => {
       const updatedProgress = prevBarProgress + 1
@@ -185,12 +185,12 @@ function ExperimentCompareImages() {
             <div className='step-buttons-container'>
               <div className='inner-button-container'>
                 <div className='button-container'>
-                  <button onClick={handleNextStep} className='StepButton' style={{ backgroundColor: 'green' }}>Continuar</button>
+                  <button onClick={handleNextStep} className='StepButton'>Continuar</button>
                 </div>
               </div>
               <div className='inner-button-container'>
                 <div className='button-container'>
-                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'red' }}>Terminar</button>
+                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'var(--deep-blue)' }}>Terminar</button>
                 </div>
               </div>
             </div>

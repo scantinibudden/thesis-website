@@ -31,6 +31,13 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .experiment-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -42,6 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 95vw;
   }
 
   .inner-button-container,
@@ -168,12 +176,13 @@ progress {
   flex-direction: column;
   align-items: center;
   justify-self: center;
+  width: 100%;
 }
 
 .progress-bar-inner-container {
   margin-top: 5px;
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 20px;
 }
 
@@ -285,6 +294,7 @@ progress {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .word-selector-instruction {
@@ -301,5 +311,6 @@ progress {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
     

@@ -179,9 +179,10 @@ function ExperimentCompareImages() {
       {
         startTrial && !loading ? (
           <div className='next-step-container'>
-            <p className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! <br />
-              Puedes elegir continuar con el experimento o finalizarlo en este momento.</p>
-
+            <p className='BlueSubHeader' style={{margin:0, padding:0}}>¡Felicitaciones llegaste al final de esta etapa! </p>
+            <p className="continue-messsage">
+              Puedes elegir continuar con el experimento o finalizarlo en este momento
+            </p>
             <div className='step-buttons-container'>
               <div className='inner-button-container'>
                 <div className='button-container'>
@@ -204,7 +205,7 @@ function ExperimentCompareImages() {
             <div className='experiment-container'>
               {
                 !loading ? (
-                  <div ref={divRef} style={{ 'width': '100%' }}>
+                  <div ref={divRef} style={{ width: '100%', marginTop: '10px' }}>
                     <WordSelector ref={wordSelectorRef} exp={exp} />
                     <div className='inner-button-container'>
                       {(exp_index < dataset_length - 1) ? (

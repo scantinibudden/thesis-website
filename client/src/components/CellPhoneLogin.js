@@ -24,13 +24,14 @@ function CellPhoneLogin() {
 
     const timestamp = new Date().getTime();
 
-    const cellNumberPattern = /^[0-9]{10}$/;
-    const isValidCellNumber = cellNumberPattern.test(cellPhoneInput);
-    const hashedCellNumber = SHA256(cellPhoneInput).toString();
+    const lowerEmail = cellPhoneInput.toLowerCase()
+    const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const isValidCellNumber = emailPattern.test(lowerEmail);
+    const hashedCellNumber = SHA256(lowerEmail).toString();
 
     if (!isValidCellNumber) {
-      console.error('Invalid cell number');
-      alert("El numero de teléfono ingresado no es valido. El número ingresado debe tener 10 dígitos. Por favor, intenta de nuevo.")
+      console.error('Invalid email number');
+      alert("Por favor ingrese un mail válido.")
       setUserId('')
       setIsLoading(false);
       return;
@@ -67,10 +68,10 @@ function CellPhoneLogin() {
       <form onSubmit={handleSubmit} className='input-button-container'>
         <input
           style={{ textAlign: 'center' }}
-          type="tel"
+          type="email"
           value={cellPhoneInput}
           onChange={handleInputChange}
-          placeholder="Ingresa tu teléfono"
+          placeholder="Ingresa tu email"
           className='Input'
         />
         <div className='button-container' >

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 export default function ThankYouMessage() {
   useEffect(() => {
     window.history.pushState(null, null, '/');
-    window.history.pushState(null, null, '/thank-you');
+    window.history.pushState(null, null, '/');
   }, []);
 
   return (

@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
 }
@@ -178,6 +178,7 @@ progress {
   justify-self: center;
   width: 98%;
   max-width: 95vw;
+  margin: 10px;
 }
 
 .progress-bar-inner-container {

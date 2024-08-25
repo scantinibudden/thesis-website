@@ -57,9 +57,9 @@ function TutorialCompareImages() {
         Fase de prueba
       </div>
 
-      <div>
+      <div style={{'width':'100%'}}>
         <div className='experiment-container'>
-          <div className='inner-star-rating-container'>
+          <div className='inner-star-rating-container' style={{'width':'100%'}}>
             <WordSelector ref={wordSelectorRef} exp={exp} />
           </div>
           <div className='inner-button-container'>

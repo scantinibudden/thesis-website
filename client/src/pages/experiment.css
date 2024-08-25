@@ -176,7 +176,8 @@ progress {
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  width: 100%;
+  width: 98%;
+  max-width: 95vw;
 }
 
 .progress-bar-inner-container {
@@ -312,5 +313,6 @@ progress {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
     

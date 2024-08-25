@@ -123,7 +123,7 @@ function ExperimentCompareImages() {
     setTimeout(() => {
       setLoading(false)
       setStartTime(now())
-    }, 5000);
+    }, 1500);
 
     setBarProgress(prevBarProgress => {
       const updatedProgress = prevBarProgress + 1
@@ -204,7 +204,7 @@ function ExperimentCompareImages() {
             <div className='experiment-container'>
               {
                 !loading ? (
-                  <div ref={divRef}>
+                  <div ref={divRef} style={{'width':'100%'}}>
                     <WordSelector ref={wordSelectorRef} exp={exp} />
                     <div className='inner-button-container'>
                       {(exp_index < dataset_length - 1) ? (

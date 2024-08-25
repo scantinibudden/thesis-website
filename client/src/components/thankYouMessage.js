@@ -10,6 +10,7 @@ export default function ThankYouMessage() {
   return (
     <div>
       <h1 className='ThankYou'> ¡Gracias por participar! </h1>
+      <h2 className='shu'> Por favor compartenos </h2>
     </div>
   );
 }

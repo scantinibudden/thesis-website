@@ -190,7 +190,7 @@ function ExperimentCompareImages() {
               </div>
               <div className='inner-button-container'>
                 <div className='button-container'>
-                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'var(--deep-blue)' }}>Terminar</button>
+                  <button onClick={handleFinishClick} className='StepButton' style={{ backgroundColor: 'var(--pale-cyan)', color: 'var(--deep-red)', border: 'solid', borderColor: 'var(--deep-red)' }}>Terminar</button>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@ function ExperimentCompareImages() {
             <div className='experiment-container'>
               {
                 !loading ? (
-                  <div ref={divRef} style={{'width':'100%'}}>
+                  <div ref={divRef} style={{ 'width': '100%' }}>
                     <WordSelector ref={wordSelectorRef} exp={exp} />
                     <div className='inner-button-container'>
                       {(exp_index < dataset_length - 1) ? (

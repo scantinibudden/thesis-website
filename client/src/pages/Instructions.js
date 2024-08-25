@@ -35,7 +35,7 @@ function Instructions() {
     }
 
     return (
-        <div className='container'>
+        <div className='container' style={{maxWidth:'1200px'}}>
             <LogosHeader />
             <div className='BlueSubHeader'>
                 Instrucciones

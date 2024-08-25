@@ -6,7 +6,7 @@ import LogosHeader from '../components/LogosHeader.js';
 export default function Home() {
 
   return (
-    <div className='container'>
+    <div className='container' style={{maxWidth:'1200px'}}>
       <LogosHeader />
       <Header />
       <SubHeader />

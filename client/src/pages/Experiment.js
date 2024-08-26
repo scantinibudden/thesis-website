@@ -179,8 +179,8 @@ function ExperimentCompareImages() {
       {
         startTrial && !loading ? (
           <div className='next-step-container'>
-            <p className='BlueSubHeader' style={{margin:0, padding:0}}>¡Felicitaciones llegaste al final de esta etapa! </p>
-            <p className="continue-messsage">
+            <div className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! </div>
+            <p className="continue-message">
               Puedes elegir continuar con el experimento o finalizarlo en este momento
             </p>
             <div className='step-buttons-container'>

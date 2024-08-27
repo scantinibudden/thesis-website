@@ -47,18 +47,21 @@ function ExperimentCompareImages() {
   const realTrialsLength = 3
   const catchLength = 1
   const stepLength = realTrialsLength + catchLength
-  const [dataset, setDataset] = useState(generateDataset(data, catch_data, seed, realTrialsLength, catchLength))
+  const dataset = generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
 
   const dataset_length = dataset.length
   const catch_length = catch_data.length
-  if (exp_index >= dataset_length + catch_length) {
+
+  const idx = currentTrial || 0
+  const [exp_index, setExperimentIndex] = useState(idx);
+
+  if (idx >= dataset_length + catch_length) {
     alert("Ya completaste el experimento, gracias por participar")
     navigate('/thank-you');
   }
 
   const [startTime, setStartTime] = useState(now())
 
-  const [exp_index, setExperimentIndex] = useState(currentTrial || 0);
   const [exp, setExperiment] = useState(dataset[exp_index]);
 
   // My states

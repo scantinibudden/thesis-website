@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   try {
     allowCORS(req, res, () => { });
 
-    const { userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted, startTime, submitTime } = req.body;
+    const { userId, trialNumber, wordID, meaningID, word, context, answers, wordOrder, lastTrialSubmitted, startTime, submitTime, hasFinished } = req.body;
 
     if (!userId) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -30,7 +30,8 @@ module.exports = async (req, res) => {
       answers: answers,
       wordOrder: wordOrder,
       startTime: startTime,
-      submitTime: submitTime
+      submitTime: submitTime,
+      hasFinished: hasFinished
     });
 
     await user.save();

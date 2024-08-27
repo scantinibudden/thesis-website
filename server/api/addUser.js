@@ -22,7 +22,8 @@ module.exports = async (req, res) => {
       loginTime: login_time,
       trials: [],
       tutorialTime: null,
-      lastTrialSubmitted: -1
+      lastTrialSubmitted: -1,
+      hasFinished: false,
     });
     await newUser.save();
 

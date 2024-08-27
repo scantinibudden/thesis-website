@@ -97,7 +97,7 @@ function ExperimentCompareImages() {
     }
   }, []);
 
-  const submitRating = async (timestamp) => {
+  const submitRating = async (timestamp, hasFinished) => {
     if (!navigator.onLine) {
       alert('No se pudo enviar la selección. Por favor, revisa tu conexión a internet.');
       return;
@@ -115,6 +115,7 @@ function ExperimentCompareImages() {
       lastTrialSubmitted: exp_index,
       startTime: startTime,
       submitTime: timestamp,
+      hasFinished: hasFinished,
     }).then(response => {
       console.log('Selection added successfully!');
     }).catch(error => {
@@ -153,7 +154,7 @@ function ExperimentCompareImages() {
         return;
       }
       const timestamp = now();
-      submitRating(timestamp);
+      submitRating(timestamp, false);
     }
   }
 
@@ -168,7 +169,7 @@ function ExperimentCompareImages() {
       return;
     }
     const timestamp = now();
-    submitRating(timestamp);
+    submitRating(timestamp, true);
     // !Es temporal
     sessionStorage.setItem('exp_index', 0);
     navigate('/thank-you');

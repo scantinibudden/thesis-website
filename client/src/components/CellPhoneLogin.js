@@ -49,6 +49,11 @@ function CellPhoneLogin() {
         console.log(user)
         console.log(last_submitted)
         console.log('User already exists');
+        if (user.hasFinished) {
+          navigate('/thank-you')
+          alert("Ya completaste el experimento. ¡Gracias por participar!")
+          return  
+        }
         navigate('/experiment', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
       } catch (error) {
         alert("Sucedió un error inesperado, vuelve a intentarlo")

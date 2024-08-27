@@ -20,6 +20,7 @@ module.exports = async (req, res) => {
     }
 
     user.lastTrialSubmitted = lastTrialSubmitted;
+    user.hasFinished = hasFinished
 
     user.trials.push({
       trialNumber: trialNumber,
@@ -31,7 +32,6 @@ module.exports = async (req, res) => {
       wordOrder: wordOrder,
       startTime: startTime,
       submitTime: submitTime,
-      hasFinished: hasFinished
     });
 
     await user.save();

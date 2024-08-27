@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
   const user = await ExperimentModel.findOne({userId: userId}
                         ).catch(err => { console.error('User not found');});
   
-  res.json(user.lastTrialSubmitted);
+  res.json(user);
     
   } catch (err) {
     console.error(err);

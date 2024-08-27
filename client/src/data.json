@@ -824,6 +824,195 @@
     ]
   },
   {
+    "wordID": 24,
+    "word": "Regla",
+    "meanings": [
+      {
+        "context": "Para trazar una línea recta, coloca una regla sobre el papel.",
+        "words": [
+          "Trazo",
+          "Recto",
+          "Recta",
+          "Dibujo",
+          "Escudra",
+          "Medida",
+          "Medición",
+          "Medir",
+          "Centímetro",
+          "Milímetro",
+          "Útiles",
+          "Herramienta",
+          "Geometría"
+        ]
+      },
+      {
+        "context": "En el trabajo, es fundamental seguir la regla de cumplimiento de normas de seguridad para evitar accidentes.",
+        "words": [
+          "Norma",
+          "Ley",
+          "Contrato",
+          "Convivencia",
+          "Estricto",
+          "Deber"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 25,
+    "word": "Goma",
+    "meanings": [
+      {
+        "context": "Para corregir los errores en el dibujo, usa una goma de borrar suave que no dañe el papel.",
+        "words": [
+          "Lápiz",
+          "Borrar",
+          "Papel",
+          "Escritura",
+          "Dibujo",
+          "Borrado",
+          "Deshacer"
+        ]
+      },
+      {
+        "context": "Durante el viaje, pinché la goma del coche al pasar por un objeto punzante en la carretera.",
+        "words": [
+          "Mecánico",
+          "Taller",
+          "Auto",
+          "Vehículo",
+          "Coche",
+          "Caucho",
+          "Camión",
+          "Llanta"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 26,
+    "word": "Raíz",
+    "meanings": [
+      {
+        "context": "La raíz cuadrada de un número es el valor que, al ser multiplicado por sí mismo, da como resultado el número original.",
+        "words": [
+          "Potencia",
+          "Cuenta",
+          "Cálculo",
+          "Matemática",
+          "Ecuación",
+          "Números"
+        ]
+      },
+      {
+        "context": "Los árboles absorven agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
+        "words": [
+          "Plantas",
+          "Árboles",
+          "Vegetales",
+          "Clorofila",
+          "Naturaleza",
+          "Frutas",
+          "Verduras"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 27,
+    "word": "Cuarto",
+    "meanings": [
+      {
+        "context": "Laura notó que estaba satisfecha con solo comer un cuarto del alfajor.",
+        "words": [
+          "Medida",
+          "Cálculo",
+          "Fracción",
+          "Cuenta",
+          "Denominador",
+          "Número",
+          "Cuatro",
+          "Parte",
+          "Porción"
+        ]
+      },
+      {
+        "context": "El cuarto de un adolescente suele estar desordenado y sucio.",
+        "words": [
+          "Habitación",
+          "Lugar",
+          "Espacio",
+          "Cama",
+          "Pieza",
+          "Alojamiento",
+          "Casa"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 28,
+    "word": "Medio",
+    "meanings": [
+      {
+        "context": "Los hermanos cortaron la milanesa al medio, para que cada uno tenga la misma cantidad.",
+        "words": [
+          "Medida",
+          "Cálculo",
+          "Fracción",
+          "Cuenta",
+          "Denominador",
+          "Número",
+          "Cuatro",
+          "Parte",
+          "Porción"
+        ]
+      },
+      {
+        "context": "Mariana había dejado la silla en el medio del camino, imposibilitando el paso.",
+        "words": [
+          "Lugar",
+          "Posición",
+          "Atrás",
+          "Adelante",
+          "Izquierda",
+          "Derecha",
+          "Centro",
+          "Simétrico"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 29,
+    "word": "Cuenta",
+    "meanings": [
+      {
+        "context": "Estaba tan nervioso durante el exámen que no pudo hacer ninguna cuenta sin la calculadora.",
+        "words": [
+          "Cálculo",
+          "Ecuación",
+          "Número",
+          "Escuela",
+          "Matemática"
+        ]
+      },
+      {
+        "context": "Al momento de asociarse al nuevo banco, le abrieron una cuenta para poder ingresar su salario.",
+        "words": [
+          "Sueldo",
+          "Dinero",
+          "Compras",
+          "Crédito",
+          "Balance",
+          "Valor",
+          "Bancario",
+          "Ahorro"
+        ]
+      }
+    ]
+  },
+  {
     "wordID": 30,
     "word": "Nota",
     "meanings": [
@@ -1187,6 +1376,352 @@
           "Coma",
           "Secuencia",
           "Sentencia"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 39,
+    "word": "Función",
+    "meanings": [
+      {
+        "context": "Antes de que empiece la función, todos los espectadores deben estar ya acomodados en sus asientos.",
+        "words": [
+          "Teatro",
+          "Actores",
+          "Personajes",
+          "Drama",
+          "Dramaturgo",
+          "Escritor",
+          "Obra",
+          "Vestuarios"
+        ]
+      },
+      {
+        "context": "La relación es lineal cuando la imágen se encuentra en función del dominio.",
+        "words": [
+          "Cálculo",
+          "Ecuación",
+          "Número",
+          "Escuela",
+          "Matemática"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 40,
+    "word": "Obra",
+    "meanings": [
+      {
+        "context": "Los espectadores aplaudieron con entusiasmo al finalizar la obra.",
+        "words": [
+          "Teatro",
+          "Actores",
+          "Personajes",
+          "Drama",
+          "Dramaturgo",
+          "Escritor",
+          "Musical",
+          "Comedia",
+          "Entretenimiento",
+          "Actuación",
+          "Escenario",
+          "Vestuarios"
+        ]
+      },
+      {
+        "context": "Miguel está cansado de escuchar los golpes de la obra que estaban construyendo al lado de su casa.",
+        "words": [
+          "Cemento",
+          "Arquitecto",
+          "Albañil",
+          "Albañileria",
+          "Casa",
+          "Edificio",
+          "Obrero",
+          "Pintura",
+          "Ladrillo",
+          "Cemento",
+          "Edificar"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 41,
+    "word": "Plataforma",
+    "meanings": [
+      {
+        "context": "El contenido de la materia será subido a la plataforma de aprendizaje al finalizar la clase.",
+        "words": [
+          "Videos",
+          "Web",
+          "Tecnología",
+          "Streaming",
+          "Digital",
+          "Herramienta",
+          "Computadora",
+          "Internet",
+          "Conexión"
+        ]
+      },
+      {
+        "context": "Juan decidió votarlo porque la plataforma del postulante coincidia con su ideología.",
+        "words": [
+          "Política",
+          "Sociedad",
+          "Economía",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Senadores",
+          "Congreso",
+          "Elecciones",
+          "Ideología",
+          "Propuesta"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 42,
+    "word": "Viral",
+    "meanings": [
+      {
+        "context": "Martina subió el video de su prima cayendose pensando que podía hacerse viral.",
+        "words": [
+          "Noticias",
+          "Social",
+          "Famoso",
+          "Instagram",
+          "Facebook",
+          "Medios",
+          "Conocido",
+          "Alcance",
+          "Vistas",
+          "Visitas"
+        ]
+      },
+      {
+        "context": "La nueva cepa de la gripe resultó ser una enfermad viral muy contagiosa. ",
+        "words": [
+          "Virus",
+          "Enfermedad",
+          "Infección",
+          "Bacteria",
+          "Daño",
+          "Hospital",
+          "Médico",
+          "Respiratorio",
+          "Contagio",
+          "Vacuna"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 43,
+    "word": "Red",
+    "meanings": [
+      {
+        "context": "Cuando llegó la navidad, todos empezaron a mandar mensajes de texto y la red se colapsó.",
+        "words": [
+          "Servidores",
+          "Internet",
+          "Web",
+          "Social",
+          "Facebook",
+          "Instagram",
+          "Conectar",
+          "Vínculo",
+          "Amistad"
+        ]
+      },
+      {
+        "context": "Los hermanos volvieron contentos del río con la red llena de peces.",
+        "words": [
+          "Hilos",
+          "Pesca",
+          "Pez",
+          "Atrapar",
+          "Araña",
+          "Captura",
+          "Trampa"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 44,
+    "word": "Aplicación",
+    "meanings": [
+      {
+        "context": "La promoción solo es válida para compras en la aplicación.",
+        "words": [
+          "Celular",
+          "Programa",
+          "Internet",
+          "Plataforma",
+          "Herramienta",
+          "Conexión"
+        ]
+      },
+      {
+        "context": "Para que la herida sane, la médica le enseño cómo hacer la correcta aplicación del producto para que éste haga efecto.",
+        "words": [
+          "Pomada",
+          "Crema",
+          "Ungüento",
+          "Medicamento"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 45,
+    "word": "Expreso",
+    "meanings": [
+      {
+        "context": "El expreso llegó velózmente a destino ya que no tiene mas paradas intermedias.",
+        "words": [
+          "Tren",
+          "Transporte",
+          "Vagón",
+          "Locomotora",
+          "Maquinista",
+          "Vehículo",
+          "Rápido",
+          "Tiempo"
+        ]
+      },
+      {
+        "context": "Al pasar por la cafeteria, pidió el expreso para llevar.",
+        "words": [
+          "Café",
+          "Capuccino",
+          "Descafeinado",
+          "Granos",
+          "Bebida",
+          "Energizante"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 46,
+    "word": "Móvil",
+    "meanings": [
+      {
+        "context": "A los 18 años, Martín sacó su registro y manejó el móvil de sus padres por primera vez.",
+        "words": [
+          "Auto",
+          "Coche",
+          "Vehículo",
+          "Transporte",
+          "Automóvil",
+          "Carro",
+          "Moto",
+          "Movilizar"
+        ]
+      },
+      {
+        "context": "La llamada llegaba pero el móvil estaba en silencio.",
+        "words": [
+          "Celular",
+          "Teléfono",
+          "Android",
+          "Iphone",
+          "Apple",
+          "Samsung",
+          "Telecomunicaciones",
+          "Internet",
+          "Comunicación",
+          "Pantalla",
+          "Whatsapp",
+          "Dispositivo",
+          "Personal"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 47,
+    "word": "Metro",
+    "meanings": [
+      {
+        "context": "Estaban a sólo dos estaciones de metro para llegar.",
+        "words": [
+          "Tren",
+          "Transporte",
+          "Vagón",
+          "Locomotora",
+          "Maquinista",
+          "Vehículo",
+          "Subterraneo",
+          "Subte",
+          "Ciudad",
+          "Movilizar"
+        ]
+      },
+      {
+        "context": "Para medir la madera con mayor precisión, recordá llevar el metro contigo.",
+        "words": [
+          "Herramienta",
+          "Medición",
+          "Medida",
+          "Modista",
+          "Carpintero",
+          "Carpintería",
+          "Ropa",
+          "Medir",
+          "Distancia",
+          "Tamaño",
+          "Regla"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 48,
+    "word": "Estación",
+    "meanings": [
+      {
+        "context": "El hotel tiene cerca una estación que lo lleva al centro de la ciudad.",
+        "words": [
+          "Tren",
+          "Transporte",
+          "Vagón",
+          "Locomotora",
+          "Maquinista",
+          "Vehículo",
+          "Subterraneo",
+          "Subte",
+          "Autobus",
+          "Horario",
+          "Espera",
+          "Frenar",
+          "Acceso",
+          "Parada"
+        ]
+      },
+      {
+        "context": "Al viajar a europa en julio, recordá llevar ropa liviana ya que es la estación mas calurosa.",
+        "words": [
+          "Primavera",
+          "Otoño",
+          "Verano",
+          "Invierno",
+          "Calendario",
+          "Mes",
+          "Día",
+          "Soleado",
+          "Nublado",
+          "Lluvioso",
+          "Árbol",
+          "Clima",
+          "Planeta",
+          "Época"
         ]
       }
     ]

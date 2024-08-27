@@ -148,8 +148,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10vw;
     font-size: 10vw;
+    padding: 0px;
   }
 }
 
@@ -327,5 +327,18 @@ progress {
 @media (max-width: 600px) {
   .continue-message {
     margin: 0;
+  }
+}
+
+.share-container {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+
+
+@media (max-width: 600px) {
+  .share-container {
+    width: 100%;
   }
 }

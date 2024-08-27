@@ -9,7 +9,7 @@ import NextButton from '../components/NextButton.js';
 
 // My imports
 import data from '../data_dev.json';
-import catch_data from '../catch.json';
+import catch_data from '../catch_dev.json';
 
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/ClockLoader.js";

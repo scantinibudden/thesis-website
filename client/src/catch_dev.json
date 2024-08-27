@@ -1,0 +1,40 @@
+[
+    {
+        "wordID": 60,
+        "word": "Perro",
+        "meanings": [
+            {
+                "context": "El perro es el mejor amigo del hombre.",
+                "words": [
+                    "Cachorro",
+                    "Can",
+                    "Mascota",
+                    "Avión",
+                    "Coche",
+                    "Silla",
+                    "Reloj",
+                    "Cuaderno"
+                ]
+            }
+        ]
+    },
+    {
+        "wordID": 61,
+        "word": "Montaña",
+        "meanings": [
+            {
+                "context": "Escalar una montaña puede ser una experiencia transformadora.",
+                "words": [
+                    "Cordillera",
+                    "Cumbre",
+                    "Colina",
+                    "Pista",
+                    "Ketchup",
+                    "Sillón",
+                    "Carpeta",
+                    "Puerta"
+                ]
+            }
+        ]
+    }
+]

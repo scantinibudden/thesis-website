@@ -6,7 +6,7 @@ import { SHA256 } from 'crypto-js';
 
 import '../pages/home.css';
 import { checkUserExists } from '../utils/dbInteractionFunctions.js';
-import { getLastSubmitted } from '../utils/dbInteractionFunctions.js';
+import { getUser } from '../utils/dbInteractionFunctions.js';
 
 function CellPhoneLogin() {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ function CellPhoneLogin() {
     if (userExists) {
       alert("Bienvenidx nuevamente!")
       try {
-        const user = await getLastSubmitted(hashedCellNumber)
+        const user = await getUser(hashedCellNumber)
         const last_submitted = user.lastTrialSubmitted
         console.log(user)
         console.log(last_submitted)

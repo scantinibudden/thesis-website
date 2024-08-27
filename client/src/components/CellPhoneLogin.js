@@ -42,7 +42,10 @@ function CellPhoneLogin() {
     if (userExists) {
       alert("Bienvenidx nuevamente!")
       try {
-        const last_submitted = await getLastSubmitted(hashedCellNumber)
+        const user = await getLastSubmitted(hashedCellNumber)
+        const last_submitted = user.lastTrialSubmitted
+        console.log(user)
+        console.log(last_submitted)
         console.log('User already exists');
         navigate('/experiment', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
       } catch (error) {

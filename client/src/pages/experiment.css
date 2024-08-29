@@ -255,12 +255,13 @@ progress {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   width: 120px;
+  font-size: 16px;
 }
 
 @media (max-width: 600px) {
   .StepButton {
     padding: 12px 20px;
-    font-size: 10px;
+    font-size: 12px;
     overflow-wrap: break-word;
     text-align: center;
   }

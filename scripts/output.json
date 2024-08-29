@@ -1,0 +1,1538 @@
+[
+  {
+    "wordID": 0,
+    "word": "Raya",
+    "meanings": [
+      {
+        "context": "Es muy difícil encontrar una raya en el acuario.",
+        "words": [
+          "Pez",
+          "Negro",
+          "Peligro",
+          "Mantarraya",
+          "Tiburón",
+          "Animal",
+          "Marino",
+          "Mar"
+        ]
+      },
+      {
+        "context": "Después de borrar su hoja, no le quedó ni una raya.",
+        "words": [
+          "Línea",
+          "Recta",
+          "Palo",
+          "Lapiz",
+          "Geométrica",
+          "Lado",
+          "Dibujo",
+          "Curvo"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 1,
+    "word": "Llama",
+    "meanings": [
+      {
+        "context": "En su viaje a Jujuy, comió una milanesa de llama.",
+        "words": [
+          "Animal",
+          "Camélido",
+          "Mamífero",
+          "Andino",
+          "Cuadrupedo",
+          "Pelos",
+          "Doméstico",
+          "Norte"
+        ]
+      },
+      {
+        "context": "Usaron un encendedor para prender la llama.",
+        "words": [
+          "Fuego",
+          "Vela",
+          "Mechero",
+          "Parrilla",
+          "Cocinar",
+          "Calor",
+          "Incendio",
+          "Combustión"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 2,
+    "word": "Salamandra",
+    "meanings": [
+      {
+        "context": "La salamandra era muy escurridiza y se movía por todo el lugar.",
+        "words": [
+          "Lagarto",
+          "Reptil",
+          "Camaleón",
+          "Animal",
+          "Anfibio",
+          "Lagartija",
+          "Iguana",
+          "Vertebrado"
+        ]
+      },
+      {
+        "context": "Su padre compró una salamandra para evitar el frío en invierno.",
+        "words": [
+          "Estufa",
+          "Carbon",
+          "Llamas",
+          "Calefacción",
+          "Madera",
+          "Calor",
+          "Humo",
+          "Hierro"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 3,
+    "word": "Muñeca",
+    "meanings": [
+      {
+        "context": "El se quebró la muñeca jugando al paddle.",
+        "words": [
+          "Brazo",
+          "Piel",
+          "Mano",
+          "Cuerpo",
+          "Persona",
+          "Articulación",
+          "Pulsera",
+          "Reloj"
+        ]
+      },
+      {
+        "context": "Su diversión favorita era jugar con su muñeca en el parque.",
+        "words": [
+          "Juguete",
+          "Trapo",
+          "Niña",
+          "Niño",
+          "Infancia",
+          "Juego",
+          "Vestido",
+          "Entretenimiento"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 4,
+    "word": "Palma",
+    "meanings": [
+      {
+        "context": "El ruido de un chasquido es producido por el golpe del pulgar con la palma.",
+        "words": [
+          "Brazo",
+          "Piel",
+          "Mano",
+          "Cuerpo",
+          "Aplauso",
+          "Dedos",
+          "Falanges",
+          "Apretón"
+        ]
+      },
+      {
+        "context": "La palma tardó muchisimos años en llegar a tener esa altura.",
+        "words": [
+          "Vegetal",
+          "Verdura",
+          "Palmera",
+          "Fruto",
+          "Verde",
+          "Caribe",
+          "Tropical",
+          "Aceite"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 5,
+    "word": "Peso",
+    "meanings": [
+      {
+        "context": "Todo lo que me queda es un peso argentino.",
+        "words": [
+          "Moneda",
+          "Billete",
+          "Economía",
+          "Dinero",
+          "Dólar",
+          "Cambio",
+          "Plata",
+          "Valor"
+        ]
+      },
+      {
+        "context": "El se pasó de peso en su equipaje y tuvo que empezar a sacar cosas de su valija.",
+        "words": [
+          "Gravedad",
+          "Masa",
+          "Kilo",
+          "Pesado",
+          "Balanza",
+          "Gramos",
+          "Newton",
+          "Medida"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 6,
+    "word": "Banco",
+    "meanings": [
+      {
+        "context": "El banco cerró y tuvo que despedir a todos sus empleados.",
+        "words": [
+          "Préstamo",
+          "Crédito",
+          "Débito",
+          "Dinero",
+          "Cajero",
+          "Dólar",
+          "Pesos",
+          "Cheque"
+        ]
+      },
+      {
+        "context": "En su carpintería estaba fabricando un banco.",
+        "words": [
+          "Silla",
+          "Sentarse",
+          "Parque",
+          "Exteriores",
+          "Escuela",
+          "Escritorio",
+          "Asiento",
+          "Plaza"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 7,
+    "word": "Tarjeta",
+    "meanings": [
+      {
+        "context": "Si no pagaba la tarjeta, iba a tener que pagar intereses.",
+        "words": [
+          "Crédito",
+          "Débito",
+          "Préstamo",
+          "Dinero",
+          "Acciones",
+          "Dólar",
+          "Pesos",
+          "Pago"
+        ]
+      },
+      {
+        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "words": [
+          "Papel",
+          "Saludo",
+          "Invitación",
+          "Carta",
+          "Información",
+          "Regalo",
+          "Felicitación",
+          "Dirigida"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 8,
+    "word": "Granada",
+    "meanings": [
+      {
+        "context": "Comer granada es delicioso.",
+        "words": [
+          "Tropical",
+          "Semillas",
+          "Fruta",
+          "Granadina",
+          "Caribe",
+          "Rojo",
+          "Dulce",
+          "Mango"
+        ]
+      },
+      {
+        "context": "Con una sola granada, abatió a 5 enemigos.",
+        "words": [
+          "Guerra",
+          "Armamento",
+          "Armas",
+          "Solados",
+          "Violencia",
+          "Destrucción",
+          "Ataque",
+          "Militar"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 9,
+    "word": "Lima",
+    "meanings": [
+      {
+        "context": "Fue a buscar una lima que tenía en la heladera.",
+        "words": [
+          "Ácido",
+          "Limón",
+          "Limónero",
+          "Tragos",
+          "Caipirinha",
+          "Fruta",
+          "Mandarina",
+          "Cítrico"
+        ]
+      },
+      {
+        "context": "Con su lima pudo darle forma al latón.",
+        "words": [
+          "Metal",
+          "Herramienta",
+          "Lija",
+          "Taller",
+          "Mecanico",
+          "Técnico",
+          "Limar",
+          "Corte"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 10,
+    "word": "Mango",
+    "meanings": [
+      {
+        "context": "No podría parar de comer mango.",
+        "words": [
+          "Tropical",
+          "Semillas",
+          "Fruta",
+          "Árbol",
+          "Caribe",
+          "Jugoso",
+          "Cáscara",
+          "Pulpa"
+        ]
+      },
+      {
+        "context": "Usaba el mango para agarrarlo y que no se le cayera.",
+        "words": [
+          "Herramientas",
+          "Hacha",
+          "Lima",
+          "Martillo",
+          "Taller",
+          "Sartén",
+          "Manija",
+          "Madera"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 11,
+    "word": "Copa",
+    "meanings": [
+      {
+        "context": "Fueron los vencedores y obtuvieron la copa.",
+        "words": [
+          "Oro",
+          "Trofeo",
+          "Triunfo",
+          "Ganador",
+          "Premio",
+          "Campeonato",
+          "Campeón",
+          "Torneo"
+        ]
+      },
+      {
+        "context": "Tomaron de la misma copa para mostrar que no estaba envenenada.",
+        "words": [
+          "Vaso",
+          "Vino",
+          "Champagne",
+          "Borracho",
+          "Alcohólico",
+          "Cristal",
+          "Bebida",
+          "Fiesta"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 12,
+    "word": "Arco",
+    "meanings": [
+      {
+        "context": "No paraban de darle al arco.",
+        "words": [
+          "Deporte",
+          "Fútbol",
+          "Hockey",
+          "Portería",
+          "Gol",
+          "Apuntar",
+          "Arquero",
+          "Red"
+        ]
+      },
+      {
+        "context": "El arco se veía gigante desde cerca.",
+        "words": [
+          "Triunfo",
+          "Arquitectura",
+          "Puerta",
+          "Curva",
+          "Construcción",
+          "Abierto",
+          "Abertura",
+          "Pared"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 13,
+    "word": "Penal",
+    "meanings": [
+      {
+        "context": "Messi se preparó para ejecutar el penal.",
+        "words": [
+          "Deporte",
+          "Fútbol",
+          "Hockey",
+          "Handbol",
+          "Gol",
+          "Corner",
+          "Patear",
+          "Barrera"
+        ]
+      },
+      {
+        "context": "Del juzgado fueron directo al penal.",
+        "words": [
+          "Abogados",
+          "Condena",
+          "Crimen",
+          "Juicio",
+          "Cárcel",
+          "Delito",
+          "Prisión",
+          "Criminal"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 14,
+    "word": "Pico",
+    "meanings": [
+      {
+        "context": "Cuando llegaron al pico estaban muy cansados.",
+        "words": [
+          "Montaña",
+          "Monte",
+          "Altura",
+          "Naturaleza",
+          "Rocas",
+          "Piedras",
+          "Cumbre",
+          "Cima"
+        ]
+      },
+      {
+        "context": "Tuvieron que usar pico y pala para poder sacar los escombros.",
+        "words": [
+          "Herramientas",
+          "Hacha",
+          "Lima",
+          "Martillo",
+          "Taller",
+          "Pinza",
+          "Golpear",
+          "Picar"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 15,
+    "word": "Cabo",
+    "meanings": [
+      {
+        "context": "Desde la ventana de su hotel tenían muy buena vista del cabo.",
+        "words": [
+          "Faro",
+          "Costa",
+          "Bahía",
+          "Golfo",
+          "Acantilado",
+          "Playa",
+          "Península",
+          "Mar"
+        ]
+      },
+      {
+        "context": "El cabo estaba muy tranquilo respecto a cuál iba a ser el resultado de la guerra.",
+        "words": [
+          "Militar",
+          "Soldado",
+          "Sargento",
+          "Teniente",
+          "Coronel",
+          "Comandante",
+          "Tropa",
+          "Infantería"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 16,
+    "word": "Sierra",
+    "meanings": [
+      {
+        "context": "Hicieron un trekking a través de las sierra.",
+        "words": [
+          "Montaña",
+          "Monte",
+          "Cordillera",
+          "Naturaleza",
+          "Rocas",
+          "Nevada",
+          "Cumbre",
+          "Cima"
+        ]
+      },
+      {
+        "context": "Usaron la sierra para dividirlo en dos.",
+        "words": [
+          "Metal",
+          "Latón",
+          "Herramienta",
+          "Lija",
+          "Taller",
+          "Mecanico",
+          "Serrucho",
+          "Madera"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 17,
+    "word": "Cólera",
+    "meanings": [
+      {
+        "context": "La cólera lo estaba matando.",
+        "words": [
+          "Medicina",
+          "Virus",
+          "Enfermedad",
+          "Infección",
+          "Heces",
+          "Diarrea",
+          "Bacteria",
+          "Fallo"
+        ]
+      },
+      {
+        "context": "Su equipo perdió y lo único que sentía era cólera.",
+        "words": [
+          "Ira",
+          "Enojo",
+          "Ataque",
+          "Furia",
+          "Emoción",
+          "Frustración",
+          "Enfado",
+          "Rabia"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 18,
+    "word": "Buzo",
+    "meanings": [
+      {
+        "context": "Al entrar, tuvo que sacarse el buzo.",
+        "words": [
+          "Prenda",
+          "Ropa",
+          "Abrigo",
+          "Campera",
+          "Canguro",
+          "Capucha",
+          "Cardigan",
+          "Sweater"
+        ]
+      },
+      {
+        "context": "El buzo entrenó durante mucho tiempo antes del rescate.",
+        "words": [
+          "Barco",
+          "Marino",
+          "Buceo",
+          "Submarino",
+          "Profundidad",
+          "Agua",
+          "Mar",
+          "Oxígeno"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 19,
+    "word": "Sostén",
+    "meanings": [
+      {
+        "context": "Entró a la tienda a comprar un sostén nuevo.",
+        "words": [
+          "Prenda",
+          "Ropa",
+          "Intimo",
+          "Calzon",
+          "Broche",
+          "Lencería",
+          "Pecho",
+          "Sujetador"
+        ]
+      },
+      {
+        "context": "Gracias a todo el sostén pudo salir adelante.",
+        "words": [
+          "Apoyo",
+          "Ayuda",
+          "Psicólogo",
+          "Emociónes",
+          "Felicidad",
+          "Tristeza",
+          "Familia",
+          "Bienestar"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 20,
+    "word": "Taco",
+    "meanings": [
+      {
+        "context": "Se le rompió el taco durante la fiesta.",
+        "words": [
+          "Prenda",
+          "Ropa",
+          "Calzado",
+          "Tacón",
+          "Pie",
+          "Altura",
+          "Dolor",
+          "Bota"
+        ]
+      },
+      {
+        "context": "Ese taco estaba deliciosos.",
+        "words": [
+          "México",
+          "Carne",
+          "Comida",
+          "Verdura",
+          "Pollo",
+          "Burrito",
+          "Guacamole",
+          "Picante"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 21,
+    "word": "Pluma",
+    "meanings": [
+      {
+        "context": "En el colegio usaba todos los días la pluma que le había regalado su abuelo.",
+        "words": [
+          "Caligrafía",
+          "Bolígrafo",
+          "Escritura",
+          "Tinta",
+          "Lapicera",
+          "Firma",
+          "Palabras",
+          "Escribir"
+        ]
+      },
+      {
+        "context": "Después del ataque del gato, no le quedó ni una pluma.",
+        "words": [
+          "Ave",
+          "Pájaro",
+          "Paloma",
+          "Pelaje",
+          "Blanco",
+          "Ligero",
+          "Calor",
+          "Piel"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 22,
+    "word": "Hoja",
+    "meanings": [
+      {
+        "context": "Tuvo que sacar una hoja en el medio del examen.",
+        "words": [
+          "Caligrafía",
+          "Bolígrafo",
+          "Escritura",
+          "Tinta",
+          "Documento",
+          "Firma",
+          "Palabras",
+          "Blanco"
+        ]
+      },
+      {
+        "context": "El jardinero pasó y no dejó ni una hoja en el piso.",
+        "words": [
+          "Árbol",
+          "Clorofila",
+          "Fotosíntesis",
+          "Flores",
+          "Verde",
+          "Otoño",
+          "Planta",
+          "Verdura"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 23,
+    "word": "Regla",
+    "meanings": [
+      {
+        "context": "Para trazar una línea recta, coloca una regla sobre el papel.",
+        "words": [
+          "Trazo",
+          "Herramienta",
+          "Recta",
+          "Dibujo",
+          "Escudra",
+          "Medida",
+          "Medición",
+          "Centímetro"
+        ]
+      },
+      {
+        "context": "En el trabajo, es fundamental seguir la regla de cumplimiento de normas de seguridad para evitar accidentes.",
+        "words": [
+          "Norma",
+          "Ley",
+          "Contrato",
+          "Convivencia",
+          "Estricto",
+          "Deber",
+          "Obligación",
+          "Pasos"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 24,
+    "word": "Goma",
+    "meanings": [
+      {
+        "context": "Para corregir los errores en el boceto, usa una goma de borrar suave para no dañarlo.",
+        "words": [
+          "Lápiz",
+          "Borrado",
+          "Papel",
+          "Escritura",
+          "Dibujo",
+          "Limpio",
+          "Blanco",
+          "Tinta"
+        ]
+      },
+      {
+        "context": "Durante el viaje, pinché la goma del coche al pasar por un objeto punzante en la carretera.",
+        "words": [
+          "Mecánico",
+          "Taller",
+          "Auto",
+          "Vehículo",
+          "Coche",
+          "Caucho",
+          "Camión",
+          "Llanta"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 25,
+    "word": "Raíz",
+    "meanings": [
+      {
+        "context": "La raíz cuadrada de un número es el valor que, al ser multiplicado por sí mismo, da como resultado el número original.",
+        "words": [
+          "Potencia",
+          "Cuenta",
+          "Cálculo",
+          "Matemática",
+          "Ecuación",
+          "Números",
+          "Multiplicación",
+          "División"
+        ]
+      },
+      {
+        "context": "Los árboles absorven agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
+        "words": [
+          "Plantas",
+          "Árboles",
+          "Vegetales",
+          "Clorofila",
+          "Naturaleza",
+          "Frutas",
+          "Verduras",
+          "Tallo"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 26,
+    "word": "Cuarto",
+    "meanings": [
+      {
+        "context": "Laura notó que estaba satisfecha con solo comer un cuarto del alfajor.",
+        "words": [
+          "Medida",
+          "Cálculo",
+          "Fracción",
+          "Porción",
+          "Denominador",
+          "Número",
+          "Cuatro",
+          "Parte"
+        ]
+      },
+      {
+        "context": "El cuarto de un adolescente suele estar desordenado y sucio.",
+        "words": [
+          "Habitación",
+          "Lugar",
+          "Espacio",
+          "Cama",
+          "Pieza",
+          "Alojamiento",
+          "Casa",
+          "Dormitorio"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 27,
+    "word": "Medio",
+    "meanings": [
+      {
+        "context": "Los hermanos cortaron la milanesa al medio, para que cada uno tenga la misma cantidad.",
+        "words": [
+          "Medida",
+          "Cálculo",
+          "Fracción",
+          "Porción",
+          "Denominador",
+          "Número",
+          "Cuatro",
+          "Parte"
+        ]
+      },
+      {
+        "context": "Mariana había dejado la silla en el medio del camino, imposibilitando el paso.",
+        "words": [
+          "Lugar",
+          "Posición",
+          "Atrás",
+          "Adelante",
+          "Izquierda",
+          "Derecha",
+          "Centro",
+          "Simétrico"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 28,
+    "word": "Cuenta",
+    "meanings": [
+      {
+        "context": "Estaba tan nervioso durante el exámen que no pudo hacer ninguna cuenta sin la calculadora.",
+        "words": [
+          "Cálculo",
+          "Ecuación",
+          "Número",
+          "Escuela",
+          "Matemática",
+          "Suma",
+          "Ecuación",
+          "Resta"
+        ]
+      },
+      {
+        "context": "Al momento de asociarse al nuevo banco, le abrieron una cuenta para poder ingresar su salario.",
+        "words": [
+          "Sueldo",
+          "Dinero",
+          "Compras",
+          "Crédito",
+          "Balance",
+          "Valor",
+          "Bancario",
+          "Ahorro"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 29,
+    "word": "Nota",
+    "meanings": [
+      {
+        "context": "Cada nota que tocaba emociónaba más que la anterior.",
+        "words": [
+          "Do",
+          "Fa",
+          "Piano",
+          "Guitarra",
+          "Música",
+          "Instrumento",
+          "Conservatorio",
+          "Sonido"
+        ]
+      },
+      {
+        "context": "Obtuvo una muy buena nota.",
+        "words": [
+          "Examen",
+          "Escuela",
+          "Educación",
+          "Apunte",
+          "Calificación",
+          "Sobresaliente",
+          "Calificaciones",
+          "Boletín"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 30,
+    "word": "Órgano",
+    "meanings": [
+      {
+        "context": "Era muy talentoso tocando el órgano.",
+        "words": [
+          "Piano",
+          "Música",
+          "Canción",
+          "Iglesia",
+          "Instrumento",
+          "Teclado",
+          "Cuerdas",
+          "Partitura"
+        ]
+      },
+      {
+        "context": "Tuvo que recibir un trasplante debido a la falla de su órgano.",
+        "words": [
+          "Cuerpo",
+          "Víscera",
+          "Cerebro",
+          "Corazón",
+          "Hígado",
+          "Humano",
+          "Cirujano",
+          "Vida"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 31,
+    "word": "Batería",
+    "meanings": [
+      {
+        "context": "Los vecinos se quejaban porque estaba tocando la batería.",
+        "words": [
+          "Platillos",
+          "Ritmo",
+          "Música",
+          "Tambor",
+          "Rock",
+          "Jazz",
+          "Baqueta",
+          "Baterista"
+        ]
+      },
+      {
+        "context": "Su celular se quedó sin batería.",
+        "words": [
+          "Energía",
+          "Electricidad",
+          "Recargable",
+          "Pila",
+          "Celular",
+          "Cargador",
+          "Laptop",
+          "Corriente"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 32,
+    "word": "Izquierda",
+    "meanings": [
+      {
+        "context": "Su primo era muy de izquierda.",
+        "words": [
+          "Comunismo",
+          "Socialismo",
+          "Rojo",
+          "Igualdad",
+          "Revolución",
+          "Política",
+          "Cuba",
+          "Ideología"
+        ]
+      },
+      {
+        "context": "Cómo se lastimó la izquierda, no podía hacer nada.",
+        "words": [
+          "Lado",
+          "Lugar",
+          "Ubicación",
+          "Posición",
+          "Orientación",
+          "Derecha",
+          "Direccion",
+          "Indicación"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 33,
+    "word": "Partido",
+    "meanings": [
+      {
+        "context": "No le gustaban las ideas del otro partido.",
+        "words": [
+          "Diputado",
+          "Congreso",
+          "Política",
+          "Sociedad",
+          "Militancia",
+          "Economía",
+          "Presidente",
+          "Política"
+        ]
+      },
+      {
+        "context": "Todos los domingos juegan un partido.",
+        "words": [
+          "Deporte",
+          "Competencia",
+          "Triunfo",
+          "Juego",
+          "Ganador",
+          "Premio",
+          "Empate",
+          "Perdedor"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 34,
+    "word": "Campaña",
+    "meanings": [
+      {
+        "context": "No cumplió nada de lo que prometió en campaña.",
+        "words": [
+          "Política",
+          "Candidato",
+          "Elecciones",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Senadores",
+          "Congreso"
+        ]
+      },
+      {
+        "context": "Hicieron una campaña por las vacaciones.",
+        "words": [
+          "Campo",
+          "Carpa",
+          "Camping",
+          "Fogata",
+          "Fogón",
+          "Llanura",
+          "Pastizal",
+          "Campiña"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 35,
+    "word": "Estado",
+    "meanings": [
+      {
+        "context": "Un estado es una organización constituida por un conjunto de instituciones burocráticas.",
+        "words": [
+          "Política",
+          "Sociedad",
+          "Economía",
+          "Senadores",
+          "Congreso",
+          "País",
+          "Nación",
+          "Gobierno"
+        ]
+      },
+      {
+        "context": "Era muy difícil describir su estado.",
+        "words": [
+          "Cansancio",
+          "Tristeza",
+          "Calma",
+          "Éxtasis",
+          "Emoción",
+          "Locura",
+          "Feliz",
+          "Mental"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 36,
+    "word": "Pastor",
+    "meanings": [
+      {
+        "context": "El pastor rezaba todas las mañanas.",
+        "words": [
+          "Religión",
+          "Iglesia",
+          "Misa",
+          "Sacerdote",
+          "Evangelico",
+          "Eucaristía",
+          "Religioso",
+          "Jesucristo"
+        ]
+      },
+      {
+        "context": "Al pastor le encantaba cuidar a sus animales.",
+        "words": [
+          "Ovejas",
+          "Trabajador",
+          "Agricultura",
+          "Monte",
+          "Campo",
+          "Vacas",
+          "Ganado",
+          "Fábula"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 37,
+    "word": "Oración",
+    "meanings": [
+      {
+        "context": "Recitó la oración del día que estaba escrita en el antiguo testamento.",
+        "words": [
+          "Religión",
+          "Iglesia",
+          "Misa",
+          "Fe",
+          "Plegaria",
+          "Evangelio",
+          "Rezo",
+          "Rosario"
+        ]
+      },
+      {
+        "context": "Su oración estaba llena de faltas de ortografía.",
+        "words": [
+          "Libro",
+          "Texto",
+          "Palabras",
+          "Lectura",
+          "Lingüística",
+          "Gramática",
+          "Párrafo",
+          "Leer"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 38,
+    "word": "Función",
+    "meanings": [
+      {
+        "context": "Antes de que empiece la función, los espectadores deben estar acomodados en sus asientos.",
+        "words": [
+          "Teatro",
+          "Actores",
+          "Personajes",
+          "Drama",
+          "Dramaturgo",
+          "Escritor",
+          "Obra",
+          "Vestuarios"
+        ]
+      },
+      {
+        "context": "La relación es lineal cuando la imágen se encuentra en función del dominio.",
+        "words": [
+          "Cálculo",
+          "Ecuación",
+          "Número",
+          "Escuela",
+          "Matemática",
+          "Ciencia",
+          "Despeje",
+          "Fórmula"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 39,
+    "word": "Obra",
+    "meanings": [
+      {
+        "context": "Los espectadores aplaudieron con entusiasmo al finalizar la obra.",
+        "words": [
+          "Teatro",
+          "Actores",
+          "Personajes",
+          "Drama",
+          "Dramaturgo",
+          "Escritor",
+          "Musical",
+          "Comedia"
+        ]
+      },
+      {
+        "context": "Miguel está cansado de escuchar los golpes de la obra que estaban construyendo al lado de su casa.",
+        "words": [
+          "Cemento",
+          "Arquitecto",
+          "Albañil",
+          "Albañileria",
+          "Casa",
+          "Edificio",
+          "Obrero",
+          "Pintura"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 40,
+    "word": "Plataforma",
+    "meanings": [
+      {
+        "context": "El contenido de la materia será subido a la plataforma de aprendizaje al finalizar la clase.",
+        "words": [
+          "Videos",
+          "Web",
+          "Tecnología",
+          "Streaming",
+          "Digital",
+          "Herramienta",
+          "Computadora",
+          "Internet"
+        ]
+      },
+      {
+        "context": "Juan decidió votarlo porque la plataforma del postulante coincidia con su ideología.",
+        "words": [
+          "Política",
+          "Sociedad",
+          "Economía",
+          "Agrupaciones",
+          "Presidente",
+          "Diputados",
+          "Senadores",
+          "Congreso"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 41,
+    "word": "Viral",
+    "meanings": [
+      {
+        "context": "Martina subió el video de su prima cayendose pensando que podía hacerse viral.",
+        "words": [
+          "Noticias",
+          "Social",
+          "Famoso",
+          "Instagram",
+          "Facebook",
+          "Medios",
+          "Conocido",
+          "Alcance"
+        ]
+      },
+      {
+        "context": "La nueva cepa de la gripe resultó ser una enfermad viral muy contagiosa. ",
+        "words": [
+          "Virus",
+          "Enfermedad",
+          "Infección",
+          "Bacteria",
+          "Daño",
+          "Hospital",
+          "Médico",
+          "Respiratorio"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 42,
+    "word": "Red",
+    "meanings": [
+      {
+        "context": "Cuando llegó la navidad, todos empezaron a mandar mensajes de texto y la red se colapsó.",
+        "words": [
+          "Servidores",
+          "Internet",
+          "Web",
+          "Social",
+          "Facebook",
+          "Instagram",
+          "Conectar",
+          "Vínculo"
+        ]
+      },
+      {
+        "context": "Los hermanos volvieron contentos del río con la red llena de peces.",
+        "words": [
+          "Hilos",
+          "Pesca",
+          "Pez",
+          "Atrapar",
+          "Araña",
+          "Captura",
+          "Trampa",
+          "Pescado"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 43,
+    "word": "Aplicación",
+    "meanings": [
+      {
+        "context": "La promoción solo es válida para compras en la aplicación.",
+        "words": [
+          "Celular",
+          "Programa",
+          "Internet",
+          "Plataforma",
+          "Herramienta",
+          "Conexión",
+          "Android",
+          "iPhone"
+        ]
+      },
+      {
+        "context": "Para que la herida sane, la médica le enseño cómo hacer la correcta aplicación del producto.",
+        "words": [
+          "Pomada",
+          "Crema",
+          "Ungüento",
+          "Medicamento",
+          "Curación",
+          "Farmacia",
+          "Inyección",
+          "Medicina"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 44,
+    "word": "Expreso",
+    "meanings": [
+      {
+        "context": "El expreso llegó velózmente a destino ya que no tiene mas paradas intermedias.",
+        "words": [
+          "Tren",
+          "Transporte",
+          "Vagón",
+          "Locomotora",
+          "Maquinista",
+          "Vehículo",
+          "Rápido",
+          "Tiempo"
+        ]
+      },
+      {
+        "context": "Al pasar por la cafeteria, pidió el expreso para llevar.",
+        "words": [
+          "Café",
+          "Capuccino",
+          "Descafeinado",
+          "Granos",
+          "Bebida",
+          "Energizante",
+          "Molino",
+          "Cafeína"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 45,
+    "word": "Móvil",
+    "meanings": [
+      {
+        "context": "A los 18 años, Martín sacó su registro y manejó el móvil de sus padres por primera vez.",
+        "words": [
+          "Auto",
+          "Coche",
+          "Vehículo",
+          "Transporte",
+          "Automóvil",
+          "Carro",
+          "Moto",
+          "Movilizar"
+        ]
+      },
+      {
+        "context": "La llamada llegaba pero el móvil estaba en silencio.",
+        "words": [
+          "Celular",
+          "Teléfono",
+          "Android",
+          "Iphone",
+          "Apple",
+          "Samsung",
+          "Telecomunicaciones",
+          "Internet"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 46,
+    "word": "Metro",
+    "meanings": [
+      {
+        "context": "Estaban a sólo dos estaciones de metro para llegar.",
+        "words": [
+          "Tren",
+          "Transporte",
+          "Vagón",
+          "Locomotora",
+          "Maquinista",
+          "Vehículo",
+          "Subterraneo",
+          "Subte"
+        ]
+      },
+      {
+        "context": "Para medir la madera con mayor precisión, recordá llevar el metro contigo.",
+        "words": [
+          "Herramienta",
+          "Medición",
+          "Medida",
+          "Modista",
+          "Carpintero",
+          "Carpintería",
+          "Ropa",
+          "Tamaño"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 47,
+    "word": "Estación",
+    "meanings": [
+      {
+        "context": "El hotel tiene cerca una estación que lo lleva al centro de la ciudad.",
+        "words": [
+          "Tren",
+          "Transporte",
+          "Vagón",
+          "Parada",
+          "Maquinista",
+          "Vehículo",
+          "Subterraneo",
+          "Subte"
+        ]
+      },
+      {
+        "context": "Al viajar a europa en julio, recordá llevar ropa liviana ya que es la estación mas calurosa.",
+        "words": [
+          "Primavera",
+          "Otoño",
+          "Verano",
+          "Invierno",
+          "Calendario",
+          "Planeta",
+          "Época",
+          "Soleado"
+        ]
+      }
+    ]
+  }
+]

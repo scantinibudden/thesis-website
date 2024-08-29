@@ -16,10 +16,10 @@ function Instructions() {
 
 
     useEffect(() => {
-        const timer1 = setTimeout(() => setShow1(true), 3000);
-        const timer2 = setTimeout(() => setShow2(true), 6000);
-        const timer3 = setTimeout(() => setShow3(true), 9000);
-        const timer4 = setTimeout(() => setShow4(true), 12000);
+        const timer1 = setTimeout(() => setShow1(true), 1000);
+        const timer2 = setTimeout(() => setShow2(true), 4000);
+        const timer3 = setTimeout(() => setShow3(true), 7000);
+        const timer4 = setTimeout(() => setShow4(true), 10000);
 
 
         return () => {
@@ -52,7 +52,7 @@ function Instructions() {
             {
                 show2 && (
                     <p className='experiment-explanation'>
-                        Seleccioná las 3 palabras que más se relacionen con la palabra en naranja.
+                        Seleccioná las 3 palabras que mejor se relacionen con la palabra en naranja.
                     </p>
                 )
             }

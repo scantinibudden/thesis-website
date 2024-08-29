@@ -54,6 +54,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   margin-top: 13px;
+  height: auto;
 }
 
 @media (max-width: 600px) {
@@ -66,9 +67,37 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     max-width: 140px;
+    font-size: 16px;
+    position: relative;
+  }
+}
+
+.HomeSubmitButton {
+  padding: 10px 15px;
+  background-color: var(--deep-red);
+  color: var(--platinum);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-top: 0px;
+}
+
+@media (max-width: 600px) {
+  .HomeSubmitButton {
+    background-color: var(--deep-red);
+    color: var(--platinum);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    max-width: 140px;
     height: 40px;
     font-size: 16px;
     position: relative;
+    margin-top: 13px;
   }
 }
 
@@ -82,6 +111,7 @@
   padding: 10px 15px;
   margin: 10px;
   text-align: center;
+  height: 30px;
 }
 
 .input-button-container {
@@ -122,12 +152,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-@media (max-width: 600px) {
-  .experiment-explanation {
-    font-size: 14px;
-  }
+  font-size: 20px
 }
 
 .image-container-home {

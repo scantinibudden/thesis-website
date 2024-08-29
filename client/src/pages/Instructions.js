@@ -16,10 +16,10 @@ function Instructions() {
 
 
     useEffect(() => {
-        const timer1 = setTimeout(() => setShow1(true), 1000);
-        const timer2 = setTimeout(() => setShow2(true), 2000);
-        const timer3 = setTimeout(() => setShow3(true), 3000);
-        const timer4 = setTimeout(() => setShow4(true), 4000);
+        const timer1 = setTimeout(() => setShow1(true), 3000);
+        const timer2 = setTimeout(() => setShow2(true), 6000);
+        const timer3 = setTimeout(() => setShow3(true), 9000);
+        const timer4 = setTimeout(() => setShow4(true), 12000);
 
 
         return () => {
@@ -44,7 +44,7 @@ function Instructions() {
             {
                 show1 && (
                     <p className='experiment-explanation'>
-                        Te vamos a mostrar una palabra que va a estar de color naranja en una oración.
+                        Te vamos a mostrar una oración que contiene una palabra en color naranja.
                     </p>
                 )
             }

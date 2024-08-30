@@ -31,7 +31,7 @@ function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     const rng = new RNG(seed);
     const getItem = (e) => {
         // const meaningID = rng.nextRange(0, meaningRange);
-        const meaningID = data.length > 0 ? 0:1 ;
+        const meaningID = data.length > 40 ? 1 : 0;
         const trial = e.meanings[meaningID];
         return {
             wordID: e.wordID,

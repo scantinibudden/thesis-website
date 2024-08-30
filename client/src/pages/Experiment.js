@@ -8,8 +8,8 @@ import './experiment.css'
 import NextButton from '../components/NextButton.js';
 
 // My imports
-import data from '../data_dev.json';
-import catch_data from '../catch_dev.json';
+import data from '../data.json';
+import catch_data from '../catch.json';
 
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/ClockLoader.js";
@@ -44,8 +44,8 @@ function ExperimentCompareImages() {
   const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
   const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
   const seed = getSeed(userId)
-  const realTrialsLength = 3
-  const catchLength = 1
+  const realTrialsLength = 10
+  const catchLength = 2
   const stepLength = realTrialsLength + catchLength
   const dataset = generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
 

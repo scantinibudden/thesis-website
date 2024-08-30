@@ -17,18 +17,23 @@ export function generateDataset(data, catch_data, seed, realTrialsLength, catchL
 
 function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     const rng = new RNG(seed);
-    const getItem = (e) => {
-        const meaningID = data.length < 40 ? 0 : 1; //(rng.nextFloat() < 0.5 ? 0 : 1); // fast workarround
+    const processedData = [];
+
+    for (let i = 0; i < data.length; i++) {
+        const e = data[i];
+        const meaningID = rng.nextRange(0, meaningRange);
         const trial = e.meanings[meaningID];
-        return {
+        
+        processedData.push({
             wordID: e.wordID,
             word: e.word,
             meaningID: meaningID,
             context: trial.context,
-            words: shuffleArray(trial.words)
-        };
-    };
-    return splitArrayByLength(shuffleArray(data.map(getItem), seed), bucketSize);
+            words: shuffleArray(trial.words, seed)
+        });
+    }
+
+    return splitArrayByLength(shuffleArray(processedData, seed), bucketSize);
 }
 
 function splitArrayByLength(A, l) {

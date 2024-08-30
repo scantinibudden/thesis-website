@@ -43,9 +43,8 @@ function ExperimentCompareImages() {
   const { userId } = location.state;
   const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
   const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
-  // const seed = getSeed(userId) * 731
-  const seed = 2000
-  console.log(getSeed)
+  const seed = getSeed(userId)
+  console.log(seed)
   console.log(userId)
   const realTrialsLength = 10
   const catchLength = 2

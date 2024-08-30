@@ -30,8 +30,7 @@ export function generateDataset(data, catch_data, seed, realTrialsLength, catchL
 function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     const rng = new RNG(seed);
     const getItem = (e) => {
-        // const meaningID = rng.nextRange(0, meaningRange);
-        const meaningID = data.length > 40 ? 1 : 0;
+        const meaningID = rng.nextRange(0, meaningRange);
         const trial = e.meanings[meaningID];
         return {
             wordID: e.wordID,

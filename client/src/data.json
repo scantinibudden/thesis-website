@@ -324,7 +324,7 @@
     "word": "Mango",
     "meanings": [
       {
-        "context": "No podría parar de comer mango.",
+        "context": "No podía parar de comer mango.",
         "words": [
           "Tropical",
           "Semillas",
@@ -395,7 +395,7 @@
           "Hockey",
           "Portería",
           "Gol",
-          "Apuntar",
+          "Meta",
           "Arquero",
           "Red"
         ]
@@ -428,7 +428,7 @@
           "Handbol",
           "Gol",
           "Corner",
-          "Patear",
+          "Punto",
           "Barrera"
         ]
       },
@@ -685,7 +685,7 @@
           "Lapicera",
           "Firma",
           "Palabras",
-          "Escribir"
+          "Documentos"
         ]
       },
       {
@@ -772,7 +772,7 @@
     "word": "Goma",
     "meanings": [
       {
-        "context": "Para corregir los errores en el boceto, usa una goma de borrar suave para no dañarlo.",
+        "context": "No encontraba la goma en su cartuchera.",
         "words": [
           "Lápiz",
           "Borrado",
@@ -804,7 +804,7 @@
     "word": "Raíz",
     "meanings": [
       {
-        "context": "La raíz cuadrada de un número es el valor que, al ser multiplicado por sí mismo, da como resultado el número original.",
+        "context": "La raíz cuadrada de 25 es 5.",
         "words": [
           "Potencia",
           "Cuenta",
@@ -836,7 +836,7 @@
     "word": "Cuarto",
     "meanings": [
       {
-        "context": "Laura notó que estaba satisfecha con solo comer un cuarto del alfajor.",
+        "context": "Laura solo comió un cuarto del alfajor.",
         "words": [
           "Medida",
           "Cálculo",
@@ -868,7 +868,7 @@
     "word": "Medio",
     "meanings": [
       {
-        "context": "Los hermanos cortaron la milanesa al medio, para que cada uno tenga la misma cantidad.",
+        "context": "Los hermanos cortaron la milanesa al medio.",
         "words": [
           "Medida",
           "Cálculo",
@@ -900,10 +900,10 @@
     "word": "Cuenta",
     "meanings": [
       {
-        "context": "Estaba tan nervioso durante el exámen que no pudo hacer ninguna cuenta sin la calculadora.",
+        "context": "No podía hacer ninguna cuenta sin la calculadora.",
         "words": [
           "Cálculo",
-          "Ecuación",
+          "Resultado",
           "Número",
           "Escuela",
           "Matemática",
@@ -1069,7 +1069,7 @@
           "Militancia",
           "Economía",
           "Presidente",
-          "Política"
+          "Agrupaciones"
         ]
       },
       {
@@ -1188,7 +1188,7 @@
     "word": "Oración",
     "meanings": [
       {
-        "context": "Recitó la oración del día que estaba escrita en el antiguo testamento.",
+        "context": "Recitó la oración del día que estaba escrita en la Biblia.",
         "words": [
           "Religión",
           "Iglesia",
@@ -1252,7 +1252,7 @@
     "word": "Obra",
     "meanings": [
       {
-        "context": "Los espectadores aplaudieron con entusiasmo al finalizar la obra.",
+        "context": "Los espectadores aplaudieron al finalizar la obra.",
         "words": [
           "Teatro",
           "Actores",
@@ -1284,7 +1284,7 @@
     "word": "Plataforma",
     "meanings": [
       {
-        "context": "El contenido de la materia será subido a la plataforma de aprendizaje al finalizar la clase.",
+        "context": "El contenido de la materia será subido a la plataforma.",
         "words": [
           "Videos",
           "Web",
@@ -1316,7 +1316,7 @@
     "word": "Viral",
     "meanings": [
       {
-        "context": "Martina subió el video de su prima cayéndose pensando que podía hacerse viral.",
+        "context": "Martina subió un video viral.",
         "words": [
           "Noticias",
           "Social",
@@ -1412,7 +1412,7 @@
     "word": "Expreso",
     "meanings": [
       {
-        "context": "El expreso llegó velozmente a destino ya que no tiene más paradas intermedias.",
+        "context": "El expreso hizo su recorrido sin paradas intermedias.",
         "words": [
           "Tren",
           "Transporte",
@@ -1444,7 +1444,7 @@
     "word": "Móvil",
     "meanings": [
       {
-        "context": "A los 18 años, Martín sacó su registro y manejó el móvil de sus padres por primera vez.",
+        "context": "Martín manejó el móvil de sus padres por primera vez.",
         "words": [
           "Auto",
           "Coche",

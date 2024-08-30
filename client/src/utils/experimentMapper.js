@@ -18,10 +18,12 @@ export function generateDataset(data, catch_data, seed, realTrialsLength, catchL
 function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     const rng = new RNG(seed);
     const processedData = [];
+    const ars = rng.random_array(data.length)
 
     for (let i = 0; i < data.length; i++) {
         const e = data[i];
-        const meaningID = rng.nextRange(0, meaningRange);
+        //const meaningID = rng.nextRange(0, meaningRange);
+        const meaningID = data.length < 40 ? 0 : ars[i];
         const trial = e.meanings[meaningID];
         
         processedData.push({
@@ -85,6 +87,14 @@ class RNG {
     choice(array) {
         return array[this.nextRange(0, array.length)];
     }
+
+    random_array(length) {
+        const res = []
+        for (let index = 0; index < length; index++) {
+            res.push(this.nextRange(0,2))    
+        }
+        return res
+    } 
 }
 
 

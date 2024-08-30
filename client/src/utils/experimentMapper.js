@@ -18,7 +18,7 @@ export function generateDataset(data, catch_data, seed, realTrialsLength, catchL
 function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     const rng = new RNG(seed);
     const getItem = (e) => {
-        const meaningID = data.length < 40 ? 0 : (rng.nextFloat() < 0.5 ? 0 : 1); // fast workarround
+        const meaningID = data.length < 40 ? 0 : 1; //(rng.nextFloat() < 0.5 ? 0 : 1); // fast workarround
         const trial = e.meanings[meaningID];
         return {
             wordID: e.wordID,

@@ -1,16 +1,4 @@
 export function generateDataset(data, catch_data, seed, realTrialsLength, catchLength) {
-    const rng = new RNG(seed);
-    const getItem = (e) => {
-        const meaningID = rng.nextRange(0, 2);
-        const trial = e.meanings[meaningID];
-        return {
-            wordID: e.wordID,
-            word: e.word,
-            meaningID: meaningID,
-            context: trial.context,
-            words: shuffleArray(trial.words)
-        };
-    };
     // Split in buckets
     const dataBuckets = buildBucketsBuckets(data, seed, realTrialsLength, 2)
     const catchBuckets = buildBucketsBuckets(catch_data, seed, catchLength, 1)

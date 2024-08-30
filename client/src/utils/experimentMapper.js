@@ -24,6 +24,7 @@ function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
         const e = data[i];
         //const meaningID = rng.nextRange(0, meaningRange);
         const meaningID = data.length < 40 ? 0 : ars[i];
+        console.log(meaningID, e.word)
         const trial = e.meanings[meaningID];
         
         processedData.push({

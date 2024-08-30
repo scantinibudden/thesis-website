@@ -24,7 +24,7 @@ export default class WordSelector extends Component {
         const wordsLowerCase = words.map(word => word.toLowerCase());
 
         // Dividir el texto en palabras y signos de puntuación
-        const parts = text.split(/(\b[\wáéíóúüñ]+[\.,!?]?\b)/);
+        const parts = text.split(/(\b[\wáéíóúüñÁÉÍÓÚÜÑ]+[\.,!?]?\b)/);
 
         return parts.map((part, index) => {
             // Verificar si la palabra (en minúsculas) debe ser envuelta

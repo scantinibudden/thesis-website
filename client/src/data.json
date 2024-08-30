@@ -177,7 +177,7 @@
         ]
       },
       {
-        "context": "El se pasó de peso en su equipaje y tuvo que empezar a sacar cosas de su valija.",
+        "context": "El se pasó de peso en su equipaje.",
         "words": [
           "Gravedad",
           "Masa",
@@ -241,7 +241,7 @@
         ]
       },
       {
-        "context": "Para felicitarlo, le dieron una tarjeta que contenía el nombre de todos.",
+        "context": "En su cumpleaños, le dieron una tarjeta que contenía el nombre de todos.",
         "words": [
           "Papel",
           "Saludo",
@@ -369,7 +369,7 @@
         ]
       },
       {
-        "context": "Tomaron de la misma copa para mostrar que no estaba envenenada.",
+        "context": "Tomaron de la misma copa.",
         "words": [
           "Vaso",
           "Vino",
@@ -753,7 +753,7 @@
         ]
       },
       {
-        "context": "En el trabajo, es fundamental seguir la regla de cumplimiento de normas de seguridad para evitar accidentes.",
+        "context": "La regla establece los límites de comportamiento aceptable.",
         "words": [
           "Norma",
           "Ley",
@@ -785,7 +785,7 @@
         ]
       },
       {
-        "context": "Durante el viaje, pinché la goma del coche al pasar por un objeto punzante en la carretera.",
+        "context": "Durante el viaje, pinché la goma del coche.",
         "words": [
           "Mecánico",
           "Taller",
@@ -817,7 +817,7 @@
         ]
       },
       {
-        "context": "Los árboles absorben agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
+        "context": "Los árboles absorben agua del suelo gracias a su raíz.",
         "words": [
           "Plantas",
           "Árboles",
@@ -881,7 +881,7 @@
         ]
       },
       {
-        "context": "Mariana había dejado la silla en el medio del camino, imposibilitando el paso.",
+        "context": "Mariana había dejado la silla en el medio del camino.",
         "words": [
           "Lugar",
           "Posición",
@@ -913,7 +913,7 @@
         ]
       },
       {
-        "context": "Al momento de asociarse al nuevo banco, le abrieron una cuenta para poder ingresar su salario.",
+        "context": "Le abrieron una cuenta para poder ingresar su salario.",
         "words": [
           "Sueldo",
           "Dinero",
@@ -1233,7 +1233,7 @@
         ]
       },
       {
-        "context": "La relación es lineal cuando la imágen se encuentra en función del dominio.",
+        "context": "Función cuadratica estaba en la curricula.",
         "words": [
           "Cálculo",
           "Ecuación",
@@ -1265,7 +1265,7 @@
         ]
       },
       {
-        "context": "Miguel está cansado de escuchar los golpes de la obra que estaban construyendo al lado de su casa.",
+        "context": "La obra que estaban construyendo era enorme.",
         "words": [
           "Cemento",
           "Arquitecto",
@@ -1329,7 +1329,7 @@
         ]
       },
       {
-        "context": "La nueva cepa de la gripe resultó ser una enfermedad viral muy contagiosa. ",
+        "context": "La nueva cepa de la gripe resultó ser una enfermedad viral.",
         "words": [
           "Virus",
           "Enfermedad",
@@ -1361,7 +1361,7 @@
         ]
       },
       {
-        "context": "Los hermanos volvieron contentos del río con la red llena de peces.",
+        "context": "Volvieron contentos del río con la red llena.",
         "words": [
           "Hilos",
           "Pesca",
@@ -1393,7 +1393,7 @@
         ]
       },
       {
-        "context": "Para que la herida sane, la médica le enseñó cómo hacer la correcta aplicación del producto.",
+        "context": "La médica le enseñó cómo hacer la correcta aplicación del producto.",
         "words": [
           "Pomada",
           "Crema",
@@ -1462,8 +1462,8 @@
           "Celular",
           "Teléfono",
           "Android",
-          "Iphone",
-          "Apple",
+          "iPhone",
+          "Audio",
           "Samsung",
           "Telecomunicaciones",
           "Internet"
@@ -1489,7 +1489,7 @@
         ]
       },
       {
-        "context": "Para medir la madera con mayor precisión, recordá llevar el metro contigo.",
+        "context": "Usaba el metro para tomar las dimensiones.",
         "words": [
           "Herramienta",
           "Medición",
@@ -1521,7 +1521,7 @@
         ]
       },
       {
-        "context": "Al viajar a europa en julio, recordá llevar ropa liviana ya que es la estación mas calurosa.",
+        "context": "Este mes empieza la una nueva estación.",
         "words": [
           "Primavera",
           "Otoño",

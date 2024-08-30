@@ -145,7 +145,7 @@
         ]
       },
       {
-        "context": "La palma tardó muchisimos años en llegar a tener esa altura.",
+        "context": "La palma tardó muchísimos años en llegar a tener esa altura.",
         "words": [
           "Vegetal",
           "Verdura",
@@ -746,7 +746,7 @@
           "Herramienta",
           "Recta",
           "Dibujo",
-          "Escudra",
+          "Escuadra",
           "Medida",
           "Medición",
           "Centímetro"
@@ -817,7 +817,7 @@
         ]
       },
       {
-        "context": "Los árboles absorven agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
+        "context": "Los árboles absorben agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
         "words": [
           "Plantas",
           "Árboles",
@@ -932,7 +932,7 @@
     "word": "Nota",
     "meanings": [
       {
-        "context": "Cada nota que tocaba emociónaba más que la anterior.",
+        "context": "Cada nota que tocaba emocionaba más que la anterior.",
         "words": [
           "Do",
           "Fa",
@@ -1270,7 +1270,7 @@
           "Cemento",
           "Arquitecto",
           "Albañil",
-          "Albañileria",
+          "Albañilería",
           "Casa",
           "Edificio",
           "Obrero",
@@ -1297,7 +1297,7 @@
         ]
       },
       {
-        "context": "Juan decidió votarlo porque la plataforma del postulante coincidia con su ideología.",
+        "context": "Juan decidió votarlo porque la plataforma del postulante coincide con su ideología.",
         "words": [
           "Política",
           "Sociedad",
@@ -1316,7 +1316,7 @@
     "word": "Viral",
     "meanings": [
       {
-        "context": "Martina subió el video de su prima cayendose pensando que podía hacerse viral.",
+        "context": "Martina subió el video de su prima cayéndose pensando que podía hacerse viral.",
         "words": [
           "Noticias",
           "Social",
@@ -1329,7 +1329,7 @@
         ]
       },
       {
-        "context": "La nueva cepa de la gripe resultó ser una enfermad viral muy contagiosa. ",
+        "context": "La nueva cepa de la gripe resultó ser una enfermedad viral muy contagiosa. ",
         "words": [
           "Virus",
           "Enfermedad",
@@ -1380,7 +1380,7 @@
     "word": "Aplicación",
     "meanings": [
       {
-        "context": "La promoción solo es válida para compras en la aplicación.",
+        "context": "La promoción sólo es válida para compras en la aplicación.",
         "words": [
           "Celular",
           "Programa",
@@ -1393,7 +1393,7 @@
         ]
       },
       {
-        "context": "Para que la herida sane, la médica le enseño cómo hacer la correcta aplicación del producto.",
+        "context": "Para que la herida sane, la médica le enseñó cómo hacer la correcta aplicación del producto.",
         "words": [
           "Pomada",
           "Crema",
@@ -1412,7 +1412,7 @@
     "word": "Expreso",
     "meanings": [
       {
-        "context": "El expreso llegó velózmente a destino ya que no tiene mas paradas intermedias.",
+        "context": "El expreso llegó velozmente a destino ya que no tiene más paradas intermedias.",
         "words": [
           "Tren",
           "Transporte",
@@ -1425,10 +1425,10 @@
         ]
       },
       {
-        "context": "Al pasar por la cafeteria, pidió el expreso para llevar.",
+        "context": "Al pasar por la cafetería, pidió el expreso para llevar.",
         "words": [
           "Café",
-          "Capuccino",
+          "Cappuccino",
           "Descafeinado",
           "Granos",
           "Bebida",

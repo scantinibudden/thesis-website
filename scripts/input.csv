@@ -8,7 +8,7 @@ wordID,word,meanings__context,meanings__words__001,meanings__words__002,meanings
 4,Muñeca,El se quebró la muñeca jugando al paddle.,Brazo,Piel,Mano,Cuerpo,Persona,Articulación,Pulsera,Reloj
 ,,Su diversión favorita era jugar con su muñeca en el parque.,Juguete,Trapo,Niña,Niño,Infancia,Juego,Vestido,Entretenimiento
 5,Palma,El ruido de un chasquido es producido por el golpe del pulgar con la palma.,Brazo,Piel,Mano,Cuerpo,Aplauso,Dedos,Falanges,Apretón
-,,La palma tardó muchisimos años en llegar a tener esa altura.,Vegetal,Verdura,Palmera,Fruto,Verde,Caribe,Tropical,Aceite
+,,La palma tardó muchísimos años en llegar a tener esa altura.,Vegetal,Verdura,Palmera,Fruto,Verde,Caribe,Tropical,Aceite
 6,Peso,Todo lo que me queda es un peso argentino.,Moneda,Billete,Economía,Dinero,Dólar,Cambio,Plata,Valor
 ,,El se pasó de peso en su equipaje y tuvo que empezar a sacar cosas de su valija.,Gravedad,Masa,Kilo,Pesado,Balanza,Gramos,Newton,Medida
 7,Banco,El banco cerró y tuvo que despedir a todos sus empleados.,Préstamo,Crédito,Débito,Dinero,Cajero,Dólar,Pesos,Cheque
@@ -45,19 +45,19 @@ wordID,word,meanings__context,meanings__words__001,meanings__words__002,meanings
 ,,"Después del ataque del gato, no le quedó ni una pluma.",Ave,Pájaro,Paloma,Pelaje,Blanco,Ligero,Calor,Piel
 23,Hoja,Tuvo que sacar una hoja en el medio del examen.,Caligrafía,Bolígrafo,Escritura,Tinta,Documento,Firma,Palabras,Blanco
 ,,El jardinero pasó y no dejó ni una hoja en el piso.,Árbol,Clorofila,Fotosíntesis,Flores,Verde,Otoño,Planta,Verdura
-24,Regla,"Para trazar una línea recta, coloca una regla sobre el papel.",Trazo,Herramienta,Recta,Dibujo,Escudra,Medida,Medición,Centímetro
+24,Regla,"Para trazar una línea recta, coloca una regla sobre el papel.",Trazo,Herramienta,Recta,Dibujo,Escuadra,Medida,Medición,Centímetro
 ,,"En el trabajo, es fundamental seguir la regla de cumplimiento de normas de seguridad para evitar accidentes.",Norma,Ley,Contrato,Convivencia,Estricto,Deber,Obligación,Pasos
 25,Goma,"Para corregir los errores en el boceto, usa una goma de borrar suave para no dañarlo.",Lápiz,Borrado,Papel,Escritura,Dibujo,Limpio,Blanco,Tinta
 ,,"Durante el viaje, pinché la goma del coche al pasar por un objeto punzante en la carretera.",Mecánico,Taller,Auto,Vehículo,Coche,Caucho,Camión,Llanta
 26,Raíz,"La raíz cuadrada de un número es el valor que, al ser multiplicado por sí mismo, da como resultado el número original.",Potencia,Cuenta,Cálculo,Matemática,Ecuación,Números,Multiplicación,División
-,,"Los árboles absorven agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",Plantas,Árboles,Vegetales,Clorofila,Naturaleza,Frutas,Verduras,Tallo
+,,"Los árboles absorben agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",Plantas,Árboles,Vegetales,Clorofila,Naturaleza,Frutas,Verduras,Tallo
 27,Cuarto,Laura notó que estaba satisfecha con solo comer un cuarto del alfajor.,Medida,Cálculo,Fracción,Porción,Denominador,Número,Cuatro,Parte
 ,,El cuarto de un adolescente suele estar desordenado y sucio.,Habitación,Lugar,Espacio,Cama,Pieza,Alojamiento,Casa,Dormitorio
 28,Medio,"Los hermanos cortaron la milanesa al medio, para que cada uno tenga la misma cantidad.",Medida,Cálculo,Fracción,Porción,Denominador,Número,Cuatro,Parte
 ,,"Mariana había dejado la silla en el medio del camino, imposibilitando el paso.",Lugar,Posición,Atrás,Adelante,Izquierda,Derecha,Centro,Simétrico
 29,Cuenta,Estaba tan nervioso durante el exámen que no pudo hacer ninguna cuenta sin la calculadora.,Cálculo,Ecuación,Número,Escuela,Matemática,Suma,Ecuación,Resta
 ,,"Al momento de asociarse al nuevo banco, le abrieron una cuenta para poder ingresar su salario.",Sueldo,Dinero,Compras,Crédito,Balance,Valor,Bancario,Ahorro
-30,Nota,Cada nota que tocaba emociónaba más que la anterior.,Do,Fa,Piano,Guitarra,Música,Instrumento,Conservatorio,Sonido
+30,Nota,Cada nota que tocaba emocionaba más que la anterior.,Do,Fa,Piano,Guitarra,Música,Instrumento,Conservatorio,Sonido
 ,,Obtuvo una muy buena nota.,Examen,Escuela,Educación,Apunte,Calificación,Sobresaliente,Calificaciones,Boletín
 31,Órgano,Era muy talentoso tocando el órgano.,Piano,Música,Canción,Iglesia,Instrumento,Teclado,Cuerdas,Partitura
 ,,Tuvo que recibir un trasplante debido a la falla de su órgano.,Cuerpo,Víscera,Cerebro,Corazón,Hígado,Humano,Cirujano,Vida
@@ -78,17 +78,17 @@ wordID,word,meanings__context,meanings__words__001,meanings__words__002,meanings
 39,Función,"Antes de que empiece la función, los espectadores deben estar acomodados en sus asientos.",Teatro,Actores,Personajes,Drama,Dramaturgo,Escritor,Obra,Vestuarios
 ,,La relación es lineal cuando la imágen se encuentra en función del dominio.,Cálculo,Ecuación,Número,Escuela,Matemática,Ciencia,Despeje,Fórmula
 40,Obra,Los espectadores aplaudieron con entusiasmo al finalizar la obra.,Teatro,Actores,Personajes,Drama,Dramaturgo,Escritor,Musical,Comedia
-,,Miguel está cansado de escuchar los golpes de la obra que estaban construyendo al lado de su casa.,Cemento,Arquitecto,Albañil,Albañileria,Casa,Edificio,Obrero,Pintura
+,,Miguel está cansado de escuchar los golpes de la obra que estaban construyendo al lado de su casa.,Cemento,Arquitecto,Albañil,Albañilería,Casa,Edificio,Obrero,Pintura
 41,Plataforma,El contenido de la materia será subido a la plataforma de aprendizaje al finalizar la clase.,Videos,Web,Tecnología,Streaming,Digital,Herramienta,Computadora,Internet
-,,Juan decidió votarlo porque la plataforma del postulante coincidia con su ideología.,Política,Sociedad,Economía,Agrupaciones,Presidente,Diputados,Senadores,Congreso
-42,Viral,Martina subió el video de su prima cayendose pensando que podía hacerse viral.,Noticias,Social,Famoso,Instagram,Facebook,Medios,Conocido,Alcance
-,,La nueva cepa de la gripe resultó ser una enfermad viral muy contagiosa. ,Virus,Enfermedad,Infección,Bacteria,Daño,Hospital,Médico,Respiratorio
+,,Juan decidió votarlo porque la plataforma del postulante coincide con su ideología.,Política,Sociedad,Economía,Agrupaciones,Presidente,Diputados,Senadores,Congreso
+42,Viral,Martina subió el video de su prima cayéndose pensando que podía hacerse viral.,Noticias,Social,Famoso,Instagram,Facebook,Medios,Conocido,Alcance
+,,La nueva cepa de la gripe resultó ser una enfermedad viral muy contagiosa. ,Virus,Enfermedad,Infección,Bacteria,Daño,Hospital,Médico,Respiratorio
 43,Red,"Cuando llegó la navidad, todos empezaron a mandar mensajes de texto y la red se colapsó.",Servidores,Internet,Web,Social,Facebook,Instagram,Conectar,Vínculo
 ,,Los hermanos volvieron contentos del río con la red llena de peces.,Hilos,Pesca,Pez,Atrapar,Araña,Captura,Trampa,Pescado
-44,Aplicación,La promoción solo es válida para compras en la aplicación.,Celular,Programa,Internet,Plataforma,Herramienta,Conexión,Android,iPhone
-,,"Para que la herida sane, la médica le enseño cómo hacer la correcta aplicación del producto.",Pomada,Crema,Ungüento,Medicamento,Curación,Farmacia,Inyección,Medicina
-45,Expreso,El expreso llegó velózmente a destino ya que no tiene mas paradas intermedias.,Tren,Transporte,Vagón,Locomotora,Maquinista,Vehículo,Rápido,Tiempo
-,,"Al pasar por la cafeteria, pidió el expreso para llevar.",Café,Capuccino,Descafeinado,Granos,Bebida,Energizante,Molino,Cafeína
+44,Aplicación,La promoción sólo es válida para compras en la aplicación.,Celular,Programa,Internet,Plataforma,Herramienta,Conexión,Android,iPhone
+,,"Para que la herida sane, la médica le enseñó cómo hacer la correcta aplicación del producto.",Pomada,Crema,Ungüento,Medicamento,Curación,Farmacia,Inyección,Medicina
+45,Expreso,El expreso llegó velozmente a destino ya que no tiene más paradas intermedias.,Tren,Transporte,Vagón,Locomotora,Maquinista,Vehículo,Rápido,Tiempo
+,,"Al pasar por la cafetería, pidió el expreso para llevar.",Café,Cappuccino,Descafeinado,Granos,Bebida,Energizante,Molino,Cafeína
 46,Móvil,"A los 18 años, Martín sacó su registro y manejó el móvil de sus padres por primera vez.",Auto,Coche,Vehículo,Transporte,Automóvil,Carro,Moto,Movilizar
 ,,La llamada llegaba pero el móvil estaba en silencio.,Celular,Teléfono,Android,Iphone,Apple,Samsung,Telecomunicaciones,Internet
 47,Metro,Estaban a sólo dos estaciones de metro para llegar.,Tren,Transporte,Vagón,Locomotora,Maquinista,Vehículo,Subterraneo,Subte

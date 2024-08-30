@@ -1,6 +1,6 @@
 [
   {
-    "wordID": 1,
+    "wordID": 0,
     "word": "Raya",
     "meanings": [
       {
@@ -26,16 +26,13 @@
           "Geométrica",
           "Lado",
           "Dibujo",
-          "Curvo",
-          "Plano",
-          "Eje",
-          "Lineal"
+          "Curvo"
         ]
       }
     ]
   },
   {
-    "wordID": 2,
+    "wordID": 1,
     "word": "Llama",
     "meanings": [
       {
@@ -61,15 +58,13 @@
           "Cocinar",
           "Calor",
           "Incendio",
-          "Combustión",
-          "Química",
-          "Hornalla"
+          "Combustión"
         ]
       }
     ]
   },
   {
-    "wordID": 3,
+    "wordID": 2,
     "word": "Salamandra",
     "meanings": [
       {
@@ -80,7 +75,9 @@
           "Camaleón",
           "Animal",
           "Anfibio",
-          "Lagartija"
+          "Lagartija",
+          "Iguana",
+          "Vertebrado"
         ]
       },
       {
@@ -92,13 +89,14 @@
           "Calefacción",
           "Madera",
           "Calor",
-          "Humo"
+          "Humo",
+          "Hierro"
         ]
       }
     ]
   },
   {
-    "wordID": 4,
+    "wordID": 3,
     "word": "Muñeca",
     "meanings": [
       {
@@ -130,7 +128,7 @@
     ]
   },
   {
-    "wordID": 5,
+    "wordID": 4,
     "word": "Palma",
     "meanings": [
       {
@@ -143,13 +141,11 @@
           "Aplauso",
           "Dedos",
           "Falanges",
-          "Apretón",
-          "Tacto",
-          "Persona"
+          "Apretón"
         ]
       },
       {
-        "context": "La palma tardó muchisimos años en llegar a tener esa altura.",
+        "context": "La palma tardó muchísimos años en llegar a tener esa altura.",
         "words": [
           "Vegetal",
           "Verdura",
@@ -164,7 +160,7 @@
     ]
   },
   {
-    "wordID": 6,
+    "wordID": 5,
     "word": "Peso",
     "meanings": [
       {
@@ -176,7 +172,8 @@
           "Dinero",
           "Dólar",
           "Cambio",
-          "Plata"
+          "Plata",
+          "Valor"
         ]
       },
       {
@@ -189,15 +186,13 @@
           "Balanza",
           "Gramos",
           "Newton",
-          "Medida",
-          "Cantidad",
-          "Kilos"
+          "Medida"
         ]
       }
     ]
   },
   {
-    "wordID": 7,
+    "wordID": 6,
     "word": "Banco",
     "meanings": [
       {
@@ -210,11 +205,7 @@
           "Cajero",
           "Dólar",
           "Pesos",
-          "Cheque",
-          "Acciones",
-          "Reserva",
-          "Protegido",
-          "Plata"
+          "Cheque"
         ]
       },
       {
@@ -227,14 +218,13 @@
           "Escuela",
           "Escritorio",
           "Asiento",
-          "Plaza",
-          "Descanso"
+          "Plaza"
         ]
       }
     ]
   },
   {
-    "wordID": 8,
+    "wordID": 7,
     "word": "Tarjeta",
     "meanings": [
       {
@@ -247,8 +237,7 @@
           "Acciones",
           "Dólar",
           "Pesos",
-          "Pago",
-          "Plata"
+          "Pago"
         ]
       },
       {
@@ -267,7 +256,7 @@
     ]
   },
   {
-    "wordID": 9,
+    "wordID": 8,
     "word": "Granada",
     "meanings": [
       {
@@ -280,8 +269,7 @@
           "Caribe",
           "Rojo",
           "Dulce",
-          "Mango",
-          "Árbol"
+          "Mango"
         ]
       },
       {
@@ -300,7 +288,7 @@
     ]
   },
   {
-    "wordID": 10,
+    "wordID": 9,
     "word": "Lima",
     "meanings": [
       {
@@ -313,10 +301,7 @@
           "Caipirinha",
           "Fruta",
           "Mandarina",
-          "Cítrico",
-          "Verde",
-          "Árbol",
-          "Naranja"
+          "Cítrico"
         ]
       },
       {
@@ -329,15 +314,13 @@
           "Mecanico",
           "Técnico",
           "Limar",
-          "Corte",
-          "Desgaste",
-          "Uñas"
+          "Corte"
         ]
       }
     ]
   },
   {
-    "wordID": 11,
+    "wordID": 10,
     "word": "Mango",
     "meanings": [
       {
@@ -350,8 +333,7 @@
           "Caribe",
           "Jugoso",
           "Cáscara",
-          "Pulpa",
-          "Dulce"
+          "Pulpa"
         ]
       },
       {
@@ -364,14 +346,13 @@
           "Taller",
           "Sartén",
           "Manija",
-          "Madera",
-          "Sostén"
+          "Madera"
         ]
       }
     ]
   },
   {
-    "wordID": 12,
+    "wordID": 11,
     "word": "Copa",
     "meanings": [
       {
@@ -384,13 +365,7 @@
           "Premio",
           "Campeonato",
           "Campeón",
-          "Torneo",
-          "Deporte",
-          "Puntaje",
-          "Puntos",
-          "Perdedor",
-          "Plata",
-          "Bronce"
+          "Torneo"
         ]
       },
       {
@@ -403,19 +378,13 @@
           "Alcohólico",
           "Cristal",
           "Bebida",
-          "Fiesta",
-          "Utensillo",
-          "Brindis",
-          "Vidrio",
-          "Derramar",
-          "Beber",
-          "Bazar"
+          "Fiesta"
         ]
       }
     ]
   },
   {
-    "wordID": 13,
+    "wordID": 12,
     "word": "Arco",
     "meanings": [
       {
@@ -428,9 +397,7 @@
           "Gol",
           "Apuntar",
           "Arquero",
-          "Red",
-          "Caño",
-          "Handbol"
+          "Red"
         ]
       },
       {
@@ -449,7 +416,7 @@
     ]
   },
   {
-    "wordID": 14,
+    "wordID": 13,
     "word": "Penal",
     "meanings": [
       {
@@ -462,9 +429,7 @@
           "Gol",
           "Corner",
           "Patear",
-          "Barrera",
-          "Intento",
-          "Lanzamiento"
+          "Barrera"
         ]
       },
       {
@@ -477,24 +442,13 @@
           "Cárcel",
           "Delito",
           "Prisión",
-          "Criminal",
-          "Juez",
-          "Delincuente",
-          "Ladrón",
-          "Civil",
-          "Trajes",
-          "Encierro",
-          "Pena",
-          "Fiscal",
-          "Corte",
-          "Testigos",
-          "Derecho"
+          "Criminal"
         ]
       }
     ]
   },
   {
-    "wordID": 15,
+    "wordID": 14,
     "word": "Pico",
     "meanings": [
       {
@@ -507,10 +461,7 @@
           "Rocas",
           "Piedras",
           "Cumbre",
-          "Cima",
-          "Nieve",
-          "Valle",
-          "Sierra"
+          "Cima"
         ]
       },
       {
@@ -523,17 +474,13 @@
           "Taller",
           "Pinza",
           "Golpear",
-          "Picar", 
-          "Filo",
-          "Fuerza",
-          "Minería",
-          "Minecraft"
+          "Picar"
         ]
       }
     ]
   },
   {
-    "wordID": 16,
+    "wordID": 15,
     "word": "Cabo",
     "meanings": [
       {
@@ -546,9 +493,7 @@
           "Acantilado",
           "Playa",
           "Península",
-          "Mar",
-          "Vegetación",
-          "Marino"
+          "Mar"
         ]
       },
       {
@@ -561,15 +506,13 @@
           "Coronel",
           "Comandante",
           "Tropa",
-          "Infantería",
-          "Jefe",
-          "Escuadra"
+          "Infantería"
         ]
       }
     ]
   },
   {
-    "wordID": 17,
+    "wordID": 16,
     "word": "Sierra",
     "meanings": [
       {
@@ -582,10 +525,7 @@
           "Rocas",
           "Nevada",
           "Cumbre",
-          "Cima",
-          "Nieve",
-          "Valle",
-          "Piedras"
+          "Cima"
         ]
       },
       {
@@ -598,18 +538,13 @@
           "Taller",
           "Mecanico",
           "Serrucho",
-          "Madera",
-          "Cortar",
-          "Carpintero",
-          "Dientes",
-          "Eléctrica",
-          "Técnico"
+          "Madera"
         ]
       }
     ]
   },
   {
-    "wordID": 18,
+    "wordID": 17,
     "word": "Cólera",
     "meanings": [
       {
@@ -621,7 +556,8 @@
           "Infección",
           "Heces",
           "Diarrea",
-          "Bacteria"
+          "Bacteria",
+          "Fallo"
         ]
       },
       {
@@ -640,7 +576,7 @@
     ]
   },
   {
-    "wordID": 19,
+    "wordID": 18,
     "word": "Buzo",
     "meanings": [
       {
@@ -653,8 +589,7 @@
           "Canguro",
           "Capucha",
           "Cardigan",
-          "Sweater",
-          "Cierre"
+          "Sweater"
         ]
       },
       {
@@ -667,16 +602,13 @@
           "Profundidad",
           "Agua",
           "Mar",
-          "Oxígeno",
-          "Respiración",
-          "Nadador",
-          "Tanque"
+          "Oxígeno"
         ]
       }
     ]
   },
   {
-    "wordID": 20,
+    "wordID": 19,
     "word": "Sostén",
     "meanings": [
       {
@@ -689,9 +621,7 @@
           "Broche",
           "Lencería",
           "Pecho",
-          "Sujetador",
-          "Corpiño",
-          "Remera"
+          "Sujetador"
         ]
       },
       {
@@ -704,17 +634,13 @@
           "Felicidad",
           "Tristeza",
           "Familia",
-          "Bienestar",
-          "Malestar",
-          "Aguantar",
-          "Soportar",
-          "Económico"
+          "Bienestar"
         ]
       }
     ]
   },
   {
-    "wordID": 21,
+    "wordID": 20,
     "word": "Taco",
     "meanings": [
       {
@@ -727,10 +653,7 @@
           "Pie",
           "Altura",
           "Dolor",
-          "Bota",
-          "Zapato",
-          "Plataforma",
-          "Caminar"
+          "Bota"
         ]
       },
       {
@@ -743,15 +666,13 @@
           "Pollo",
           "Burrito",
           "Guacamole",
-          "Picante",
-          "Picante",
-          "Tortilla"
+          "Picante"
         ]
       }
     ]
   },
   {
-    "wordID": 22,
+    "wordID": 21,
     "word": "Pluma",
     "meanings": [
       {
@@ -764,8 +685,7 @@
           "Lapicera",
           "Firma",
           "Palabras",
-          "Escribir",
-          "Documento"
+          "Escribir"
         ]
       },
       {
@@ -778,14 +698,13 @@
           "Blanco",
           "Ligero",
           "Calor",
-          "Piel",
-          "Cobertura"
+          "Piel"
         ]
       }
     ]
   },
   {
-    "wordID": 23,
+    "wordID": 22,
     "word": "Hoja",
     "meanings": [
       {
@@ -798,9 +717,7 @@
           "Documento",
           "Firma",
           "Palabras",
-          "Blanco",
-          "Papel",
-          "Árbol"
+          "Blanco"
         ]
       },
       {
@@ -813,36 +730,26 @@
           "Verde",
           "Otoño",
           "Planta",
-          "Verdura",
-          "Palmeras",
-          "Acelga",
-          "Lechuga",
-          "Espinaca",
-          "Primavera"
+          "Verdura"
         ]
       }
     ]
   },
   {
-    "wordID": 24,
+    "wordID": 23,
     "word": "Regla",
     "meanings": [
       {
         "context": "Para trazar una línea recta, coloca una regla sobre el papel.",
         "words": [
           "Trazo",
-          "Recto",
+          "Herramienta",
           "Recta",
           "Dibujo",
-          "Escudra",
+          "Escuadra",
           "Medida",
           "Medición",
-          "Medir",
-          "Centímetro",
-          "Milímetro",
-          "Útiles",
-          "Herramienta",
-          "Geometría"
+          "Centímetro"
         ]
       },
       {
@@ -853,25 +760,28 @@
           "Contrato",
           "Convivencia",
           "Estricto",
-          "Deber"
+          "Deber",
+          "Obligación",
+          "Pasos"
         ]
       }
     ]
   },
   {
-    "wordID": 25,
+    "wordID": 24,
     "word": "Goma",
     "meanings": [
       {
-        "context": "Para corregir los errores en el dibujo, usa una goma de borrar suave que no dañe el papel.",
+        "context": "Para corregir los errores en el boceto, usa una goma de borrar suave para no dañarlo.",
         "words": [
           "Lápiz",
-          "Borrar",
+          "Borrado",
           "Papel",
           "Escritura",
           "Dibujo",
-          "Borrado",
-          "Deshacer"
+          "Limpio",
+          "Blanco",
+          "Tinta"
         ]
       },
       {
@@ -890,7 +800,7 @@
     ]
   },
   {
-    "wordID": 26,
+    "wordID": 25,
     "word": "Raíz",
     "meanings": [
       {
@@ -901,11 +811,13 @@
           "Cálculo",
           "Matemática",
           "Ecuación",
-          "Números"
+          "Números",
+          "Multiplicación",
+          "División"
         ]
       },
       {
-        "context": "Los árboles absorven agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
+        "context": "Los árboles absorben agua y nutrientes del suelo gracias a su raíz, que también le proporciona estabilidad.",
         "words": [
           "Plantas",
           "Árboles",
@@ -913,13 +825,14 @@
           "Clorofila",
           "Naturaleza",
           "Frutas",
-          "Verduras"
+          "Verduras",
+          "Tallo"
         ]
       }
     ]
   },
   {
-    "wordID": 27,
+    "wordID": 26,
     "word": "Cuarto",
     "meanings": [
       {
@@ -928,12 +841,11 @@
           "Medida",
           "Cálculo",
           "Fracción",
-          "Cuenta",
+          "Porción",
           "Denominador",
           "Número",
           "Cuatro",
-          "Parte",
-          "Porción"
+          "Parte"
         ]
       },
       {
@@ -945,13 +857,14 @@
           "Cama",
           "Pieza",
           "Alojamiento",
-          "Casa"
+          "Casa",
+          "Dormitorio"
         ]
       }
     ]
   },
   {
-    "wordID": 28,
+    "wordID": 27,
     "word": "Medio",
     "meanings": [
       {
@@ -960,12 +873,11 @@
           "Medida",
           "Cálculo",
           "Fracción",
-          "Cuenta",
+          "Porción",
           "Denominador",
           "Número",
           "Cuatro",
-          "Parte",
-          "Porción"
+          "Parte"
         ]
       },
       {
@@ -984,7 +896,7 @@
     ]
   },
   {
-    "wordID": 29,
+    "wordID": 28,
     "word": "Cuenta",
     "meanings": [
       {
@@ -994,7 +906,10 @@
           "Ecuación",
           "Número",
           "Escuela",
-          "Matemática"
+          "Matemática",
+          "Suma",
+          "Ecuación",
+          "Resta"
         ]
       },
       {
@@ -1013,11 +928,11 @@
     ]
   },
   {
-    "wordID": 30,
+    "wordID": 29,
     "word": "Nota",
     "meanings": [
       {
-        "context": "Cada nota que tocaba emociónaba más que la anterior.",
+        "context": "Cada nota que tocaba emocionaba más que la anterior.",
         "words": [
           "Do",
           "Fa",
@@ -1026,8 +941,7 @@
           "Música",
           "Instrumento",
           "Conservatorio",
-          "Sonido",
-          "Músicalidad"
+          "Sonido"
         ]
       },
       {
@@ -1040,19 +954,13 @@
           "Calificación",
           "Sobresaliente",
           "Calificaciones",
-          "Boletín",
-          "Diez",
-          "Uno",
-          "Siete",
-          "Estudios",
-          "Estudiante",
-          "Puntaje"
+          "Boletín"
         ]
       }
     ]
   },
   {
-    "wordID": 31,
+    "wordID": 30,
     "word": "Órgano",
     "meanings": [
       {
@@ -1064,7 +972,8 @@
           "Iglesia",
           "Instrumento",
           "Teclado",
-          "Cuerdas"
+          "Cuerdas",
+          "Partitura"
         ]
       },
       {
@@ -1076,18 +985,14 @@
           "Corazón",
           "Hígado",
           "Humano",
-          "Vital",
-          "Vida",
           "Cirujano",
-          "Cirugía",
-          "Hospital",
-          "Sangre"
+          "Vida"
         ]
       }
     ]
   },
   {
-    "wordID": 32,
+    "wordID": 31,
     "word": "Batería",
     "meanings": [
       {
@@ -1100,9 +1005,7 @@
           "Rock",
           "Jazz",
           "Baqueta",
-          "Baterista",
-          "Banda",
-          "Bombo"
+          "Baterista"
         ]
       },
       {
@@ -1115,14 +1018,13 @@
           "Celular",
           "Cargador",
           "Laptop",
-          "Corriente",
-          "Alcalina"
+          "Corriente"
         ]
       }
     ]
   },
   {
-    "wordID": 33,
+    "wordID": 32,
     "word": "Izquierda",
     "meanings": [
       {
@@ -1135,12 +1037,7 @@
           "Revolución",
           "Política",
           "Cuba",
-          "Socialista",
-          "Castro",
-          "Comunista",
-          "Ideología",
-          "Marx",
-          "Trotsky"
+          "Ideología"
         ]
       },
       {
@@ -1153,38 +1050,26 @@
           "Orientación",
           "Derecha",
           "Direccion",
-          "Indicación",
-          "Pierna",
-          "Mano"
+          "Indicación"
         ]
       }
     ]
   },
   {
-    "wordID": 34,
+    "wordID": 33,
     "word": "Partido",
     "meanings": [
       {
         "context": "No le gustaban las ideas del otro partido.",
         "words": [
-          "Peronismo",
-          "Liberalismo",
+          "Diputado",
+          "Congreso",
           "Política",
           "Sociedad",
           "Militancia",
           "Economía",
           "Presidente",
-          "Política",
-          "Diputados",
-          "Agrupaciones",
-          "Senadores",
-          "Congreso",
-          "Político",
-          "Socialista",
-          "Comunista",
-          "Liberal",
-          "Nacionalista",
-          "Ideología"
+          "Política"
         ]
       },
       {
@@ -1196,40 +1081,27 @@
           "Juego",
           "Ganador",
           "Premio",
-          "Competencia",
-          "Perdedor",
           "Empate",
-          "Fútbol",
-          "Trofeo",
-          "Equipo",
-          "Ganar",
-          "Perder",
-          "Árbitro",
-          "Derrota"
+          "Perdedor"
         ]
       }
     ]
   },
   {
-    "wordID": 35,
+    "wordID": 34,
     "word": "Campaña",
     "meanings": [
       {
         "context": "No cumplió nada de lo que prometió en campaña.",
         "words": [
           "Política",
-          "Sociedad",
+          "Candidato",
           "Elecciones",
           "Agrupaciones",
           "Presidente",
           "Diputados",
           "Senadores",
-          "Congreso",
-          "Economía",
-          "Candidato",
-          "Candidatura",
-          "Militancia",
-          "Propaganda"
+          "Congreso"
         ]
       },
       {
@@ -1242,18 +1114,17 @@
           "Fogón",
           "Llanura",
           "Pastizal",
-          "Campiña",
-          "Valle"
+          "Campiña"
         ]
       }
     ]
   },
   {
-    "wordID": 36,
+    "wordID": 35,
     "word": "Estado",
     "meanings": [
       {
-        "context": "Un estado es una organización política constituida por un conjunto de instituciones burocráticas estables.",
+        "context": "Un estado es una organización constituida por un conjunto de instituciones burocráticas.",
         "words": [
           "Política",
           "Sociedad",
@@ -1262,13 +1133,7 @@
           "Congreso",
           "País",
           "Nación",
-          "Gobierno",
-          "Agrupaciones",
-          "Presidente",
-          "Diputados",
-          "Peronismo",
-          "Liberalismo",
-          "Pueblo"
+          "Gobierno"
         ]
       },
       {
@@ -1281,17 +1146,13 @@
           "Emoción",
           "Locura",
           "Feliz",
-          "Mental",
-          "Sentimiento",
-          "Placer",
-          "Sentir",
-          "Vigor"
+          "Mental"
         ]
       }
     ]
   },
   {
-    "wordID": 37,
+    "wordID": 36,
     "word": "Pastor",
     "meanings": [
       {
@@ -1304,12 +1165,7 @@
           "Evangelico",
           "Eucaristía",
           "Religioso",
-          "Jesucristo",
-          "Cristo",
-          "Protestante",
-          "Creyente",
-          "Orador",
-          "Cura"
+          "Jesucristo"
         ]
       },
       {
@@ -1322,18 +1178,13 @@
           "Campo",
           "Vacas",
           "Ganado",
-          "Fábula",
-          "Pasto",
-          "Lana",
-          "Cabra",
-          "Lobos",
-          "Cultivo"
+          "Fábula"
         ]
       }
     ]
   },
   {
-    "wordID": 38,
+    "wordID": 37,
     "word": "Oración",
     "meanings": [
       {
@@ -1343,20 +1194,10 @@
           "Iglesia",
           "Misa",
           "Fe",
-          "Orar",
+          "Plegaria",
           "Evangelio",
           "Rezo",
-          "Rosario",
-          "Evangelico",
-          "Eucaristía",
-          "Jesucristo",
-          "Cristo",
-          "Plegaria",
-          "Dios",
-          "Rezar",
-          "Iglesia",
-          "Credo",
-          "Cura"
+          "Rosario"
         ]
       },
       {
@@ -1369,23 +1210,17 @@
           "Lingüística",
           "Gramática",
           "Párrafo",
-          "Leer",
-          "Sujeto",
-          "Predicado",
-          "Punto",
-          "Coma",
-          "Secuencia",
-          "Sentencia"
+          "Leer"
         ]
       }
     ]
   },
   {
-    "wordID": 39,
+    "wordID": 38,
     "word": "Función",
     "meanings": [
       {
-        "context": "Antes de que empiece la función, todos los espectadores deben estar ya acomodados en sus asientos.",
+        "context": "Antes de que empiece la función, los espectadores deben estar acomodados en sus asientos.",
         "words": [
           "Teatro",
           "Actores",
@@ -1404,13 +1239,16 @@
           "Ecuación",
           "Número",
           "Escuela",
-          "Matemática"
+          "Matemática",
+          "Ciencia",
+          "Despeje",
+          "Fórmula"
         ]
       }
     ]
   },
   {
-    "wordID": 40,
+    "wordID": 39,
     "word": "Obra",
     "meanings": [
       {
@@ -1423,11 +1261,7 @@
           "Dramaturgo",
           "Escritor",
           "Musical",
-          "Comedia",
-          "Entretenimiento",
-          "Actuación",
-          "Escenario",
-          "Vestuarios"
+          "Comedia"
         ]
       },
       {
@@ -1436,20 +1270,17 @@
           "Cemento",
           "Arquitecto",
           "Albañil",
-          "Albañileria",
+          "Albañilería",
           "Casa",
           "Edificio",
           "Obrero",
-          "Pintura",
-          "Ladrillo",
-          "Cemento",
-          "Edificar"
+          "Pintura"
         ]
       }
     ]
   },
   {
-    "wordID": 41,
+    "wordID": 40,
     "word": "Plataforma",
     "meanings": [
       {
@@ -1462,12 +1293,11 @@
           "Digital",
           "Herramienta",
           "Computadora",
-          "Internet",
-          "Conexión"
+          "Internet"
         ]
       },
       {
-        "context": "Juan decidió votarlo porque la plataforma del postulante coincidia con su ideología.",
+        "context": "Juan decidió votarlo porque la plataforma del postulante coincide con su ideología.",
         "words": [
           "Política",
           "Sociedad",
@@ -1476,20 +1306,17 @@
           "Presidente",
           "Diputados",
           "Senadores",
-          "Congreso",
-          "Elecciones",
-          "Ideología",
-          "Propuesta"
+          "Congreso"
         ]
       }
     ]
   },
   {
-    "wordID": 42,
+    "wordID": 41,
     "word": "Viral",
     "meanings": [
       {
-        "context": "Martina subió el video de su prima cayendose pensando que podía hacerse viral.",
+        "context": "Martina subió el video de su prima cayéndose pensando que podía hacerse viral.",
         "words": [
           "Noticias",
           "Social",
@@ -1498,13 +1325,11 @@
           "Facebook",
           "Medios",
           "Conocido",
-          "Alcance",
-          "Vistas",
-          "Visitas"
+          "Alcance"
         ]
       },
       {
-        "context": "La nueva cepa de la gripe resultó ser una enfermad viral muy contagiosa. ",
+        "context": "La nueva cepa de la gripe resultó ser una enfermedad viral muy contagiosa. ",
         "words": [
           "Virus",
           "Enfermedad",
@@ -1513,15 +1338,13 @@
           "Daño",
           "Hospital",
           "Médico",
-          "Respiratorio",
-          "Contagio",
-          "Vacuna"
+          "Respiratorio"
         ]
       }
     ]
   },
   {
-    "wordID": 43,
+    "wordID": 42,
     "word": "Red",
     "meanings": [
       {
@@ -1534,8 +1357,7 @@
           "Facebook",
           "Instagram",
           "Conectar",
-          "Vínculo",
-          "Amistad"
+          "Vínculo"
         ]
       },
       {
@@ -1547,43 +1369,50 @@
           "Atrapar",
           "Araña",
           "Captura",
-          "Trampa"
+          "Trampa",
+          "Pescado"
         ]
       }
     ]
   },
   {
-    "wordID": 44,
+    "wordID": 43,
     "word": "Aplicación",
     "meanings": [
       {
-        "context": "La promoción solo es válida para compras en la aplicación.",
+        "context": "La promoción sólo es válida para compras en la aplicación.",
         "words": [
           "Celular",
           "Programa",
           "Internet",
           "Plataforma",
           "Herramienta",
-          "Conexión"
+          "Conexión",
+          "Android",
+          "iPhone"
         ]
       },
       {
-        "context": "Para que la herida sane, la médica le enseño cómo hacer la correcta aplicación del producto para que éste haga efecto.",
+        "context": "Para que la herida sane, la médica le enseñó cómo hacer la correcta aplicación del producto.",
         "words": [
           "Pomada",
           "Crema",
           "Ungüento",
-          "Medicamento"
+          "Medicamento",
+          "Curación",
+          "Farmacia",
+          "Inyección",
+          "Medicina"
         ]
       }
     ]
   },
   {
-    "wordID": 45,
+    "wordID": 44,
     "word": "Expreso",
     "meanings": [
       {
-        "context": "El expreso llegó velózmente a destino ya que no tiene mas paradas intermedias.",
+        "context": "El expreso llegó velozmente a destino ya que no tiene más paradas intermedias.",
         "words": [
           "Tren",
           "Transporte",
@@ -1596,20 +1425,22 @@
         ]
       },
       {
-        "context": "Al pasar por la cafeteria, pidió el expreso para llevar.",
+        "context": "Al pasar por la cafetería, pidió el expreso para llevar.",
         "words": [
           "Café",
-          "Capuccino",
+          "Cappuccino",
           "Descafeinado",
           "Granos",
           "Bebida",
-          "Energizante"
+          "Energizante",
+          "Molino",
+          "Cafeína"
         ]
       }
     ]
   },
   {
-    "wordID": 46,
+    "wordID": 45,
     "word": "Móvil",
     "meanings": [
       {
@@ -1635,18 +1466,13 @@
           "Apple",
           "Samsung",
           "Telecomunicaciones",
-          "Internet",
-          "Comunicación",
-          "Pantalla",
-          "Whatsapp",
-          "Dispositivo",
-          "Personal"
+          "Internet"
         ]
       }
     ]
   },
   {
-    "wordID": 47,
+    "wordID": 46,
     "word": "Metro",
     "meanings": [
       {
@@ -1659,9 +1485,7 @@
           "Maquinista",
           "Vehículo",
           "Subterraneo",
-          "Subte",
-          "Ciudad",
-          "Movilizar"
+          "Subte"
         ]
       },
       {
@@ -1674,16 +1498,13 @@
           "Carpintero",
           "Carpintería",
           "Ropa",
-          "Medir",
-          "Distancia",
-          "Tamaño",
-          "Regla"
+          "Tamaño"
         ]
       }
     ]
   },
   {
-    "wordID": 48,
+    "wordID": 47,
     "word": "Estación",
     "meanings": [
       {
@@ -1692,17 +1513,11 @@
           "Tren",
           "Transporte",
           "Vagón",
-          "Locomotora",
+          "Parada",
           "Maquinista",
           "Vehículo",
           "Subterraneo",
-          "Subte",
-          "Autobus",
-          "Horario",
-          "Espera",
-          "Frenar",
-          "Acceso",
-          "Parada"
+          "Subte"
         ]
       },
       {
@@ -1713,15 +1528,9 @@
           "Verano",
           "Invierno",
           "Calendario",
-          "Mes",
-          "Día",
-          "Soleado",
-          "Nublado",
-          "Lluvioso",
-          "Árbol",
-          "Clima",
           "Planeta",
-          "Época"
+          "Época",
+          "Soleado"
         ]
       }
     ]

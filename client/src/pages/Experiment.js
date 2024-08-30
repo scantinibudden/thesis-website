@@ -107,7 +107,7 @@ function ExperimentCompareImages() {
       userId: userId,
       trialNumber: exp_index,
       wordID: exp.wordID,
-      meaningID: exp.meaningID,
+      meaningID: exp.meaningID + 1,
       word: exp.word,
       context: exp.context,
       answers: wordSelectorRef.current.result(),

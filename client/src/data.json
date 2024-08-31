@@ -657,7 +657,7 @@
         ]
       },
       {
-        "context": "Ese taco estaba deliciosos.",
+        "context": "Ese taco estaba delicioso.",
         "words": [
           "México",
           "Carne",
@@ -955,6 +955,38 @@
           "Sobresaliente",
           "Calificaciones",
           "Boletín"
+        ]
+      }
+    ]
+  },
+  {
+    "wordID": 30,
+    "word": "Órgano",
+    "meanings": [
+      {
+        "context": "Era muy talentoso tocando el órgano.",
+        "words": [
+          "Piano",
+          "Música",
+          "Canción",
+          "Iglesia",
+          "Instrumento",
+          "Teclado",
+          "Cuerdas",
+          "Partitura"
+        ]
+      },
+      {
+        "context": "Tuvo que recibir un trasplante debido a la falla de su órgano.",
+        "words": [
+          "Cuerpo",
+          "Víscera",
+          "Cerebro",
+          "Corazón",
+          "Hígado",
+          "Humano",
+          "Cirujano",
+          "Vida"
         ]
       }
     ]

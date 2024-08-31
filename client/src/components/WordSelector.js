@@ -22,13 +22,22 @@ export default class WordSelector extends Component {
     wrapWords(text, words) {
         // Convertir todas las palabras a minúsculas
         const wordsLowerCase = words.map(word => word.toLowerCase());
-
-        // Dividir el texto en palabras y signos de puntuación
-        const parts = text.split(/(\b[\wáéíóúüñÁÉÍÓÚÜÑ]+[\.,!?]?\b)/);
-
+    
+        // Dividir el texto en palabras y espacios, manteniendo la puntuación
+        const parts = text.split(/(\s+)/).flatMap(part => {
+            if (/\s+/.test(part)) {
+                return [part];
+            }
+            const match = part.match(/^(.*?)([\.,!?]?)$/);
+            return match[1] ? [match[1], match[2]] : [match[2]];
+        }).filter(Boolean);
+    
         return parts.map((part, index) => {
+            // Obtener la versión en minúsculas de la parte actual sin puntuación
+            const partLowerCase = part.toLowerCase().trim();
+            
             // Verificar si la palabra (en minúsculas) debe ser envuelta
-            if (wordsLowerCase.includes(part.toLowerCase().trim().replace(/[\.,!?]$/, ''))) {
+            if (wordsLowerCase.includes(partLowerCase)) {
                 return <span className='highlight-word' key={index}>{part}</span>;
             }
             return part;

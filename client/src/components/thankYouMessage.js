@@ -17,7 +17,7 @@ export default function ThankYouMessage() {
     window.history.pushState(null, null, '/');
   }, []);
 
-  const shareUrl = process.env.REACT_APP_SERVER_BASE_ROUTE
+  const shareUrl = "https://experiment-webpage.vercel.app/"
   const title = "¡Participá en este experimento!"
 
   return (

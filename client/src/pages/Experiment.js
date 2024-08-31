@@ -12,7 +12,7 @@ import data from '../data.json';
 import catch_data from '../catch.json';
 
 import WordSelector from '../components/WordSelector.js';
-import Loader from "react-spinners/ClockLoader.js";
+import Loader from "react-spinners/PulseLoader.js";
 
 import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
@@ -224,12 +224,13 @@ function ExperimentCompareImages() {
                 ) : (
                   <div class="loader-container" style={{ height: height }}>
                     <Loader
-                      color={'grey'}
+                      color={'var(--deep-red)'}
                       loading={true}
-                      size={150}
+                      size={40}
                       aria-label="Loading Spinner"
                       data-testid="loader"
-                    />
+                      speedMultiplier={0.5}
+                    />|
                   </div>
                 )
               }

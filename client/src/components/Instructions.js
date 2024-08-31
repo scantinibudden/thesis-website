@@ -1,9 +1,9 @@
 import {  useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import LogosHeader from '../components/LogosHeader.js';
-import './experiment.css';
+import '../pages/experiment.css';
 
-function Instructions() {
+function Instructions({title, navigateTo}) {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -31,14 +31,14 @@ function Instructions() {
     }, []);
 
     const handleGoToTutorial = async () => {
-        navigate('/tutorial', { state: { userId: userId } });
+        navigate(navigateTo, { state: { userId: userId } });
     }
 
     return (
         <div className='container' style={{maxWidth:'1200px'}}>
             <LogosHeader />
             <div className='BlueSubHeader'>
-                Instrucciones
+                {title}
             </div>
 
             {

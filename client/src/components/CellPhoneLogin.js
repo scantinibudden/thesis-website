@@ -43,18 +43,16 @@ function CellPhoneLogin() {
 
 
     if (userExists) {
-      alert("Bienvenidx nuevamente!")
       try {
         const last_submitted = user.lastTrialSubmitted
-        console.log(user)
-        console.log(last_submitted)
         console.log('User already exists');
         if (user.hasFinished) {
           navigate('/thank-you')
+          alert("¡Bienvenido nuevamente!")
           alert("Ya completaste el experimento. ¡Gracias por participar!")
           return  
         }
-        navigate('/experiment', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
+        navigate('/welcome-back', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
       } catch (error) {
         alert("Sucedió un error inesperado, vuelve a intentarlo")
         console.error("Cant get last trial")

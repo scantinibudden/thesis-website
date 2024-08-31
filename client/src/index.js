@@ -7,7 +7,8 @@ import ExperimentCompareImages from './pages/Experiment.js';
 import Home from './pages/Home.js';
 import ThankYouMessage from './components/thankYouMessage.js';
 import TutorialCompareImages from './pages/TutorialCompareImages.js';
-import Instructions from './pages/Instructions.js';
+import InstructionsFirstTime from './pages/InstructionsFirstTime.js';
+import InstructionsWelcomeBack from './pages/InstructionWelcomeBack.js';
 import Break from './pages/Break.js'
 
 import 'normalize.css'
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
   },
   {
     path: "instructions/",
-    element: <Instructions />,
+    element: <InstructionsFirstTime />,
+  },
+  {
+    path: "welcome-back/",
+    element: <InstructionsFirstTime />,
   },
   {
     path: "break/",

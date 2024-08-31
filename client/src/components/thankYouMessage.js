@@ -18,7 +18,7 @@ export default function ThankYouMessage() {
   }, []);
 
   const shareUrl = process.env.REACT_APP_SERVER_BASE_ROUTE
-  const title = "Experimento de Neurociencia - LIAA"
+  const title = "¡Participá en este experimento!"
 
   return (
     <div className='container'>

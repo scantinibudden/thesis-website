@@ -3,7 +3,7 @@ import Instructions from '../components/Instructions.js';
 
 function InstructionsFirstTime() {
     return (
-        <Instructions title={"Instrucciones"} navigateTo={"/tutorial"}/>
+        <Instructions title={"Instrucciones"} navigateTo={"/tutorial"} isFirstTime={true}/>
     )
 }
 

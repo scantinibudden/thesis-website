@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "welcome-back/",
-    element: <InstructionsFirstTime />,
+    element: <InstructionsWelcomeBack />,
   },
   {
     path: "break/",

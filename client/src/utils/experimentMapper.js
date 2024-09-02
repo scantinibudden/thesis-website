@@ -31,7 +31,7 @@ function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
             word: e.word,
             meaningID: meaningID,
             context: trial.context,
-            words: shuffleArray(trial.words, seed)
+            words: shuffleArray(trial.words, seed * (i + 1))
         });
     }
 

@@ -205,8 +205,7 @@ function ExperimentCompareImages() {
           </div>
         ) : (
           <div className='center-items'>
-            <div className='BlueSubHeader'>
-              Experimento
+            <div>
             </div>
 
             <div className='experiment-container'>

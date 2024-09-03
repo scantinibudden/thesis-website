@@ -229,7 +229,7 @@ function ExperimentCompareImages() {
                       aria-label="Loading Spinner"
                       data-testid="loader"
                       speedMultiplier={0.5}
-                    />|
+                    />
                   </div>
                 )
               }

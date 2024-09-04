@@ -88,12 +88,10 @@ function ExperimentCompareImages() {
   useEffect(() => {
     console.log(exp_index)
     setExperiment(dataset[exp_index]);
-    console.log(sessionStorage.getItem('exp_index'))
   }, [exp_index]);
 
   useEffect(() => {
     if (divRef.current) {
-      console.log(divRef.current.offsetHeight)
       setHeight(`${divRef.current.offsetHeight}px`);
     }
   }, []);

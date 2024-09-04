@@ -18,6 +18,7 @@ import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 import LogosHeader from '../components/LogosHeader.js';
 import { set } from 'mongoose';
+import Contact from '../components/Contact.js';
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
@@ -202,6 +203,7 @@ function ExperimentCompareImages() {
                 </div>
               </div>
             </div>
+            <Contact />
           </div>
         ) : (
           <div className='center-items'>

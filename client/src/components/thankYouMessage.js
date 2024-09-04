@@ -10,6 +10,7 @@ import {
   TelegramShareButton,
   TelegramIcon
 } from 'react-share'
+import Contact from './Contact';
 
 export default function ThankYouMessage() {
   useEffect(() => {
@@ -41,6 +42,7 @@ export default function ThankYouMessage() {
           <TelegramIcon  size={50} round={true} />
         </TelegramShareButton>
       </div>
+      <Contact />
     </div>
   );
 }

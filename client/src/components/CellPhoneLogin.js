@@ -96,7 +96,7 @@ function CellPhoneLogin() {
         </div>
       </form>
 
-      <div className='Center'>
+      <div className='Center' style={{padding:'0px'}}>
         Solo guardaremos este dato encriptado como identificador.
       </div>
     </div>

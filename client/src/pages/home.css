@@ -176,3 +176,36 @@
 .no-margin {
   margin: 0;
 }
+
+.contact {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-text {
+  margin: 0px;
+  font-size: 20px;
+  padding: 2px 0px;
+}
+
+
+@media (max-width: 600px) {
+  .contact-text {
+    font-size: 16px;
+  }
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}

@@ -37,42 +37,49 @@ function CellPhoneLogin() {
       return;
     }
 
-    const user = await getUser(hashedCellNumber)
-    const userExists = user;
 
+    try {
+      const user = await getUser(hashedCellNumber);
+      const userExists = user;
 
-    if (userExists) {
-      try {
-        const last_submitted = user.lastTrialSubmitted
-        console.log('User already exists');
-        if (user.hasFinished) {
-          navigate('/thank-you')
-          alert("¡Bienvenido nuevamente!")
-          alert("Ya completaste el experimento. ¡Gracias por participar!")
-          return  
+      if (userExists) {
+        alert("¡Bienvenido nuevamente!");
+        try {
+          const last_submitted = user.lastTrialSubmitted;
+          console.log('User already exists');
+          if (user.hasFinished) {
+            navigate('/thank-you');
+            alert("Ya completaste el experimento. ¡Gracias por participar!");
+            return;
+          }
+          navigate('/welcome-back', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
+        } catch (error) {
+          console.error("Can't get last trial:", error);
+          alert("Sucedió un error inesperado, vuelve a intentarlo");
+          return;
         }
-        navigate('/welcome-back', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
-      } catch (error) {
-        alert("Sucedió un error inesperado, vuelve a intentarlo")
-        console.error("Cant get last trial")
-        return
+      } else {
+        try {
+          await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
+            userId: hashedCellNumber,
+            loginTime: timestamp
+          });
+
+          navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } });
+        } catch (error) {
+          console.error('Error submitting data:', error);
+          alert("Algo salió mal. Intentá nuevamente");
+
+          navigate('/');
+        }
       }
-    } else {
-      try {
-        await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
-          userId: hashedCellNumber,
-          loginTime: timestamp
-        });
-      
-        navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } });
-      } catch (error) {
-        console.error('Error submitting data:', error);
-        alert("Algo salió mal. Intentá nuevamente");
-      
-        navigate('/');
-      }
+    } catch (error) {
+      console.error('Error getting user:', error);
+      alert("Ocurrió un error al obtener la información del usuario. Por favor, inténtalo de nuevo.");
+      navigate('/');
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   return (
@@ -95,7 +102,7 @@ function CellPhoneLogin() {
         </div>
       </form>
 
-      <div className='Center' style={{padding:'0px'}}>
+      <div className='Center' style={{ padding: '0px' }}>
         Solo guardaremos este dato encriptado como identificador.
       </div>
     </div>

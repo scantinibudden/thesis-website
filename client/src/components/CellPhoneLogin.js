@@ -58,18 +58,18 @@ function CellPhoneLogin() {
         return
       }
     } else {
-      console.log('Add new user: User does not exist');
-      navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } });
-
       try {
-
         await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
           userId: hashedCellNumber,
           loginTime: timestamp
         });
-        navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } })
+      
+        navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } });
       } catch (error) {
         console.error('Error submitting data:', error);
+        alert("Algo salió mal. Intentá nuevamente");
+      
+        navigate('/');
       }
     }
     setIsLoading(false);

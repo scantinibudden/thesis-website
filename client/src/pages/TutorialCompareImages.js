@@ -11,7 +11,6 @@ import './experiment.css';
 function TutorialCompareImages() {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location.state)
   const [isLoading, setIsLoading] = useState(false);
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);

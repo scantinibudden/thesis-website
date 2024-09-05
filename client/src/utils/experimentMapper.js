@@ -1,5 +1,22 @@
 export function generateDataset(data, catch_data, seed, realTrialsLength, catchLength) {
     // Split in buckets
+    const dataBuckets = buildBuckets(data, seed, realTrialsLength, 2)
+    const catchBuckets = buildBuckets(catch_data, seed, catchLength, 1)
+    
+    // Make step trials
+    const contatenatedArrays = concatenateArrays(dataBuckets,catchBuckets)
+
+    const shuffleItem = (e) => {
+        return shuffleArray(e, seed)
+    } 
+
+    const shuffledConcatenadArrays = contatenatedArrays.map(shuffleItem)
+
+    return shuffledConcatenadArrays.flat();
+}
+
+export function generateDatasetNew(data, catch_data, seed, realTrialsLength, catchLength) {
+    // Split in buckets
     const dataBuckets = buildBucketsBuckets(data, seed, realTrialsLength, 2)
     const catchBuckets = buildBucketsBuckets(catch_data, seed, catchLength, 1)
     
@@ -13,6 +30,28 @@ export function generateDataset(data, catch_data, seed, realTrialsLength, catchL
     const shuffledConcatenadArrays = contatenatedArrays.map(shuffleItem)
 
     return shuffledConcatenadArrays.flat();
+}
+
+function buildBuckets(data, seed, bucketSize, meaningRange) {
+    const rng = new RNG(seed);
+    const processedData = [];
+    const ars = rng.random_array(data.length)
+
+    for (let i = 0; i < data.length; i++) {
+        const e = data[i];
+        const meaningID = data.length < 40 ? 0 : ars[i];
+        const trial = e.meanings[meaningID];
+        
+        processedData.push({
+            wordID: e.wordID,
+            word: e.word,
+            meaningID: meaningID,
+            context: trial.context,
+            words: shuffleArray(trial.words, seed * (i + 1))
+        });
+    }
+
+    return splitArrayByLength(shuffleArray(processedData, seed), bucketSize);
 }
 
 function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {

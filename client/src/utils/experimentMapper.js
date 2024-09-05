@@ -38,44 +38,35 @@ function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     return splitArrayByLength(shuffleArray(processedData, seed), bucketSize);
 }
 
-export function processJson(data, catch_, jsonWithX) {
-    let result = [];
-    
-    // Combine data from 'data' and 'catch'
-    let combinedData = [...data, ...catch_];
-    
-    // Iterate over each word in the combined data
-    for (let item of combinedData) {
-        let wordId = item.wordID;
-        let word = item.word;
-        
-        // Iterate over each meaning of the word
-        item.meanings.forEach((meaning, meaningId) => {
-            let context = meaning.context;
-            let words = meaning.words;
-            
-            // Find the corresponding entry in jsonWithX using wordID
-            let correspondingXEntry = jsonWithX.find(entry => entry.w === wordId);
-            
-            let orderedWords;
-            if (correspondingXEntry) {
-                // Order the words according to the mapping in 'x'
-                orderedWords = correspondingXEntry.x.map(index => words[index]);
-            } else {
-                orderedWords = words;
-            }
-            
-            // Create the final object
-            result.push({
-                wordID: wordId,
-                word: word,
-                meaningID: meaningId,
-                context: context,
-                words: orderedWords
-            });
-        });
-    }
-    
+export function processJson(data, catchData, jsonWithX) {
+    const result = [];
+
+    jsonWithX.forEach((item) => {
+      const wordId = item.w;
+      const idx = item.i;
+      const meaningId = item.m;
+  
+      // Determine the correct object based on wordID
+      const obj = wordId > 60 ? catchData[idx] : data[idx];
+  
+      const word = obj.word;
+      const meaning = obj.meanings[meaningId];
+      const context = meaning.context;
+      const words = meaning.words;
+  
+      // Order the words according to the indices in 'x'
+      const orderedWords = item.x.map(index => words[index]);
+  
+      // Append the formatted result
+      result.push({
+        wordID: wordId,
+        word: word,
+        meaningID: meaningId,
+        context: context,
+        words: orderedWords,
+      });
+    });
+  
     return result;
 }
 

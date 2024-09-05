@@ -14,7 +14,7 @@ import catch_data from '../catch.json';
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/PulseLoader.js";
 
-import { generateDataset, generateDatasetNew } from '../utils/experimentMapper.js';
+import { generateDataset } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 import LogosHeader from '../components/LogosHeader.js';
 import { set } from 'mongoose';
@@ -48,7 +48,7 @@ function ExperimentCompareImages() {
   const realTrialsLength = 10
   const catchLength = 2
   const stepLength = realTrialsLength + catchLength
-  const dataset = currentTrial > 0 ? generateDataset(data, catch_data, seed, realTrialsLength, catchLength) : generateDatasetNew(data, catch_data, seed, realTrialsLength, catchLength)
+  const dataset = generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
 
   const dataset_length = dataset.length
   const catch_length = catch_data.length

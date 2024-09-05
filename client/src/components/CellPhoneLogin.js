@@ -43,6 +43,8 @@ function CellPhoneLogin() {
       const userExists = user;
 
       if (userExists) {
+        const isNew = user.isNew ? true : false;
+        console.log(isNew);
         alert("¡Bienvenido nuevamente!");
         try {
           const last_submitted = user.lastTrialSubmitted;

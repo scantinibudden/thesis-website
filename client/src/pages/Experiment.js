@@ -10,15 +10,18 @@ import NextButton from '../components/NextButton.js';
 // My imports
 import data from '../data.json';
 import catch_data from '../catch.json';
+import result_data from '../result_data.json';
+
 
 import WordSelector from '../components/WordSelector.js';
 import Loader from "react-spinners/PulseLoader.js";
 
-import { generateDataset } from '../utils/experimentMapper.js';
+import { generateDataset, processJson } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 import LogosHeader from '../components/LogosHeader.js';
 import { set } from 'mongoose';
 import Contact from '../components/Contact.js';
+
 
 function ProgressBar({ value, max }) {
   const percentage = Math.min((value / max) * 100, 99);
@@ -48,7 +51,7 @@ function ExperimentCompareImages() {
   const realTrialsLength = 10
   const catchLength = 2
   const stepLength = realTrialsLength + catchLength
-  const dataset = generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
+  const dataset = currentTrial > 0 ? generateDataset(data, catch_data, seed, realTrialsLength, catchLength) : processJson(data,catch_data,result_data[0])
 
   const dataset_length = dataset.length
   const catch_length = catch_data.length

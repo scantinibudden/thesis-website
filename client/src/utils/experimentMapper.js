@@ -38,6 +38,47 @@ function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     return splitArrayByLength(shuffleArray(processedData, seed), bucketSize);
 }
 
+export function processJson(data, catch_, jsonWithX) {
+    let result = [];
+    
+    // Combine data from 'data' and 'catch'
+    let combinedData = [...data, ...catch_];
+    
+    // Iterate over each word in the combined data
+    for (let item of combinedData) {
+        let wordId = item.wordID;
+        let word = item.word;
+        
+        // Iterate over each meaning of the word
+        item.meanings.forEach((meaning, meaningId) => {
+            let context = meaning.context;
+            let words = meaning.words;
+            
+            // Find the corresponding entry in jsonWithX using wordID
+            let correspondingXEntry = jsonWithX.find(entry => entry.w === wordId);
+            
+            let orderedWords;
+            if (correspondingXEntry) {
+                // Order the words according to the mapping in 'x'
+                orderedWords = correspondingXEntry.x.map(index => words[index]);
+            } else {
+                orderedWords = words;
+            }
+            
+            // Create the final object
+            result.push({
+                wordID: wordId,
+                word: word,
+                meaningID: meaningId,
+                context: context,
+                words: orderedWords
+            });
+        });
+    }
+    
+    return result;
+}
+
 function splitArrayByLength(A, l) {
     const B = [];
     for (let i = 0; i < A.length; i += l) {

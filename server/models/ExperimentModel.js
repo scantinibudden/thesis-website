@@ -18,7 +18,8 @@ const expDBSchema = new mongoose.Schema({
     tutorialTime: { type: Date, required: false },
     trials: [trialSchema],
     lastTrialSubmitted: { type: Number, required: false },
-    hasFinished: {type:Boolean, required: true}
+    hasFinished: {type:Boolean, required: true},
+    isNew: {type:Boolean, required: true}
     /*serieAssigned: { type: Number, required: false },*/
 });
 

@@ -51,10 +51,8 @@ function ExperimentCompareImages() {
   const realTrialsLength = 10
   const catchLength = 2
   const stepLength = realTrialsLength + catchLength
-  console.log(result_data[0])
-  console.log(currentTrial)
   const dataset = currentTrial > 0 ? generateDataset(data, catch_data, seed, realTrialsLength, catchLength) : processJson(data,catch_data,result_data[0])
-  console.log(dataset)
+  
 
   const dataset_length = dataset.length
   const catch_length = catch_data.length

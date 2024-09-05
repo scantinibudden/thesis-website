@@ -44,14 +44,16 @@ function ExperimentCompareImages() {
     return new Date().getTime()
   }
 
+  console.log(location.state)
   const { userId } = location.state;
+  const { isNew } = location.state;
   const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
   const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
   const seed = getSeed(userId)
   const realTrialsLength = 10
   const catchLength = 2
   const stepLength = realTrialsLength + catchLength
-  const dataset = currentTrial > 0 ? generateDataset(data, catch_data, seed, realTrialsLength, catchLength) : processJson(data,catch_data,result_data[0])
+  const dataset = isNew > 0 ? processJson(data,catch_data,result_data[0]) : generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
   
 
   const dataset_length = dataset.length

@@ -54,7 +54,7 @@ function CellPhoneLogin() {
             alert("Ya completaste el experimento. ¡Gracias por participar!");
             return;
           }
-          navigate('/welcome-back', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1 } });
+          navigate('/welcome-back', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1, isNew: isNew } });
         } catch (error) {
           console.error("Can't get last trial:", error);
           alert("Sucedió un error inesperado, vuelve a intentarlo");
@@ -67,7 +67,7 @@ function CellPhoneLogin() {
             loginTime: timestamp
           });
 
-          navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0 } });
+          navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0, isNew: true } });
         } catch (error) {
           console.error('Error submitting data:', error);
           alert("Algo salió mal. Intentá nuevamente");

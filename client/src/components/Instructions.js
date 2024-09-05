@@ -36,7 +36,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
     }, []);
 
     const handleGoToTutorial = async () => {
-        navigate(navigateTo, { state: { userId: userId } });
+        navigate(navigateTo, { state: location.state });
     }
 
     return (

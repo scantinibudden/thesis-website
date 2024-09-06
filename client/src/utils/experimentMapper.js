@@ -47,7 +47,7 @@ export function processJson(data, catchData, jsonWithX) {
       const meaningId = item.m;
   
       // Determine the correct object based on wordID
-      const obj = wordId > 60 ? catchData[idx] : data[idx];
+      const obj = wordId >= 60 ? catchData[idx] : data[idx];
   
       const word = obj.word;
       const meaning = obj.meanings[meaningId];

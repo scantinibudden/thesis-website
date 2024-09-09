@@ -23,7 +23,7 @@ function buildBucketsBuckets(data, seed, bucketSize, meaningRange) {
     for (let i = 0; i < data.length; i++) {
         const e = data[i];
         //const meaningID = rng.nextRange(0, meaningRange);
-        const meaningID = data.length < 40 ? 0 : ars[i];
+        const meaningID = data.length < 40 ? 0 : 1 - ars[i];
         const trial = e.meanings[meaningID];
         
         processedData.push({

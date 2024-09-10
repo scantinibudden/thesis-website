@@ -67,7 +67,7 @@ function CellPhoneLogin() {
             loginTime: timestamp
           });
 
-          navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0, isNew: false } });
+          navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0, isNew: true } });
         } catch (error) {
           console.error('Error submitting data:', error);
           alert("Algo salió mal. Intentá nuevamente");

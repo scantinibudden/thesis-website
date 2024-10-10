@@ -62,6 +62,7 @@ function CellPhoneLogin() {
         }
       } else {
         try {
+          console.log(`${process.env.REACT_APP_SERVER_BASE_ROUTE}`)
           await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
             userId: hashedCellNumber,
             loginTime: timestamp

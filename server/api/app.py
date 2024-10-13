@@ -38,6 +38,9 @@ async def add_tutorial_time():
 async def add_user():
     return {"message": "Tutorial time added succesfully"}
 
+@app.post("/api/getUser")
+async def get_user():
+    return {"message": "Tutorial time added succesfully"}
 
 @app.post("/api/addRating")
 async def add_rating():

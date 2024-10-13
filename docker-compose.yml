@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: ./server
+    container_name: thesis_server
+    volumes:
+      - ./server:/app
+    ports:
+      - '8001:8000'
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+    depends_on:
+      - mongo
+    command: python app/main.py
+
+    mongo:
+      image: mongo:6.0  # Use the official MongoDB image
+      container_name: thesis_mongo
+      ports:
+        - "27017:27017"  # Map the MongoDB port
+      volumes:
+        - thesis_mongo_data:/data/db  # Persistent storage for MongoDB
+
+volumes:
+  mongo_data:  # Volume to store MongoDB data
+  

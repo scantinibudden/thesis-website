@@ -1,1 +1,1 @@
-from models.experiment_model import Trial, Experiment
+from models.experiment_model import Session, Trial

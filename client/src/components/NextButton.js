@@ -1,4 +1,3 @@
-
 import '../pages/experiment.css';
 import { useState } from 'react';
 

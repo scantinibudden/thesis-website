@@ -19,7 +19,6 @@ import Loader from "react-spinners/PulseLoader.js";
 import { generateDataset, processJson } from '../utils/experimentMapper.js';
 import { getSeed } from '../utils/getSeed.js';
 import LogosHeader from '../components/LogosHeader.js';
-import { set } from 'mongoose';
 import Contact from '../components/Contact.js';
 
 
@@ -31,12 +30,11 @@ function ProgressBar({ value, max }) {
       <progress value={value} max={max}></progress>
       <span className="progress-bar-text">{`${percentage.toFixed(0)}%`}</span>
     </div>
-
   );
 }
 
 
-function ExperimentCompareImages() {
+function RunExperiment() {
   // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
@@ -256,4 +254,4 @@ function ExperimentCompareImages() {
   );
 }
 
-export default ExperimentCompareImages;
+export default RunExperiment;

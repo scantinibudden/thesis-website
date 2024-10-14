@@ -1,40 +1,14 @@
 import axios from 'axios';
-import images from '../data.json';
 
-export async function checkUserExists(hashedCellNumber){
+export async function checkUserExists(userId){
     try {
       const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/checkUser`, 
-      {},{
-        params: {
-          userId: hashedCellNumber,
-        },
-      });
-
+      {userId: userId});
       return (response.data.userExists);
-     
     } catch (error) {
       console.error('Error checking user:', error);
       return false;
     }
-};
-
-
-export async function getNewImageToRate(userId){
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const imgSelected = images[randomIndex];
-    const userAlreadyRated = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/hasRated`, {
-      params: {
-        userId: userId,
-        imgId: imgSelected.img,
-        group: imgSelected.group,
-        imgGeneratedBy: imgSelected.imgGeneratedBy,
-        promptUsed: imgSelected.promptUsed
-      }
-    });
-    if (userAlreadyRated.data.hasRated){
-      return getNewImageToRate(userId);
-    }
-    return randomIndex;
 };
 
 export async function getUser(userId){

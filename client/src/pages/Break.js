@@ -1,8 +1,5 @@
 import './home.css';
-import ExperimentExplanation from '../components/ExperimentExplanation.js';
-import CellPhoneLogin from '../components/CellPhoneLogin.js';
 import LogosHeader from '../components/LogosHeader.js';
-import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Home() {

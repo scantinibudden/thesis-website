@@ -39,12 +39,12 @@ function CellPhoneLogin() {
 
 
     try {
-      const user = await getUser(hashedCellNumber);
-      const userExists = user;
+      const userExists = await checkUserExists(hashedCellNumber);
+      console.log(userExists)
 
       if (userExists) {
+        const user = await getUser(hashedCellNumber);
         const isNew = user.isNew ? true : false;
-        console.log(isNew);
         alert("¡Bienvenido nuevamente!");
         try {
           const last_submitted = user.lastTrialSubmitted;
@@ -62,7 +62,7 @@ function CellPhoneLogin() {
         }
       } else {
         try {
-          console.log(`${process.env.REACT_APP_SERVER_BASE_ROUTE}`)
+          console.log('New user');
           await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
             userId: hashedCellNumber,
             loginTime: timestamp

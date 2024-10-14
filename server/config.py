@@ -1,5 +1,11 @@
-from scripts import get_stories
 import os
+import logging
+from scripts import get_stories
+from dotenv import load_dotenv
+
+load_dotenv()
+
+logging.basicConfig(level=logging.INFO)
 
 # Load environment variables from .env file
 API_PORT = os.getenv("API_PORT")
@@ -9,3 +15,4 @@ MONGO_URI = os.getenv("MONGO_URI")
 
 STORIES_FOLDER = 'stories'
 STORIES = get_stories(STORIES_FOLDER)
+WORD_SKIP = 30

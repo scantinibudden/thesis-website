@@ -8,7 +8,7 @@ import WordSelector from '../components/WordSelector.js';
 import './experiment.css';
 
 
-function TutorialCompareImages() {
+function Tutorial() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
@@ -72,9 +72,8 @@ function TutorialCompareImages() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
 
-export default TutorialCompareImages;
+export default Tutorial;

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import ExperimentCompareImages from './pages/Experiment.js';
+import RunExperiment from './pages/Experiment.js';
 import Home from './pages/Home.js';
 import ThankYouMessage from './components/thankYouMessage.js';
-import TutorialCompareImages from './pages/TutorialCompareImages.js';
+import Tutorial from './pages/Tutorial.js';
 import InstructionsFirstTime from './pages/InstructionsFirstTime.js';
 import InstructionsWelcomeBack from './pages/InstructionWelcomeBack.js';
 import Break from './pages/Break.js'
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "experiment/",
-    element: < ExperimentCompareImages />,
+    element: <RunExperiment />,
   },
   {
     path: "thank-you/",
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
   },
   {
     path: "tutorial/",
-    element: <TutorialCompareImages />,
+    element: <Tutorial />,
   },
 ]);
 

@@ -1,5 +1,3 @@
-
-
 const OriginalImagesGrid = () => {
     const numGroups = 4; 
     const numImgsPerGroup = 4;

@@ -1,7 +1,9 @@
+import os
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
-# from config import MONGO_URI
+from config import MONGO_URI
+from api.get_trial import get_trial
 
 # Initialize FastAPI
 app = FastAPI()
@@ -24,39 +26,54 @@ app.add_middleware(
     allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
 )
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.post("/api/addTutorialTime")
-async def add_tutorial_time():
-    return {"message": "Tutorial time added succesfully"}
-
 
 @app.post("/api/addUser")
-async def add_user():
-    return {"message": "Tutorial time added succesfully"}
+async def add_user(request: Request):
+    data = await request.json()
+    user_id = data["userId"]
+    login_time = data["loginTime"]
+    return {"message": "User added succesfully"}
+
 
 @app.post("/api/getUser")
-async def get_user():
-    return {"message": "Tutorial time added succesfully"}
-
-@app.post("/api/addRating")
-async def add_rating():
-    return {"message": "Tutorial time added succesfully"}
+async def get_user(request: Request):
+    data = await request.json()
+    user_id = data["userId"]
+    return {}
 
 
 @app.post("/api/checkUser")
-async def check_user():
+async def check_user(request: Request):
+    data = await request.json()
+    user_id = data["userId"]
+    return {"userExists": False}
+
+
+@app.post("/api/addTutorialTime")
+async def add_tutorial_time(request: Request):
+    data = await request.json()
+    user_id = data["userId"]
+    tutorial_time = data["userId"]
     return {"message": "Tutorial time added succesfully"}
 
 
-@app.post("/api/hasRated")
-async def has_rated():
-    return {"message": "Tutorial time added succesfully"}
+@app.post("/api/addTrial")
+async def add_trial(request: Request):
+    data = await request.json()
+    user_id = data["userId"]
+    trial_number = data["trialNumber"]
+    word_id = data["wordID"]
+    meaning_id = data["meaningID"]
+    word = data["word"]
+    context = data["context"]
+    answers = data["answers"]
+    word_order = data["wordOrder"]
+    last_trial_submitted = data["lastTrialSubmitted"]
+    start_time = data["startTime"]
+    submit_time = data["submitTime"]
+    has_finished = data["hasFinished"]
+    return {"message": "Trial added succesfully"}
 
-
-@app.post("/api/getCurrentSerie")
-async def get_current_serie():
-    return {"message": "Tutorial time added succesfully"}
+@app.post("/api/getTrial")
+async def get_new_trial():
+    return get_trial()

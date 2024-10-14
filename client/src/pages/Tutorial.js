@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import LogosHeader from '../components/LogosHeader.js';
 import axios from 'axios';
 
-import WordSelector from '../components/WordSelector.js';
+import WordFiller from '../components/WordFiller.js';
 
 import './experiment.css';
 
@@ -15,22 +15,13 @@ function Tutorial() {
   const { userId } = location.state;
   const wordSelectorRef = useRef(null);
   const exp = {
-    "word": "mensaje",
-    "context": "Ana le envió un mensaje a Beto.",
-    "words": [
-      "Comunicación",
-      "Chat",
-      "Mail",
-      "Celular",
-      "Computadora",
-      "Casilla",
-      "Videollamada",
-      "Tecnología"
-    ]
+    "storyName": 'Tutorial Story',
+    "story": ['Ayer', 'le', 'di', 'de', 'comer', 'a', 'mi', 'perro', 'y', 'él', 'se', 'puso', 'muy', 'feliz.'],
+    "fillInWords": [7,13]
   }
 
   const handleGoToBreak = async () => {
-    if (wordSelectorRef != null && wordSelectorRef.current.isFull()) {
+    if (wordSelectorRef != null && wordSelectorRef.current.isFinished()) {
       setIsLoading(true);
       const timestamp = new Date().getTime();
       try {
@@ -44,9 +35,8 @@ function Tutorial() {
       setIsLoading(false);
       navigate('/break', { state: location.state });
     } else {
-      alert("Por favor, seleccione 3 palabras antes de continuar")
+      alert("Por favor, termine la historia antes de continuar")
     }
-
   }
 
   return (
@@ -59,7 +49,7 @@ function Tutorial() {
       <div style={{width:'100%', marginTop:'10px'}}>
         <div className='experiment-container'>
           <div className='inner-star-rating-container' style={{'width':'100%'}}>
-            <WordSelector ref={wordSelectorRef} exp={exp} />
+            <WordFiller ref={wordSelectorRef} exp={exp} />
           </div>
           <div className='inner-button-container'>
             <div className='button-container'>

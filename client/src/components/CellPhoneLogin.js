@@ -40,8 +40,6 @@ function CellPhoneLogin() {
 
     try {
       const userExists = await checkUserExists(hashedCellNumber);
-      console.log(userExists)
-
       if (userExists) {
         const user = await getUser(hashedCellNumber);
         const isNew = user.isNew ? true : false;

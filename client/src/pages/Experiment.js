@@ -14,6 +14,7 @@ import result_data from '../result_data.json';
 
 
 import WordSelector from '../components/WordSelector.js';
+import WordFiller from '../components/WordFiller.js';
 import Loader from "react-spinners/PulseLoader.js";
 
 import { generateDataset, processJson } from '../utils/experimentMapper.js';
@@ -52,7 +53,6 @@ function RunExperiment() {
   const stepLength = realTrialsLength + catchLength
   const dataset = isNew > 0 ? processJson(data,catch_data,result_data[seed%1000]) : generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
   
-
   const dataset_length = dataset.length
   const catch_length = catch_data.length
 

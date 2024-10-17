@@ -32,7 +32,6 @@ function Tutorial() {
       } catch (error) {
         console.error("Error trying to add tutorial time:", error)
       }
-      setIsLoading(false);
       navigate('/break', { state: location.state });
     } else {
       alert("Por favor, termine la historia antes de continuar")
@@ -56,7 +55,7 @@ function Tutorial() {
               {isLoading ? (
                 <div className="loader"></div>
               ) : (
-                <button onClick={handleGoToBreak} className='SubmitButton'>Siguiente</button>
+                <button onClick={handleGoToBreak} className='SubmitButton' style={{ display: 'none' }}>Siguiente</button>
               )}
             </div>
           </div>

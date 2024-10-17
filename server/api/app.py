@@ -3,7 +3,6 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from config import MONGO_URI
-from api.get_trial import get_trial
 
 # Initialize FastAPI
 app = FastAPI()
@@ -62,18 +61,14 @@ async def add_trial(request: Request):
     data = await request.json()
     user_id = data["userId"]
     trial_number = data["trialNumber"]
-    word_id = data["wordID"]
-    meaning_id = data["meaningID"]
-    word = data["word"]
-    context = data["context"]
+    trial_name = data["trialName"]
+    missing_word_ids = data["missingWordIDs"]
+    missing_words = data["missingWords"]
     answers = data["answers"]
-    word_order = data["wordOrder"]
     last_trial_submitted = data["lastTrialSubmitted"]
     start_time = data["startTime"]
     submit_time = data["submitTime"]
-    has_finished = data["hasFinished"]
-    return {"message": "Trial added succesfully"}
 
-@app.post("/api/getTrial")
-async def get_new_trial():
-    return get_trial()
+    print(data)
+
+    return {"message": "Trial added succesfully"}

@@ -8,35 +8,41 @@ import './experiment.css'
 import NextButton from '../components/NextButton.js';
 
 // My imports
-import data from '../data.json';
-import catch_data from '../catch.json';
-import result_data from '../result_data.json';
+import data from '../data.json'
 
-
-import WordSelector from '../components/WordSelector.js';
 import WordFiller from '../components/WordFiller.js';
 import Loader from "react-spinners/PulseLoader.js";
 
-import { generateDataset, processJson } from '../utils/experimentMapper.js';
-import { getSeed } from '../utils/getSeed.js';
 import LogosHeader from '../components/LogosHeader.js';
 import Contact from '../components/Contact.js';
 
-
-function ProgressBar({ value, max }) {
-  const percentage = Math.min((value / max) * 100, 99);
-
-  return (
-    <div className="progress-bar-inner-container">
-      <progress value={value} max={max}></progress>
-      <span className="progress-bar-text">{`${percentage.toFixed(0)}%`}</span>
-    </div>
-  );
+function getFillInWords(n) {
+  let word_idx = [];
+  let start = Math.floor(Math.random() * 30); // Random start between 0 and 29
+  
+  for (let i = start; i < n;) {
+      word_idx.push(i);
+      i += 27 + Math.floor(Math.random() * 7); // Random increment between 27 and 33
+  }
+  
+  return word_idx;
 }
 
+function getStory(notIn=[]) {
+  const keys = Object.keys(data);
+  const randomIndex = Math.floor(Math.random() * keys.length);
+  const randomStoryName = keys[randomIndex];
+
+  const exp = {
+    "storyName": randomStoryName,
+    "story": data[randomStoryName],
+    "fillInWords": getFillInWords(data[randomStoryName].length)
+  }
+  
+  return exp
+}
 
 function RunExperiment() {
-  // Paula's states
   const navigate = useNavigate();
   const location = useLocation();
   const now = () => {
@@ -44,62 +50,25 @@ function RunExperiment() {
   }
 
   const { userId } = location.state;
-  const { isNew } = location.state;
+  
   const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
   const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
-  const seed = getSeed(userId)
-  const realTrialsLength = 10
-  const catchLength = 2
-  const stepLength = realTrialsLength + catchLength
-  const dataset = isNew > 0 ? processJson(data,catch_data,result_data[seed%1000]) : generateDataset(data, catch_data, seed, realTrialsLength, catchLength)
-  
-  const dataset_length = dataset.length
-  const catch_length = catch_data.length
-
   const idx = currentTrial || 0
+
   const [exp_index, setExperimentIndex] = useState(idx);
-
-  if (idx >= dataset_length + catch_length) {
-    alert("Ya completaste el experimento, gracias por participar")
-    navigate('/thank-you');
-  }
-
   const [startTime, setStartTime] = useState(now())
+  const [exp, setExperiment] = useState(getStory());
 
-  const [exp, setExperiment] = useState(dataset[exp_index]);
-
-  // My states
-  
-  // const [barProgress, setBarProgress] = useState((parseInt(sessionStorage.getItem('barProgress')) || currentTrial) % stepLength)
-  const [barProgress, setBarProgress] = useState(currentTrial % stepLength)
-  const [maxProgress, setMaxProgress] = useState(Math.min(stepLength, dataset_length - exp_index + 1))
-
-  
-
-  const wordSelectorRef = useRef(null);
+  // States
+  const wordFillerRef = useRef(null);
 
   const [loading, setLoading] = useState(false)
-
-  const [startTrial, setStartTrial] = useState(false)
+  const [inTrial, setInTrial] = useState(true)
 
   const divRef = useRef(null)
-  const [height, setHeight] = useState('400px');
 
-  // Facu
-
-  // update next image 
-  useEffect(() => {
-    console.log(exp_index)
-    setExperiment(dataset[exp_index]);
-  }, [exp_index]);
-
-  useEffect(() => {
-    if (divRef.current) {
-      setHeight(`${divRef.current.offsetHeight}px`);
-    }
-  }, []);
-
-  const submitRating = async (timestamp, hasFinished) => {
+  // Store results
+  const submitWords = async (timestamp) => {
     if (!navigator.onLine) {
       alert('No se pudo enviar la selección. Por favor, revisa tu conexión a internet.');
       return;
@@ -108,16 +77,13 @@ function RunExperiment() {
     axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
       userId: userId,
       trialNumber: exp_index,
-      wordID: exp.wordID,
-      meaningID: exp.meaningID + 1,
-      word: exp.word,
-      context: exp.context,
-      answers: wordSelectorRef.current.result(),
-      wordOrder: exp.words,
+      trialName: exp["storyName"],
+      missingWordIDs: wordFillerRef.current.state.missingWordsIdx,
+      missingWords: wordFillerRef.current.state.missingWords,
+      answers: wordFillerRef.current.state.guesses,
       lastTrialSubmitted: exp_index,
       startTime: startTime,
-      submitTime: timestamp,
-      hasFinished: hasFinished,
+      submitTime: timestamp
     }).then(response => {
       console.log('Selection added successfully!');
     }).catch(error => {
@@ -125,7 +91,6 @@ function RunExperiment() {
     });
 
     const new_exp_index = exp_index + 1
-    const next_change_step = new_exp_index % stepLength === 0
 
     setLoading(true)
 
@@ -134,29 +99,20 @@ function RunExperiment() {
       setStartTime(now())
     }, 1500);
 
-    setBarProgress(prevBarProgress => {
-      const updatedProgress = prevBarProgress + 1
-      return updatedProgress % stepLength === 0 ? 0 : updatedProgress;
-    })
-
-    if (next_change_step && dataset_length - new_exp_index < stepLength) {
-      setMaxProgress(dataset_length - new_exp_index)
-    }
-    setStartTrial(new_exp_index % stepLength === 0)
+    setInTrial(false)
     setExperimentIndex(new_exp_index);
     sessionStorage.setItem('exp_index', new_exp_index);
   };
 
 
-  const handleNextClick = async () => {
-    if (wordSelectorRef) {
-      // !Repeated Code
-      if (!wordSelectorRef.current.isFull()) {
-        alert('Selecciona todas las palabras antes de continuar');
+  const handleContinueClick = async () => {
+    if (wordFillerRef) {
+      if (!wordFillerRef.current.isFinished()) {
+        alert('Termina la historia antes de continuar');
         return;
       }
       const timestamp = now();
-      submitRating(timestamp, false);
+      submitWords(timestamp);
     }
   }
 
@@ -165,20 +121,10 @@ function RunExperiment() {
     navigate('/thank-you');
   }
 
-  const handleExitClick = async () => {
-    if (!wordSelectorRef.current.isFull()) {
-      alert('Selecciona todas las palabras antes de continuar');
-      return;
-    }
-    const timestamp = now();
-    submitRating(timestamp, true);
-    // !Es temporal
-    sessionStorage.setItem('exp_index', 0);
-    navigate('/thank-you');
-  }
+  const handleAnotherClick = async () => {
+    setExperiment(getStory([]))
 
-  const handleNextStep = async () => {
-    setStartTrial(false)
+    setInTrial(true)
     setStartTime(now())
   }
 
@@ -186,7 +132,7 @@ function RunExperiment() {
     <div className='container'>
       <LogosHeader />
       {
-        startTrial && !loading ? (
+        !inTrial && !loading ? (
           <div className='next-step-container'>
             <div className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! </div>
             <p className="continue-message">
@@ -195,7 +141,7 @@ function RunExperiment() {
             <div className='step-buttons-container'>
               <div className='inner-button-container'>
                 <div className='button-container'>
-                  <button onClick={handleNextStep} className='StepButton'>Continuar</button>
+                  <button onClick={handleAnotherClick} className='StepButton'>Continuar</button>
                 </div>
               </div>
               <div className='inner-button-container'>
@@ -215,16 +161,13 @@ function RunExperiment() {
               {
                 !loading ? (
                   <div ref={divRef} style={{ width: '100%', marginTop: '10px' }}>
-                    <WordSelector ref={wordSelectorRef} exp={exp} />
+                    <WordFiller ref={wordFillerRef} exp={exp} />
                     <div className='inner-button-container'>
-                      {(exp_index < dataset_length - 1) ? (
-                        <NextButton handleOnClick={handleNextClick} />
-                      ) : (<button onClick={handleExitClick} className='SubmitButton'>Salir del experimento</button>)
-                      }
+                        <NextButton handleOnClick={handleContinueClick} />
                     </div>
                   </div>
                 ) : (
-                  <div class="loader-container" style={{ height: height }}>
+                  <div class="loader-container" style={{ height: '400px' }}>
                     <Loader
                       color={'var(--deep-red)'}
                       loading={true}
@@ -237,15 +180,6 @@ function RunExperiment() {
                 )
               }
             </div>
-            {
-              !startTrial ? (
-                <div className='progress-bar-container'>
-                  <ProgressBar value={barProgress} max={maxProgress} className='progress' />
-                </div>
-              ) : (
-                <div></div>
-              )
-            }
           </div >
         )
       }

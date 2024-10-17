@@ -301,6 +301,8 @@ progress {
 
 .word-selector-instruction {
   font-size: 20px;
+  padding-top: 20px;  /* Adjust value as needed */
+  padding-bottom: 200px;  /* Adjust value as needed */
 }
 
 @media (max-width: 600px) {

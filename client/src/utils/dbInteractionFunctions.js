@@ -17,7 +17,7 @@ export async function getUser(userId){
     {userId: userId});
     return response.data;
   } catch (error) {
-    console.error('Error getting serie number:', error);
+    console.error('Error getting user:', error);
     return false;
   }
-}
+};

@@ -46,7 +46,6 @@ function Instructions({ title, navigateTo, isFirstTime }) {
                 {title}
             </div>
 
-
             {
                 !isFirstTime ? (
                     <div>
@@ -59,11 +58,10 @@ function Instructions({ title, navigateTo, isFirstTime }) {
                 )
             }
 
-
             {
                 show0 && (
                     <p className='experiment-explanation'>
-                        Te vamos a mostrar una oración que contiene una palabra en color naranja.
+                        Te vamos a mostrar una historia con palabras faltantes.
                     </p>
                 )
             }
@@ -71,7 +69,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show1 && (
                     <p className='experiment-explanation'>
-                        Debajo aparecerán 8 palabras.
+                        Solo se mostrara el texto previo a una palabra faltante.
                     </p>
                 )
             }
@@ -79,7 +77,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show2 && (
                     <p className='experiment-explanation'>
-                        Seleccioná las 3 palabras que mejor se relacionen con la palabra en naranja.
+                        Escriba la palabra que crees que continua la historia.
                     </p>
                 )
             }
@@ -88,7 +86,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show3 && (
                     <p className='experiment-explanation'>
-                        Una vez seleccionadas, pulsa el boton de Siguiente.
+                        Una vez escrita, se mostrara la palabra correcta junto con el texto que continua la historia.
                     </p>
                 )
             }

@@ -1,4 +1,5 @@
 import os
+import json
 
 def get_stories(folder_path):
     stories = {}
@@ -17,3 +18,8 @@ def get_story(file_path):
         content = file.read()
 
     return content.split()
+
+if __name__ == "__main__":
+    data = get_stories("stories")
+    with open("stories/data.json", 'w') as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=4)

@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 
-
 export default class WordFiller extends Component {
     constructor(props) {
         super(props);
-    
-        this.setStory(props.exp)
+
+        this.setStory(props.exp); // Pass initial guesses to setStory
+        this.observers = []
+        if(props.observer)
+            this.observers.push(props.observer)
     }
 
     setStory(exp) {
         const story = exp.story;
         const missingWordsIdx = exp.fillInWords;
-    
+
         // Extract the missing words based on the indices
         const missingWords = story.filter((_, index) => missingWordsIdx.includes(index));
-    
+
+        const guesses = exp.guesses;
+
+        // Find the first empty guess to determine the starting currentIndex
+        const firstEmptyIndex = guesses.length;
+        const startIndex = firstEmptyIndex !== -1 ? firstEmptyIndex : missingWords.length; // If all are filled, start at the end
+
         this.state = {
-            currentIndex: 0,
-            guesses: Array(missingWordsIdx.length).fill(''),
-            showAnswer: Array(missingWordsIdx.length).fill(false),
+            currentIndex: startIndex, // Start from the first empty guess
+            guesses: guesses, // Initialize with provided guesses or empty strings
+            showAnswer: Array(guesses.legnth).fill(true).concat(Array(missingWordsIdx.length - guesses.length).fill(false)), // If there's a guess, show the answer
             missingWords, // Add the missing words directly to the state
             missingWordsIdx, // Store the indices of the missing words
         };
@@ -28,7 +36,7 @@ export default class WordFiller extends Component {
         const { exp } = this.props;
         const { fillInWords } = exp;
 
-        return this.state.currentIndex >= fillInWords.length
+        return this.state.currentIndex >= fillInWords.length;
     }
 
     reset() {
@@ -40,10 +48,14 @@ export default class WordFiller extends Component {
     }
 
     handleGuess = (index, guess) => {
+        this.observers.forEach(observer => {
+            observer()
+        });
+
         // Update guess
         this.setState(prevState => {
             const updatedGuesses = [...prevState.guesses];
-            updatedGuesses[index] = guess;
+            updatedGuesses.push(guess);
             return {
                 currentIndex: prevState.currentIndex + 1,
                 guesses: updatedGuesses,
@@ -58,22 +70,25 @@ export default class WordFiller extends Component {
             }
         });
     };
-    
+
     wrapWords(prefixes) {
         const { currentIndex, guesses, showAnswer, missingWords } = this.state;
-    
+
         return (
             <div style={{ textAlign: 'justify', textJustify: 'inter-word', display: 'block', width: '100%' }}> {/* Container for left alignment */}
                 {prefixes.map((prefix, index) => {
                     const missingWord = missingWords[index];
                     const isVisible = showAnswer[index];
                     const isLastInput = index === missingWords.length - 1; // Check if this is the last input
-    
+
                     return (
                         <span key={index} className="word-wrap">
                             {index <= currentIndex ? ( // Show the prefix only if index is less than or equal to currentIndex
                                 <>
-                                    <span>{prefix}</span>
+                                    {/* Conditional boldness */}
+                                    <span style={{ fontWeight: index === currentIndex ? 'bold' : 'normal' }}>
+                                        {prefix}
+                                    </span>
                                     {index === currentIndex && index < missingWords.length ? (
                                         <input
                                             id={`input-${index}`} // Unique ID for each input
@@ -85,18 +100,18 @@ export default class WordFiller extends Component {
                                                         const submitButton = document.querySelector('.SubmitButton');
                                                         if (submitButton) {
                                                             submitButton.style.display = 'block'; // Unhide the submit button
-                                                            const instruction = document.querySelector('.word-selector-instruction')
-                                                            instruction.style.paddingBottom = '20px'; // Unhide the submit button
+                                                            const instruction = document.querySelector('.word-selector-instruction');
+                                                            instruction.style.paddingBottom = '20px'; // Adjust padding for the submit button
                                                         }
                                                     }
                                                 }
                                             }}
-                                            style={{ 
-                                                marginLeft: '4px', 
+                                            style={{
+                                                marginLeft: '4px',
                                                 width: '15%',  // Set input width to half the container
-                                                border: 'none', 
-                                                borderBottom: '1px solid #000', 
-                                                fontSize: 'inherit', 
+                                                border: 'none',
+                                                borderBottom: '1px solid #000',
+                                                fontSize: 'inherit',
                                                 textAlign: 'left' // Align text inside the input to the left
                                             }}
                                         />
@@ -111,30 +126,30 @@ export default class WordFiller extends Component {
             </div>
         );
     }
-    
+
     render() {
         const { exp } = this.props;
         const story = exp.story;
         const { missingWordsIdx } = this.state;  // No need to calculate missingWords and missingWordsIdx again
-    
+
         // Generate prefixes for each word
         const prefixes = [];
-    
+
         // prefix for first word
         let subArray = story.slice(0, missingWordsIdx[0]);
         prefixes.push(subArray.join(' '));
-    
+
         for (let i = 0; i < missingWordsIdx.length - 1; i++) {
             const start = missingWordsIdx[i] + 1; // Start from the next index
             const end = missingWordsIdx[i + 1]; // End at the current index of the next pair
             subArray = story.slice(start, end); // Get words between the indices
             prefixes.push(subArray.join(' ')); // Join and push to result
         }
-    
+
         // last prefix (actually suffix)
-        subArray = story.slice(missingWordsIdx[missingWordsIdx.length-1]+1, story.length);
+        subArray = story.slice(missingWordsIdx[missingWordsIdx.length - 1] + 1, story.length);
         prefixes.push(subArray.join(' '));
-    
+
         return (
             <div className='word-selector-container'>
                 <div className='SubHeaderExp'>
@@ -142,7 +157,7 @@ export default class WordFiller extends Component {
                         {this.wrapWords(prefixes)}
                     </p>
                 </div>
-                <p className='word-selector-instruction'>                       
+                <p className='word-selector-instruction'>
                     Escribe la palabra que creas correcta.
                 </p>
             </div>

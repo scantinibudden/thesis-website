@@ -8,10 +8,10 @@ import '../pages/home.css';
 import { checkUserExists } from '../utils/dbInteractionFunctions.js';
 import { getUser } from '../utils/dbInteractionFunctions.js';
 
-function CellPhoneLogin() {
+function EmailLogin() {
   const navigate = useNavigate();
 
-  const [cellPhoneInput, setUserId] = useState('');
+  const [emailInput, setUserId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (event) => {
@@ -24,12 +24,12 @@ function CellPhoneLogin() {
 
     const timestamp = new Date().getTime();
 
-    const lowerEmail = cellPhoneInput.toLowerCase()
+    const lowerEmail = emailInput.toLowerCase()
     const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const isValidCellNumber = emailPattern.test(lowerEmail);
-    const hashedCellNumber = SHA256(lowerEmail).toString();
+    const isValidEmail = emailPattern.test(lowerEmail);
+    const hashedEmail = SHA256(lowerEmail).toString();
 
-    if (!isValidCellNumber) {
+    if (!isValidEmail) {
       console.error('Invalid email number');
       alert("Por favor ingrese un mail válido.")
       setUserId('')
@@ -39,20 +39,19 @@ function CellPhoneLogin() {
 
 
     try {
-      const userExists = await checkUserExists(hashedCellNumber);
+      const userExists = await checkUserExists(hashedEmail);
       if (userExists) {
-        const user = await getUser(hashedCellNumber);
-        const isNew = user.isNew ? true : false;
+        const user = await getUser(hashedEmail);
         alert("¡Bienvenido nuevamente!");
+        console.log(user)
         try {
-          const last_submitted = user.lastTrialSubmitted;
+          const last_submitted = user.trials? user.trials.length : 0;
           console.log('User already exists');
-          if (user.hasFinished) {
-            navigate('/thank-you');
-            alert("Ya completaste el experimento. ¡Gracias por participar!");
-            return;
-          }
-          navigate('/welcome-back', { state: { userId: hashedCellNumber, currentTrial: last_submitted + 1, isNew: isNew } });
+          if (user.is_new)
+            navigate('/instructions', { state: { userId: hashedEmail, currentTrial: 0, trials: user.trials} });
+
+          else
+            navigate('/welcome-back', { state: { userId: hashedEmail, currentTrial: last_submitted + 1, trials: user.trials} });
         } catch (error) {
           console.error("Can't get last trial:", error);
           alert("Sucedió un error inesperado, vuelve a intentarlo");
@@ -62,11 +61,11 @@ function CellPhoneLogin() {
         try {
           console.log('New user');
           await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
-            userId: hashedCellNumber,
+            userId: hashedEmail,
             loginTime: timestamp
           });
 
-          navigate('/instructions', { state: { userId: hashedCellNumber, currentTrial: 0, isNew: true } });
+          navigate('/instructions', { state: { userId: hashedEmail, currentTrial: 0, trials: []} });
         } catch (error) {
           console.error('Error submitting data:', error);
           alert("Algo salió mal. Intentá nuevamente");
@@ -89,7 +88,7 @@ function CellPhoneLogin() {
         <input
           style={{ textAlign: 'center' }}
           type="email"
-          value={cellPhoneInput}
+          value={emailInput}
           onChange={handleInputChange}
           placeholder="Ingresa tu email"
           className='Input'
@@ -111,6 +110,6 @@ function CellPhoneLogin() {
 
 }
 
-export default CellPhoneLogin;
+export default EmailLogin;
 
 

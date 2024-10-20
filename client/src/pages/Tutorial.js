@@ -17,7 +17,8 @@ function Tutorial() {
   const exp = {
     "storyName": 'Tutorial Story',
     "story": ['Ayer', 'le', 'di', 'de', 'comer', 'a', 'mi', 'perro', 'y', 'él', 'se', 'puso', 'muy', 'feliz.'],
-    "fillInWords": [7,13]
+    "fillInWords": [7,13],
+    "guesses": Array(0)
   }
 
   const handleGoToBreak = async () => {
@@ -48,7 +49,7 @@ function Tutorial() {
       <div style={{width:'100%', marginTop:'10px'}}>
         <div className='experiment-container'>
           <div className='inner-star-rating-container' style={{'width':'100%'}}>
-            <WordFiller ref={wordSelectorRef} exp={exp} />
+            <WordFiller ref={wordSelectorRef} exp={exp}/>
           </div>
           <div className='inner-button-container'>
             <div className='button-container'>

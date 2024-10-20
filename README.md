@@ -17,5 +17,6 @@ Esta es una app web diseñada para tomar datos sobre la performance de humanos y
 - fill .env file with the following environment variables:
     - API_HOST (example: 0.0.0.0)
     - API_PORT (example: 8000)
+    - MONGO_URI (example: "mongodb://root:example@localhost:27017/your_database_name?authSource=admin")
 - install requirements in requirements.txt with pip (pip install -r requirements.txt)
 - use 'python main.py'

@@ -1,6 +1,6 @@
 import './home.css';
 import ExperimentExplanation from '../components/ExperimentExplanation.js';
-import CellPhoneLogin from '../components/CellPhoneLogin.js';
+import EmailLogin from '../components/EmailLogin.js';
 import LogosHeader from '../components/LogosHeader.js';
 import Contact from '../components/Contact.js';
 
@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <SubHeader />
       <ExperimentExplanation />
-      <CellPhoneLogin />
+      <EmailLogin />
       <Contact />
     </div>
   );

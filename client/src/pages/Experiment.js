@@ -28,36 +28,54 @@ function getFillInWords(n) {
   return word_idx;
 }
 
-function getStory(notIn=[]) {
-  const keys = Object.keys(data);
-  const randomIndex = Math.floor(Math.random() * keys.length);
-  const randomStoryName = keys[randomIndex];
-
-  const exp = {
-    "storyName": randomStoryName,
-    "story": data[randomStoryName],
-    "fillInWords": getFillInWords(data[randomStoryName].length)
-  }
-  
-  return exp
-}
-
 function RunExperiment() {
+  const storeInterval = 5
+
   const navigate = useNavigate();
   const location = useLocation();
   const now = () => {
     return new Date().getTime()
   }
 
-  const { userId } = location.state;
+  const { userId, trials } = location.state;
   
   const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
   const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
-  const idx = currentTrial || 0
+  const idx = currentTrial || 0;
+
+  function getStory() {
+    if (trials.length > 0){
+      const trial = trials[trials.length-1]
+      if (!trial.hasFinished){
+        const exp = {
+          "storyName": trial.trialName,
+          "story": data[trial.trialName],
+          "fillInWords": trial.missingWordIds,
+          "guesses": trial.guessedWords
+        }
+
+        return exp;
+      }
+    }
+    const keys = Object.keys(data);
+    const randomIndex = Math.floor(Math.random() * keys.length);
+    const randomStoryName = keys[randomIndex];
+  
+    const exp = {
+      "storyName": randomStoryName,
+      "story": data[randomStoryName],
+      "fillInWords": getFillInWords(data[randomStoryName].length),
+      "guesses": Array(0)
+    }
+    
+    return exp
+  }
 
   const [exp_index, setExperimentIndex] = useState(idx);
   const [startTime, setStartTime] = useState(now())
   const [exp, setExperiment] = useState(getStory());
+
+  let currentGuesses = exp.guesses.length
 
   // States
   const wordFillerRef = useRef(null);
@@ -68,7 +86,7 @@ function RunExperiment() {
   const divRef = useRef(null)
 
   // Store results
-  const submitWords = async (timestamp) => {
+  const submitWords = async (timestamp, hasFinished) => {
     if (!navigator.onLine) {
       alert('No se pudo enviar la selección. Por favor, revisa tu conexión a internet.');
       return;
@@ -76,34 +94,21 @@ function RunExperiment() {
 
     axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
       userId: userId,
-      trialNumber: exp_index,
+      trialId: exp_index,
       trialName: exp["storyName"],
-      missingWordIDs: wordFillerRef.current.state.missingWordsIdx,
-      missingWords: wordFillerRef.current.state.missingWords,
-      answers: wordFillerRef.current.state.guesses,
-      lastTrialSubmitted: exp_index,
       startTime: startTime,
-      submitTime: timestamp
+      submitTime: timestamp,
+      missingWordIds: wordFillerRef.current.state.missingWordsIdx,
+      missingWords: wordFillerRef.current.state.missingWords,
+      guessedWords: wordFillerRef.current.state.guesses,
+      lastTrialSubmitted: exp_index,
+      hasFinished: hasFinished
     }).then(response => {
-      console.log('Selection added successfully!');
+      console.log('Words added successfully!');
     }).catch(error => {
-      console.error('Error adding selection:', error);
+      console.error('Error adding words:', error);
     });
-
-    const new_exp_index = exp_index + 1
-
-    setLoading(true)
-
-    setTimeout(() => {
-      setLoading(false)
-      setStartTime(now())
-    }, 1500);
-
-    setInTrial(false)
-    setExperimentIndex(new_exp_index);
-    sessionStorage.setItem('exp_index', new_exp_index);
   };
-
 
   const handleContinueClick = async () => {
     if (wordFillerRef) {
@@ -112,7 +117,19 @@ function RunExperiment() {
         return;
       }
       const timestamp = now();
-      submitWords(timestamp);
+      submitWords(timestamp, true);
+      const new_exp_index = exp_index + 1
+
+      setLoading(true)
+
+      setTimeout(() => {
+        setLoading(false)
+        setStartTime(now())
+      }, 1500);
+
+      setInTrial(false)
+      setExperimentIndex(new_exp_index);
+      sessionStorage.setItem('exp_index', new_exp_index);
     }
   }
 
@@ -122,10 +139,18 @@ function RunExperiment() {
   }
 
   const handleAnotherClick = async () => {
-    setExperiment(getStory([]))
+    setExperiment(getStory())
 
     setInTrial(true)
     setStartTime(now())
+  }
+
+  const newGuess = async () => {
+    currentGuesses++
+    if (currentGuesses % storeInterval === 0) {
+      const timestamp = now();
+      submitWords(timestamp, false)
+    }
   }
 
   return (
@@ -161,7 +186,7 @@ function RunExperiment() {
               {
                 !loading ? (
                   <div ref={divRef} style={{ width: '100%', marginTop: '10px' }}>
-                    <WordFiller ref={wordFillerRef} exp={exp} />
+                    <WordFiller ref={wordFillerRef} exp={exp} observer={newGuess}/>
                     <div className='inner-button-container'>
                         <NextButton handleOnClick={handleContinueClick} />
                     </div>

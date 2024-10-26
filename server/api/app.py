@@ -25,6 +25,9 @@ app.add_middleware(
     allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
 )
 
+@app.get("/api/test")
+async def test():
+    return 'Hello, World!'
 
 @app.post("/api/addUser")
 async def add_user(request: Request):

@@ -14,8 +14,7 @@ db = client.get_default_database()  # Specify your database name if necessary
 
 # Configure CORS
 allowed_origins = [
-    "http://localhost:3000",
-    "http://192.168.0.55:3000",
+    "http://localhost:3000"
 ]
 
 app.add_middleware(

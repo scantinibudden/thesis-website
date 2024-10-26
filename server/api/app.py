@@ -10,7 +10,7 @@ app = FastAPI()
 
 # Connect to MongoDB
 client = AsyncIOMotorClient(MONGO_URI)
-db = client.get_default_database()  # Specify your database name if necessary
+db = client.mydatabase
 
 # Configure CORS
 allowed_origins = [

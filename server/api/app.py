@@ -14,7 +14,7 @@ db = client.mydatabase
 
 # Configure CORS
 allowed_origins = [
-    "http://localhost:3000"
+    "https://thesis-experiment.vercel.app/"
 ]
 
 app.add_middleware(

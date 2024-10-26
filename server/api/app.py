@@ -14,9 +14,7 @@ db = client.mydatabase
 
 # Configure CORS
 allowed_origins = [
-    "https://thesis-experiment.vercel.app",
-    "https://thesis-experiment.vercel.app/",
-    "*"
+    "https://thesis-experiment.vercel.app"
 ]
 
 app.add_middleware(

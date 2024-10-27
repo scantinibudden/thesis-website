@@ -1,9 +1,12 @@
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from bson import ObjectId
+
 from models import Session, Trial
 from config import MONGO_URI
-from bson import ObjectId
+
+import logging
 
 # Initialize FastAPI
 app = FastAPI()
@@ -27,23 +30,29 @@ app.add_middleware(
 
 @app.get("/api/test")
 async def test():
+    logging.log(logging.INFO, "Testing call recieved")
     return 'Hello, World!'
 
 @app.post("/api/addUser")
 async def add_user(request: Request):
+    logging.log(logging.INFO, "Adding user")
+
     data = await request.json()
     user_id = data["userId"]
     login_time = data["loginTime"]
     
     user_exists = await db.users.find_one({"userId": user_id})
     if user_exists:
+        logging.log(logging.ERROR, "User already existed")
         raise HTTPException(status_code=400, detail="User already exists")
 
+    logging.log(logging.DEBUG, "User is new, contructing model")
     new_session = Session(
         userId=user_id,
         loginTime=login_time
     ).dict()
-    
+
+    logging.log(logging.DEBUG, "Inserting user")
     await db.users.insert_one(new_session)
     
     return {"message": "User added successfully"}
@@ -51,16 +60,19 @@ async def add_user(request: Request):
 
 @app.post("/api/getUser")
 async def get_user(request: Request):
+    logging.log(logging.INFO, "Getting user")
     data = await request.json()
     user_id = data["userId"]
     user = await db.users.find_one({"userId": user_id})
     if user:
+        logging.log(logging.DEBUG, "User found")
         user = convert_objectid_to_str(user)
     return user or {"message": "User not found"}
 
 
 @app.post("/api/checkUser")
 async def check_user(request: Request):
+    logging.log(logging.INFO, "Checking if user exists")
     data = await request.json()
     user_id = data["userId"]
 
@@ -70,6 +82,7 @@ async def check_user(request: Request):
 
 @app.post("/api/addTutorialTime")
 async def add_tutorial_time(request: Request):
+    logging.log(logging.INFO, "Adding tutorial time")
     data = await request.json()
     user_id = data["userId"]
     tutorial_time = data["tutorialTime"]
@@ -83,6 +96,7 @@ async def add_tutorial_time(request: Request):
 
 @app.post("/api/addTrial")
 async def add_trial(request: Request):
+    logging.log(logging.INFO, "Adding trial data")
     data = await request.json()
 
     # Extract userId from request data

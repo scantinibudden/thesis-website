@@ -16,16 +16,12 @@ client = AsyncIOMotorClient(MONGO_URI)
 db = client.mydatabase
 
 # Configure CORS
-allowed_origins = [
-    "https://thesis-experiment.vercel.app"
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
+    allow_origins=["https://thesis-experiment.vercel.app"],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 @app.get("/api/test")

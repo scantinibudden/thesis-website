@@ -43,6 +43,17 @@ export default class WordFiller extends Component {
         if (!guess || guess.trim() === "")
             return
 
+        const isLastInput = index === missingWords.length - 1;
+
+        if (isLastInput) {
+            const submitButton = document.querySelector('.SubmitButton');
+            if (submitButton) {
+                submitButton.style.display = 'block';
+                const instruction = document.querySelector('.word-selector-instruction');
+                instruction.style.paddingBottom = '20px';
+            }
+        }
+
         this.observers.forEach(observer => {
             observer()
         });
@@ -75,7 +86,6 @@ export default class WordFiller extends Component {
                 {prefixes.map((prefix, index) => {
                     const missingWord = missingWords[index];
                     const isVisible = showAnswer[index];
-                    const isLastInput = index === missingWords.length - 1;
     
                     return (
                         <span key={index} className="word-wrap">
@@ -89,17 +99,8 @@ export default class WordFiller extends Component {
                                             id={`input-${index}`}
                                             type="text"
                                             onKeyDown={(e) => {
-                                                if (e.key === 'Enter') {
+                                                if (e.key === 'Enter')
                                                     this.handleGuess(index, e.target.value);
-                                                    if (isLastInput) {
-                                                        const submitButton = document.querySelector('.SubmitButton');
-                                                        if (submitButton) {
-                                                            submitButton.style.display = 'block';
-                                                            const instruction = document.querySelector('.word-selector-instruction');
-                                                            instruction.style.paddingBottom = '20px';
-                                                        }
-                                                    }
-                                                }
                                             }}
                                             style={{
                                                 marginLeft: '8px',

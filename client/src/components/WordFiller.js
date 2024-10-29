@@ -105,6 +105,7 @@ export default class WordFiller extends Component {
                                                 fontSize: 'inherit',
                                                 textAlign: 'left'
                                             }}
+                                            autocomplete="off"
                                         />
                                     ) : (
                                         isVisible && (

@@ -76,7 +76,7 @@
   color: var(--deeper-gray-color);
   margin: 0;
   padding: 10px 15px;
-  background-color: #e3e3e3;
+  background-color: #f4f6fb;
   border-radius: 10px;
   border-width: thin;
   border: solid;
@@ -93,7 +93,7 @@
 
 @media (max-width: 600px) {
   .SubHeaderExp {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .BlueSubHeader {

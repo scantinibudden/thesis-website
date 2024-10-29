@@ -106,11 +106,13 @@ export default class WordFiller extends Component {
                                                 textAlign: 'left'
                                             }}
                                             autocomplete="off"
+                                            autoCorrect='off'
+                                            spellCheck="false"
                                         />
                                     ) : (
                                         isVisible && (
                                             <span style={{ fontWeight: index === currentIndex - 1 ? 'bold' : 'normal', marginLeft: '4px' }}>
-                                                {missingWord} {' '}
+                                                {' '} {missingWord} {' '}
                                             </span>
                                         )
                                     )}

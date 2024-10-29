@@ -98,10 +98,11 @@ export default class WordFiller extends Component {
                                                 }
                                             }}
                                             style={{
-                                                marginLeft: '4px',
-                                                width: '15%',
+                                                marginLeft: '8px',
+                                                width: '20%',
                                                 border: 'none',
                                                 borderBottom: '1px solid #000',
+                                                borderRadius: '5pt',
                                                 fontSize: 'inherit',
                                                 textAlign: 'left'
                                             }}

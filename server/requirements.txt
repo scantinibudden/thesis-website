@@ -1,5 +1,5 @@
-fastapi
-uvicorn
 pydantic
-motor
 python-dotenv
+Flask
+Flask-Cors
+pymongo

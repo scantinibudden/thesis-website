@@ -1,1 +1,0 @@
-from scripts.get_stories import get_stories

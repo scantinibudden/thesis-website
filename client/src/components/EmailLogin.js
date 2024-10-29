@@ -40,6 +40,7 @@ function EmailLogin() {
 
     try {
       const userExists = await checkUserExists(hashedEmail);
+      console.log(userExists)
       if (userExists) {
         const user = await getUser(hashedEmail);
         alert("¡Bienvenido nuevamente!");

@@ -103,6 +103,7 @@ export default class WordFiller extends Component {
                                                 border: 'none',
                                                 borderBottom: '1px solid #000',
                                                 borderRadius: '5pt',
+                                                border: 'solid',
                                                 fontSize: 'inherit',
                                                 textAlign: 'left'
                                             }}

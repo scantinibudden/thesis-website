@@ -67,7 +67,8 @@ export default class WordFiller extends Component {
         const { currentIndex, guesses, showAnswer, missingWords } = this.state;
     
         return (
-            <div style={{ textAlign: 'justify', textJustify: 'inter-word', display: 'block', width: '100%' }}>
+            <div style={{ textAlign: 'left', textJustify: 'inter-word', display: 'block', width: '100%' }}>
+            {/* <div style={{ textAlign: 'justify', textJustify: 'inter-word', display: 'block', width: '100%' }}> */}
                 {prefixes.map((prefix, index) => {
                     const missingWord = missingWords[index];
                     const isVisible = showAnswer[index];

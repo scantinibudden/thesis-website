@@ -11,8 +11,8 @@ from config import MONGO_URI
 app = Flask(__name__)
 
 # Configure CORS
-# CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
-CORS(app, resources={r"/api/*": {"origins": "https://thesis-experiment.vercel.app"}})
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+# CORS(app, resources={r"/api/*": {"origins": "https://thesis-experiment.vercel.app"}})
 
 # Connect to MongoDB
 client = MongoClient(MONGO_URI)

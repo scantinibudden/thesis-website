@@ -39,14 +39,6 @@ export default class WordFiller extends Component {
         return this.state.currentIndex >= fillInWords.length;
     }
 
-    reset() {
-        this.setState({ selected: new Set() });
-    }
-
-    result() {
-        return Array.from(this.state.selected);
-    }
-
     handleGuess = (index, guess) => {
         this.observers.forEach(observer => {
             observer()
@@ -73,25 +65,24 @@ export default class WordFiller extends Component {
 
     wrapWords(prefixes) {
         const { currentIndex, guesses, showAnswer, missingWords } = this.state;
-
+    
         return (
-            <div style={{ textAlign: 'justify', textJustify: 'inter-word', display: 'block', width: '100%' }}> {/* Container for left alignment */}
+            <div style={{ textAlign: 'justify', textJustify: 'inter-word', display: 'block', width: '100%' }}>
                 {prefixes.map((prefix, index) => {
                     const missingWord = missingWords[index];
                     const isVisible = showAnswer[index];
-                    const isLastInput = index === missingWords.length - 1; // Check if this is the last input
-
+                    const isLastInput = index === missingWords.length - 1;
+    
                     return (
                         <span key={index} className="word-wrap">
-                            {index <= currentIndex ? ( // Show the prefix only if index is less than or equal to currentIndex
+                            {index <= currentIndex ? (
                                 <>
-                                    {/* Conditional boldness */}
                                     <span style={{ fontWeight: index === currentIndex ? 'bold' : 'normal' }}>
                                         {prefix}
                                     </span>
                                     {index === currentIndex && index < missingWords.length ? (
                                         <input
-                                            id={`input-${index}`} // Unique ID for each input
+                                            id={`input-${index}`}
                                             type="text"
                                             onKeyDown={(e) => {
                                                 if (e.key === 'Enter') {
@@ -99,24 +90,28 @@ export default class WordFiller extends Component {
                                                     if (isLastInput) {
                                                         const submitButton = document.querySelector('.SubmitButton');
                                                         if (submitButton) {
-                                                            submitButton.style.display = 'block'; // Unhide the submit button
+                                                            submitButton.style.display = 'block';
                                                             const instruction = document.querySelector('.word-selector-instruction');
-                                                            instruction.style.paddingBottom = '20px'; // Adjust padding for the submit button
+                                                            instruction.style.paddingBottom = '20px';
                                                         }
                                                     }
                                                 }
                                             }}
                                             style={{
                                                 marginLeft: '4px',
-                                                width: '15%',  // Set input width to half the container
+                                                width: '15%',
                                                 border: 'none',
                                                 borderBottom: '1px solid #000',
                                                 fontSize: 'inherit',
-                                                textAlign: 'left' // Align text inside the input to the left
+                                                textAlign: 'left'
                                             }}
                                         />
                                     ) : (
-                                        isVisible && <span style={{ marginLeft: '4px' }}>{missingWord} </span> // Add space after revealed word
+                                        isVisible && (
+                                            <span style={{ fontWeight: index === currentIndex - 1 ? 'bold' : 'normal', marginLeft: '4px' }}>
+                                                {missingWord} {' '}
+                                            </span>
+                                        )
                                     )}
                                 </>
                             ) : null}
@@ -125,7 +120,7 @@ export default class WordFiller extends Component {
                 })}
             </div>
         );
-    }
+    }    
 
     render() {
         const { exp } = this.props;

@@ -40,6 +40,9 @@ export default class WordFiller extends Component {
     }
 
     handleGuess = (index, guess) => {
+        if (!guess || guess.trim() === "")
+            return
+
         this.observers.forEach(observer => {
             observer()
         });

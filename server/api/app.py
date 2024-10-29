@@ -73,7 +73,7 @@ async def check_user(request: Request):
     user_id = data["userId"]
 
     user_exists = await db.users.find_one({"userId": user_id})
-    return {"userExists": bool(user_exists)}
+    return {"userExists": not bool(user_exists)}
 
 
 @app.post("/api/addTutorialTime")

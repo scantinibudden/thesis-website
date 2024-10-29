@@ -76,7 +76,7 @@
   color: var(--deeper-gray-color);
   margin: 0;
   padding: 10px 15px;
-  /* background-color: var(--pale-cyan); */
+  background-color: #e4e4e4;
   border-radius: 10px;
   border-width: thin;
   border: solid;

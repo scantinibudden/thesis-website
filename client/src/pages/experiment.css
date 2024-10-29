@@ -93,7 +93,7 @@
 
 @media (max-width: 600px) {
   .SubHeaderExp {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .BlueSubHeader {
@@ -132,7 +132,6 @@
     min-width: unset;
   }
 }
-
 
 .ThankYou {
   text-align: center;

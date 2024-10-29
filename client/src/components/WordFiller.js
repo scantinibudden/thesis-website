@@ -42,6 +42,7 @@ export default class WordFiller extends Component {
     handleGuess = (index, guess) => {
         if (!guess || guess.trim() === "") {
             console.warn("Guess can't be empty.");
+            alert("Guess can't be empty.");
             return;
         }
 

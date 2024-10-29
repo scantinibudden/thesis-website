@@ -43,7 +43,7 @@ export default class WordFiller extends Component {
         if (!guess || guess.trim() === "")
             return
 
-        const isLastInput = index === missingWords.length - 1;
+        const isLastInput = index === this.state.missingWords.length - 1;
 
         if (isLastInput) {
             const submitButton = document.querySelector('.SubmitButton');

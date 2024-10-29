@@ -40,8 +40,10 @@ export default class WordFiller extends Component {
     }
 
     handleGuess = (index, guess) => {
-        if (!guess || guess.trim() === "")
-            return
+        if (!guess || guess.trim() === "") {
+            console.warn("Guess can't be empty.");
+            return;
+        }
 
         const isLastInput = index === this.state.missingWords.length - 1;
 

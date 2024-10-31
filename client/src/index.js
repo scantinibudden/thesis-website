@@ -14,8 +14,6 @@ import 'normalize.css'
 import './styles/global.css';
 import './index.css';
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",

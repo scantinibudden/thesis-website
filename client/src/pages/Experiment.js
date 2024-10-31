@@ -157,8 +157,6 @@ function RunExperiment() {
       const timestamp = now();
       submitWords(timestamp, false)
     }
-
-    console.log(wordFillerRef.current.state.guessTimestamps)
   }
 
   return (

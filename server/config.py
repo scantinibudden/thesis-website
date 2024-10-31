@@ -11,6 +11,8 @@ logging.basicConfig(
 )
 
 # Load environment variables from .env file
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS")
+
 API_PORT = os.getenv("API_PORT")
 API_HOST = os.getenv("API_HOST")
 

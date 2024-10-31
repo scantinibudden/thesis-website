@@ -5,14 +5,13 @@ from bson import ObjectId
 import logging
 
 from models import Session, Trial  # Ensure your models are compatible with this structure
-from config import MONGO_URI
+from config import MONGO_URI, ALLOWED_ORIGINS
 
 # Initialize Flask
 app = Flask(__name__)
 
 # Configure CORS
-# CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
-CORS(app, resources={r"/api/*": {"origins": "https://thesis-experiment.vercel.app"}})
+CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGINS}})
 
 # Connect to MongoDB
 client = MongoClient(MONGO_URI)

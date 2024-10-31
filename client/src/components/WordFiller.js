@@ -113,7 +113,8 @@ export default class WordFiller extends Component {
                                                 borderRadius: '5pt',
                                                 border: 'solid',
                                                 fontSize: 'inherit',
-                                                textAlign: 'left'
+                                                textAlign: 'left',
+                                                paddingTop: '2px',
                                             }}
                                             autocomplete="off"
                                             autoCorrect='off'

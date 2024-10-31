@@ -94,6 +94,7 @@ def add_trial():
             missingWordIds=data["missingWordIds"],
             missingWords=data["missingWords"],
             guessedWords=data["guessedWords"],
+            guessTimestamps=data["guessTimestamps"],
             hasFinished=data["hasFinished"]
         )
     except KeyError as e:

@@ -10,6 +10,7 @@ class Trial(BaseModel):
     missingWordIds: List[int]
     missingWords: List[str]
     guessedWords: List[str]
+    guessTimestamps: List[datetime]
     hasFinished: bool
     
 class Session(BaseModel):

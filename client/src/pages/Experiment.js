@@ -101,6 +101,7 @@ function RunExperiment() {
       missingWordIds: wordFillerRef.current.state.missingWordsIdx,
       missingWords: wordFillerRef.current.state.missingWords,
       guessedWords: wordFillerRef.current.state.guesses,
+      guessTimestamps: wordFillerRef.current.state.guessTimestamps,
       lastTrialSubmitted: exp_index,
       hasFinished: hasFinished
     }).then(response => {
@@ -151,8 +152,8 @@ function RunExperiment() {
       const timestamp = now();
       submitWords(timestamp, false)
     }
-    console.log(wordFillerRef.guesses)
-    console.log(wordFillerRef.guessTimestamps)
+    console.log(wordFillerRef.current.state.guesses)
+    console.log(wordFillerRef.current.state.guessTimestamps)
   }
 
   return (

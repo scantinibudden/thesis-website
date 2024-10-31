@@ -46,6 +46,9 @@ function RunExperiment() {
   function getStory() {
     if (trials.length > 0){
       const trial = trials[trials.length-1]
+
+      console.log(trial)
+
       if (!trial.hasFinished){
         const exp = {
           "storyName": trial.trialName,

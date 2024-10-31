@@ -7,8 +7,6 @@ function Instructions({ title, navigateTo, isFirstTime }) {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const { userId } = location.state;
-
     const [show0, setShow0] = useState(false)
     const [show1, setShow1] = useState(false)
     const [show2, setShow2] = useState(false)
@@ -19,11 +17,11 @@ function Instructions({ title, navigateTo, isFirstTime }) {
     useEffect(() => {
         const offset = isFirstTime ? 0 : 1000
 
-        const timer0 = setTimeout(() => setShow0(true), 1000 + offset);
-        const timer1 = setTimeout(() => setShow1(true), 2000 + offset);
-        const timer2 = setTimeout(() => setShow2(true), 3000 + offset);
-        const timer3 = setTimeout(() => setShow3(true), 4000 + offset);
-        const timer4 = setTimeout(() => setShow4(true), 5000 + offset);
+        const timer0 = setTimeout(() => setShow0(true), 1300 + offset);
+        const timer1 = setTimeout(() => setShow1(true), 2600 + offset);
+        const timer2 = setTimeout(() => setShow2(true), 3900 + offset);
+        const timer3 = setTimeout(() => setShow3(true), 5200 + offset);
+        const timer4 = setTimeout(() => setShow4(true), 6800 + offset);
 
 
         return () => {

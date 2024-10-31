@@ -1,9 +1,5 @@
 import '../pages/home.css';
 
-import laboratoryLogo from '../assets/liaa-logo.png';
-
-// TODO: Add UBA logo
-
 function ExperimentExplanation() {
   return (
     <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', }}>

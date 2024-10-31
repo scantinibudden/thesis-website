@@ -51,7 +51,8 @@ function RunExperiment() {
           "storyName": trial.trialName,
           "story": data[trial.trialName],
           "fillInWords": trial.missingWordIds,
-          "guesses": trial.guessedWords
+          "guesses": trial.guessedWords,
+          "guessTimestamps": trial.guessTimestamps
         }
 
         return exp;
@@ -65,7 +66,8 @@ function RunExperiment() {
       "storyName": randomStoryName,
       "story": data[randomStoryName],
       "fillInWords": getFillInWords(data[randomStoryName].length),
-      "guesses": Array(0)
+      "guesses": Array(0),
+      "guessTimestamps": Array(0)
     }
     
     return exp

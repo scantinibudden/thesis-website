@@ -18,7 +18,7 @@ export default class WordFiller extends Component {
         const missingWords = story.filter((_, index) => missingWordsIdx.includes(index));
 
         const guesses = exp.guesses;
-        console.log(exp.guessTimestamps);
+        const guessTimestamps = exp.guessTimestamps
 
         // Find the first empty guess to determine the starting currentIndex
         const firstEmptyIndex = guesses.length;
@@ -27,7 +27,7 @@ export default class WordFiller extends Component {
         this.state = {
             currentIndex: startIndex, // Start from the first empty guess
             guesses: guesses, // Initialize with provided guesses or empty strings
-            guessTimestamps: Array(guesses.length).fill(null), // Initialize with null for pre-filled guesses
+            guessTimestamps: guessTimestamps, // Initialize with null for pre-filled guesses
             showAnswer: Array(guesses.length).fill(true).concat(Array(missingWordsIdx.length - guesses.length).fill(false)), // If there's a guess, show the answer
             missingWords, // Add the missing words directly to the state
             missingWordsIdx // Store the indices of the missing words

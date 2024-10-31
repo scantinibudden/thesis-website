@@ -9,7 +9,6 @@ import ThankYouMessage from './components/thankYouMessage.js';
 import Tutorial from './pages/Tutorial.js';
 import InstructionsFirstTime from './pages/InstructionsFirstTime.js';
 import InstructionsWelcomeBack from './pages/InstructionWelcomeBack.js';
-import Break from './pages/Break.js'
 
 import 'normalize.css'
 import './styles/global.css';
@@ -29,10 +28,6 @@ const router = createBrowserRouter([
   {
     path: "welcome-back/",
     element: <InstructionsWelcomeBack />,
-  },
-  {
-    path: "break/",
-    element: <Break />,
   },
   {
     path: "experiment/",

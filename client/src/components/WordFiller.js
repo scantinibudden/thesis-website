@@ -94,7 +94,7 @@ export default class WordFiller extends Component {
                         <span key={index} className="word-wrap">
                             {index <= currentIndex ? (
                                 <>
-                                    <span style={{ color: index === currentIndex ? '000000' : '#666666' }}>
+                                    <span style={{ color: index === currentIndex ? '#000000' : '#666666' }}>
                                         {prefix}
                                     </span>
                                     {index === currentIndex && index < missingWords.length ? (
@@ -121,7 +121,7 @@ export default class WordFiller extends Component {
                                         />
                                     ) : (
                                         isVisible && (
-                                            <span style={{ color: index === currentIndex - 1 ? '000000' : '#666666', marginLeft: '4px' }}>
+                                            <span style={{ color: index === currentIndex - 1 ? '#000000' : '#666666', marginLeft: '4px' }}>
                                                 {missingWord} {' '}
                                             </span>
                                         )

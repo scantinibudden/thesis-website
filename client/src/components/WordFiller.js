@@ -73,7 +73,7 @@ export default class WordFiller extends Component {
                 missingWordsIdx: prevState.missingWordsIdx
             };
         }, () => {
-            const nextInput = sour;
+            const nextInput = document.getElementById(`input-${index + 1}`);
             if (nextInput) {
                 nextInput.focus(); // Focus the next input after state is updated
             }

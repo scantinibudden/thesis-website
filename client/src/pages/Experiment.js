@@ -42,7 +42,7 @@ function RunExperiment() {
 
   function getStory() {
     for(let i = 0; i < trials.length; i++){
-      if(trials.hasFinished)
+      if(trials[i].hasFinished)
         continue;
   
       current_trial = i

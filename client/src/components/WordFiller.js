@@ -26,9 +26,10 @@ export default class WordFiller extends Component {
         this.state = {
             currentIndex: startIndex, // Start from the first empty guess
             guesses: guesses, // Initialize with provided guesses or empty strings
-            showAnswer: Array(guesses.legnth).fill(true).concat(Array(missingWordsIdx.length - guesses.length).fill(false)), // If there's a guess, show the answer
+            guessTimestamps: Array(guesses.length).fill(null), // Initialize with null for pre-filled guesses
+            showAnswer: Array(guesses.length).fill(true).concat(Array(missingWordsIdx.length - guesses.length).fill(false)), // If there's a guess, show the answer
             missingWords, // Add the missing words directly to the state
-            missingWordsIdx, // Store the indices of the missing words
+            missingWordsIdx // Store the indices of the missing words
         };
     }
 
@@ -65,11 +66,16 @@ export default class WordFiller extends Component {
         this.setState(prevState => {
             const updatedGuesses = [...prevState.guesses];
             updatedGuesses.push(guess);
+
+            const updatedTimestamps = [...prevState.guessTimestamps];
+            updatedTimestamps.push(new Date().toISOString()); // Add the current timestamp
+
             return {
                 currentIndex: prevState.currentIndex + 1,
                 guesses: updatedGuesses,
+                guessTimestamps: updatedTimestamps, // Update timestamps
                 showAnswer: prevState.showAnswer.map((val, idx) => idx === index ? true : val),
-                missingWords: prevState.missingWords, // Add the missing words directly to the state
+                missingWords: prevState.missingWords,
                 missingWordsIdx: prevState.missingWordsIdx
             };
         }, () => {

@@ -18,6 +18,7 @@ export default class WordFiller extends Component {
         const missingWords = story.filter((_, index) => missingWordsIdx.includes(index));
 
         const guesses = exp.guesses;
+        console.log(exp.guessTimestamps);
 
         // Find the first empty guess to determine the starting currentIndex
         const firstEmptyIndex = guesses.length;

@@ -18,11 +18,6 @@ CORS(app, resources={r"/api/*": {"origins": "https://thesis-experiment.vercel.ap
 client = MongoClient(MONGO_URI)
 db = client.mydatabase
 
-@app.route("/api/test", methods=["GET"])
-def test():
-    logging.info("Testing call received")
-    return 'Hello, World!'
-
 @app.route("/api/addUser", methods=["POST"])
 def add_user():
     logging.info("Adding user")

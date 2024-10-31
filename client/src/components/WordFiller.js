@@ -68,7 +68,7 @@ export default class WordFiller extends Component {
             updatedGuesses.push(guess);
 
             const updatedTimestamps = [...prevState.guessTimestamps];
-            updatedTimestamps.push(new Date().toISOString()); // Add the current timestamp
+            updatedTimestamps.push(new Date().getTime()); // Add the current timestamp
 
             return {
                 currentIndex: prevState.currentIndex + 1,

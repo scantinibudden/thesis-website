@@ -14,6 +14,7 @@ Esta es una app web diseñada para tomar datos sobre como los humanos predecimos
 ### Server (Backend)
 - Stand in server folder
 - fill .env file with the following environment variables:
+    - ALLOWED_ORIGINS (example: http://localhost:3000)
     - API_HOST (example: 0.0.0.0)
     - API_PORT (example: 8000)
     - MONGO_URI (example: "mongodb://root:example@localhost:27017/your_database_name?authSource=admin")

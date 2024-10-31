@@ -5,17 +5,17 @@ from datetime import datetime
 class Trial(BaseModel):
     trialId: str
     trialName: str
-    startTime: datetime
+    startTime: Optional[datetime] = None
     submitTime: datetime
     missingWordIds: List[int]
     missingWords: List[str]
-    guessedWords: List[str]
-    guessTimestamps: List[datetime]
-    hasFinished: bool
+    guessedWords: List[str] = []
+    guessTimestamps: List[datetime] = []
+    hasFinished: bool = False
     
 class Session(BaseModel):
     userId: str
     loginTime: datetime
     trials: List[Trial] = []
     tutorialTime: Optional[datetime] = None
-    is_new: bool = True
+    isNew: bool = True

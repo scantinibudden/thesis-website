@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import RunExperiment from './pages/Experiment.js';
 import Home from './pages/Home.js';
-import ThankYouMessage from './components/thankYouMessage.js';
 import Tutorial from './pages/Tutorial.js';
 import InstructionsFirstTime from './pages/InstructionsFirstTime.js';
 import InstructionsWelcomeBack from './pages/InstructionWelcomeBack.js';
+import Experiment from './pages/Experiment.js';
+import ThankYouMessage from './components/ThankYouMessage.js';
 
 import 'normalize.css'
 import './styles/global.css';
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: "experiment/",
-    element: <RunExperiment />,
+    element: <Experiment />,
   },
   {
     path: "thank-you/",

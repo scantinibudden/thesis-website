@@ -15,7 +15,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
 
 
     useEffect(() => {
-        const offset = isFirstTime ? 0 : 1000
+        const offset = isFirstTime ? 0 : 800
 
         const timer0 = setTimeout(() => setShow0(true), 1300 + offset);
         const timer1 = setTimeout(() => setShow1(true), 2600 + offset);

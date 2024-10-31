@@ -7,7 +7,6 @@ import './experiment.css'
 
 import NextButton from '../components/NextButton.js';
 
-// My imports
 import data from '../data.json'
 
 import WordFiller from '../components/WordFiller.js';
@@ -38,45 +37,35 @@ function RunExperiment() {
   }
 
   const { userId, trials } = location.state;
-  
-  const stored_exp_index = parseInt(sessionStorage.getItem('exp_index')) || 0;
-  const currentTrial = (location.state.currentTrial || 0) > stored_exp_index ? location.state.currentTrial : stored_exp_index;
-  const idx = currentTrial || 0;
+
+  let current_trial = 0;
 
   function getStory() {
-    if (trials.length > 0){
-      const trial = trials[trials.length-1]
-
-      console.log(trial)
-
-      if (!trial.hasFinished){
-        const exp = {
-          "storyName": trial.trialName,
-          "story": data[trial.trialName],
-          "fillInWords": trial.missingWordIds,
-          "guesses": trial.guessedWords,
-          "guessTimestamps": trial.guessTimestamps
-        }
-
-        return exp;
-      }
-    }
-    const keys = Object.keys(data);
-    const randomIndex = Math.floor(Math.random() * keys.length);
-    const randomStoryName = keys[randomIndex];
+    for(let i = 0; i < trials.length; i++){
+      if(trials.hasFinished)
+        continue;
   
-    const exp = {
-      "storyName": randomStoryName,
-      "story": data[randomStoryName],
-      "fillInWords": getFillInWords(data[randomStoryName].length),
-      "guesses": Array(0),
-      "guessTimestamps": Array(0)
+      current_trial = i
+      break;
     }
-    
-    return exp
+
+    const trial = trials[current_trial]
+
+
+    const exp = {
+      "storyName": trial.trialName,
+      "story": data[trial.trialName],
+      "fillInWords": trial.missingWordIds,
+      "guesses": trial.guessedWords || [],
+      "guessTimestamps": trial.guessTimestamps || []
+    }
+
+    console.log(exp)
+
+    return exp;
   }
 
-  const [exp_index, setExperimentIndex] = useState(idx);
+  const [exp_index, setExperimentIndex] = useState(current_trial);
   const [startTime, setStartTime] = useState(now())
   const [exp, setExperiment] = useState(getStory());
 
@@ -97,7 +86,7 @@ function RunExperiment() {
       return;
     }
 
-    axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrial`, {
+    axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/updateTrial`, {
       userId: userId,
       trialId: exp_index,
       trialName: exp["storyName"],
@@ -107,7 +96,6 @@ function RunExperiment() {
       missingWords: wordFillerRef.current.state.missingWords,
       guessedWords: wordFillerRef.current.state.guesses,
       guessTimestamps: wordFillerRef.current.state.guessTimestamps,
-      lastTrialSubmitted: exp_index,
       hasFinished: hasFinished
     }).then(response => {
       console.log('Words added successfully!');
@@ -123,6 +111,7 @@ function RunExperiment() {
         return;
       }
       const timestamp = now();
+      trials[exp_index].hasFinished = true;
       submitWords(timestamp, true);
       const new_exp_index = exp_index + 1
 

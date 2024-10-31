@@ -68,12 +68,46 @@ def add_tutorial_time():
     tutorial_time = data["tutorialTime"]
     result = db.users.update_one(
         {"userId": user_id},
-        {"$set": {"tutorialTime": tutorial_time, "is_new": False}}
+        {"$set": {"tutorialTime": tutorial_time, "isNew": False}}
     )
     return jsonify({"message": "Tutorial time added successfully" if result.modified_count > 0 else "User not found"})
 
-@app.route("/api/addTrial", methods=["POST"])
-def add_trial():
+@app.route("/api/addTrials", methods=["POST"])
+def add_trials():
+    logging.info("Adding trials")
+    data = request.json["trials"]
+
+    user_id = data[0]["userId"]
+
+    trials = []
+
+    for trial in data:
+        try:
+            trial = Trial(
+                trialId=str(trial["trialId"]),
+                trialName=trial["trialName"],
+                submitTime=trial["submitTime"],
+                missingWordIds=trial["missingWordIds"],
+                missingWords=trial["missingWords"]
+            )
+
+            trials.append(trial.dict())
+
+        except KeyError as e:
+            return jsonify({"detail": f"Missing field in trial data: {str(e)}"}), 400
+
+    result = db.users.update_one(
+        {"userId": user_id},
+        {"$set": {"trials": trials}}
+    )
+
+    if result.modified_count == 0:
+        return jsonify({"detail": "User not found or trial not updated"}), 404
+
+    return jsonify({"message": "Trial added successfully"}), 200
+
+@app.route("/api/updateTrial", methods=["POST"])
+def update_trial():
     logging.info("Adding trial data")
     data = request.json
 
@@ -93,28 +127,21 @@ def add_trial():
         )
     except KeyError as e:
         return jsonify({"detail": f"Missing field in trial data: {str(e)}"}), 400
+    
+    print(trial.hasFinished)
 
-    existing_trial = db.users.find_one(
+    result = db.users.update_one(
         {"userId": user_id, "trials.trialId": trial.trialId},
-        {"trials.$": 1}
+        {"$set": {"trials.$.guessedWords": trial.guessedWords,
+                    "trials.$.guessTimestamps": trial.guessTimestamps,
+                    "trials.$.hasFinished": trial.hasFinished}},
+        upsert=True
     )
-
-    if existing_trial:
-        result = db.users.update_one(
-            {"userId": user_id, "trials.trialId": trial.trialId},
-            {"$set": {"trials.$.guessedWords": trial.guessedWords,
-                       "trials.$.hasFinished": trial.hasFinished}}
-        )
-    else:
-        result = db.users.update_one(
-            {"userId": user_id},
-            {"$push": {"trials": trial.dict()}}
-        )
 
     if result.modified_count == 0:
         return jsonify({"detail": "User not found or trial not updated"}), 404
 
-    return jsonify({"message": "Trial updated successfully" if existing_trial else "Trial added successfully"})
+    return jsonify({"message": "Trial updated successfully"})
 
 def convert_objectid_to_str(data):
     if isinstance(data, ObjectId):

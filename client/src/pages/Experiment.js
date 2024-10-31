@@ -151,8 +151,8 @@ function RunExperiment() {
       const timestamp = now();
       submitWords(timestamp, false)
     }
-    console.log(exp.guesses)
-    console.log(exp.guessTimestamps)
+    console.log(wordFillerRef.guesses)
+    console.log(wordFillerRef.guessTimestamps)
   }
 
   return (

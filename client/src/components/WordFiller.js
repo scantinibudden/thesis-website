@@ -73,7 +73,7 @@ export default class WordFiller extends Component {
                 missingWordsIdx: prevState.missingWordsIdx
             };
         }, () => {
-            const nextInput = document.getElementById(`input-${index + 1}`);
+            const nextInput = sour;
             if (nextInput) {
                 nextInput.focus(); // Focus the next input after state is updated
             }
@@ -94,7 +94,7 @@ export default class WordFiller extends Component {
                         <span key={index} className="word-wrap">
                             {index <= currentIndex ? (
                                 <>
-                                    <span style={{ fontWeight: index === currentIndex ? 'bold' : 'normal' }}>
+                                    <span style={{ color: index === currentIndex ? '000000' : '#666666' }}>
                                         {prefix}
                                     </span>
                                     {index === currentIndex && index < missingWords.length ? (
@@ -121,8 +121,8 @@ export default class WordFiller extends Component {
                                         />
                                     ) : (
                                         isVisible && (
-                                            <span style={{ fontWeight: index === currentIndex - 1 ? 'bold' : 'normal', marginLeft: '4px' }}>
-                                                {' '} {missingWord} {' '}
+                                            <span style={{ color: index === currentIndex - 1 ? '000000' : '#666666', marginLeft: '4px' }}>
+                                                {missingWord} {' '}
                                             </span>
                                         )
                                     )}

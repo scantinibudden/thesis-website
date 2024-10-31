@@ -42,7 +42,6 @@ function EmailLogin() {
       const userExists = await checkUserExists(hashedEmail);
       if (userExists) {
         const user = await getUser(hashedEmail);
-        alert("¡Bienvenido nuevamente!");
         console.log(user)
         try {
           const last_submitted = user.trials? user.trials.length : 0;

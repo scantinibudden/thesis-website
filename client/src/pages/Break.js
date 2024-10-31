@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function Home() {
     const navigate = useNavigate();
     const location = useLocation();
-    const { userId } = location.state;
     
     const handleGoToExperiment = async () => {
         navigate('/experiment', { state: location.state });

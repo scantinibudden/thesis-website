@@ -20,9 +20,6 @@ export default class WordFiller extends Component {
         const guesses = exp.guesses;
         const guessTimestamps = exp.guessTimestamps
 
-        console.log(exp)
-        console.log(exp.guessTimestamps)
-
         // Find the first empty guess to determine the starting currentIndex
         const firstEmptyIndex = guesses.length;
         const startIndex = firstEmptyIndex !== -1 ? firstEmptyIndex : missingWords.length; // If all are filled, start at the end
@@ -72,7 +69,7 @@ export default class WordFiller extends Component {
             updatedGuesses.push(guess);
 
             const updatedTimestamps = [...prevState.guessTimestamps];
-            updatedTimestamps.push(new Date().getTime()); // Add the current timestamp
+            updatedTimestamps.push(new Date().toISOString()); // Add the current timestamp
 
             return {
                 currentIndex: prevState.currentIndex + 1,

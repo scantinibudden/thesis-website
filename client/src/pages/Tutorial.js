@@ -34,7 +34,7 @@ function Tutorial() {
       } catch (error) {
         console.error("Error trying to add tutorial time:", error)
       }
-      navigate('/break', { state: location.state });
+      navigate('/experiment', { state: location.state });
     } else {
       alert("Por favor, termine la historia antes de continuar")
     }

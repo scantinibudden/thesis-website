@@ -18,7 +18,8 @@ function Tutorial() {
     "storyName": 'Tutorial Story',
     "story": ['Ayer', 'le', 'di', 'de', 'comer', 'a', 'mi', 'perro', 'y', 'él', 'se', 'puso', 'muy', 'feliz.'],
     "fillInWords": [7,13],
-    "guesses": Array(0)
+    "guesses": Array(0),
+    "guessTimestamps": Array(0)
   }
 
   const handleGoToBreak = async () => {

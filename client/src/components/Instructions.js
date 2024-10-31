@@ -17,13 +17,13 @@ function Instructions({ title, navigateTo, isFirstTime }) {
 
 
     useEffect(() => {
-        const offset = isFirstTime ? 0 : 1500
+        const offset = isFirstTime ? 0 : 1000
 
         const timer0 = setTimeout(() => setShow0(true), 1000 + offset);
-        const timer1 = setTimeout(() => setShow1(true), 3500 + offset);
-        const timer2 = setTimeout(() => setShow2(true), 6000 + offset);
-        const timer3 = setTimeout(() => setShow3(true), 8500 + offset);
-        const timer4 = setTimeout(() => setShow4(true), 11000 + offset);
+        const timer1 = setTimeout(() => setShow1(true), 2000 + offset);
+        const timer2 = setTimeout(() => setShow2(true), 3000 + offset);
+        const timer3 = setTimeout(() => setShow3(true), 4000 + offset);
+        const timer4 = setTimeout(() => setShow4(true), 5000 + offset);
 
 
         return () => {

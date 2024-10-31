@@ -19,6 +19,7 @@ export default class WordFiller extends Component {
 
         const guesses = exp.guesses;
         const guessTimestamps = exp.guessTimestamps
+        console.log(exp.guessTimestamps)
 
         // Find the first empty guess to determine the starting currentIndex
         const firstEmptyIndex = guesses.length;

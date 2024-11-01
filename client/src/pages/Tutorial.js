@@ -57,7 +57,7 @@ function Tutorial() {
               {isLoading ? (
                 <div className="loader"></div>
               ) : (
-                <button onClick={handleGoToBreak} className='SubmitButton' style={{ display: 'none' }}>Siguiente</button>
+                <button onClick={handleGoToBreak} className='SubmitButton' style={{ display: 'none', marginBottom: '10%'}}>Siguiente</button>
               )}
             </div>
           </div>

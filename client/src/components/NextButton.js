@@ -21,7 +21,7 @@ const NextButton = ({handleOnClick}) => {
                 {isLoading ? (
                             <div className="loader"></div>
                         ) : (
-                            <button className='SubmitButton' onClick={handleClick} style={{ display: 'none' }}> Siguiente </button>
+                            <button className='SubmitButton' onClick={handleClick} style={{ display: 'none', marginBottom: '10%'}}> Siguiente </button>
                         )}
                 </div>        
         )

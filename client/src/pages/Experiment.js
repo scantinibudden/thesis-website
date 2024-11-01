@@ -37,9 +37,6 @@ function RunExperiment() {
   }
 
   function getStory() {
-    console.log(exp_index)
-    console.log(trials)
-
     const trial = trials[exp_index]
 
     const exp = {
@@ -49,8 +46,6 @@ function RunExperiment() {
       "guesses": trial.guessedWords || [],
       "guessTimestamps": trial.guessTimestamps || []
     }
-
-    console.log(exp)
 
     return exp;
   }

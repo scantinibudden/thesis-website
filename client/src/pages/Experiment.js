@@ -15,18 +15,6 @@ import Loader from "react-spinners/PulseLoader.js";
 import LogosHeader from '../components/LogosHeader.js';
 import Contact from '../components/Contact.js';
 
-function getFillInWords(n) {
-  let word_idx = [];
-  let start = Math.floor(Math.random() * 30); // Random start between 0 and 29
-  
-  for (let i = start; i < n;) {
-      word_idx.push(i);
-      i += 27 + Math.floor(Math.random() * 7); // Random increment between 27 and 33
-  }
-  
-  return word_idx;
-}
-
 function RunExperiment() {
   const storeInterval = 5
 
@@ -40,17 +28,19 @@ function RunExperiment() {
 
   let current_trial = 0;
 
+  for(let i = 0; i < trials.length; i++){
+    if(trials[i].hasFinished)
+      continue;
+
+    current_trial = i;
+    break;
+  }
+
   function getStory() {
-    for(let i = 0; i < trials.length; i++){
-      if(trials[i].hasFinished)
-        continue;
-  
-      current_trial = i
-      break;
-    }
+    console.log(exp_index)
+    console.log(trials)
 
-    const trial = trials[current_trial]
-
+    const trial = trials[exp_index]
 
     const exp = {
       "storyName": trial.trialName,

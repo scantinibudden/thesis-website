@@ -1,4 +1,3 @@
-// Paula's imports
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
@@ -22,6 +21,16 @@ function RunExperiment() {
   const location = useLocation();
   const now = () => {
     return new Date().getTime()
+  }
+
+  useEffect(() => {
+    if (!location.state) {
+      navigate("/");
+    }
+  }, [location.state, navigate]);
+
+  if (!location.state) {
+    return null; // Prevent rendering if navigation occurs
   }
 
   const { userId, trials } = location.state;

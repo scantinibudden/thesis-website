@@ -30,7 +30,7 @@ function Header() {
 function SubHeader() {
   return (
     <div className="SubHeader">
-      El objetivo de este experimento es entender un poco mejor como funciona ChatGPT.
+      Este experimento es parte de una investigación para entender mejor cómo funciona la predicción de texto en chatGPT y nuestro cerebro.
     </div>
   );
 }

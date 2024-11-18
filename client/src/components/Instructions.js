@@ -59,7 +59,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show0 && (
                     <p className='experiment-explanation'>
-                        Te vamos a mostrar una historia con palabras faltantes.
+                        Te vamos a mostrar una historia en partes con palabras a completar.
                     </p>
                 )
             }
@@ -67,7 +67,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show1 && (
                     <p className='experiment-explanation'>
-                        Solo se mostrara el texto previo a una palabra faltante.
+                        En cada parte se mostrara el texto previo a una palabra faltante.
                     </p>
                 )
             }
@@ -75,7 +75,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show2 && (
                     <p className='experiment-explanation'>
-                        Escriba la palabra que crees que continua la historia.
+                        Deberas completar con una unica palaba que creas que continua la historia.
                     </p>
                 )
             }
@@ -84,7 +84,7 @@ function Instructions({ title, navigateTo, isFirstTime }) {
             {
                 show3 && (
                     <p className='experiment-explanation'>
-                        Una vez escrita, se mostrara la palabra correcta junto con el texto que continua la historia.
+                        Luego se mostrara la palabra correcta junto con la siguiente parte.
                     </p>
                 )
             }

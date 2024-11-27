@@ -28,13 +28,12 @@ function EmailLogin() {
   const [emailInput, setUserId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const url = new URL(window.location.href);
+  const runId = url.searchParams.get("run-id");
+
   const handleInputChange = (event) => {
     setUserId(event.target.value);
   };
-
-  const url = new URL(window.location.href);
-  const runId = url.searchParams.get("run-id");
-  console.log(runId);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -141,18 +140,18 @@ function EmailLogin() {
       setIsLoading(false);
     }
   };
-
+  
   return (
     <div>
       <form onSubmit={handleSubmit} className='input-button-container'>
-        <input
+        {runId ? (<input
           style={{ textAlign: 'center' }}
           type="email"
           value={emailInput}
           onChange={handleInputChange}
           placeholder="Ingresa tu email"
           className='Input'
-        />
+        />) : ('')}
         <div className='button-container' >
           {isLoading ? (
             <div className="loader"></div>

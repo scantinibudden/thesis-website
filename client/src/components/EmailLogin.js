@@ -57,9 +57,6 @@ function EmailLogin() {
       userId = SHA256(lowerEmail).toString();
     }
 
-    alert(userId)
-    return
-
     try {
       const userExists = await checkUserExists(userId);
       if (userExists) {

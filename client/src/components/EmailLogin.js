@@ -29,7 +29,7 @@ function EmailLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
   const url = new URL(window.location.href);
-  const runId = url.searchParams.get("run-id");
+  let userId = url.searchParams.get("run-id");
 
   const handleInputChange = (event) => {
     setUserId(event.target.value);
@@ -41,31 +41,36 @@ function EmailLogin() {
 
     const timestamp = new Date().getTime();
 
-    const lowerEmail = emailInput.toLowerCase()
-    const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const isValidEmail = emailPattern.test(lowerEmail);
-    const hashedEmail = SHA256(lowerEmail).toString();
-
-    if (!isValidEmail) {
-      console.error('Invalid email number');
-      alert("Por favor ingrese un mail válido.")
-      setUserId('')
-      setIsLoading(false);
-      return;
+    if (!userId) {
+      const lowerEmail = emailInput.toLowerCase()
+      const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const isValidEmail = emailPattern.test(lowerEmail);
+      
+      if (!isValidEmail) {
+        console.error('Invalid email number');
+        alert("Por favor ingrese un mail válido.")
+        setUserId('')
+        setIsLoading(false);
+        return;
+      }
+      
+      userId = SHA256(lowerEmail).toString();
     }
 
+    alert(userId)
+    return
 
     try {
-      const userExists = await checkUserExists(hashedEmail);
+      const userExists = await checkUserExists(userId);
       if (userExists) {
-        const user = await getUser(hashedEmail);
+        const user = await getUser(userId);
         try {
           console.log('User already exists');
           if (user.is_new)
-            navigate('/instructions', { state: { userId: hashedEmail, trials: user.trials} });
+            navigate('/instructions', { state: { userId: userId, trials: user.trials} });
 
           else
-            navigate('/welcome-back', { state: { userId: hashedEmail, trials: user.trials} });
+            navigate('/welcome-back', { state: { userId: userId, trials: user.trials} });
         } catch (error) {
           console.error("Can't get last trial:", error);
           alert("Sucedió un error inesperado, vuelve a intentarlo");
@@ -76,7 +81,7 @@ function EmailLogin() {
           console.log('New user');
 
           await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
-            userId: hashedEmail,
+            userId: userId,
             loginTime: timestamp
           });
 
@@ -106,7 +111,7 @@ function EmailLogin() {
             }
 
             const newTrial = {
-              userId: hashedEmail,
+              userId: userId,
               trialId: i,
               trialName: storyOrder[i],
               submitTime: timestamp,
@@ -124,7 +129,7 @@ function EmailLogin() {
             console.error('Error adding words:', error);
           });
           
-          navigate('/instructions', { state: { userId: hashedEmail, currentTrial: 0, trials: trials} });
+          navigate('/instructions', { state: { userId: userId, currentTrial: 0, trials: trials} });
         } catch (error) {
           console.error('Error submitting data:', error);
           alert("Algo salió mal. Intentá nuevamente");
@@ -144,7 +149,7 @@ function EmailLogin() {
   return (
     <div>
       <form onSubmit={handleSubmit} className='input-button-container'>
-        {runId ? (''):(<input
+        {userId ? (''):(<input
           style={{ textAlign: 'center' }}
           type="email"
           value={emailInput}

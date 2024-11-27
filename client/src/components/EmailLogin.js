@@ -144,14 +144,14 @@ function EmailLogin() {
   return (
     <div>
       <form onSubmit={handleSubmit} className='input-button-container'>
-        {runId ? (<input
+        {runId ? (''):(<input
           style={{ textAlign: 'center' }}
           type="email"
           value={emailInput}
           onChange={handleInputChange}
           placeholder="Ingresa tu email"
           className='Input'
-        />) : ('')}
+        />)}
         <div className='button-container' >
           {isLoading ? (
             <div className="loader"></div>

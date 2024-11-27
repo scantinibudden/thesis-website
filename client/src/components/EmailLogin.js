@@ -32,6 +32,10 @@ function EmailLogin() {
     setUserId(event.target.value);
   };
 
+  const url = new URL(window.location.href);
+  const runId = url.searchParams.get("run-id");
+  console.log(runId);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);

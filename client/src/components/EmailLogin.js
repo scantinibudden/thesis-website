@@ -41,8 +41,8 @@ function EmailLogin() {
 
     const timestamp = new Date().getTime();
 
+    const lowerEmail = emailInput.toLowerCase()
     if (!userId) {
-      const lowerEmail = emailInput.toLowerCase()
       const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       const isValidEmail = emailPattern.test(lowerEmail);
       
@@ -79,6 +79,7 @@ function EmailLogin() {
 
           await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
             userId: userId,
+            email: lowerEmail,
             loginTime: timestamp
           });
 
@@ -163,9 +164,9 @@ function EmailLogin() {
         </div>
       </form>
 
-      <div className='Center' style={{ padding: '0px' }}>
+      {/* <div className='Center' style={{ padding: '0px' }}>
         Solo guardaremos este dato encriptado como identificador.
-      </div>
+      </div> */}
     </div>
   );
 

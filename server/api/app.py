@@ -4,7 +4,7 @@ from pymongo import MongoClient
 from bson import ObjectId
 import logging
 
-from models import Session, Trial  # Ensure your models are compatible with this structure
+from models import Session, Trial, Email # Ensure your models are compatible with this structure
 from config import MONGO_URI, ALLOWED_ORIGINS
 
 # Initialize Flask
@@ -23,7 +23,13 @@ def add_user():
     data = request.json
     user_id = data["userId"]
     login_time = data["loginTime"]
-    
+
+    if data["email"]:
+        logging.debug("Storing email")
+        new_mail = Email(email=data["email"]).dict()
+        db.mails.insert_one(new_mail)
+
+            
     user_exists = db.users.find_one({"userId": user_id})
     if user_exists:
         logging.error("User already exists")

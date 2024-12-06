@@ -27,12 +27,7 @@ def add_user():
     gender = data["gender"]
     country = data["country"]
     first_lang = data["firstLang"]
-    
-    if data["email"]:
-        logging.debug("Storing email")
-        new_mail = Email(email=data["email"]).dict()
-        db.mails.insert_one(new_mail)
-
+    print(data)
             
     user_exists = db.users.find_one({"userId": user_id})
     if user_exists:
@@ -51,6 +46,11 @@ def add_user():
 
     logging.debug("Inserting user")
     db.users.insert_one(new_session)
+
+    if data["email"]:
+        logging.debug("Storing email")
+        new_mail = Email(email=data["email"]).dict()
+        db.mails.insert_one(new_mail)
     
     return jsonify({"message": "User added successfully"})
 

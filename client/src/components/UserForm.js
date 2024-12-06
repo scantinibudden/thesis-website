@@ -1,5 +1,5 @@
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import React, { useState } from 'react';
 
@@ -21,37 +21,57 @@ function getFillInWords(n) {
 
 function UserForm() {
   const navigate = useNavigate();
+  const state = useLocation().state;
+  const userId = state.userId;
+  const mail = state.email;
 
   const [gender, setGender] = useState('');
-  const [age, setAge] = useState(0);
-  const [country, setCountry] = useState('');
+  const [age, setAge] = useState('');
+  const [country, setCountry] = useState('Argentina');
   const [spanishFirstLanguage, setFirstLang] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-  const userId = 'banana';
 
-  const handleInputChange = (event) => {
-    
+  const handleAgeChange = (event) => {
+    const inputValue = event.target.value;
+  
+    // Allow only integers
+    if (/^\d*$/.test(inputValue)) {
+      setAge(inputValue); // Update state only with valid integer input
+    } else {
+      alert("Solo se permiten numeros en este campo.")
+      event.target.value = ''
+    }
+  };
+  
+
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
+  };
+
+  const handleCountryChange = (event) => {
+    setCountry(event.target.value);
+  };
+
+  const handleFirstLangChange = (event) => {
+    setFirstLang(event.target.checked);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    setAge(24)
-    setGender('come find out')
-    setCountry('Argentina')
-    setFirstLang(false);
+    const timestamp = new Date().getTime()
     
     try {
       await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
         userId: userId,
-        email: lowerEmail,
+        email: mail,
         age: age,
         gender: gender,
         country: country,
         firstLang: spanishFirstLanguage,
-        loginTime: new Date().getTime()
+        loginTime: timestamp
       });
 
       // Generate Trials
@@ -114,36 +134,52 @@ function UserForm() {
       <form onSubmit={handleSubmit} className='input-button-container'>
         {<input
           style={{ textAlign: 'center' }}
-          type="email"
-          value={emailInput}
-          onChange={handleInputChange}
-          placeholder="Ingresa tu pais"
-          className='Input'
-        />}
-        {<input
-          style={{ textAlign: 'center' }}
-          type="email"
-          value={emailInput}
-          onChange={handleInputChange}
-          placeholder="Ingresa tu genero"
-          className='Input'
-        />}
-        {<input
-          style={{ textAlign: 'center' }}
-          type="email"
-          value={emailInput}
-          onChange={handleInputChange}
+          type="text"
+          value={age}
+          onChange={handleAgeChange}
           placeholder="Ingresa tu edad"
           className='Input'
         />}
-        {<input
+        {<select
           style={{ textAlign: 'center' }}
-          type="email"
-          value={emailInput}
-          onChange={handleInputChange}
-          placeholder="primer idioma esp"
-          className='Input'
-        />}
+          value={gender}
+          onChange={handleGenderChange}
+          className="Input"
+        >
+          <option value="" disabled>Ingresa tu género</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Otro">Otro</option>
+          <option value="Prefiero no decir">Prefiero no decir</option>
+        </select>}
+        {<select
+          style={{ textAlign: 'center' }}
+          value={country}
+          onChange={handleCountryChange}
+          className="Input"
+        >
+          <option value="Argentina">Argentina</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Chile">Chile</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="España">España</option>
+          <option value="México">México</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Peru">Peru</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Otro país hispanohablante">Otro país hispanohablante</option>
+          <option value="Otro país no hispanohablante">Otro país no hispanohablante</option>
+        </select>}
+        {<label style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <input
+            type="checkbox"
+            checked={spanishFirstLanguage}
+            onChange={handleFirstLangChange}
+            className="Input"
+          />
+          ¿Es el español tu primer idioma?
+        </label>}
         <div className='button-container' >
           {isLoading ? (
             <div className="loader"></div>
@@ -152,10 +188,6 @@ function UserForm() {
           )}
         </div>
       </form>
-
-      <div className='Center' style={{ padding: '0px' }}>
-        Solo guardaremos este dato encriptado como identificador.
-      </div>
     </div>
   );
 

@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import Home from './pages/Home.js';
-import UserForm from './pages/UserForm.js';
+import Form from './pages/UserForm.js';
 import InstructionsFirstTime from './pages/InstructionsFirstTime.js';
 import InstructionsWelcomeBack from './pages/InstructionWelcomeBack.js';
 import Tutorial from './pages/Tutorial.js';
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "user-form/",
-    element: <UserForm />,
+    element: <Form />,
   },
   {
     path: "instructions/",

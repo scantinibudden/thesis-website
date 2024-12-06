@@ -19,6 +19,10 @@ class Session(BaseModel):
     trials: List[Trial] = []
     tutorialTime: Optional[datetime] = None
     isNew: bool = True
+    age: int
+    gender: str
+    country: str
+    firstLang: bool
 
 class Email(BaseModel):
     email: str

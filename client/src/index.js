@@ -4,9 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import Home from './pages/Home.js';
-import Tutorial from './pages/Tutorial.js';
+import UserForm from './pages/UserForm.js';
 import InstructionsFirstTime from './pages/InstructionsFirstTime.js';
 import InstructionsWelcomeBack from './pages/InstructionWelcomeBack.js';
+import Tutorial from './pages/Tutorial.js';
 import Experiment from './pages/Experiment.js';
 import ThankYouMessage from './components/ThankYouMessage.js';
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "user-form/",
+    element: <UserForm />,
+  },
+  {
     path: "instructions/",
     element: <InstructionsFirstTime />,
   },
@@ -28,16 +33,16 @@ const router = createBrowserRouter([
     element: <InstructionsWelcomeBack />,
   },
   {
+    path: "tutorial/",
+    element: <Tutorial />,
+  },
+  {
     path: "experiment/",
     element: <Experiment />,
   },
   {
     path: "thank-you/",
     element: <ThankYouMessage />,
-  },
-  {
-    path: "tutorial/",
-    element: <Tutorial />,
   },
 ]);
 

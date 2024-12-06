@@ -39,7 +39,7 @@ function EmailLogin() {
     e.preventDefault();
     setIsLoading(true);
 
-    const timestamp = new Date().getTime();
+    // const timestamp = new Date().getTime();
 
     const lowerEmail = emailInput.toLowerCase()
     if (!userId) {
@@ -76,58 +76,59 @@ function EmailLogin() {
       } else {
         try {
           console.log('New user');
+            navigate('/user-form', { state: { userId: userId, trials: user.trials} })
 
-          await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
-            userId: userId,
-            email: lowerEmail,
-            loginTime: timestamp
-          });
+          // await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addUser`, {
+          //   userId: userId,
+          //   email: lowerEmail,
+          //   loginTime: timestamp
+          // });
 
-          // Generate Trials
-          const storyOrder = []
-          let stories = Object.keys(data);
+          // // Generate Trials
+          // const storyOrder = []
+          // let stories = Object.keys(data);
 
-          for(let i = stories.length-1; i >= 0; i--){
-            const randomIndex = Math.floor(Math.random() * i);
-            const randomStoryName = stories[randomIndex];
+          // for(let i = stories.length-1; i >= 0; i--){
+          //   const randomIndex = Math.floor(Math.random() * i);
+          //   const randomStoryName = stories[randomIndex];
 
-            stories = stories.filter(item => item !== randomStoryName);
+          //   stories = stories.filter(item => item !== randomStoryName);
             
-            storyOrder.push(randomStoryName)
-          }
+          //   storyOrder.push(randomStoryName)
+          // }
 
-          const trials = []
+          // const trials = []
 
-          for(let i = 0; i < storyOrder.length; i++){
-            const missingWordIds = getFillInWords(data[storyOrder[i]].length)
+          // for(let i = 0; i < storyOrder.length; i++){
+          //   const missingWordIds = getFillInWords(data[storyOrder[i]].length)
 
-            const missingWords = []
-            for(let j = 0; j < missingWordIds.length; j++) {
-              const missingWordID = missingWordIds[j]
-              const missingWord = data[storyOrder[i]][missingWordID]
-              missingWords.push(missingWord)
-            }
+          //   const missingWords = []
+          //   for(let j = 0; j < missingWordIds.length; j++) {
+          //     const missingWordID = missingWordIds[j]
+          //     const missingWord = data[storyOrder[i]][missingWordID]
+          //     missingWords.push(missingWord)
+          //   }
 
-            const newTrial = {
-              userId: userId,
-              trialId: i,
-              trialName: storyOrder[i],
-              submitTime: timestamp,
-              missingWordIds: missingWordIds,
-              missingWords: missingWords
-            }
+          //   const newTrial = {
+          //     userId: userId,
+          //     trialId: i,
+          //     trialName: storyOrder[i],
+          //     submitTime: timestamp,
+          //     missingWordIds: missingWordIds,
+          //     missingWords: missingWords
+          //   }
 
-            trials.push(newTrial)
-          }
+          //   trials.push(newTrial)
+          // }
 
-          axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrials`, {trials: trials})
-          .then(response => {
-            console.log('Trial added successfully!');
-          }).catch(error => {
-            console.error('Error adding words:', error);
-          });
+          // axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTrials`, {trials: trials})
+          // .then(response => {
+          //   console.log('Trial added successfully!');
+          // }).catch(error => {
+          //   console.error('Error adding words:', error);
+          // });
           
-          navigate('/instructions', { state: { userId: userId, currentTrial: 0, trials: trials} });
+          // navigate('/instructions', { state: { userId: userId, currentTrial: 0, trials: trials} });
         } catch (error) {
           console.error('Error submitting data:', error);
           alert("Algo salió mal. Intentá nuevamente");

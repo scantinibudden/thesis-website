@@ -23,7 +23,11 @@ def add_user():
     data = request.json
     user_id = data["userId"]
     login_time = data["loginTime"]
-
+    age = data["age"]
+    gender = data["gender"]
+    country = data["country"]
+    first_lang = data["firstLang"]
+    
     if data["email"]:
         logging.debug("Storing email")
         new_mail = Email(email=data["email"]).dict()
@@ -38,7 +42,11 @@ def add_user():
     logging.debug("User is new, constructing model")
     new_session = Session(
         userId=user_id,
-        loginTime=login_time
+        loginTime=login_time,
+        age=age,
+        gender=gender,
+        country=country,
+        firstLang=first_lang
     ).dict()
 
     logging.debug("Inserting user")

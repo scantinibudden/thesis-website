@@ -21,7 +21,8 @@ class Session(BaseModel):
     isNew: bool = True
     age: int
     gender: str
-    country: str
+    birthCountry: str
+    residencyCountry: str
     firstLang: bool
 
 class Email(BaseModel):

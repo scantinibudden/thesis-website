@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import data from '../data.json'
 
 import '../pages/home.css';
+import './form.css';
 
 function getFillInWords(n) {
   let word_idx = [];
@@ -27,7 +28,8 @@ function UserForm() {
 
   const [gender, setGender] = useState('');
   const [age, setAge] = useState('');
-  const [country, setCountry] = useState('Argentina');
+  const [country, setCountry] = useState('');
+  const [residency, setResidency] = useState('');
   const [spanishFirstLanguage, setFirstLang] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -53,6 +55,10 @@ function UserForm() {
     setCountry(event.target.value);
   };
 
+  const handleResidencyChange = (event) => {
+    setResidency(event.target.value);
+  };
+
   const handleFirstLangChange = (event) => {
     setFirstLang(event.target.checked);
   };
@@ -70,6 +76,7 @@ function UserForm() {
         age: age,
         gender: gender,
         country: country,
+        residency:residency,
         firstLang: spanishFirstLanguage,
         loginTime: timestamp
       });
@@ -130,48 +137,70 @@ function UserForm() {
   };
   
   return (
-    <div>
-      <form onSubmit={handleSubmit} className='input-button-container'>
-        {<input
-          style={{ textAlign: 'center' }}
-          type="text"
-          value={age}
-          onChange={handleAgeChange}
-          placeholder="Ingresa tu edad"
-          className='Input'
-        />}
-        {<select
-          style={{ textAlign: 'center' }}
-          value={gender}
-          onChange={handleGenderChange}
-          className="Input"
-        >
-          <option value="" disabled>Ingresa tu género</option>
-          <option value="Hombre">Hombre</option>
-          <option value="Mujer">Mujer</option>
-          <option value="Otro">Otro</option>
-          <option value="Prefiero no decir">Prefiero no decir</option>
-        </select>}
-        {<select
-          style={{ textAlign: 'center' }}
-          value={country}
-          onChange={handleCountryChange}
-          className="Input"
-        >
-          <option value="Argentina">Argentina</option>
-          <option value="Bolivia">Bolivia</option>
-          <option value="Chile">Chile</option>
-          <option value="Colombia">Colombia</option>
-          <option value="Ecuador">Ecuador</option>
-          <option value="España">España</option>
-          <option value="México">México</option>
-          <option value="Paraguay">Paraguay</option>
-          <option value="Peru">Peru</option>
-          <option value="Uruguay">Uruguay</option>
-          <option value="Otro país hispanohablante">Otro país hispanohablante</option>
-          <option value="Otro país no hispanohablante">Otro país no hispanohablante</option>
-        </select>}
-        {<label style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+    <form onSubmit={handleSubmit} class='user-form'>
+      <div id='fill-in'>
+        <div id='personal-fill-in' class='fill-in-row'>
+          {<input id='age'
+            style={{ textAlign: 'center' }}
+            type="text"
+            value={age}
+            onChange={handleAgeChange}
+            placeholder="Ingresa tu edad"
+            />}
+          {<select id='gender' class='fill-content'
+            style={{ textAlign: 'center' }}
+            value={gender}
+            onChange={handleGenderChange}
+            >
+            <option value="" disabled>Ingresa tu género</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Otro">Otro</option>
+            <option value="Prefiero no decir">Prefiero no decir</option>
+          </select>}
+        </div>
+        <div id='geo-fill-in' class='fill-in-row'>
+          {<select id='birthplace' class='fill-content'
+            style={{ textAlign: 'center' }}
+            value={country}
+            onChange={handleCountryChange}
+          >
+            <option value="" disabled>Ingresa tu país de nacimiento</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="España">España</option>
+            <option value="México">México</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Otro país hispanohablante">Otro país hispanohablante</option>
+            <option value="Otro país no hispanohablante">Otro país no hispanohablante</option>
+          </select>}
+          {<select id='residency' class='fill-content'
+            style={{ textAlign: 'center' }}
+            value={residency}
+            onChange={handleResidencyChange}
+          >
+            <option value="" disabled>Ingresa tu país de residencia</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="España">España</option>
+            <option value="México">México</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Otro país hispanohablante">Otro país hispanohablante</option>
+            <option value="Otro país no hispanohablante">Otro país no hispanohablante</option>
+          </select>}
+        </div>
+        {<label id='firstlang' class='fill-in-row'
+          style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <input
             type="checkbox"
             checked={spanishFirstLanguage}
@@ -180,15 +209,15 @@ function UserForm() {
           />
           ¿Es el español tu primer idioma?
         </label>}
-        <div className='button-container' >
-          {isLoading ? (
-            <div className="loader"></div>
-          ) : (
-            <button type="submit" className='SubmitButton'>Ingresar</button>
-          )}
-        </div>
-      </form>
-    </div>
+      </div>
+      <div className='button-container' >
+        {isLoading ? (
+          <div className="loader"></div>
+        ) : (
+          <button type="submit" className='SubmitButton'>Ingresar</button>
+        )}
+      </div>
+    </form>
   );
 
 }

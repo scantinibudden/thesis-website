@@ -25,6 +25,7 @@ export default function ThankYouMessage() {
     <div className='container'>
       <h1 className='ThankYou'> ¡Gracias por participar! </h1>
       <h2 className='BlueSubHeader' style={{ padding: '0px' }}> Por favor comparte nuestro experimento </h2>
+      <h2 className='BlueSubHeader' style={{ padding: '0px' }}> Para realizar mas experimentos ve a datapruebas.org </h2>
       <div className='share-container'>
         <FacebookShareButton url={shareUrl}>
           <FacebookIcon size={50} round={true} />

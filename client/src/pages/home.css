@@ -154,6 +154,12 @@
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .experiment-explanation {
+    font-size: 16px;
+  }
+}
+
 .image-container-home {
   display: flex;
   justify-content: center;

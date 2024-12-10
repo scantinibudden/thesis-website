@@ -26,6 +26,7 @@ def add_user():
     age = data["age"]
     gender = data["gender"]
     country = data["country"]
+    residency = data["residency"]
     first_lang = data["firstLang"]
     print(data)
             
@@ -40,7 +41,8 @@ def add_user():
         loginTime=login_time,
         age=age,
         gender=gender,
-        country=country,
+        birthCountry=country,
+        residencyCountry=residency,
         firstLang=first_lang
     ).dict()
 

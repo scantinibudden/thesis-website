@@ -26,6 +26,7 @@ function Tutorial() {
     if (wordSelectorRef != null && wordSelectorRef.current.isFinished()) {
       setIsLoading(true);
       const timestamp = new Date().getTime();
+      console.log(timestamp)
       try {
         const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/addTutorialTime`, {
           userId: userId,

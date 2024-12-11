@@ -28,7 +28,6 @@ def add_user():
     country = data["country"]
     residency = data["residency"]
     first_lang = data["firstLang"]
-    print(data)
             
     user_exists = db.users.find_one({"userId": user_id})
     if user_exists:
@@ -143,12 +142,11 @@ def update_trial():
         )
     except KeyError as e:
         return jsonify({"detail": f"Missing field in trial data: {str(e)}"}), 400
-    
-    print(trial.hasFinished)
 
     result = db.users.update_one(
         {"userId": user_id, "trials.trialId": trial.trialId},
         {"$set": {"trials.$.guessedWords": trial.guessedWords,
+                    "trials.$.startTime": trial.startTime,
                     "trials.$.guessTimestamps": trial.guessTimestamps,
                     "trials.$.hasFinished": trial.hasFinished}},
         upsert=True

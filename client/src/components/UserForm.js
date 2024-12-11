@@ -199,7 +199,7 @@ function UserForm() {
             <option value="Otro país no hispanohablante">Otro país no hispanohablante</option>
           </select>}
         </div>
-        {<label id='firstlang' class='fill-in-row'
+        {<label id='firstlang'
           style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <input
             type="checkbox"

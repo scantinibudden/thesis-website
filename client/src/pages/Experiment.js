@@ -80,6 +80,8 @@ function RunExperiment() {
       return;
     }
 
+    console.log(timestamp)
+
     axios.post(`${process.env.REACT_APP_SERVER_BASE_ROUTE}/api/updateTrial`, {
       userId: userId,
       trialId: exp_index,

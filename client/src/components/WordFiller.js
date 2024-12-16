@@ -179,7 +179,7 @@ export default class WordFiller extends Component {
                     </p>
                 </div>
                 <p className="word-selector-instruction">
-                    Escribe la palabra que creas correcta.
+                    Escriba la palabra que crea correcta. Presione enter en su teclado para continuar.
                 </p>
             </div>
         );

@@ -63,7 +63,7 @@ export default class WordFiller extends Component {
             const submitButton = document.querySelector('.SubmitButton');
             if (submitButton) {
                 submitButton.style.display = 'block';
-                submitButton.focus();
+                // submitButton.focus();
                 const instruction = document.querySelector('.word-selector-instruction');
                 instruction.style.paddingBottom = '20px';
             }

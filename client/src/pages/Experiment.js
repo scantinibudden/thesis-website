@@ -150,9 +150,9 @@ function RunExperiment() {
       {
         !inTrial && !loading ? (
           <div className='next-step-container'>
-            <div className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta etapa! </div>
+            <div className='BlueSubHeader'>¡Felicitaciones llegaste al final de esta historia! </div>
             <p className="continue-message">
-              Puedes elegir continuar con el experimento o finalizarlo en este momento
+              Presiona continuar para seguir con la siguiente.
             </p>
             <div className='step-buttons-container'>
               <div className='inner-button-container'>

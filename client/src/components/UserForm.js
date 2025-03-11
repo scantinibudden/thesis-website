@@ -33,7 +33,6 @@ function UserForm() {
   const [spanishFirstLanguage, setFirstLang] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-
   const handleAgeChange = (event) => {
     const inputValue = event.target.value;
   
@@ -45,7 +44,6 @@ function UserForm() {
       event.target.value = ''
     }
   };
-  
 
   const handleGenderChange = (event) => {
     setGender(event.target.value);
@@ -86,7 +84,7 @@ function UserForm() {
       let stories = Object.keys(data);
 
       for(let i = stories.length-1; i >= 0; i--){
-        const randomIndex = Math.floor(Math.random() * i);
+        const randomIndex = Math.floor(Math.random() * stories.length);
         const randomStoryName = stories[randomIndex];
 
         stories = stories.filter(item => item !== randomStoryName);

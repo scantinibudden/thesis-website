@@ -9,8 +9,8 @@ os.system('cls' if os.name == 'nt' else 'clear')
 load_dotenv()
 
 # Connect to MongoDB
-client = MongoClient(os.getenv("MONGO_URI"))
-db = client.mydatabase
+client_source = MongoClient(os.getenv("MONGO_URI_RAW"))
+db = client_source.mydatabase
 users_collection = db.users
 mails_collection = db.mails
 
@@ -41,20 +41,19 @@ for trial_name in trial_names:
     total_completions += completed_count
 
 # Print statistics
-print(f"Total number of users: {session_count}\n")
-print("Completed Stories:")
+print(f"Total number of users: {session_count}")
+print("Total Completed Stories:", total_completions)
+print("Average Completed Stories:", total_completions/session_count)
+print("\nCompleted Stories:")
 for name, count in completed_stories.items():
     print(f"{name}: {count}")
-print()
-print("Total Completed Stories:", total_completions)
-print("Average Completed Stories:", total_completions/len(trial_names))
 
 # Retrieve all emails from the mails collection
 emails = mails_collection.find({}, {"email": 1})
 
 # Write emails to a file
-with open("emails.txt", "w") as file:
-    for email in emails:
-        file.write(email["email"] + "\n")
+# with open("mails.txt", "w") as file:
+#     for email in emails:
+#         file.write(email["email"] + "\n")
 
-print("Emails have been written to emails.txt")
+# print("Emails have been written to mails.txt")

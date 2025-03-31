@@ -82,12 +82,23 @@ function UserForm() {
       // Generate Trials
       const storyOrder = []
       let stories = Object.keys(data);
+      let priority = ["la lluvia de fuego", "wakefield", "rubí y el lago danzante", "una rosa para emilia", "la salud de los enfermos", "el almohadón de plumas", "la gallina degollada", "el espejo", "ahora debería reírme, si no estuviera muerto", "la canción que cantábamos todos los días"]
+      let other = ["buenos aires", "la de la obsesión por la patineta", "el golpe de gracia", "la máscara de la muerte roja", "embarrar la magia", "la noche de los feos", "educar para escalar y bucear", "cómo funciona caminar en la nieve", "las fotografías", "cómo funcionan los bolsillos"]
 
-      for(let i = stories.length-1; i >= 0; i--){
-        const randomIndex = Math.floor(Math.random() * stories.length);
-        const randomStoryName = stories[randomIndex];
+      for(let i = priority.length-1; i >= 0; i--){
+        const randomIndex = Math.floor(Math.random() * priority.length);
+        const randomStoryName = priority[randomIndex];
 
-        stories = stories.filter(item => item !== randomStoryName);
+        priority = priority.filter(item => item !== randomStoryName);
+        
+        storyOrder.push(randomStoryName)
+      }
+
+      for(let i = other.length-1; i >= 0; i--){
+        const randomIndex = Math.floor(Math.random() * other.length);
+        const randomStoryName = other[randomIndex];
+
+        other = other.filter(item => item !== randomStoryName);
         
         storyOrder.push(randomStoryName)
       }

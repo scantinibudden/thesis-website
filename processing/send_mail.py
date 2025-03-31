@@ -4,11 +4,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 EMAIL_SEND_INTERVAL = 5 * 60
-EMAIL_FILE = "emails.txt"
+EMAIL_SEND_COUNT = 30
+EMAIL_FILE = "mails.txt"
 SENDER_EMAIL = 'experimentos.neuroling@gmail.com'
 SENDER_PASSWORD = 'prcm ibfo mlyw qlod'
-SUBJECT = 'Continúa completando historias en "Jugá a ser ChatGPT"'
-BODY = """
+SUBJECT = 'Completa historias en "Jugá a ser ChatGPT"'
+BODY_COMEBACK = """
 <html>
   <body>
     <p>Hola,</p>
@@ -20,6 +21,19 @@ BODY = """
   </body>
 </html>
 """
+BODY_NEW = """
+<html>
+  <body>
+    <p>Hola,</p>
+    <p>Queríamos invitarte a participar en nuestro experimento "Jugá a ser ChatGPT"!</p>
+    <p>Tu participación es clave para ayudarnos a entender mejor cómo se compara nuestra cognición con los modelos computacionales del lenguaje. Solo te tomará unos minutos y cada historia adicional que completes hace una gran diferencia.</p>
+    <p>Podés ingresar haciendo click <a href="https://thesis-experiment.vercel.app/">acá</a>.</p>
+    <p>¡Gracias por tu ayuda!</p>
+    <p>Saludos,<br>Laboratorio de Inteligencia Artificial Aplicada, UBA</p>
+  </body>
+</html>
+"""
+BODY = BODY_NEW
 
 def send_email(receiver_email):
     # Set up the MIME
@@ -51,5 +65,6 @@ with open(EMAIL_FILE, 'r') as file:
         email = email.strip()  # Prints the list of parts
         print(f"Sending email {count}: {email}") # TODO add timestamp
         send_email(email)
-        time.sleep(EMAIL_SEND_INTERVAL)
+        if count % EMAIL_SEND_COUNT == 0:
+          time.sleep(EMAIL_SEND_INTERVAL)
         count += 1
